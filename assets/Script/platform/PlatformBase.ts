@@ -55,4 +55,9 @@ export abstract class PlatformBase extends SingleBase{
         }
         xhr.send(dataStr);
     }
+    createSocket(ip:string,binaryType:BinaryType="arraybuffer"){
+        var socketTarget = new WebSocket(ip);
+        socketTarget.binaryType=binaryType;
+        return socketTarget
+    }
 };
