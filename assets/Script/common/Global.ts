@@ -8,6 +8,9 @@ import { ResManager } from "./manager/ResManager";
 import { SceneManager } from "./manager/SceneManager";
 import { TaskManager } from "./manager/TaskManager";
 import { TimeManager } from "./manager/TimeManager";
+import { ProtoManager } from "./manager/ProtoManager";
+import { EventManager } from "./manager/EventManager";
+import { NetManager } from "./manager/NetManager";
 
 declare global {
     namespace globalThis {
@@ -22,6 +25,9 @@ export class Global extends SingleBase{
     platFormMgr:PlatformBase
     logMgr:LogManager
     taskMgr:TaskManager
+    protoMgr:ProtoManager
+    eventMgr:EventManager
+    netMgr:NetManager
     constructor(){
         super();
         globalThis.game = this;
@@ -33,6 +39,9 @@ export class Global extends SingleBase{
         this.timeMgr = TimeManager.getInstance();
         this.logMgr = LogManager.getInstance();
         this.taskMgr = TaskManager.getInstance();
+        this.protoMgr = ProtoManager.getInstance();
+        this.eventMgr = EventManager.getInstance();
+        this.netMgr = NetManager.getInstance();
         switch(getPlatForm()){
             case PLATFORM_TYPE.ANDROID:
                 this.platFormMgr = AndroidPlatFormManager.getInstance();

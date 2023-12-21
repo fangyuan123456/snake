@@ -27,13 +27,19 @@ export default class LoadScene extends SceneBase {
     }
     loadRes(next){
         this.scheduleOnce(function(){
-            if(next){
-                next();
-            }
+            next();
         },1)
     }
-    changeScene(){
+    login(next){
+        game.platFormMgr.getLoginCode((data)=>{
+            game.netMgr.sendHttpRequest(data,"login",()=>{
+                next();
+            })
+        });
+    }
+    changeScene(next){
         cc.director.loadScene("MenuScene");
+        next();
     }
     // update (dt) {}
 }

@@ -1,13 +1,13 @@
 import { SingleBase } from "../base/SingleBase";
 import { SocketBase } from "../base/SocketBase";
-export interface SendSocketStruct{
+export interface SocketMsgStruct{
     msgHead:string,
     msgData:any
 }
 export class NetManager extends SingleBase{
     showLoadTimes:number = 0
     socketMap:{[key:string]:SocketBase} = {}
-    sendHttpRequest(data:any,className:string,_callBack:(data:any)=>void,_fileCallback:()=>void,retryTime:number,_isShowLoading){
+    sendHttpRequest(data:any,className:string,_callBack:(data:any)=>void,_fileCallback?:()=>void,retryTime:number = -1,_isShowLoading = true){
         var that=this;
         if(_isShowLoading){
             this.showNetLoadingBar(true);
@@ -36,7 +36,7 @@ export class NetManager extends SingleBase{
             }
          })
     }
-    sendSocket(socketName:string,data:SendSocketStruct,callBack?:()=>void){
+    sendSocket(socketName:string,data:SocketMsgStruct,callBack?:()=>void){
         if(!this.socketMap[socketName]){
             game.logMgr.error("socketName:%s is not find",socketName);
             return;
