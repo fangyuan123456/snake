@@ -1,9 +1,9 @@
 import { app, Application, Session } from "mydog";
-import { gameLog } from "../../../app/common/logger";
-import { constKey, serverType } from "../../../app/common/someConfig";
-import { svr_con } from "../../../app/svr_connector/svr_con";
-import { getInfoId } from "../../../app/util/gameUtil";
-import { createCountdown } from "../../../app/util/util";
+import { gameLog } from "../../../../app/common/logger";
+import { constKey, serverType } from "../../../../app/common/someConfig";
+import { svr_con } from "../../../../app/svr_connector/svr_con";
+import { getInfoId } from "../../../../app/util/gameUtil";
+import { createCountdown } from "../../../../app/util/util";
 
 export default class Handler {
     app: Application;

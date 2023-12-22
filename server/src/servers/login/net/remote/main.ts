@@ -1,5 +1,5 @@
 import { app, Application } from "mydog";
-import { svr_login } from "../../../app/svr_login/svr_login";
+import { svr_login } from "../../../../app/svr_login/svr_login";
 
 declare global {
     interface Rpc {

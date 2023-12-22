@@ -1,9 +1,9 @@
 import { app, Session } from "mydog";
-import { cfg_all } from "../../../app/common/configUtil";
-import { E_lock } from "../../../app/svr_info/roleInfo";
-import { RoleInfoMgr } from "../../../app/svr_info/roleInfoMgr";
-import { svr_info } from "../../../app/svr_info/svr_info";
-import { getBit, setBit } from "../../../app/util/util";
+import { cfg_all } from "../../../../app/common/configUtil";
+import { E_lock } from "../../../../app/svr_info/roleInfo";
+import { RoleInfoMgr } from "../../../../app/svr_info/roleInfoMgr";
+import { svr_info } from "../../../../app/svr_info/svr_info";
+import { getBit, setBit } from "../../../../app/util/util";
 
 
 

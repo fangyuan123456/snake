@@ -1,6 +1,6 @@
 import { Session } from "mydog";
-import { E_itemT } from "../../../app/svr_info/roleInfo";
-import { svr_info } from "../../../app/svr_info/svr_info";
+import { E_itemT } from "../../../../app/svr_info/roleInfo";
+import { svr_info } from "../../../../app/svr_info/svr_info";
 
 
 export default class Handler {

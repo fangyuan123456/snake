@@ -1,14 +1,14 @@
 import { app, Session } from "mydog";
-import { cfg_all } from "../../../app/common/configUtil";
-import { gameLog } from "../../../app/common/logger";
-import { constKey, serverType } from "../../../app/common/someConfig";
-import { svr_con } from "../../../app/svr_connector/svr_con";
-import { I_roleInfo } from "../../../app/svr_info/roleInfo";
-import { j2x2 } from "../../../app/svr_map/map";
-import { getCharLen, getInfoId } from "../../../app/util/gameUtil";
-import { getInsertSql } from "../../../app/util/mysql";
-import { createCountdown, randArrElement, removeFromArr } from "../../../app/util/util";
-import { I_xy } from "../../map/handler/main";
+import { cfg_all } from "../../../../app/common/configUtil";
+import { gameLog } from "../../../../app/common/logger";
+import { constKey, serverType } from "../../../../app/common/someConfig";
+import { svr_con } from "../../../../app/svr_connector/svr_con";
+import { I_roleInfo } from "../../../../app/svr_info/roleInfo";
+import { j2x2 } from "../../../../app/svr_map/map";
+import { getCharLen, getInfoId } from "../../../../app/util/gameUtil";
+import { getInsertSql } from "../../../../app/util/mysql";
+import { createCountdown, randArrElement, removeFromArr } from "../../../../app/util/util";
+import { I_xy } from "../../../map/handler/main";
 
 let bornPos: I_xy[] = [{ "x": 20, "y": 29 }, { "x": 47, "y": 42 }];
 
