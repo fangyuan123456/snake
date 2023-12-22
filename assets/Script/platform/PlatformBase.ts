@@ -27,6 +27,7 @@ export function getPlatForm():PLATFORM_TYPE{
     }
 }
 export abstract class PlatformBase extends SingleBase{
+    platformName = ""
     loadOrderCfg:LOAD_ORDER_CFG[];
     getLoadPercentCfg(){
         return this.loadOrderCfg;
@@ -54,5 +55,13 @@ export abstract class PlatformBase extends SingleBase{
             failCallBack();
         }
         xhr.send(dataStr);
+    }
+    createSocket(ip:string,binaryType:BinaryType="arraybuffer"){
+        var socketTarget = new WebSocket(ip);
+        socketTarget.binaryType=binaryType;
+        return socketTarget
+    }
+    getLoginCode(callBack:(data:string)=>void){
+        
     }
 };

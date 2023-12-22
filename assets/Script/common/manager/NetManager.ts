@@ -1,12 +1,13 @@
 import { SingleBase } from "../base/SingleBase";
-import { SocketType } from "../base/SocketBase";
-export interface SendSocketStruct{
+import { SocketBase } from "../base/SocketBase";
+export interface SocketMsgStruct{
     msgHead:string,
     msgData:any
 }
 export class NetManager extends SingleBase{
     showLoadTimes:number = 0
-    sendHttpRequest(data:any,className:string,_callBack:(data:any)=>void,_fileCallback:()=>void,retryTime:number,_isShowLoading){
+    socketMap:{[key:string]:SocketBase} = {}
+    sendHttpRequest(data:any,className:string,_callBack:(data:any)=>void,_fileCallback?:()=>void,retryTime:number = -1,_isShowLoading = true){
         var that=this;
         if(_isShowLoading){
             this.showNetLoadingBar(true);
@@ -35,7 +36,22 @@ export class NetManager extends SingleBase{
             }
          })
     }
-    sendSocket(data:SendSocketStruct,socketType:SocketType = SocketType.Center){
+    sendSocket(socketName:string,data:SocketMsgStruct,callBack?:()=>void){
+        if(!this.socketMap[socketName]){
+            game.logMgr.error("socketName:%s is not find",socketName);
+            return;
+        }
+        this.socketMap[socketName].send(data,callBack);
+    }
+    createSocket(socketName:string,ip:string,createFunc?:(socketName:string,ip:string)=>SocketBase){
+        if(!this.socketMap[socketName]){
+            return;
+        }
+        if(createFunc){
+            this.socketMap[socketName] = createFunc(socketName,ip);
+        }else{
+            this.socketMap[socketName] = new SocketBase(socketName,ip);
+        }
     }
     showNetLoadingBar(_b){
         if(_b){
