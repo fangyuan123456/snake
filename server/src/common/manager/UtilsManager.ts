@@ -1,5 +1,7 @@
+import { Application } from "mydog";
 import { SingleBase } from "../base/SingleBase";
 import { serverType } from "../config/GameCfg";
+import * as path from "path";
 
 export class UtilsManager extends SingleBase{
 
@@ -18,6 +20,9 @@ export class UtilsManager extends SingleBase{
             return 1;
         }
         return 2;
+    }
+    getAppPath(){
+        return path.join(__dirname,"../../servers/"+game.app.serverType)
     }
 
 }

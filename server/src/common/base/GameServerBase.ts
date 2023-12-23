@@ -3,12 +3,15 @@ declare global{
         var game:GameServerBase
     }
 }
+import * as fs from "fs";
+import * as path from "path";
 import { Application, connector } from "mydog";
 import { LoginServer } from "../../servers/login/LoginServer";
 import { LogManager } from "../manager/LogManager";
 import { serverType } from "../config/GameCfg";
 import { UtilsManager } from "../manager/UtilsManager";
 import { ProtoManager } from "../manager/ProtoManager";
+import { HttpManager } from "../manager/HttpManager";
 
 export class GameServerBase{
     clientNum:number = 0
@@ -26,14 +29,26 @@ export class GameServerBase{
         this.initCupUsage();
         this.setConfig();
         this.app.start();
+
+        if(this.app.serverInfo.HttpPort){
+            HttpManager.getInstance();
+        }
     }
     getCert(){
-        // if (app.env === "production") {
-        //     app.set("key", fs.readFileSync(path.join(__dirname, "../www.mydog.wiki.key")))
-        //     app.set("cert", fs.readFileSync(path.join(__dirname, "../www.mydog.wiki.pem")));
-        // }
+        if (this.app.env === "production") {
+            return {
+                key:fs.readFileSync(path.join(this.utilsMgr.getAppPath(), "../www.mydog.wiki.key")),
+                cert:fs.readFileSync(path.join(this.utilsMgr.getAppPath(), "../www.mydog.wiki.key"))
+            }
+        }else{
+            return {
+                key:"",
+                cert:""
+            }
+        }
     }
     setConfig(){
+        let cert = this.getCert();
         this.app.setConfig("mydogList", this.mydogList);
         this.app.setConfig("connector", {
             "connector": connector.Ws,
@@ -42,8 +57,8 @@ export class GameServerBase{
             "interval": 50,
             "noDelay": false,
             "ssl": this.app.env === "production",
-            "key": this.app.get("key"),
-            "cert": this.app.get("cert"),
+            "key": cert.key,
+            "cert": cert.cert,
         });
         this.app.setConfig("rpc", { "interval": 30, "noDelay": false });
         this.app.setConfig("encodeDecode", { "msgDecode": this.protoManger.decode, "msgEncode": this.protoManger.encode });
