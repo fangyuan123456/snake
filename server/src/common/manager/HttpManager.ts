@@ -63,7 +63,7 @@ export class HttpManager extends SingleBase{
         req.on("end",(err:any)=>{
             game.logMgr.debug(err);
         });
-        req.on("error",(err)=>{
+        req.on("error",(err:Error)=>{
             game.logMgr.error(err);
         });
     }
@@ -73,8 +73,11 @@ export class HttpManager extends SingleBase{
            fileName = pathUrl; 
         }
         if(this.moudles[fileName]){
-            if(this.moudles[fileName]["msgHead"]){
-                this.moudles[fileName]["msgHead"](msgData,res);
+            let handlerName = "on"+game.utilsMgr.capitalizeFirstLetter(msgHead)+"Handler";
+            if(this.moudles[fileName][handlerName]){
+                this.moudles[fileName][handlerName](msgData,res);
+            }else{
+                game.logMgr.error("funcName:%s is not exits",handlerName)
             }
         }else{
             game.logMgr.error("fileName:%s is not exits",fileName)

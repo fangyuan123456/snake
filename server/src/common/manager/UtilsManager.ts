@@ -24,5 +24,8 @@ export class UtilsManager extends SingleBase{
     getAppPath(){
         return path.join(__dirname,"../../servers/"+game.app.serverType)
     }
+    capitalizeFirstLetter(str: string): string {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
 
 }
