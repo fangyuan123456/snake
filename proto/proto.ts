@@ -1,18 +1,21 @@
-export function encodeheartBetReq(message) {
+export interface heartBetReq {
+}
+
+export function encodeheartBetReq(message: heartBetReq): Uint8Array {
   let bb = popByteBuffer();
   _encodeheartBetReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodeheartBetReq(message, bb) {
+function _encodeheartBetReq(message: heartBetReq, bb: ByteBuffer): void {
 }
 
-export function decodeheartBetReq(binary) {
+export function decodeheartBetReq(binary: Uint8Array): heartBetReq {
   return _decodeheartBetReq(wrapByteBuffer(binary));
 }
 
-function _decodeheartBetReq(bb) {
-  let message = {};
+function _decodeheartBetReq(bb: ByteBuffer): heartBetReq {
+  let message: heartBetReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -29,21 +32,24 @@ function _decodeheartBetReq(bb) {
   return message;
 }
 
-export function encodeheartBetRes(message) {
+export interface heartBetRes {
+}
+
+export function encodeheartBetRes(message: heartBetRes): Uint8Array {
   let bb = popByteBuffer();
   _encodeheartBetRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodeheartBetRes(message, bb) {
+function _encodeheartBetRes(message: heartBetRes, bb: ByteBuffer): void {
 }
 
-export function decodeheartBetRes(binary) {
+export function decodeheartBetRes(binary: Uint8Array): heartBetRes {
   return _decodeheartBetRes(wrapByteBuffer(binary));
 }
 
-function _decodeheartBetRes(bb) {
-  let message = {};
+function _decodeheartBetRes(bb: ByteBuffer): heartBetRes {
+  let message: heartBetRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -60,13 +66,18 @@ function _decodeheartBetRes(bb) {
   return message;
 }
 
-export function encodegetRoomIdReq(message) {
+export interface getRoomIdReq {
+  uid: number;
+  inviteUid?: number;
+}
+
+export function encodegetRoomIdReq(message: getRoomIdReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetRoomIdReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetRoomIdReq(message, bb) {
+function _encodegetRoomIdReq(message: getRoomIdReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -82,12 +93,12 @@ function _encodegetRoomIdReq(message, bb) {
   }
 }
 
-export function decodegetRoomIdReq(binary) {
+export function decodegetRoomIdReq(binary: Uint8Array): getRoomIdReq {
   return _decodegetRoomIdReq(wrapByteBuffer(binary));
 }
 
-function _decodegetRoomIdReq(bb) {
-  let message = {};
+function _decodegetRoomIdReq(bb: ByteBuffer): getRoomIdReq {
+  let message: getRoomIdReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -119,13 +130,18 @@ function _decodegetRoomIdReq(bb) {
   return message;
 }
 
-export function encodegetRoomIdRes(message) {
+export interface getRoomIdRes {
+  roomId: number;
+  roomIp: string;
+}
+
+export function encodegetRoomIdRes(message: getRoomIdRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetRoomIdRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetRoomIdRes(message, bb) {
+function _encodegetRoomIdRes(message: getRoomIdRes, bb: ByteBuffer): void {
   // required int32 roomId = 1;
   let $roomId = message.roomId;
   if ($roomId !== undefined) {
@@ -141,12 +157,12 @@ function _encodegetRoomIdRes(message, bb) {
   }
 }
 
-export function decodegetRoomIdRes(binary) {
+export function decodegetRoomIdRes(binary: Uint8Array): getRoomIdRes {
   return _decodegetRoomIdRes(wrapByteBuffer(binary));
 }
 
-function _decodegetRoomIdRes(bb) {
-  let message = {};
+function _decodegetRoomIdRes(bb: ByteBuffer): getRoomIdRes {
+  let message: getRoomIdRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -181,13 +197,19 @@ function _decodegetRoomIdRes(bb) {
   return message;
 }
 
-export function encodegetPlayerBaseInfoRes(message) {
+export interface getPlayerBaseInfoRes {
+  uid: number;
+  nickName?: string;
+  avatarUrl?: string;
+}
+
+export function encodegetPlayerBaseInfoRes(message: getPlayerBaseInfoRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetPlayerBaseInfoRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetPlayerBaseInfoRes(message, bb) {
+function _encodegetPlayerBaseInfoRes(message: getPlayerBaseInfoRes, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -210,12 +232,12 @@ function _encodegetPlayerBaseInfoRes(message, bb) {
   }
 }
 
-export function decodegetPlayerBaseInfoRes(binary) {
+export function decodegetPlayerBaseInfoRes(binary: Uint8Array): getPlayerBaseInfoRes {
   return _decodegetPlayerBaseInfoRes(wrapByteBuffer(binary));
 }
 
-function _decodegetPlayerBaseInfoRes(bb) {
-  let message = {};
+function _decodegetPlayerBaseInfoRes(bb: ByteBuffer): getPlayerBaseInfoRes {
+  let message: getPlayerBaseInfoRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -253,13 +275,28 @@ function _decodegetPlayerBaseInfoRes(bb) {
   return message;
 }
 
-export function encodegetPlayerAssetInfoRes(message) {
+export interface getPlayerAssetInfoRes {
+  money?: number;
+  diamond?: number;
+  haveQuipId?: { [key: string]: quipData };
+  nowQuipId?: { [key: string]: quipData };
+  lianColor?: string;
+  piFuColor?: string;
+  gameBg?: { [key: string]: BgIndexData };
+  vip?: quipData;
+  signIndex: number;
+  isSigned: number;
+  getInviteReworldIndex: string;
+  inviteUidStr: string;
+}
+
+export function encodegetPlayerAssetInfoRes(message: getPlayerAssetInfoRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetPlayerAssetInfoRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetPlayerAssetInfoRes(message, bb) {
+function _encodegetPlayerAssetInfoRes(message: getPlayerAssetInfoRes, bb: ByteBuffer): void {
   // optional int32 money = 1;
   let $money = message.money;
   if ($money !== undefined) {
@@ -391,12 +428,12 @@ function _encodegetPlayerAssetInfoRes(message, bb) {
   }
 }
 
-export function decodegetPlayerAssetInfoRes(binary) {
+export function decodegetPlayerAssetInfoRes(binary: Uint8Array): getPlayerAssetInfoRes {
   return _decodegetPlayerAssetInfoRes(wrapByteBuffer(binary));
 }
 
-function _decodegetPlayerAssetInfoRes(bb) {
-  let message = {};
+function _decodegetPlayerAssetInfoRes(bb: ByteBuffer): getPlayerAssetInfoRes {
+  let message: getPlayerAssetInfoRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -421,8 +458,8 @@ function _decodegetPlayerAssetInfoRes(bb) {
       case 3: {
         let values = message.haveQuipId || (message.haveQuipId = {});
         let outerLimit = pushTemporaryLength(bb);
-        let key;
-        let value;
+        let key: string | undefined;
+        let value: quipData | undefined;
         end_of_entry: while (!isAtEnd(bb)) {
           let tag = readVarint32(bb);
           switch (tag >>> 3) {
@@ -453,8 +490,8 @@ function _decodegetPlayerAssetInfoRes(bb) {
       case 4: {
         let values = message.nowQuipId || (message.nowQuipId = {});
         let outerLimit = pushTemporaryLength(bb);
-        let key;
-        let value;
+        let key: string | undefined;
+        let value: quipData | undefined;
         end_of_entry: while (!isAtEnd(bb)) {
           let tag = readVarint32(bb);
           switch (tag >>> 3) {
@@ -497,8 +534,8 @@ function _decodegetPlayerAssetInfoRes(bb) {
       case 7: {
         let values = message.gameBg || (message.gameBg = {});
         let outerLimit = pushTemporaryLength(bb);
-        let key;
-        let value;
+        let key: string | undefined;
+        let value: BgIndexData | undefined;
         end_of_entry: while (!isAtEnd(bb)) {
           let tag = readVarint32(bb);
           switch (tag >>> 3) {
@@ -577,13 +614,19 @@ function _decodegetPlayerAssetInfoRes(bb) {
   return message;
 }
 
-export function encodegetPlayerScoreInfoRes(message) {
+export interface getPlayerScoreInfoRes {
+  score?: number;
+  defScore?: number;
+  rank?: number;
+}
+
+export function encodegetPlayerScoreInfoRes(message: getPlayerScoreInfoRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetPlayerScoreInfoRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetPlayerScoreInfoRes(message, bb) {
+function _encodegetPlayerScoreInfoRes(message: getPlayerScoreInfoRes, bb: ByteBuffer): void {
   // optional int32 score = 1;
   let $score = message.score;
   if ($score !== undefined) {
@@ -606,12 +649,12 @@ function _encodegetPlayerScoreInfoRes(message, bb) {
   }
 }
 
-export function decodegetPlayerScoreInfoRes(binary) {
+export function decodegetPlayerScoreInfoRes(binary: Uint8Array): getPlayerScoreInfoRes {
   return _decodegetPlayerScoreInfoRes(wrapByteBuffer(binary));
 }
 
-function _decodegetPlayerScoreInfoRes(bb) {
-  let message = {};
+function _decodegetPlayerScoreInfoRes(bb: ByteBuffer): getPlayerScoreInfoRes {
+  let message: getPlayerScoreInfoRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -646,13 +689,18 @@ function _decodegetPlayerScoreInfoRes(bb) {
   return message;
 }
 
-export function encodematchPlayerReq(message) {
+export interface matchPlayerReq {
+  uid: number;
+  isMatch: boolean;
+}
+
+export function encodematchPlayerReq(message: matchPlayerReq): Uint8Array {
   let bb = popByteBuffer();
   _encodematchPlayerReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodematchPlayerReq(message, bb) {
+function _encodematchPlayerReq(message: matchPlayerReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -668,12 +716,12 @@ function _encodematchPlayerReq(message, bb) {
   }
 }
 
-export function decodematchPlayerReq(binary) {
+export function decodematchPlayerReq(binary: Uint8Array): matchPlayerReq {
   return _decodematchPlayerReq(wrapByteBuffer(binary));
 }
 
-function _decodematchPlayerReq(bb) {
-  let message = {};
+function _decodematchPlayerReq(bb: ByteBuffer): matchPlayerReq {
+  let message: matchPlayerReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -708,13 +756,22 @@ function _decodematchPlayerReq(bb) {
   return message;
 }
 
-export function encodematchScuessRes(message) {
+export interface matchScuessRes {
+  uid: number;
+  nickName?: string;
+  avatarUrl?: string;
+  isWxInvite?: boolean;
+  isRobote: boolean;
+  roboteBaseData?: roboteDataStruct;
+}
+
+export function encodematchScuessRes(message: matchScuessRes): Uint8Array {
   let bb = popByteBuffer();
   _encodematchScuessRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodematchScuessRes(message, bb) {
+function _encodematchScuessRes(message: matchScuessRes, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -762,12 +819,12 @@ function _encodematchScuessRes(message, bb) {
   }
 }
 
-export function decodematchScuessRes(binary) {
+export function decodematchScuessRes(binary: Uint8Array): matchScuessRes {
   return _decodematchScuessRes(wrapByteBuffer(binary));
 }
 
-function _decodematchScuessRes(bb) {
-  let message = {};
+function _decodematchScuessRes(bb: ByteBuffer): matchScuessRes {
+  let message: matchScuessRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -828,13 +885,18 @@ function _decodematchScuessRes(bb) {
   return message;
 }
 
-export function encodemathReadyReq(message) {
+export interface mathReadyReq {
+  uid: number;
+  isReady: boolean;
+}
+
+export function encodemathReadyReq(message: mathReadyReq): Uint8Array {
   let bb = popByteBuffer();
   _encodemathReadyReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodemathReadyReq(message, bb) {
+function _encodemathReadyReq(message: mathReadyReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -850,12 +912,12 @@ function _encodemathReadyReq(message, bb) {
   }
 }
 
-export function decodemathReadyReq(binary) {
+export function decodemathReadyReq(binary: Uint8Array): mathReadyReq {
   return _decodemathReadyReq(wrapByteBuffer(binary));
 }
 
-function _decodemathReadyReq(bb) {
-  let message = {};
+function _decodemathReadyReq(bb: ByteBuffer): mathReadyReq {
+  let message: mathReadyReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -890,13 +952,18 @@ function _decodemathReadyReq(bb) {
   return message;
 }
 
-export function encodemathReadyRes(message) {
+export interface mathReadyRes {
+  uid: number;
+  isReady: boolean;
+}
+
+export function encodemathReadyRes(message: mathReadyRes): Uint8Array {
   let bb = popByteBuffer();
   _encodemathReadyRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodemathReadyRes(message, bb) {
+function _encodemathReadyRes(message: mathReadyRes, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -912,12 +979,12 @@ function _encodemathReadyRes(message, bb) {
   }
 }
 
-export function decodemathReadyRes(binary) {
+export function decodemathReadyRes(binary: Uint8Array): mathReadyRes {
   return _decodemathReadyRes(wrapByteBuffer(binary));
 }
 
-function _decodemathReadyRes(bb) {
-  let message = {};
+function _decodemathReadyRes(bb: ByteBuffer): mathReadyRes {
+  let message: mathReadyRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -952,13 +1019,19 @@ function _decodemathReadyRes(bb) {
   return message;
 }
 
-export function encodeinviteRePlayReq(message) {
+export interface inviteRePlayReq {
+  uid: number;
+  inviteKey: string;
+  invite: boolean;
+}
+
+export function encodeinviteRePlayReq(message: inviteRePlayReq): Uint8Array {
   let bb = popByteBuffer();
   _encodeinviteRePlayReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodeinviteRePlayReq(message, bb) {
+function _encodeinviteRePlayReq(message: inviteRePlayReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -981,12 +1054,12 @@ function _encodeinviteRePlayReq(message, bb) {
   }
 }
 
-export function decodeinviteRePlayReq(binary) {
+export function decodeinviteRePlayReq(binary: Uint8Array): inviteRePlayReq {
   return _decodeinviteRePlayReq(wrapByteBuffer(binary));
 }
 
-function _decodeinviteRePlayReq(bb) {
-  let message = {};
+function _decodeinviteRePlayReq(bb: ByteBuffer): inviteRePlayReq {
+  let message: inviteRePlayReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1030,13 +1103,18 @@ function _decodeinviteRePlayReq(bb) {
   return message;
 }
 
-export function encodeinviteRePlayRes(message) {
+export interface inviteRePlayRes {
+  uid: number;
+  invite: boolean;
+}
+
+export function encodeinviteRePlayRes(message: inviteRePlayRes): Uint8Array {
   let bb = popByteBuffer();
   _encodeinviteRePlayRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodeinviteRePlayRes(message, bb) {
+function _encodeinviteRePlayRes(message: inviteRePlayRes, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -1052,12 +1130,12 @@ function _encodeinviteRePlayRes(message, bb) {
   }
 }
 
-export function decodeinviteRePlayRes(binary) {
+export function decodeinviteRePlayRes(binary: Uint8Array): inviteRePlayRes {
   return _decodeinviteRePlayRes(wrapByteBuffer(binary));
 }
 
-function _decodeinviteRePlayRes(bb) {
-  let message = {};
+function _decodeinviteRePlayRes(bb: ByteBuffer): inviteRePlayRes {
+  let message: inviteRePlayRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1092,13 +1170,18 @@ function _decodeinviteRePlayRes(bb) {
   return message;
 }
 
-export function encodeinviteFriendReq(message) {
+export interface inviteFriendReq {
+  uid: number;
+  inviteKey?: string;
+}
+
+export function encodeinviteFriendReq(message: inviteFriendReq): Uint8Array {
   let bb = popByteBuffer();
   _encodeinviteFriendReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodeinviteFriendReq(message, bb) {
+function _encodeinviteFriendReq(message: inviteFriendReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -1114,12 +1197,12 @@ function _encodeinviteFriendReq(message, bb) {
   }
 }
 
-export function decodeinviteFriendReq(binary) {
+export function decodeinviteFriendReq(binary: Uint8Array): inviteFriendReq {
   return _decodeinviteFriendReq(wrapByteBuffer(binary));
 }
 
-function _decodeinviteFriendReq(bb) {
-  let message = {};
+function _decodeinviteFriendReq(bb: ByteBuffer): inviteFriendReq {
+  let message: inviteFriendReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1151,21 +1234,24 @@ function _decodeinviteFriendReq(bb) {
   return message;
 }
 
-export function encodegetEquipInfoReq(message) {
+export interface getEquipInfoReq {
+}
+
+export function encodegetEquipInfoReq(message: getEquipInfoReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetEquipInfoReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetEquipInfoReq(message, bb) {
+function _encodegetEquipInfoReq(message: getEquipInfoReq, bb: ByteBuffer): void {
 }
 
-export function decodegetEquipInfoReq(binary) {
+export function decodegetEquipInfoReq(binary: Uint8Array): getEquipInfoReq {
   return _decodegetEquipInfoReq(wrapByteBuffer(binary));
 }
 
-function _decodegetEquipInfoReq(bb) {
-  let message = {};
+function _decodegetEquipInfoReq(bb: ByteBuffer): getEquipInfoReq {
+  let message: getEquipInfoReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1182,13 +1268,17 @@ function _decodegetEquipInfoReq(bb) {
   return message;
 }
 
-export function encodegetEquipInfoRes(message) {
+export interface getEquipInfoRes {
+  EqiupInfo?: { [key: string]: quipConfig };
+}
+
+export function encodegetEquipInfoRes(message: getEquipInfoRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetEquipInfoRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetEquipInfoRes(message, bb) {
+function _encodegetEquipInfoRes(message: getEquipInfoRes, bb: ByteBuffer): void {
   // optional map<string, quipConfig> EqiupInfo = 1;
   let map$EqiupInfo = message.EqiupInfo;
   if (map$EqiupInfo !== undefined) {
@@ -1211,12 +1301,12 @@ function _encodegetEquipInfoRes(message, bb) {
   }
 }
 
-export function decodegetEquipInfoRes(binary) {
+export function decodegetEquipInfoRes(binary: Uint8Array): getEquipInfoRes {
   return _decodegetEquipInfoRes(wrapByteBuffer(binary));
 }
 
-function _decodegetEquipInfoRes(bb) {
-  let message = {};
+function _decodegetEquipInfoRes(bb: ByteBuffer): getEquipInfoRes {
+  let message: getEquipInfoRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1229,8 +1319,8 @@ function _decodegetEquipInfoRes(bb) {
       case 1: {
         let values = message.EqiupInfo || (message.EqiupInfo = {});
         let outerLimit = pushTemporaryLength(bb);
-        let key;
-        let value;
+        let key: string | undefined;
+        let value: quipConfig | undefined;
         end_of_entry: while (!isAtEnd(bb)) {
           let tag = readVarint32(bb);
           switch (tag >>> 3) {
@@ -1265,21 +1355,24 @@ function _decodegetEquipInfoRes(bb) {
   return message;
 }
 
-export function encodegetSignConfigReq(message) {
+export interface getSignConfigReq {
+}
+
+export function encodegetSignConfigReq(message: getSignConfigReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetSignConfigReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetSignConfigReq(message, bb) {
+function _encodegetSignConfigReq(message: getSignConfigReq, bb: ByteBuffer): void {
 }
 
-export function decodegetSignConfigReq(binary) {
+export function decodegetSignConfigReq(binary: Uint8Array): getSignConfigReq {
   return _decodegetSignConfigReq(wrapByteBuffer(binary));
 }
 
-function _decodegetSignConfigReq(bb) {
-  let message = {};
+function _decodegetSignConfigReq(bb: ByteBuffer): getSignConfigReq {
+  let message: getSignConfigReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1296,13 +1389,17 @@ function _decodegetSignConfigReq(bb) {
   return message;
 }
 
-export function encodegetSignConfigRes(message) {
+export interface getSignConfigRes {
+  signConfig?: signData[];
+}
+
+export function encodegetSignConfigRes(message: getSignConfigRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetSignConfigRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetSignConfigRes(message, bb) {
+function _encodegetSignConfigRes(message: getSignConfigRes, bb: ByteBuffer): void {
   // repeated signData signConfig = 1;
   let array$signConfig = message.signConfig;
   if (array$signConfig !== undefined) {
@@ -1317,12 +1414,12 @@ function _encodegetSignConfigRes(message, bb) {
   }
 }
 
-export function decodegetSignConfigRes(binary) {
+export function decodegetSignConfigRes(binary: Uint8Array): getSignConfigRes {
   return _decodegetSignConfigRes(wrapByteBuffer(binary));
 }
 
-function _decodegetSignConfigRes(bb) {
-  let message = {};
+function _decodegetSignConfigRes(bb: ByteBuffer): getSignConfigRes {
+  let message: getSignConfigRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1348,13 +1445,18 @@ function _decodegetSignConfigRes(bb) {
   return message;
 }
 
-export function encodesignReq(message) {
+export interface signReq {
+  uid: number;
+  isDoubleSign?: boolean;
+}
+
+export function encodesignReq(message: signReq): Uint8Array {
   let bb = popByteBuffer();
   _encodesignReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodesignReq(message, bb) {
+function _encodesignReq(message: signReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -1370,12 +1472,12 @@ function _encodesignReq(message, bb) {
   }
 }
 
-export function decodesignReq(binary) {
+export function decodesignReq(binary: Uint8Array): signReq {
   return _decodesignReq(wrapByteBuffer(binary));
 }
 
-function _decodesignReq(bb) {
-  let message = {};
+function _decodesignReq(bb: ByteBuffer): signReq {
+  let message: signReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1407,13 +1509,17 @@ function _decodesignReq(bb) {
   return message;
 }
 
-export function encodegetInviteReworldConfigReq(message) {
+export interface getInviteReworldConfigReq {
+  uid: number;
+}
+
+export function encodegetInviteReworldConfigReq(message: getInviteReworldConfigReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetInviteReworldConfigReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetInviteReworldConfigReq(message, bb) {
+function _encodegetInviteReworldConfigReq(message: getInviteReworldConfigReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -1422,12 +1528,12 @@ function _encodegetInviteReworldConfigReq(message, bb) {
   }
 }
 
-export function decodegetInviteReworldConfigReq(binary) {
+export function decodegetInviteReworldConfigReq(binary: Uint8Array): getInviteReworldConfigReq {
   return _decodegetInviteReworldConfigReq(wrapByteBuffer(binary));
 }
 
-function _decodegetInviteReworldConfigReq(bb) {
-  let message = {};
+function _decodegetInviteReworldConfigReq(bb: ByteBuffer): getInviteReworldConfigReq {
+  let message: getInviteReworldConfigReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1453,13 +1559,18 @@ function _decodegetInviteReworldConfigReq(bb) {
   return message;
 }
 
-export function encodegetInviteReworldConfigRes(message) {
+export interface getInviteReworldConfigRes {
+  InviteReworldConfig?: InviteReworldData[];
+  player?: playerData[];
+}
+
+export function encodegetInviteReworldConfigRes(message: getInviteReworldConfigRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetInviteReworldConfigRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetInviteReworldConfigRes(message, bb) {
+function _encodegetInviteReworldConfigRes(message: getInviteReworldConfigRes, bb: ByteBuffer): void {
   // repeated InviteReworldData InviteReworldConfig = 1;
   let array$InviteReworldConfig = message.InviteReworldConfig;
   if (array$InviteReworldConfig !== undefined) {
@@ -1487,12 +1598,12 @@ function _encodegetInviteReworldConfigRes(message, bb) {
   }
 }
 
-export function decodegetInviteReworldConfigRes(binary) {
+export function decodegetInviteReworldConfigRes(binary: Uint8Array): getInviteReworldConfigRes {
   return _decodegetInviteReworldConfigRes(wrapByteBuffer(binary));
 }
 
-function _decodegetInviteReworldConfigRes(bb) {
-  let message = {};
+function _decodegetInviteReworldConfigRes(bb: ByteBuffer): getInviteReworldConfigRes {
+  let message: getInviteReworldConfigRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1527,13 +1638,18 @@ function _decodegetInviteReworldConfigRes(bb) {
   return message;
 }
 
-export function encodeInviteReworldReq(message) {
+export interface InviteReworldReq {
+  uid: number;
+  getRewarldIndex: number;
+}
+
+export function encodeInviteReworldReq(message: InviteReworldReq): Uint8Array {
   let bb = popByteBuffer();
   _encodeInviteReworldReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodeInviteReworldReq(message, bb) {
+function _encodeInviteReworldReq(message: InviteReworldReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -1549,12 +1665,12 @@ function _encodeInviteReworldReq(message, bb) {
   }
 }
 
-export function decodeInviteReworldReq(binary) {
+export function decodeInviteReworldReq(binary: Uint8Array): InviteReworldReq {
   return _decodeInviteReworldReq(wrapByteBuffer(binary));
 }
 
-function _decodeInviteReworldReq(bb) {
-  let message = {};
+function _decodeInviteReworldReq(bb: ByteBuffer): InviteReworldReq {
+  let message: InviteReworldReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1589,21 +1705,24 @@ function _decodeInviteReworldReq(bb) {
   return message;
 }
 
-export function encodegetTryPiFuConfigReq(message) {
+export interface getTryPiFuConfigReq {
+}
+
+export function encodegetTryPiFuConfigReq(message: getTryPiFuConfigReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetTryPiFuConfigReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetTryPiFuConfigReq(message, bb) {
+function _encodegetTryPiFuConfigReq(message: getTryPiFuConfigReq, bb: ByteBuffer): void {
 }
 
-export function decodegetTryPiFuConfigReq(binary) {
+export function decodegetTryPiFuConfigReq(binary: Uint8Array): getTryPiFuConfigReq {
   return _decodegetTryPiFuConfigReq(wrapByteBuffer(binary));
 }
 
-function _decodegetTryPiFuConfigReq(bb) {
-  let message = {};
+function _decodegetTryPiFuConfigReq(bb: ByteBuffer): getTryPiFuConfigReq {
+  let message: getTryPiFuConfigReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1620,13 +1739,17 @@ function _decodegetTryPiFuConfigReq(bb) {
   return message;
 }
 
-export function encodegetTryPiFuConfigRes(message) {
+export interface getTryPiFuConfigRes {
+  pifuConfig?: pifuConfigData[];
+}
+
+export function encodegetTryPiFuConfigRes(message: getTryPiFuConfigRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetTryPiFuConfigRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetTryPiFuConfigRes(message, bb) {
+function _encodegetTryPiFuConfigRes(message: getTryPiFuConfigRes, bb: ByteBuffer): void {
   // repeated pifuConfigData pifuConfig = 1;
   let array$pifuConfig = message.pifuConfig;
   if (array$pifuConfig !== undefined) {
@@ -1641,12 +1764,12 @@ function _encodegetTryPiFuConfigRes(message, bb) {
   }
 }
 
-export function decodegetTryPiFuConfigRes(binary) {
+export function decodegetTryPiFuConfigRes(binary: Uint8Array): getTryPiFuConfigRes {
   return _decodegetTryPiFuConfigRes(wrapByteBuffer(binary));
 }
 
-function _decodegetTryPiFuConfigRes(bb) {
-  let message = {};
+function _decodegetTryPiFuConfigRes(bb: ByteBuffer): getTryPiFuConfigRes {
+  let message: getTryPiFuConfigRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1672,13 +1795,18 @@ function _decodegetTryPiFuConfigRes(bb) {
   return message;
 }
 
-export function encodetryPiFuReq(message) {
+export interface tryPiFuReq {
+  uid: number;
+  tryIndex: number;
+}
+
+export function encodetryPiFuReq(message: tryPiFuReq): Uint8Array {
   let bb = popByteBuffer();
   _encodetryPiFuReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodetryPiFuReq(message, bb) {
+function _encodetryPiFuReq(message: tryPiFuReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -1694,12 +1822,12 @@ function _encodetryPiFuReq(message, bb) {
   }
 }
 
-export function decodetryPiFuReq(binary) {
+export function decodetryPiFuReq(binary: Uint8Array): tryPiFuReq {
   return _decodetryPiFuReq(wrapByteBuffer(binary));
 }
 
-function _decodetryPiFuReq(bb) {
-  let message = {};
+function _decodetryPiFuReq(bb: ByteBuffer): tryPiFuReq {
+  let message: tryPiFuReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1734,13 +1862,21 @@ function _decodetryPiFuReq(bb) {
   return message;
 }
 
-export function encodebuyQuipReq(message) {
+export interface buyQuipReq {
+  uid: number;
+  quipId?: number;
+  type: number;
+  lianColor?: string;
+  piFuColor?: string;
+}
+
+export function encodebuyQuipReq(message: buyQuipReq): Uint8Array {
   let bb = popByteBuffer();
   _encodebuyQuipReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodebuyQuipReq(message, bb) {
+function _encodebuyQuipReq(message: buyQuipReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -1777,12 +1913,12 @@ function _encodebuyQuipReq(message, bb) {
   }
 }
 
-export function decodebuyQuipReq(binary) {
+export function decodebuyQuipReq(binary: Uint8Array): buyQuipReq {
   return _decodebuyQuipReq(wrapByteBuffer(binary));
 }
 
-function _decodebuyQuipReq(bb) {
-  let message = {};
+function _decodebuyQuipReq(bb: ByteBuffer): buyQuipReq {
+  let message: buyQuipReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1835,13 +1971,18 @@ function _decodebuyQuipReq(bb) {
   return message;
 }
 
-export function encodegetVipReq(message) {
+export interface getVipReq {
+  uid: number;
+  level: number;
+}
+
+export function encodegetVipReq(message: getVipReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetVipReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetVipReq(message, bb) {
+function _encodegetVipReq(message: getVipReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -1857,12 +1998,12 @@ function _encodegetVipReq(message, bb) {
   }
 }
 
-export function decodegetVipReq(binary) {
+export function decodegetVipReq(binary: Uint8Array): getVipReq {
   return _decodegetVipReq(wrapByteBuffer(binary));
 }
 
-function _decodegetVipReq(bb) {
-  let message = {};
+function _decodegetVipReq(bb: ByteBuffer): getVipReq {
+  let message: getVipReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1897,13 +2038,18 @@ function _decodegetVipReq(bb) {
   return message;
 }
 
-export function encodegetGiftReq(message) {
+export interface getGiftReq {
+  uid: number;
+  selectIndex: number;
+}
+
+export function encodegetGiftReq(message: getGiftReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetGiftReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetGiftReq(message, bb) {
+function _encodegetGiftReq(message: getGiftReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -1919,12 +2065,12 @@ function _encodegetGiftReq(message, bb) {
   }
 }
 
-export function decodegetGiftReq(binary) {
+export function decodegetGiftReq(binary: Uint8Array): getGiftReq {
   return _decodegetGiftReq(wrapByteBuffer(binary));
 }
 
-function _decodegetGiftReq(bb) {
-  let message = {};
+function _decodegetGiftReq(bb: ByteBuffer): getGiftReq {
+  let message: getGiftReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -1959,13 +2105,21 @@ function _decodegetGiftReq(bb) {
   return message;
 }
 
-export function encodegetGiftRes(message) {
+export interface getGiftRes {
+  type: number;
+  quipId?: number;
+  price?: number;
+  payType?: number;
+  selectIndex: number;
+}
+
+export function encodegetGiftRes(message: getGiftRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetGiftRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetGiftRes(message, bb) {
+function _encodegetGiftRes(message: getGiftRes, bb: ByteBuffer): void {
   // required int32 type = 1;
   let $type = message.type;
   if ($type !== undefined) {
@@ -2002,12 +2156,12 @@ function _encodegetGiftRes(message, bb) {
   }
 }
 
-export function decodegetGiftRes(binary) {
+export function decodegetGiftRes(binary: Uint8Array): getGiftRes {
   return _decodegetGiftRes(wrapByteBuffer(binary));
 }
 
-function _decodegetGiftRes(bb) {
-  let message = {};
+function _decodegetGiftRes(bb: ByteBuffer): getGiftRes {
+  let message: getGiftRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -2060,13 +2214,19 @@ function _decodegetGiftRes(bb) {
   return message;
 }
 
-export function encodepushMsg(message) {
+export interface pushMsg {
+  msgText?: string;
+  msgCode?: number;
+  msgExData?: string;
+}
+
+export function encodepushMsg(message: pushMsg): Uint8Array {
   let bb = popByteBuffer();
   _encodepushMsg(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodepushMsg(message, bb) {
+function _encodepushMsg(message: pushMsg, bb: ByteBuffer): void {
   // optional string msgText = 1;
   let $msgText = message.msgText;
   if ($msgText !== undefined) {
@@ -2089,12 +2249,12 @@ function _encodepushMsg(message, bb) {
   }
 }
 
-export function decodepushMsg(binary) {
+export function decodepushMsg(binary: Uint8Array): pushMsg {
   return _decodepushMsg(wrapByteBuffer(binary));
 }
 
-function _decodepushMsg(bb) {
-  let message = {};
+function _decodepushMsg(bb: ByteBuffer): pushMsg {
+  let message: pushMsg = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -2129,13 +2289,17 @@ function _decodepushMsg(bb) {
   return message;
 }
 
-export function encodegetGetGoldTimesReq(message) {
+export interface getGetGoldTimesReq {
+  uid: number;
+}
+
+export function encodegetGetGoldTimesReq(message: getGetGoldTimesReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetGetGoldTimesReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetGetGoldTimesReq(message, bb) {
+function _encodegetGetGoldTimesReq(message: getGetGoldTimesReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -2144,12 +2308,12 @@ function _encodegetGetGoldTimesReq(message, bb) {
   }
 }
 
-export function decodegetGetGoldTimesReq(binary) {
+export function decodegetGetGoldTimesReq(binary: Uint8Array): getGetGoldTimesReq {
   return _decodegetGetGoldTimesReq(wrapByteBuffer(binary));
 }
 
-function _decodegetGetGoldTimesReq(bb) {
-  let message = {};
+function _decodegetGetGoldTimesReq(bb: ByteBuffer): getGetGoldTimesReq {
+  let message: getGetGoldTimesReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -2175,13 +2339,23 @@ function _decodegetGetGoldTimesReq(bb) {
   return message;
 }
 
-export function encodegetGetGoldTimesRes(message) {
+export interface getGetGoldTimesRes {
+  times1: number;
+  times2: number;
+  times3: number;
+  totalTimes1: number;
+  totalTimes2: number;
+  totalTimes3: number;
+  goldCfg?: { [key: string]: goldStruct };
+}
+
+export function encodegetGetGoldTimesRes(message: getGetGoldTimesRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetGetGoldTimesRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetGetGoldTimesRes(message, bb) {
+function _encodegetGetGoldTimesRes(message: getGetGoldTimesRes, bb: ByteBuffer): void {
   // required int32 times1 = 1;
   let $times1 = message.times1;
   if ($times1 !== undefined) {
@@ -2246,12 +2420,12 @@ function _encodegetGetGoldTimesRes(message, bb) {
   }
 }
 
-export function decodegetGetGoldTimesRes(binary) {
+export function decodegetGetGoldTimesRes(binary: Uint8Array): getGetGoldTimesRes {
   return _decodegetGetGoldTimesRes(wrapByteBuffer(binary));
 }
 
-function _decodegetGetGoldTimesRes(bb) {
-  let message = {};
+function _decodegetGetGoldTimesRes(bb: ByteBuffer): getGetGoldTimesRes {
+  let message: getGetGoldTimesRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -2300,8 +2474,8 @@ function _decodegetGetGoldTimesRes(bb) {
       case 7: {
         let values = message.goldCfg || (message.goldCfg = {});
         let outerLimit = pushTemporaryLength(bb);
-        let key;
-        let value;
+        let key: string | undefined;
+        let value: goldStruct | undefined;
         end_of_entry: while (!isAtEnd(bb)) {
           let tag = readVarint32(bb);
           switch (tag >>> 3) {
@@ -2354,13 +2528,18 @@ function _decodegetGetGoldTimesRes(bb) {
   return message;
 }
 
-export function encodegetGoldReq(message) {
+export interface getGoldReq {
+  uid: number;
+  type: number;
+}
+
+export function encodegetGoldReq(message: getGoldReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetGoldReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetGoldReq(message, bb) {
+function _encodegetGoldReq(message: getGoldReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -2376,12 +2555,12 @@ function _encodegetGoldReq(message, bb) {
   }
 }
 
-export function decodegetGoldReq(binary) {
+export function decodegetGoldReq(binary: Uint8Array): getGoldReq {
   return _decodegetGoldReq(wrapByteBuffer(binary));
 }
 
-function _decodegetGoldReq(bb) {
-  let message = {};
+function _decodegetGoldReq(bb: ByteBuffer): getGoldReq {
+  let message: getGoldReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -2416,13 +2595,17 @@ function _decodegetGoldReq(bb) {
   return message;
 }
 
-export function encodegetShareRecordReq(message) {
+export interface getShareRecordReq {
+  uid: number;
+}
+
+export function encodegetShareRecordReq(message: getShareRecordReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetShareRecordReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetShareRecordReq(message, bb) {
+function _encodegetShareRecordReq(message: getShareRecordReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -2431,12 +2614,12 @@ function _encodegetShareRecordReq(message, bb) {
   }
 }
 
-export function decodegetShareRecordReq(binary) {
+export function decodegetShareRecordReq(binary: Uint8Array): getShareRecordReq {
   return _decodegetShareRecordReq(wrapByteBuffer(binary));
 }
 
-function _decodegetShareRecordReq(bb) {
-  let message = {};
+function _decodegetShareRecordReq(bb: ByteBuffer): getShareRecordReq {
+  let message: getShareRecordReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -2462,13 +2645,18 @@ function _decodegetShareRecordReq(bb) {
   return message;
 }
 
-export function encodeguangBoReq(message) {
+export interface guangBoReq {
+  uid: number;
+  msg: string;
+}
+
+export function encodeguangBoReq(message: guangBoReq): Uint8Array {
   let bb = popByteBuffer();
   _encodeguangBoReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodeguangBoReq(message, bb) {
+function _encodeguangBoReq(message: guangBoReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -2484,12 +2672,12 @@ function _encodeguangBoReq(message, bb) {
   }
 }
 
-export function decodeguangBoReq(binary) {
+export function decodeguangBoReq(binary: Uint8Array): guangBoReq {
   return _decodeguangBoReq(wrapByteBuffer(binary));
 }
 
-function _decodeguangBoReq(bb) {
-  let message = {};
+function _decodeguangBoReq(bb: ByteBuffer): guangBoReq {
+  let message: guangBoReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -2524,13 +2712,18 @@ function _decodeguangBoReq(bb) {
   return message;
 }
 
-export function encodeguangBoRes(message) {
+export interface guangBoRes {
+  nickName: string;
+  msg: string;
+}
+
+export function encodeguangBoRes(message: guangBoRes): Uint8Array {
   let bb = popByteBuffer();
   _encodeguangBoRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodeguangBoRes(message, bb) {
+function _encodeguangBoRes(message: guangBoRes, bb: ByteBuffer): void {
   // required string nickName = 1;
   let $nickName = message.nickName;
   if ($nickName !== undefined) {
@@ -2546,12 +2739,12 @@ function _encodeguangBoRes(message, bb) {
   }
 }
 
-export function decodeguangBoRes(binary) {
+export function decodeguangBoRes(binary: Uint8Array): guangBoRes {
   return _decodeguangBoRes(wrapByteBuffer(binary));
 }
 
-function _decodeguangBoRes(bb) {
-  let message = {};
+function _decodeguangBoRes(bb: ByteBuffer): guangBoRes {
+  let message: guangBoRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -2586,13 +2779,17 @@ function _decodeguangBoRes(bb) {
   return message;
 }
 
-export function encodegetJiFenRoomPlayerReq(message) {
+export interface getJiFenRoomPlayerReq {
+  score: number;
+}
+
+export function encodegetJiFenRoomPlayerReq(message: getJiFenRoomPlayerReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetJiFenRoomPlayerReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetJiFenRoomPlayerReq(message, bb) {
+function _encodegetJiFenRoomPlayerReq(message: getJiFenRoomPlayerReq, bb: ByteBuffer): void {
   // required int32 score = 1;
   let $score = message.score;
   if ($score !== undefined) {
@@ -2601,12 +2798,12 @@ function _encodegetJiFenRoomPlayerReq(message, bb) {
   }
 }
 
-export function decodegetJiFenRoomPlayerReq(binary) {
+export function decodegetJiFenRoomPlayerReq(binary: Uint8Array): getJiFenRoomPlayerReq {
   return _decodegetJiFenRoomPlayerReq(wrapByteBuffer(binary));
 }
 
-function _decodegetJiFenRoomPlayerReq(bb) {
-  let message = {};
+function _decodegetJiFenRoomPlayerReq(bb: ByteBuffer): getJiFenRoomPlayerReq {
+  let message: getJiFenRoomPlayerReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -2632,13 +2829,26 @@ function _decodegetJiFenRoomPlayerReq(bb) {
   return message;
 }
 
-export function encodegetJiFenRoomPlayerRes(message) {
+export interface getJiFenRoomPlayerRes {
+  nickName: string;
+  avatarUrl: string;
+  piFuColor: string;
+  lianColor: string;
+  nowQuipId?: { [key: string]: quipData };
+  haveQuipId?: { [key: string]: quipData };
+  hitBallRandom: number;
+  kouqiuRandom: number;
+  score: number;
+  sayWrolds?: string;
+}
+
+export function encodegetJiFenRoomPlayerRes(message: getJiFenRoomPlayerRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetJiFenRoomPlayerRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetJiFenRoomPlayerRes(message, bb) {
+function _encodegetJiFenRoomPlayerRes(message: getJiFenRoomPlayerRes, bb: ByteBuffer): void {
   // required string nickName = 1;
   let $nickName = message.nickName;
   if ($nickName !== undefined) {
@@ -2738,12 +2948,12 @@ function _encodegetJiFenRoomPlayerRes(message, bb) {
   }
 }
 
-export function decodegetJiFenRoomPlayerRes(binary) {
+export function decodegetJiFenRoomPlayerRes(binary: Uint8Array): getJiFenRoomPlayerRes {
   return _decodegetJiFenRoomPlayerRes(wrapByteBuffer(binary));
 }
 
-function _decodegetJiFenRoomPlayerRes(bb) {
-  let message = {};
+function _decodegetJiFenRoomPlayerRes(bb: ByteBuffer): getJiFenRoomPlayerRes {
+  let message: getJiFenRoomPlayerRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -2780,8 +2990,8 @@ function _decodegetJiFenRoomPlayerRes(bb) {
       case 5: {
         let values = message.nowQuipId || (message.nowQuipId = {});
         let outerLimit = pushTemporaryLength(bb);
-        let key;
-        let value;
+        let key: string | undefined;
+        let value: quipData | undefined;
         end_of_entry: while (!isAtEnd(bb)) {
           let tag = readVarint32(bb);
           switch (tag >>> 3) {
@@ -2812,8 +3022,8 @@ function _decodegetJiFenRoomPlayerRes(bb) {
       case 6: {
         let values = message.haveQuipId || (message.haveQuipId = {});
         let outerLimit = pushTemporaryLength(bb);
-        let key;
-        let value;
+        let key: string | undefined;
+        let value: quipData | undefined;
         end_of_entry: while (!isAtEnd(bb)) {
           let tag = readVarint32(bb);
           switch (tag >>> 3) {
@@ -2893,13 +3103,17 @@ function _decodegetJiFenRoomPlayerRes(bb) {
   return message;
 }
 
-export function encodegetTiaoZhanRoomPlayerReq(message) {
+export interface getTiaoZhanRoomPlayerReq {
+  score: number;
+}
+
+export function encodegetTiaoZhanRoomPlayerReq(message: getTiaoZhanRoomPlayerReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetTiaoZhanRoomPlayerReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetTiaoZhanRoomPlayerReq(message, bb) {
+function _encodegetTiaoZhanRoomPlayerReq(message: getTiaoZhanRoomPlayerReq, bb: ByteBuffer): void {
   // required int32 score = 1;
   let $score = message.score;
   if ($score !== undefined) {
@@ -2908,12 +3122,12 @@ function _encodegetTiaoZhanRoomPlayerReq(message, bb) {
   }
 }
 
-export function decodegetTiaoZhanRoomPlayerReq(binary) {
+export function decodegetTiaoZhanRoomPlayerReq(binary: Uint8Array): getTiaoZhanRoomPlayerReq {
   return _decodegetTiaoZhanRoomPlayerReq(wrapByteBuffer(binary));
 }
 
-function _decodegetTiaoZhanRoomPlayerReq(bb) {
-  let message = {};
+function _decodegetTiaoZhanRoomPlayerReq(bb: ByteBuffer): getTiaoZhanRoomPlayerReq {
+  let message: getTiaoZhanRoomPlayerReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -2939,13 +3153,26 @@ function _decodegetTiaoZhanRoomPlayerReq(bb) {
   return message;
 }
 
-export function encodegetTiaoZhanRoomPlayerRes(message) {
+export interface getTiaoZhanRoomPlayerRes {
+  nickName: string;
+  avatarUrl: string;
+  piFuColor: string;
+  lianColor: string;
+  nowQuipId?: { [key: string]: quipData };
+  haveQuipId?: { [key: string]: quipData };
+  hitBallRandom: number;
+  kouqiuRandom: number;
+  score: number;
+  sayWrolds?: string;
+}
+
+export function encodegetTiaoZhanRoomPlayerRes(message: getTiaoZhanRoomPlayerRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetTiaoZhanRoomPlayerRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetTiaoZhanRoomPlayerRes(message, bb) {
+function _encodegetTiaoZhanRoomPlayerRes(message: getTiaoZhanRoomPlayerRes, bb: ByteBuffer): void {
   // required string nickName = 1;
   let $nickName = message.nickName;
   if ($nickName !== undefined) {
@@ -3045,12 +3272,12 @@ function _encodegetTiaoZhanRoomPlayerRes(message, bb) {
   }
 }
 
-export function decodegetTiaoZhanRoomPlayerRes(binary) {
+export function decodegetTiaoZhanRoomPlayerRes(binary: Uint8Array): getTiaoZhanRoomPlayerRes {
   return _decodegetTiaoZhanRoomPlayerRes(wrapByteBuffer(binary));
 }
 
-function _decodegetTiaoZhanRoomPlayerRes(bb) {
-  let message = {};
+function _decodegetTiaoZhanRoomPlayerRes(bb: ByteBuffer): getTiaoZhanRoomPlayerRes {
+  let message: getTiaoZhanRoomPlayerRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -3087,8 +3314,8 @@ function _decodegetTiaoZhanRoomPlayerRes(bb) {
       case 5: {
         let values = message.nowQuipId || (message.nowQuipId = {});
         let outerLimit = pushTemporaryLength(bb);
-        let key;
-        let value;
+        let key: string | undefined;
+        let value: quipData | undefined;
         end_of_entry: while (!isAtEnd(bb)) {
           let tag = readVarint32(bb);
           switch (tag >>> 3) {
@@ -3119,8 +3346,8 @@ function _decodegetTiaoZhanRoomPlayerRes(bb) {
       case 6: {
         let values = message.haveQuipId || (message.haveQuipId = {});
         let outerLimit = pushTemporaryLength(bb);
-        let key;
-        let value;
+        let key: string | undefined;
+        let value: quipData | undefined;
         end_of_entry: while (!isAtEnd(bb)) {
           let tag = readVarint32(bb);
           switch (tag >>> 3) {
@@ -3200,13 +3427,18 @@ function _decodegetTiaoZhanRoomPlayerRes(bb) {
   return message;
 }
 
-export function encodegetJiFenRoomEndReq(message) {
+export interface getJiFenRoomEndReq {
+  uid: number;
+  isWin: boolean;
+}
+
+export function encodegetJiFenRoomEndReq(message: getJiFenRoomEndReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetJiFenRoomEndReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetJiFenRoomEndReq(message, bb) {
+function _encodegetJiFenRoomEndReq(message: getJiFenRoomEndReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -3222,12 +3454,12 @@ function _encodegetJiFenRoomEndReq(message, bb) {
   }
 }
 
-export function decodegetJiFenRoomEndReq(binary) {
+export function decodegetJiFenRoomEndReq(binary: Uint8Array): getJiFenRoomEndReq {
   return _decodegetJiFenRoomEndReq(wrapByteBuffer(binary));
 }
 
-function _decodegetJiFenRoomEndReq(bb) {
-  let message = {};
+function _decodegetJiFenRoomEndReq(bb: ByteBuffer): getJiFenRoomEndReq {
+  let message: getJiFenRoomEndReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -3262,13 +3494,18 @@ function _decodegetJiFenRoomEndReq(bb) {
   return message;
 }
 
-export function encodegetJiFenRoomEndRes(message) {
+export interface getJiFenRoomEndRes {
+  scoreOffSet: number;
+  score: number;
+}
+
+export function encodegetJiFenRoomEndRes(message: getJiFenRoomEndRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetJiFenRoomEndRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetJiFenRoomEndRes(message, bb) {
+function _encodegetJiFenRoomEndRes(message: getJiFenRoomEndRes, bb: ByteBuffer): void {
   // required int32 scoreOffSet = 1;
   let $scoreOffSet = message.scoreOffSet;
   if ($scoreOffSet !== undefined) {
@@ -3284,12 +3521,12 @@ function _encodegetJiFenRoomEndRes(message, bb) {
   }
 }
 
-export function decodegetJiFenRoomEndRes(binary) {
+export function decodegetJiFenRoomEndRes(binary: Uint8Array): getJiFenRoomEndRes {
   return _decodegetJiFenRoomEndRes(wrapByteBuffer(binary));
 }
 
-function _decodegetJiFenRoomEndRes(bb) {
-  let message = {};
+function _decodegetJiFenRoomEndRes(bb: ByteBuffer): getJiFenRoomEndRes {
+  let message: getJiFenRoomEndRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -3324,13 +3561,18 @@ function _decodegetJiFenRoomEndRes(bb) {
   return message;
 }
 
-export function encodegetTiaoZhanRoomEndReq(message) {
+export interface getTiaoZhanRoomEndReq {
+  uid: number;
+  score: number;
+}
+
+export function encodegetTiaoZhanRoomEndReq(message: getTiaoZhanRoomEndReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetTiaoZhanRoomEndReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetTiaoZhanRoomEndReq(message, bb) {
+function _encodegetTiaoZhanRoomEndReq(message: getTiaoZhanRoomEndReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -3346,12 +3588,12 @@ function _encodegetTiaoZhanRoomEndReq(message, bb) {
   }
 }
 
-export function decodegetTiaoZhanRoomEndReq(binary) {
+export function decodegetTiaoZhanRoomEndReq(binary: Uint8Array): getTiaoZhanRoomEndReq {
   return _decodegetTiaoZhanRoomEndReq(wrapByteBuffer(binary));
 }
 
-function _decodegetTiaoZhanRoomEndReq(bb) {
-  let message = {};
+function _decodegetTiaoZhanRoomEndReq(bb: ByteBuffer): getTiaoZhanRoomEndReq {
+  let message: getTiaoZhanRoomEndReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -3386,13 +3628,18 @@ function _decodegetTiaoZhanRoomEndReq(bb) {
   return message;
 }
 
-export function encodegetTiaoZhanRoomEndRes(message) {
+export interface getTiaoZhanRoomEndRes {
+  scoreOffSet: number;
+  score: number;
+}
+
+export function encodegetTiaoZhanRoomEndRes(message: getTiaoZhanRoomEndRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetTiaoZhanRoomEndRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetTiaoZhanRoomEndRes(message, bb) {
+function _encodegetTiaoZhanRoomEndRes(message: getTiaoZhanRoomEndRes, bb: ByteBuffer): void {
   // required int32 scoreOffSet = 1;
   let $scoreOffSet = message.scoreOffSet;
   if ($scoreOffSet !== undefined) {
@@ -3408,12 +3655,12 @@ function _encodegetTiaoZhanRoomEndRes(message, bb) {
   }
 }
 
-export function decodegetTiaoZhanRoomEndRes(binary) {
+export function decodegetTiaoZhanRoomEndRes(binary: Uint8Array): getTiaoZhanRoomEndRes {
   return _decodegetTiaoZhanRoomEndRes(wrapByteBuffer(binary));
 }
 
-function _decodegetTiaoZhanRoomEndRes(bb) {
-  let message = {};
+function _decodegetTiaoZhanRoomEndRes(bb: ByteBuffer): getTiaoZhanRoomEndRes {
+  let message: getTiaoZhanRoomEndRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -3448,13 +3695,18 @@ function _decodegetTiaoZhanRoomEndRes(bb) {
   return message;
 }
 
-export function encoderoboteMatchRoomDismissReq(message) {
+export interface roboteMatchRoomDismissReq {
+  uid: number;
+  rank: number;
+}
+
+export function encoderoboteMatchRoomDismissReq(message: roboteMatchRoomDismissReq): Uint8Array {
   let bb = popByteBuffer();
   _encoderoboteMatchRoomDismissReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encoderoboteMatchRoomDismissReq(message, bb) {
+function _encoderoboteMatchRoomDismissReq(message: roboteMatchRoomDismissReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -3470,12 +3722,12 @@ function _encoderoboteMatchRoomDismissReq(message, bb) {
   }
 }
 
-export function decoderoboteMatchRoomDismissReq(binary) {
+export function decoderoboteMatchRoomDismissReq(binary: Uint8Array): roboteMatchRoomDismissReq {
   return _decoderoboteMatchRoomDismissReq(wrapByteBuffer(binary));
 }
 
-function _decoderoboteMatchRoomDismissReq(bb) {
-  let message = {};
+function _decoderoboteMatchRoomDismissReq(bb: ByteBuffer): roboteMatchRoomDismissReq {
+  let message: roboteMatchRoomDismissReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -3510,13 +3762,17 @@ function _decoderoboteMatchRoomDismissReq(bb) {
   return message;
 }
 
-export function encodegetRankDataReq(message) {
+export interface getRankDataReq {
+  type: string;
+}
+
+export function encodegetRankDataReq(message: getRankDataReq): Uint8Array {
   let bb = popByteBuffer();
   _encodegetRankDataReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetRankDataReq(message, bb) {
+function _encodegetRankDataReq(message: getRankDataReq, bb: ByteBuffer): void {
   // required string type = 1;
   let $type = message.type;
   if ($type !== undefined) {
@@ -3525,12 +3781,12 @@ function _encodegetRankDataReq(message, bb) {
   }
 }
 
-export function decodegetRankDataReq(binary) {
+export function decodegetRankDataReq(binary: Uint8Array): getRankDataReq {
   return _decodegetRankDataReq(wrapByteBuffer(binary));
 }
 
-function _decodegetRankDataReq(bb) {
-  let message = {};
+function _decodegetRankDataReq(bb: ByteBuffer): getRankDataReq {
+  let message: getRankDataReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -3556,13 +3812,18 @@ function _decodegetRankDataReq(bb) {
   return message;
 }
 
-export function encodegetRankDataRes(message) {
+export interface getRankDataRes {
+  type: string;
+  data?: playerData[];
+}
+
+export function encodegetRankDataRes(message: getRankDataRes): Uint8Array {
   let bb = popByteBuffer();
   _encodegetRankDataRes(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodegetRankDataRes(message, bb) {
+function _encodegetRankDataRes(message: getRankDataRes, bb: ByteBuffer): void {
   // required string type = 1;
   let $type = message.type;
   if ($type !== undefined) {
@@ -3584,12 +3845,12 @@ function _encodegetRankDataRes(message, bb) {
   }
 }
 
-export function decodegetRankDataRes(binary) {
+export function decodegetRankDataRes(binary: Uint8Array): getRankDataRes {
   return _decodegetRankDataRes(wrapByteBuffer(binary));
 }
 
-function _decodegetRankDataRes(bb) {
-  let message = {};
+function _decodegetRankDataRes(bb: ByteBuffer): getRankDataRes {
+  let message: getRankDataRes = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -3624,13 +3885,24 @@ function _decodegetRankDataRes(bb) {
   return message;
 }
 
-export function encodeemitPlayerReq(message) {
+export interface emitPlayerReq {
+  uid: number;
+  openId: string;
+  nickName?: string;
+  avatarUrl?: string;
+  gender?: number;
+  city?: string;
+  country?: string;
+  province?: string;
+}
+
+export function encodeemitPlayerReq(message: emitPlayerReq): Uint8Array {
   let bb = popByteBuffer();
   _encodeemitPlayerReq(message, bb);
   return toUint8Array(bb);
 }
 
-function _encodeemitPlayerReq(message, bb) {
+function _encodeemitPlayerReq(message: emitPlayerReq, bb: ByteBuffer): void {
   // required int32 uid = 1;
   let $uid = message.uid;
   if ($uid !== undefined) {
@@ -3688,12 +3960,12 @@ function _encodeemitPlayerReq(message, bb) {
   }
 }
 
-export function decodeemitPlayerReq(binary) {
+export function decodeemitPlayerReq(binary: Uint8Array): emitPlayerReq {
   return _decodeemitPlayerReq(wrapByteBuffer(binary));
 }
 
-function _decodeemitPlayerReq(bb) {
-  let message = {};
+function _decodeemitPlayerReq(bb: ByteBuffer): emitPlayerReq {
+  let message: emitPlayerReq = {} as any;
 
   end_of_message: while (!isAtEnd(bb)) {
     let tag = readVarint32(bb);
@@ -3764,14 +4036,26 @@ function _decodeemitPlayerReq(bb) {
   return message;
 }
 
-function pushTemporaryLength(bb) {
+export interface Long {
+  low: number;
+  high: number;
+  unsigned: boolean;
+}
+
+interface ByteBuffer {
+  bytes: Uint8Array;
+  offset: number;
+  limit: number;
+}
+
+function pushTemporaryLength(bb: ByteBuffer): number {
   let length = readVarint32(bb);
   let limit = bb.limit;
   bb.limit = bb.offset + length;
   return limit;
 }
 
-function skipUnknownField(bb, type) {
+function skipUnknownField(bb: ByteBuffer, type: number): void {
   switch (type) {
     case 0: while (readByte(bb) & 0x80) { } break;
     case 2: skip(bb, readVarint32(bb)); break;
@@ -3781,7 +4065,7 @@ function skipUnknownField(bb, type) {
   }
 }
 
-function stringToLong(value) {
+function stringToLong(value: string): Long {
   return {
     low: value.charCodeAt(0) | (value.charCodeAt(1) << 16),
     high: value.charCodeAt(2) | (value.charCodeAt(3) << 16),
@@ -3789,7 +4073,7 @@ function stringToLong(value) {
   };
 }
 
-function longToString(value) {
+function longToString(value: Long): string {
   let low = value.low;
   let high = value.high;
   return String.fromCharCode(
@@ -3808,7 +4092,7 @@ let f32_u8 = new Uint8Array(f32.buffer);
 let f64 = new Float64Array(1);
 let f64_u8 = new Uint8Array(f64.buffer);
 
-function intToLong(value) {
+function intToLong(value: number): Long {
   value |= 0;
   return {
     low: value,
@@ -3817,41 +4101,41 @@ function intToLong(value) {
   };
 }
 
-let bbStack = [];
+let bbStack: ByteBuffer[] = [];
 
-function popByteBuffer() {
+function popByteBuffer(): ByteBuffer {
   const bb = bbStack.pop();
   if (!bb) return { bytes: new Uint8Array(64), offset: 0, limit: 0 };
   bb.offset = bb.limit = 0;
   return bb;
 }
 
-function pushByteBuffer(bb) {
+function pushByteBuffer(bb: ByteBuffer): void {
   bbStack.push(bb);
 }
 
-function wrapByteBuffer(bytes) {
+function wrapByteBuffer(bytes: Uint8Array): ByteBuffer {
   return { bytes, offset: 0, limit: bytes.length };
 }
 
-function toUint8Array(bb) {
+function toUint8Array(bb: ByteBuffer): Uint8Array {
   let bytes = bb.bytes;
   let limit = bb.limit;
   return bytes.length === limit ? bytes : bytes.subarray(0, limit);
 }
 
-function skip(bb, offset) {
+function skip(bb: ByteBuffer, offset: number): void {
   if (bb.offset + offset > bb.limit) {
     throw new Error('Skip past limit');
   }
   bb.offset += offset;
 }
 
-function isAtEnd(bb) {
+function isAtEnd(bb: ByteBuffer): boolean {
   return bb.offset >= bb.limit;
 }
 
-function grow(bb, count) {
+function grow(bb: ByteBuffer, count: number): number {
   let bytes = bb.bytes;
   let offset = bb.offset;
   let limit = bb.limit;
@@ -3868,7 +4152,7 @@ function grow(bb, count) {
   return offset;
 }
 
-function advance(bb, count) {
+function advance(bb: ByteBuffer, count: number): number {
   let offset = bb.offset;
   if (offset + count > bb.limit) {
     throw new Error('Read past limit');
@@ -3877,17 +4161,17 @@ function advance(bb, count) {
   return offset;
 }
 
-function readBytes(bb, count) {
+function readBytes(bb: ByteBuffer, count: number): Uint8Array {
   let offset = advance(bb, count);
   return bb.bytes.subarray(offset, offset + count);
 }
 
-function writeBytes(bb, buffer) {
+function writeBytes(bb: ByteBuffer, buffer: Uint8Array): void {
   let offset = grow(bb, buffer.length);
   bb.bytes.set(buffer, offset);
 }
 
-function readString(bb, count) {
+function readString(bb: ByteBuffer, count: number): string {
   // Sadly a hand-coded UTF8 decoder is much faster than subarray+TextDecoder in V8
   let offset = advance(bb, count);
   let fromCharCode = String.fromCharCode;
@@ -3896,7 +4180,7 @@ function readString(bb, count) {
   let text = '';
 
   for (let i = 0; i < count; i++) {
-    let c1 = bytes[i + offset], c2, c3, c4, c;
+    let c1 = bytes[i + offset], c2: number, c3: number, c4: number, c: number;
 
     // 1 byte
     if ((c1 & 0x80) === 0) {
@@ -3964,7 +4248,7 @@ function readString(bb, count) {
   return text;
 }
 
-function writeString(bb, text) {
+function writeString(bb: ByteBuffer, text: string): void {
   // Sadly a hand-coded UTF8 encoder is much faster than TextEncoder+set in V8
   let n = text.length;
   let byteCount = 0;
@@ -4007,7 +4291,7 @@ function writeString(bb, text) {
   }
 }
 
-function writeByteBuffer(bb, buffer) {
+function writeByteBuffer(bb: ByteBuffer, buffer: ByteBuffer): void {
   let offset = grow(bb, buffer.limit);
   let from = bb.bytes;
   let to = buffer.bytes;
@@ -4018,16 +4302,16 @@ function writeByteBuffer(bb, buffer) {
   }
 }
 
-function readByte(bb) {
+function readByte(bb: ByteBuffer): number {
   return bb.bytes[advance(bb, 1)];
 }
 
-function writeByte(bb, value) {
+function writeByte(bb: ByteBuffer, value: number): void {
   let offset = grow(bb, 1);
   bb.bytes[offset] = value;
 }
 
-function readFloat(bb) {
+function readFloat(bb: ByteBuffer): number {
   let offset = advance(bb, 4);
   let bytes = bb.bytes;
 
@@ -4039,7 +4323,7 @@ function readFloat(bb) {
   return f32[0];
 }
 
-function writeFloat(bb, value) {
+function writeFloat(bb: ByteBuffer, value: number): void {
   let offset = grow(bb, 4);
   let bytes = bb.bytes;
   f32[0] = value;
@@ -4051,7 +4335,7 @@ function writeFloat(bb, value) {
   bytes[offset++] = f32_u8[3];
 }
 
-function readDouble(bb) {
+function readDouble(bb: ByteBuffer): number {
   let offset = advance(bb, 8);
   let bytes = bb.bytes;
 
@@ -4067,7 +4351,7 @@ function readDouble(bb) {
   return f64[0];
 }
 
-function writeDouble(bb, value) {
+function writeDouble(bb: ByteBuffer, value: number): void {
   let offset = grow(bb, 8);
   let bytes = bb.bytes;
   f64[0] = value;
@@ -4083,7 +4367,7 @@ function writeDouble(bb, value) {
   bytes[offset++] = f64_u8[7];
 }
 
-function readInt32(bb) {
+function readInt32(bb: ByteBuffer): number {
   let offset = advance(bb, 4);
   let bytes = bb.bytes;
   return (
@@ -4094,7 +4378,7 @@ function readInt32(bb) {
   );
 }
 
-function writeInt32(bb, value) {
+function writeInt32(bb: ByteBuffer, value: number): void {
   let offset = grow(bb, 4);
   let bytes = bb.bytes;
   bytes[offset] = value;
@@ -4103,7 +4387,7 @@ function writeInt32(bb, value) {
   bytes[offset + 3] = value >> 24;
 }
 
-function readInt64(bb, unsigned) {
+function readInt64(bb: ByteBuffer, unsigned: boolean): Long {
   return {
     low: readInt32(bb),
     high: readInt32(bb),
@@ -4111,15 +4395,15 @@ function readInt64(bb, unsigned) {
   };
 }
 
-function writeInt64(bb, value) {
+function writeInt64(bb: ByteBuffer, value: Long): void {
   writeInt32(bb, value.low);
   writeInt32(bb, value.high);
 }
 
-function readVarint32(bb) {
+function readVarint32(bb: ByteBuffer): number {
   let c = 0;
   let value = 0;
-  let b;
+  let b: number;
   do {
     b = readByte(bb);
     if (c < 32) value |= (b & 0x7F) << c;
@@ -4128,7 +4412,7 @@ function readVarint32(bb) {
   return value;
 }
 
-function writeVarint32(bb, value) {
+function writeVarint32(bb: ByteBuffer, value: number): void {
   value >>>= 0;
   while (value >= 0x80) {
     writeByte(bb, (value & 0x7f) | 0x80);
@@ -4137,11 +4421,11 @@ function writeVarint32(bb, value) {
   writeByte(bb, value);
 }
 
-function readVarint64(bb, unsigned) {
+function readVarint64(bb: ByteBuffer, unsigned: boolean): Long {
   let part0 = 0;
   let part1 = 0;
   let part2 = 0;
-  let b;
+  let b: number;
 
   b = readByte(bb); part0 = (b & 0x7F); if (b & 0x80) {
     b = readByte(bb); part0 |= (b & 0x7F) << 7; if (b & 0x80) {
@@ -4172,7 +4456,7 @@ function readVarint64(bb, unsigned) {
   };
 }
 
-function writeVarint64(bb, value) {
+function writeVarint64(bb: ByteBuffer, value: Long): void {
   let part0 = value.low >>> 0;
   let part1 = ((value.low >>> 28) | (value.high << 4)) >>> 0;
   let part2 = value.high >>> 24;
@@ -4206,19 +4490,19 @@ function writeVarint64(bb, value) {
   }
 }
 
-function readVarint32ZigZag(bb) {
+function readVarint32ZigZag(bb: ByteBuffer): number {
   let value = readVarint32(bb);
 
   // ref: src/google/protobuf/wire_format_lite.h
   return (value >>> 1) ^ -(value & 1);
 }
 
-function writeVarint32ZigZag(bb, value) {
+function writeVarint32ZigZag(bb: ByteBuffer, value: number): void {
   // ref: src/google/protobuf/wire_format_lite.h
   writeVarint32(bb, (value << 1) ^ (value >> 31));
 }
 
-function readVarint64ZigZag(bb) {
+function readVarint64ZigZag(bb: ByteBuffer): Long {
   let value = readVarint64(bb, /* unsigned */ false);
   let low = value.low;
   let high = value.high;
@@ -4232,7 +4516,7 @@ function readVarint64ZigZag(bb) {
   };
 }
 
-function writeVarint64ZigZag(bb, value) {
+function writeVarint64ZigZag(bb: ByteBuffer, value: Long): void {
   let low = value.low;
   let high = value.high;
   let flip = high >> 31;
