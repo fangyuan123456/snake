@@ -2,7 +2,7 @@
 export const enum serverType {
     master = "master",
     login = "login",
-    connector = "connector",
+    centor = "centor",
     info = "info",
     map = "map",
 }

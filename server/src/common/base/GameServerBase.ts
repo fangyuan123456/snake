@@ -22,10 +22,11 @@ export class GameServerBase{
     protoManger:ProtoManager
     constructor(app:Application){
         this.app = app;
-        game = this;
+        globalThis.game = this;
         this.logMgr = LogManager.getInstance();
         this.utilsMgr = UtilsManager.getInstance();
         this.protoManger = ProtoManager.getInstance();
+        this.uncaughtException();
         this.initCupUsage();
         this.setConfig();
         this.app.start();
@@ -93,7 +94,10 @@ export class GameServerBase{
     onUserLeave(){
 
     }
+    uncaughtException(){
+        process.on("uncaughtException", function (err: any) {
+            game.logMgr.error(err)
+        });
+    }
+
 }
-process.on("uncaughtException", function (err: any) {
-    game.logMgr.error(err)
-});

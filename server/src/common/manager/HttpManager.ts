@@ -21,14 +21,14 @@ export class HttpManager extends SingleBase{
                 }
                 let name = path.basename(filename, '.js');
                 let handler = require(path.join(moduleDir, filename));
-                if (handler) {
-                    this.moudles[name] = new handler();
+                if (handler.default) {
+                    this.moudles[name] = new handler.default();
                 }
             });
         }
     }
     createHttpServer(){
-        app.all('/users', (req: Request, res: Response,next:NextFunction) => {
+        app.all('*', (req: Request, res: Response,next:NextFunction) => {
             res.header('Access-Control-Allow-Origin', '*');
             res.header('Access-Control-Allow-Headers', 'Content-Type');
             res.header('Access-Control-Allow-Methods', '*');
@@ -36,7 +36,7 @@ export class HttpManager extends SingleBase{
             next();
         });
         app.get('/img',this.OnGetImageHander.bind(this))
-        app.post("*",this.OnGetDataHander.bind(this));
+        app.post("/data",this.OnGetDataHander.bind(this));
         app.listen(game.app.serverInfo.HttpPort, function () {
             console.log("应用实例，访问地址为 http://%s:%s", game.app.serverInfo.host, game.app.serverInfo.HttpPort)
         })

@@ -32,9 +32,9 @@ export abstract class PlatformBase extends SingleBase{
     getLoadPercentCfg(){
         return this.loadOrderCfg;
     }
-    sendHttpRequest(dataStr:string,callBack:(callDataStr:any)=>void,failCallBack:()=>void){
+    sendHttpRequest(data:any,callBack:(callDataStr:any)=>void,failCallBack:()=>void){
         var xhr = new XMLHttpRequest();
-        xhr.open("POST",ServerCfg.httpUrl+"/data");
+        xhr.open("POST",data.url);
         xhr.setRequestHeader("Content-Type","text/plain;charset=UTF-8");
         xhr.responseType="json";
         xhr.onreadystatechange = function () {
@@ -54,7 +54,11 @@ export abstract class PlatformBase extends SingleBase{
         xhr.onerror = function(){
             failCallBack();
         }
-        xhr.send(dataStr);
+        let sendData = {
+            msgHead:data.msgHead,
+            msgData:data.msgData
+        }
+        xhr.send(JSON.stringify(sendData));
     }
     createSocket(ip:string,binaryType:BinaryType="arraybuffer"){
         var socketTarget = new WebSocket(ip);

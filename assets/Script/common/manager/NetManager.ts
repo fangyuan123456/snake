@@ -1,5 +1,6 @@
 import { SingleBase } from "../base/SingleBase";
 import { SocketBase } from "../base/SocketBase";
+import { ServerCfg } from "../configs/ServerCfg";
 export interface SocketMsgStruct{
     msgHead:string,
     msgData:any
@@ -8,12 +9,16 @@ export class NetManager extends SingleBase{
     showLoadTimes:number = 0
     socketMap:{[key:string]:SocketBase} = {}
     sendHttpRequest(data:any,className:string,_callBack:(data:any)=>void,_fileCallback?:()=>void,retryTime:number = -1,_isShowLoading = true){
+        let msgData = {
+            msgHead:className,
+            msgData:data,
+            url:data.url || ServerCfg.httpUrl
+        }
         var that=this;
         if(_isShowLoading){
             this.showNetLoadingBar(true);
         }
-         var dataStr=JSON.stringify(data);
-         game.platFormMgr.sendHttpRequest(dataStr,(_dataStr)=>{
+         game.platFormMgr.sendHttpRequest(msgData,(_dataStr)=>{
             if(_callBack){
                 _callBack(JSON.parse(_dataStr));
             }

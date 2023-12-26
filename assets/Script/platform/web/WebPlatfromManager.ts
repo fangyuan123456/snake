@@ -10,6 +10,12 @@ export class WebPlatfromManager extends PlatformBase{
             title:"加载资源中..."
         },
         {
+            funcName:"login",
+            progressNum:50,
+            time:0.5,
+            title:"登录中..."
+        },
+        {
             funcName:"changeScene",
             progressNum:50,
             time:0.5,

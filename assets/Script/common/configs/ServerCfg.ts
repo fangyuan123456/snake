@@ -1,3 +1,3 @@
 export let ServerCfg = {
-    httpUrl : "127.0.0.1:8088"
+    httpUrl : "http://127.0.0.1:8080/data"
 }

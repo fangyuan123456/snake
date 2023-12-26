@@ -5,7 +5,7 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
-import { Global } from "../common/Global";
+import { Game } from "../common/Game";
 import { LOAD_ORDER_CFG } from "../platform/PlatformBase";
 import { SceneBase } from "../common/base/SceneBase";
 import LoadingComponent from "../common/components/LoadingComponent";
@@ -18,7 +18,7 @@ export default class LoadScene extends SceneBase {
     progressComp:LoadingComponent
     constructor(){
         super();
-        Global.getInstance().init();
+        Game.getInstance().init();
     }
     start () {
         super.start();
