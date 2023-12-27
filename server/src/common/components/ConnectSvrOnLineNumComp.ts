@@ -47,4 +47,7 @@ export class ConnectSvrOnLineNumComp{
         }
         this.minSvr = minSvr;
     }
+    getMinSvrIp(){
+        return this.minSvr.host+this.minSvr.clientPort
+    }
 }

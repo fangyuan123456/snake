@@ -11,6 +11,9 @@ import { UtilsManager } from "../manager/UtilsManager";
 import { ProtoManager } from "../manager/ProtoManager";
 import { HttpManager } from "../manager/HttpManager";
 import { TimeManager } from "../manager/TimeManager";
+import { ConnectSvrOnLineNumComp } from "../components/ConnectSvrOnLineNumComp";
+import { serverType } from "../config/GameCfg";
+import { PlatformManager } from "../manager/PlatformManager";
 
 export class GameServerBase{
     clientNum:number = 0
@@ -21,6 +24,8 @@ export class GameServerBase{
     protoMgr:ProtoManager
     httpMgr?:HttpManager
     timeMgr:TimeManager
+    platformMgr:PlatformManager
+    svrNumComp?:ConnectSvrOnLineNumComp
     constructor(app:Application){
         this.app = app;
         globalThis.game = this;
@@ -28,11 +33,14 @@ export class GameServerBase{
         this.utilsMgr = UtilsManager.getInstance();
         this.protoMgr = ProtoManager.getInstance();
         this.timeMgr = TimeManager.getInstance();
+        this.platformMgr = PlatformManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
         this.setConfig();
         this.app.start();
-
+        if(this.app.serverInfo.clientPort){
+            this.svrNumComp = new ConnectSvrOnLineNumComp(serverType.centor);
+        }
         if(this.app.serverInfo.HttpPort){
             this.httpMgr = HttpManager.getInstance();
         }
