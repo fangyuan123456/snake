@@ -39,13 +39,13 @@ class GameServerBase {
         globalThis.game = this;
         this.logMgr = LogManager_1.LogManager.getInstance();
         this.utilsMgr = UtilsManager_1.UtilsManager.getInstance();
-        this.protoManger = ProtoManager_1.ProtoManager.getInstance();
+        this.protoMgr = ProtoManager_1.ProtoManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
         this.setConfig();
         this.app.start();
         if (this.app.serverInfo.HttpPort) {
-            HttpManager_1.HttpManager.getInstance();
+            this.httpMgr = HttpManager_1.HttpManager.getInstance();
         }
     }
     getCert() {
@@ -76,7 +76,7 @@ class GameServerBase {
             "cert": cert.cert,
         });
         this.app.setConfig("rpc", { "interval": 30, "noDelay": false });
-        this.app.setConfig("encodeDecode", { "msgDecode": this.protoManger.decode, "msgEncode": this.protoManger.encode });
+        this.app.setConfig("encodeDecode", { "msgDecode": this.protoMgr.decode, "msgEncode": this.protoMgr.encode });
         this.app.setConfig("logger", (level, info) => {
             if (level !== "debug") {
                 this.logMgr[level](info);

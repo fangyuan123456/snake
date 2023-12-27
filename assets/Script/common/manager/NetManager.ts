@@ -18,9 +18,9 @@ export class NetManager extends SingleBase{
         if(_isShowLoading){
             this.showNetLoadingBar(true);
         }
-         game.platFormMgr.sendHttpRequest(msgData,(_dataStr)=>{
+         game.platFormMgr.sendHttpRequest(msgData,(data)=>{
             if(_callBack){
-                _callBack(JSON.parse(_dataStr));
+                _callBack(data);
             }
             if(_isShowLoading){
                 that.showNetLoadingBar(false);

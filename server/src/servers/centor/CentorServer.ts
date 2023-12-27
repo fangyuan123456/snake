@@ -1,6 +1,7 @@
-import { Session } from "mydog";
+import { Application, Session } from "mydog";
 import { GameServerBase } from "../../common/base/GameServerBase";
 import { serverType } from "../../common/config/GameCfg";
+
 
 export class CentorServer extends GameServerBase{
     setConfig(): void {

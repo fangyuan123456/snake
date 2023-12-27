@@ -65,7 +65,7 @@ class HttpManager extends SingleBase_1.SingleBase {
             next();
         });
         app.get('/img', this.OnGetImageHander.bind(this));
-        app.post("/data", this.OnGetDataHander.bind(this));
+        app.post("*", this.OnGetDataHander.bind(this));
         app.listen(game.app.serverInfo.HttpPort, function () {
             console.log("应用实例，访问地址为 http://%s:%s", game.app.serverInfo.host, game.app.serverInfo.HttpPort);
         });
@@ -75,7 +75,6 @@ class HttpManager extends SingleBase_1.SingleBase {
         res.sendFile(game.utilsMgr.getAppPath() + "/fileDownLoad/" + pathname);
     }
     OnGetDataHander(req, res) {
-        let pathname = url_1.default.parse(req.url).pathname;
         req.on('data', (data) => {
             try {
                 var _obj = null;
@@ -83,7 +82,7 @@ class HttpManager extends SingleBase_1.SingleBase {
                 if (_obj) {
                     var msgHead = _obj.msgHead;
                     var msgData = _obj.msgData;
-                    this.router(pathname, msgHead, msgData, res);
+                    this.router(msgHead, msgData, res);
                 }
             }
             catch (err) {
@@ -97,13 +96,16 @@ class HttpManager extends SingleBase_1.SingleBase {
             game.logMgr.error(err);
         });
     }
-    router(pathUrl, msgHead, msgData, res) {
+    router(msgHead, msgData, res) {
+        let msgArr = msgHead.split("/");
         let fileName = "main";
-        if (pathUrl) {
-            fileName = pathUrl;
+        let funcName = msgArr[0];
+        if (msgArr.length > 1) {
+            fileName = msgArr[0];
+            funcName = msgArr[1];
         }
         if (this.moudles[fileName]) {
-            let handlerName = "on" + game.utilsMgr.capitalizeFirstLetter(msgHead) + "Handler";
+            let handlerName = "on" + game.utilsMgr.capitalizeFirstLetter(funcName) + "Handler";
             if (this.moudles[fileName][handlerName]) {
                 this.moudles[fileName][handlerName](msgData, res);
             }
@@ -114,6 +116,9 @@ class HttpManager extends SingleBase_1.SingleBase {
         else {
             game.logMgr.error("fileName:%s is not exits", fileName);
         }
+    }
+    sendMsg(msgData, res) {
+        res.end(JSON.stringify(msgData));
     }
 }
 exports.HttpManager = HttpManager;

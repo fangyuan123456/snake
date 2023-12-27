@@ -36,7 +36,7 @@ export class HttpManager extends SingleBase{
             next();
         });
         app.get('/img',this.OnGetImageHander.bind(this))
-        app.post("/data",this.OnGetDataHander.bind(this));
+        app.post("*",this.OnGetDataHander.bind(this));
         app.listen(game.app.serverInfo.HttpPort, function () {
             console.log("应用实例，访问地址为 http://%s:%s", game.app.serverInfo.host, game.app.serverInfo.HttpPort)
         })
@@ -46,7 +46,6 @@ export class HttpManager extends SingleBase{
         res.sendFile(game.utilsMgr.getAppPath() + "/fileDownLoad/"+pathname);
     }
     OnGetDataHander(req: Request, res: Response){
-        let pathname=url.parse(req.url).pathname;
         req.on('data',(data:any)=>{
             try{
                 var _obj = null;
@@ -54,7 +53,7 @@ export class HttpManager extends SingleBase{
                 if(_obj){
                     var msgHead=_obj.msgHead;
                     var msgData=_obj.msgData;
-                    this.router(pathname,msgHead,msgData,res);
+                    this.router(msgHead,msgData,res);
                 }
             }catch(err){
                 console.log(err);
@@ -67,13 +66,18 @@ export class HttpManager extends SingleBase{
             game.logMgr.error(err);
         });
     }
-    router(pathUrl:string|null,msgHead:string,msgData:any,res:Response){
+    router(msgHead:string,msgData:any,res:Response){
+        let msgArr = msgHead.split("/");
         let fileName = "main"
-        if(pathUrl){
-           fileName = pathUrl; 
+        let funcName = msgArr[0];
+        if(msgArr.length>1){
+            fileName = msgArr[0];
+            funcName = msgArr[1];
         }
+
+ 
         if(this.moudles[fileName]){
-            let handlerName = "on"+game.utilsMgr.capitalizeFirstLetter(msgHead)+"Handler";
+            let handlerName = "on"+game.utilsMgr.capitalizeFirstLetter(funcName)+"Handler";
             if(this.moudles[fileName][handlerName]){
                 this.moudles[fileName][handlerName](msgData,res);
             }else{
@@ -82,5 +86,8 @@ export class HttpManager extends SingleBase{
         }else{
             game.logMgr.error("fileName:%s is not exits",fileName)
         }
+    }
+    sendMsg(msgData:any,res:Response){
+        res.end(JSON.stringify(msgData));
     }
 }

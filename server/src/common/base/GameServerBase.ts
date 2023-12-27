@@ -6,12 +6,11 @@ declare global{
 import * as fs from "fs";
 import * as path from "path";
 import { Application, connector } from "mydog";
-import { LoginServer } from "../../servers/login/LoginServer";
 import { LogManager } from "../manager/LogManager";
-import { serverType } from "../config/GameCfg";
 import { UtilsManager } from "../manager/UtilsManager";
 import { ProtoManager } from "../manager/ProtoManager";
 import { HttpManager } from "../manager/HttpManager";
+import { TimeManager } from "../manager/TimeManager";
 
 export class GameServerBase{
     clientNum:number = 0
@@ -19,20 +18,23 @@ export class GameServerBase{
     app:Application
     logMgr:LogManager
     utilsMgr:UtilsManager
-    protoManger:ProtoManager
+    protoMgr:ProtoManager
+    httpMgr?:HttpManager
+    timeMgr:TimeManager
     constructor(app:Application){
         this.app = app;
         globalThis.game = this;
         this.logMgr = LogManager.getInstance();
         this.utilsMgr = UtilsManager.getInstance();
-        this.protoManger = ProtoManager.getInstance();
+        this.protoMgr = ProtoManager.getInstance();
+        this.timeMgr = TimeManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
         this.setConfig();
         this.app.start();
 
         if(this.app.serverInfo.HttpPort){
-            HttpManager.getInstance();
+            this.httpMgr = HttpManager.getInstance();
         }
     }
     getCert(){
@@ -62,7 +64,7 @@ export class GameServerBase{
             "cert": cert.cert,
         });
         this.app.setConfig("rpc", { "interval": 30, "noDelay": false });
-        this.app.setConfig("encodeDecode", { "msgDecode": this.protoManger.decode, "msgEncode": this.protoManger.encode });
+        this.app.setConfig("encodeDecode", { "msgDecode": this.protoMgr.decode, "msgEncode": this.protoMgr.encode });
         this.app.setConfig("logger", (level, info) => {
             if (level !== "debug") {
                 this.logMgr[level](info);
