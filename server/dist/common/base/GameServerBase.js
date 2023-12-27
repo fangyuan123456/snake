@@ -31,6 +31,7 @@ const LogManager_1 = require("../manager/LogManager");
 const UtilsManager_1 = require("../manager/UtilsManager");
 const ProtoManager_1 = require("../manager/ProtoManager");
 const HttpManager_1 = require("../manager/HttpManager");
+const TimeManager_1 = require("../manager/TimeManager");
 class GameServerBase {
     constructor(app) {
         this.clientNum = 0;
@@ -40,6 +41,7 @@ class GameServerBase {
         this.logMgr = LogManager_1.LogManager.getInstance();
         this.utilsMgr = UtilsManager_1.UtilsManager.getInstance();
         this.protoMgr = ProtoManager_1.ProtoManager.getInstance();
+        this.timeMgr = TimeManager_1.TimeManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
         this.setConfig();
