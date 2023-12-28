@@ -12,8 +12,9 @@ import { ProtoManager } from "../manager/ProtoManager";
 import { HttpManager } from "../manager/HttpManager";
 import { TimeManager } from "../manager/TimeManager";
 import { ConnectSvrOnLineNumComp } from "../components/ConnectSvrOnLineNumComp";
-import { serverType } from "../config/GameCfg";
+import { getConfigByEnv, mysqlConfig, serverType } from "../config/GameCfg";
 import { PlatformManager } from "../manager/PlatformManager";
+import { SqlManager } from "../manager/SqlManager";
 
 export class GameServerBase{
     clientNum:number = 0
@@ -26,6 +27,7 @@ export class GameServerBase{
     timeMgr:TimeManager
     platformMgr:PlatformManager
     svrNumComp?:ConnectSvrOnLineNumComp
+    sqlMgr:SqlManager
     constructor(app:Application){
         this.app = app;
         globalThis.game = this;
@@ -34,6 +36,7 @@ export class GameServerBase{
         this.protoMgr = ProtoManager.getInstance();
         this.timeMgr = TimeManager.getInstance();
         this.platformMgr = PlatformManager.getInstance();
+        this.sqlMgr = SqlManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
         this.setConfig();

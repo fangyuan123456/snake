@@ -1,10 +1,14 @@
+import { I_loginReq, I_sdkLoginRes } from "../interface/ILogin";
+
 export class PlatformApiBase{
     constructor(){
 
     }
-    getLoginCode(callBack:(data:any)=>void){
+    getLoginCode(data:I_loginReq,callBack:(resData:I_sdkLoginRes)=>void){
         if(callBack){
-            callBack("");
+            callBack({
+                openid : data.code
+            });
         }
     }
 }
