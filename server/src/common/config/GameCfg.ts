@@ -8,11 +8,11 @@ export const enum serverType {
 }
 export let mysqlConfig = {
     "development": {
-        "host": "127.0.0.1",
+        "host": "120.76.217.84",
         "port": 3306,
         "user": "root",
-        "password": "123456",
-        "database": "mmo_demo",
+        "password": "fangyuan123.",
+        "database": "db_snake",
         "connectionLimit": 5,
     },
     "production": {

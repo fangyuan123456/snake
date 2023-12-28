@@ -32,6 +32,9 @@ const UtilsManager_1 = require("../manager/UtilsManager");
 const ProtoManager_1 = require("../manager/ProtoManager");
 const HttpManager_1 = require("../manager/HttpManager");
 const TimeManager_1 = require("../manager/TimeManager");
+const ConnectSvrOnLineNumComp_1 = require("../components/ConnectSvrOnLineNumComp");
+const PlatformManager_1 = require("../manager/PlatformManager");
+const SqlManager_1 = require("../manager/SqlManager");
 class GameServerBase {
     constructor(app) {
         this.clientNum = 0;
@@ -42,10 +45,15 @@ class GameServerBase {
         this.utilsMgr = UtilsManager_1.UtilsManager.getInstance();
         this.protoMgr = ProtoManager_1.ProtoManager.getInstance();
         this.timeMgr = TimeManager_1.TimeManager.getInstance();
+        this.platformMgr = PlatformManager_1.PlatformManager.getInstance();
+        this.sqlMgr = SqlManager_1.SqlManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
         this.setConfig();
         this.app.start();
+        if (this.app.serverInfo.clientPort) {
+            this.svrNumComp = new ConnectSvrOnLineNumComp_1.ConnectSvrOnLineNumComp("centor" /* serverType.centor */);
+        }
         if (this.app.serverInfo.HttpPort) {
             this.httpMgr = HttpManager_1.HttpManager.getInstance();
         }

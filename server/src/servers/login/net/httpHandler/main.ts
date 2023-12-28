@@ -8,12 +8,16 @@ export default class Handler {
             url:game.svrNumComp?.getMinSvrIp()
         },res);
         game.platformMgr.getLoginCode(msgData,(data:I_sdkLoginRes)=>{
-            this.registerAndLogin(data,(data)=>{
+            this.registerAndLogin(data).then(()=>{
                 res.end(data);
             });
         });
     }
-    registerAndLogin(data:I_sdkLoginRes,callBack:(data:I_loginRes)=>void){
-            
+    async registerAndLogin(data:I_sdkLoginRes){
+        let userData = await game.sqlMgr.select("t_user",data)
+        if(userData.length == 0){
+            userData = await game.sqlMgr.add("t_user",data);
+        }
+        return userData;
     }
 }

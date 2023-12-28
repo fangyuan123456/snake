@@ -12,23 +12,35 @@ type callback = (err: mysql.MysqlError | null, res?: any) => void
 import { SingleBase } from "../base/SingleBase";
 import { getConfigByEnv, mysqlConfig } from "../config/GameCfg";
 export class SqlManager extends SingleBase{
-    private pool: mysql.Pool;
+    private pool?: mysql.Pool;
     constructor() {
         super();
-        let config = getConfigByEnv(mysqlConfig);
-        this.pool = mysql.createPool(config);
+     
     }
-    query(sql: string, args: any, cb?: callback) {
-        this.pool.getConnection((err, connection) => {
-            if (!err) {
-                connection.query(sql, args, (err, res) => {
-                    connection.release();
-                    cb && cb(err, res);
-                });
-            } else {
-                cb && cb(err);
-            }
-        });
+    query(sql: string, args: any, cb?: callback): Promise<any> {
+        if(!this.pool){
+            let config = getConfigByEnv(mysqlConfig);
+            this.pool = mysql.createPool(config);
+        }
+        return new Promise((resolve, reject)=>{
+            this.pool!.getConnection((err, connection) => {
+                if (!err) {
+                    connection.query(sql, args, (err, res) => {
+                        connection.release();
+                        if(!err){
+                            resolve(res) ;
+                        }else{
+                            game.logMgr.error(err);
+                            reject(err);
+                        }
+                       
+                    });
+                } else {
+                    game.logMgr.error(err);
+                    reject(err);
+                }
+            });
+        })
     }
     private getSqlStrByArr(opsType:SqlOpsType,table:string, obj: Dic<any>){
         let parmStr = "";
@@ -55,28 +67,27 @@ export class SqlManager extends SingleBase{
         }else if(opsType == SqlOpsType.DEL){
             sqlStr = "delete from " + table + " where "+ parmStr
         }else if(opsType == SqlOpsType.UPDATE){
-            sqlStr = "delete from " + table + " where "+ parmStr
+            sqlStr = "update " + table + " set "+ parmStr
         }else if(opsType == SqlOpsType.SELECT){
-            sqlStr = "delete from " + table + " where "+ parmStr
-            
+            sqlStr = "select * from " + table + " where "+ parmStr
         }
         return sqlStr;
     }
-    add(table:string, obj: Dic<any>,callBack:(data:any)=>void){
+    add(table:string, obj: Dic<any>): Promise<any>{
         let sqlStr = this.getSqlStrByArr(SqlOpsType.ADD,table,obj);
-        this.query(sqlStr,null,callBack)
+        return this.query(sqlStr,null)
     }
-    del(table:string, obj: Dic<any>,callBack:(data:any)=>void){
+    del(table:string, obj: Dic<any>): Promise<any>{
         let sqlStr = this.getSqlStrByArr(SqlOpsType.DEL,table,obj);
-        this.query(sqlStr,null,callBack)
+        return this.query(sqlStr,null)
     }
-    update(table:string, obj: Dic<any>,callBack:(data:any)=>void){
+    update(table:string, obj: Dic<any>): Promise<any>{
         let sqlStr = this.getSqlStrByArr(SqlOpsType.UPDATE,table,obj);
-        this.query(sqlStr,null,callBack)
+        return this.query(sqlStr,null)
     }
-    select(table:string, obj: Dic<any>,callBack:(data:any)=>void){
+    select(table:string, obj: Dic<any>): Promise<any>{
         let sqlStr = this.getSqlStrByArr(SqlOpsType.SELECT,table,obj);
-        this.query(sqlStr,null,callBack)
+        return this.query(sqlStr,null)
     }
 
 }
