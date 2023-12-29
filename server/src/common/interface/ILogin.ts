@@ -8,5 +8,8 @@ export interface I_sdkLoginRes{
 
 }
 export interface I_loginRes{
+    centerIp:string,
+    uid:number,
+    nickName:string,
 
 }

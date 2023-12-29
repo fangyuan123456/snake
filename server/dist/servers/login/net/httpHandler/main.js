@@ -13,13 +13,14 @@ class Handler {
     constructor() {
     }
     onLoginHandler(msgData, res) {
-        var _a;
-        game.httpMgr.sendMsg({
-            url: (_a = game.svrNumComp) === null || _a === void 0 ? void 0 : _a.getMinSvrIp()
-        }, res);
         game.platformMgr.getLoginCode(msgData, (data) => {
-            this.registerAndLogin(data).then(() => {
-                res.end(data);
+            this.registerAndLogin(data).then((registerData) => {
+                let loginResData = {
+                    centerIp: game.svrNumComp.getMinSvrIp(),
+                    uid: registerData.uid,
+                    nickName: registerData.nickName
+                };
+                game.httpMgr.sendMsg(loginResData, res);
             });
         });
     }
@@ -29,7 +30,7 @@ class Handler {
             if (userData.length == 0) {
                 userData = yield game.sqlMgr.add("t_user", data);
             }
-            return userData;
+            return userData[userData.length - 1];
         });
     }
 }

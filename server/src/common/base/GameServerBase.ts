@@ -41,9 +41,6 @@ export class GameServerBase{
         this.initCupUsage();
         this.setConfig();
         this.app.start();
-        if(this.app.serverInfo.clientPort){
-            this.svrNumComp = new ConnectSvrOnLineNumComp(serverType.centor);
-        }
         if(this.app.serverInfo.HttpPort){
             this.httpMgr = HttpManager.getInstance();
         }

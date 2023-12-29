@@ -52,14 +52,16 @@ export class SqlManager extends SingleBase{
             }
             fieldArr.push(key);
             let value = obj[key];
+            let valueStr = "";
             if (typeof value === "string") {
-                valueArr.push("'" + value + "'");
+                valueStr = "'" + value + "'";
             } else if (typeof value === "object") {
-                valueArr.push("'" + JSON.stringify(value) + "'");
+                valueStr = "'" + JSON.stringify(value) + "'";
             } else {
-                valueArr.push(value);
+                valueStr = value;
             }
-            parmStr += (key + " = " +value) 
+            valueArr.push(valueStr);
+            parmStr += (key + " = " +valueStr); 
         }
         let sqlStr = ""
         if(opsType == SqlOpsType.ADD){

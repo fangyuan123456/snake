@@ -4,12 +4,14 @@ export default class Handler {
     constructor() {
     }
     onLoginHandler(msgData:I_loginReq,res:Response){
-        game.httpMgr!.sendMsg({
-            url:game.svrNumComp?.getMinSvrIp()
-        },res);
         game.platformMgr.getLoginCode(msgData,(data:I_sdkLoginRes)=>{
-            this.registerAndLogin(data).then(()=>{
-                res.end(data);
+            this.registerAndLogin(data).then((registerData)=>{
+                let loginResData:I_loginRes = {
+                    centerIp:game.svrNumComp!.getMinSvrIp(),
+                    uid:registerData.uid,
+                    nickName:registerData.nickName
+                }
+                game.httpMgr!.sendMsg(loginResData,res);
             });
         });
     }
@@ -18,6 +20,6 @@ export default class Handler {
         if(userData.length == 0){
             userData = await game.sqlMgr.add("t_user",data);
         }
-        return userData;
+        return userData[userData.length-1];
     }
 }
