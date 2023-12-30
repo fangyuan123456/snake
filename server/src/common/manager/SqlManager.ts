@@ -42,36 +42,48 @@ export class SqlManager extends SingleBase{
             });
         })
     }
-    private getSqlStrByArr(opsType:SqlOpsType,table:string, obj: Dic<any>){
-        let parmStr = "";
-        let fieldArr: string[] = [];
-        let valueArr: string[] = [];
-        for (let key in obj) {
-            if(parmStr!=""){
-                parmStr += ","
+    private getSqlStrByArr(opsType:SqlOpsType,table:string, obj: Dic<any>|null,cond?:Dic<any>|null){
+        let getSqlStrFunc=(obj:Dic<any>,isInsert:boolean = false)=>{
+            if(!obj){
+                return ""
             }
-            fieldArr.push(key);
-            let value = obj[key];
-            let valueStr = "";
-            if (typeof value === "string") {
-                valueStr = "'" + value + "'";
-            } else if (typeof value === "object") {
-                valueStr = "'" + JSON.stringify(value) + "'";
-            } else {
-                valueStr = value;
+            let fieldArr: string[] = [];
+            let valueArr: string[] = [];
+            for (let key in obj) {
+                fieldArr.push(key);
+                let value = obj[key];
+                let valueStr = "";
+                if (typeof value === "string") {
+                    valueStr = "'" + value + "'";
+                } else if (typeof value === "object") {
+                    valueStr = "'" + JSON.stringify(value) + "'";
+                } else {
+                    valueStr = value;
+                }
+                valueArr.push(valueStr);
             }
-            valueArr.push(valueStr);
-            parmStr += (key + " = " +valueStr); 
+            if(isInsert){
+                return " (" + fieldArr.join(",") + ") values(" + valueArr.join(",") + ")"
+            }else{
+                let str = "";
+                for(let i in fieldArr){
+                    if(str!=""){
+                        str += ","
+                    }
+                    str += (fieldArr[i] + " = " +valueArr[i]); 
+                }
+                return str;
+            }
         }
         let sqlStr = ""
         if(opsType == SqlOpsType.ADD){
-            sqlStr = "insert into " + table +" (" + fieldArr.join(",") + ") values(" + valueArr.join(",") + ")"
+            sqlStr = "insert into " + table + getSqlStrFunc(obj!,true);
         }else if(opsType == SqlOpsType.DEL){
-            sqlStr = "delete from " + table + " where "+ parmStr
+            sqlStr = "delete from " + table + " where "+ getSqlStrFunc(cond!)
         }else if(opsType == SqlOpsType.UPDATE){
-            sqlStr = "update " + table + " set "+ parmStr
+            sqlStr = "update " + table + " set " + getSqlStrFunc(obj!) + " where "+ getSqlStrFunc(cond!)
         }else if(opsType == SqlOpsType.SELECT){
-            sqlStr = "select * from " + table + " where "+ parmStr
+            sqlStr = "select * from " + table + " where "+ getSqlStrFunc(cond!)
         }
         return sqlStr;
     }
@@ -79,16 +91,16 @@ export class SqlManager extends SingleBase{
         let sqlStr = this.getSqlStrByArr(SqlOpsType.ADD,table,obj);
         return this.query(sqlStr,null)
     }
-    del(table:string, obj: Dic<any>): Promise<any>{
-        let sqlStr = this.getSqlStrByArr(SqlOpsType.DEL,table,obj);
+    del(table:string, cond: Dic<any>): Promise<any>{
+        let sqlStr = this.getSqlStrByArr(SqlOpsType.DEL,table,null,cond);
         return this.query(sqlStr,null)
     }
-    update(table:string, obj: Dic<any>): Promise<any>{
-        let sqlStr = this.getSqlStrByArr(SqlOpsType.UPDATE,table,obj);
+    update(table:string, obj: Dic<any>, cond?: Dic<any>): Promise<any>{
+        let sqlStr = this.getSqlStrByArr(SqlOpsType.UPDATE,table,obj,cond);
         return this.query(sqlStr,null)
     }
-    select(table:string, obj: Dic<any>): Promise<any>{
-        let sqlStr = this.getSqlStrByArr(SqlOpsType.SELECT,table,obj);
+    select(table:string, cond: Dic<any>): Promise<any>{
+        let sqlStr = this.getSqlStrByArr(SqlOpsType.SELECT,table,null,cond);
         return this.query(sqlStr,null)
     }
 

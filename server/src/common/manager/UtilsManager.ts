@@ -4,7 +4,6 @@ import { serverType } from "../config/GameCfg";
 import * as path from "path";
 
 export class UtilsManager extends SingleBase{
-
     getInfoId(uid: number) {
         let infoArr =  game.app.serversConfig[serverType.info]
         return infoArr[uid % infoArr.length].id;

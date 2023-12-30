@@ -1,6 +1,6 @@
 declare global {
     interface Rpc {
-        centor: {
+        info: {
             main: Remote,
         }
     }
@@ -8,7 +8,9 @@ declare global {
 export default class Remote {
     constructor() {
     }
-    getClientNum(cb: (err: number, num: number) => void) {
-        cb(0, game.app.clientNum);
+    async getInfo(uid:number){
+        return {
+            haha:1
+        }
     }
 }
