@@ -9,7 +9,7 @@ export class ConnectSvrOnLineNumComp{
         this.minSvr.userNum = 0;
         setInterval(this.rpcGetUserNum.bind(this), 500);
     }
-    private async rpcGetUserNum() {
+    private rpcGetUserNum() {
         let callNum = 1;
         let callBack = ()=>{
             callNum--;
@@ -20,7 +20,14 @@ export class ConnectSvrOnLineNumComp{
         let svrs = game.app.getServersByType(this.connectServerType);
         for (let one of svrs) {
             callNum++;
-             one.userNum =  await game.app.rpc(one.id).center.main.getClientNum();
+            game.app.rpc(one.id).center.main.getClientNum(function (err, num) {
+                if (err) {
+                    callBack();
+                    return;
+                }
+                one.userNum = num;
+                callBack();
+            });
         }
         callBack();
     }

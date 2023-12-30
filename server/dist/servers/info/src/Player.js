@@ -23,6 +23,11 @@ class Player {
         this.queryAllInfo(callBack);
     }
     queryAllInfo(callBack) {
+        setTimeout(() => {
+            if (callBack) {
+                callBack();
+            }
+        }, 500);
     }
     online() {
         this.delThisTime = 0;

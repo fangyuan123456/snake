@@ -31,7 +31,11 @@ export class Player {
         this.queryAllInfo(callBack);
     }
     queryAllInfo(callBack:()=>void){
-        
+        setTimeout(()=>{
+            if(callBack){
+                callBack()
+            }
+        },500)
     }
     private online() {
         this.delThisTime = 0;
