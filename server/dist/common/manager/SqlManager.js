@@ -41,41 +41,54 @@ class SqlManager extends SingleBase_1.SingleBase {
             });
         });
     }
-    getSqlStrByArr(opsType, table, obj) {
-        let parmStr = "";
-        let fieldArr = [];
-        let valueArr = [];
-        for (let key in obj) {
-            if (parmStr != "") {
-                parmStr += ",";
+    getSqlStrByArr(opsType, table, obj, cond) {
+        let getSqlStrFunc = (obj, isInsert = false) => {
+            if (!obj) {
+                return "";
             }
-            fieldArr.push(key);
-            let value = obj[key];
-            let valueStr = "";
-            if (typeof value === "string") {
-                valueStr = "'" + value + "'";
+            let fieldArr = [];
+            let valueArr = [];
+            for (let key in obj) {
+                fieldArr.push(key);
+                let value = obj[key];
+                let valueStr = "";
+                if (typeof value === "string") {
+                    valueStr = "'" + value + "'";
+                }
+                else if (typeof value === "object") {
+                    valueStr = "'" + JSON.stringify(value) + "'";
+                }
+                else {
+                    valueStr = value;
+                }
+                valueArr.push(valueStr);
             }
-            else if (typeof value === "object") {
-                valueStr = "'" + JSON.stringify(value) + "'";
+            if (isInsert) {
+                return " (" + fieldArr.join(",") + ") values(" + valueArr.join(",") + ")";
             }
             else {
-                valueStr = value;
+                let str = "";
+                for (let i in fieldArr) {
+                    if (str != "") {
+                        str += ",";
+                    }
+                    str += (fieldArr[i] + " = " + valueArr[i]);
+                }
+                return str;
             }
-            valueArr.push(valueStr);
-            parmStr += (key + " = " + valueStr);
-        }
+        };
         let sqlStr = "";
         if (opsType == SqlOpsType.ADD) {
-            sqlStr = "insert into " + table + " (" + fieldArr.join(",") + ") values(" + valueArr.join(",") + ")";
+            sqlStr = "insert into " + table + getSqlStrFunc(obj, true);
         }
         else if (opsType == SqlOpsType.DEL) {
-            sqlStr = "delete from " + table + " where " + parmStr;
+            sqlStr = "delete from " + table + " where " + getSqlStrFunc(cond);
         }
         else if (opsType == SqlOpsType.UPDATE) {
-            sqlStr = "update " + table + " set " + parmStr;
+            sqlStr = "update " + table + " set " + getSqlStrFunc(obj) + " where " + getSqlStrFunc(cond);
         }
         else if (opsType == SqlOpsType.SELECT) {
-            sqlStr = "select * from " + table + " where " + parmStr;
+            sqlStr = "select * from " + table + " where " + getSqlStrFunc(cond);
         }
         return sqlStr;
     }
@@ -83,16 +96,16 @@ class SqlManager extends SingleBase_1.SingleBase {
         let sqlStr = this.getSqlStrByArr(SqlOpsType.ADD, table, obj);
         return this.query(sqlStr, null);
     }
-    del(table, obj) {
-        let sqlStr = this.getSqlStrByArr(SqlOpsType.DEL, table, obj);
+    del(table, cond) {
+        let sqlStr = this.getSqlStrByArr(SqlOpsType.DEL, table, null, cond);
         return this.query(sqlStr, null);
     }
-    update(table, obj) {
-        let sqlStr = this.getSqlStrByArr(SqlOpsType.UPDATE, table, obj);
+    update(table, obj, cond) {
+        let sqlStr = this.getSqlStrByArr(SqlOpsType.UPDATE, table, obj, cond);
         return this.query(sqlStr, null);
     }
-    select(table, obj) {
-        let sqlStr = this.getSqlStrByArr(SqlOpsType.SELECT, table, obj);
+    select(table, cond) {
+        let sqlStr = this.getSqlStrByArr(SqlOpsType.SELECT, table, null, cond);
         return this.query(sqlStr, null);
     }
 }

@@ -6,7 +6,7 @@ const GameServerBase_1 = require("../../common/base/GameServerBase");
 class LoginServer extends GameServerBase_1.GameServerBase {
     constructor(app) {
         super(app);
-        this.svrNumComp = new ConnectSvrOnLineNumComp_1.ConnectSvrOnLineNumComp("centor" /* serverType.centor */);
+        this.svrNumComp = new ConnectSvrOnLineNumComp_1.ConnectSvrOnLineNumComp("center" /* serverType.center */);
     }
 }
 exports.LoginServer = LoginServer;

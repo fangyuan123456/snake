@@ -10,6 +10,7 @@ export class InfoServer extends GameServerBase{
         super(app);
         setInterval(this.update.bind(this),InfoConfig.updateDt)
         setInterval(this.doSqlUpdate.bind(this),InfoConfig.updateSqlDelayTime)
+        setInterval(this.check_delRole.bind(this), 60 * 1000);
     }
     update(){
         for(let i in this.roles){
@@ -17,10 +18,28 @@ export class InfoServer extends GameServerBase{
             player.update();
         }
     }
-    doSqlUpdate(){
+    private doSqlUpdate(){
         for(let i in this.roles){
             let player = this.roles[i];
             player.doSqlUpdate();
+        }
+    }
+    // 检测过期玩家，删除缓存数据
+    private check_delRole() {
+        let nowTime = game.timeMgr.getCurTime();
+        for (let i in this.roles) {
+            let one = this.roles[i];
+            if (one.delThisTime !== 0 && nowTime > one.delThisTime) {
+                delete this.roles[i];
+            }
+        }
+    }
+    async getInfoData(uid:number){
+        let player = this.roles[uid];
+        if(!player){
+            player = new Player(uid,()=>{
+                return;
+            });
         }
     }
 }

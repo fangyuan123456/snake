@@ -71,6 +71,7 @@ class LogManager extends SingleBase_1.SingleBase {
     }
     debug(message, ...args) {
         this.gameLog.debug(message, ...args);
+        console.log(message, ...args);
     }
     ;
     info(message, ...args) {
@@ -79,10 +80,12 @@ class LogManager extends SingleBase_1.SingleBase {
     ;
     warn(message, ...args) {
         this.gameLog.warn(message, ...args);
+        console.warn(message, ...args);
     }
     ;
     error(message, ...args) {
         this.gameLog.error(message, ...args);
+        console.error(message, ...args);
     }
     ;
 }

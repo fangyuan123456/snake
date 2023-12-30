@@ -14,8 +14,8 @@ export class Bag extends SqlUpdateBase{
     change(msg: { "t": I_item, num: number,isDel:boolean }){
         
     }
-    updateSql(){
-        super.doUpdateSql({uid:this.player.uid});
+    doSqlUpdate(){
+        super.doSqlUpdate({uid:this.player.uid});
     }
     update(){
         

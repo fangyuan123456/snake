@@ -1,3 +1,5 @@
+import { InfoServer } from "../../InfoServer";
+
 declare global {
     interface Rpc {
         info: {
@@ -9,8 +11,7 @@ export default class Remote {
     constructor() {
     }
     async getInfo(uid:number){
-        return {
-            haha:1
-        }
+        let infoGame = game as InfoServer;
+        await infoGame.getInfoData(uid);
     }
 }

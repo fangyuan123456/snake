@@ -1,6 +1,6 @@
 import { I_proto} from "mydog";
 
-export let ProtoCfg:{[key:string]:I_proto}={
+export default{
     login:{
         cs:1000,
         sc:1001,

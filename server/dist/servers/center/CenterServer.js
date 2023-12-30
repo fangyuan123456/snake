@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CentorServer = void 0;
+exports.CenterServer = void 0;
 const GameServerBase_1 = require("../../common/base/GameServerBase");
-class CentorServer extends GameServerBase_1.GameServerBase {
+class CenterServer extends GameServerBase_1.GameServerBase {
     setConfig() {
         super.setConfig();
-        this.app.configure("centor" /* serverType.centor */, this.route);
+        this.app.configure("center" /* serverType.center */, this.route.bind(this));
     }
     route() {
         this.app.route("info" /* serverType.info */, (session) => {
@@ -13,4 +13,4 @@ class CentorServer extends GameServerBase_1.GameServerBase {
         });
     }
 }
-exports.CentorServer = CentorServer;
+exports.CenterServer = CenterServer;

@@ -6,6 +6,6 @@ export class LoginServer extends GameServerBase{
    
     constructor(app:Application){
         super(app);
-        this.svrNumComp = new ConnectSvrOnLineNumComp(serverType.centor);
+        this.svrNumComp = new ConnectSvrOnLineNumComp(serverType.center);
     }
 }

@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mydog_1 = require("mydog");
 const LoginServer_1 = require("./servers/login/LoginServer");
 const InfoServer_1 = require("./servers/info/InfoServer");
-const CentorServer_1 = require("./servers/centor/CentorServer");
+const CenterServer_1 = require("./servers/center/CenterServer");
 let CreateServerApp = function () {
     let app = (0, mydog_1.createApp)();
     switch (app.serverType) {
@@ -16,8 +16,8 @@ let CreateServerApp = function () {
         case "info" /* serverType.info */:
             new InfoServer_1.InfoServer(app);
             break;
-        case "centor" /* serverType.centor */:
-            new CentorServer_1.CentorServer(app);
+        case "center" /* serverType.center */:
+            new CenterServer_1.CenterServer(app);
             break;
     }
 };

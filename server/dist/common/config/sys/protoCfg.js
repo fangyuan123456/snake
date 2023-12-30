@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProtoCfg = void 0;
-exports.ProtoCfg = {
+exports.default = {
     login: {
         cs: 1000,
         sc: 1001,

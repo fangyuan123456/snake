@@ -1,3 +1,4 @@
+"use strict";
 // import { gameLog } from "../common/logger";
 // import { friendState, I_friendInfo_client, I_roleAllInfo, I_roleAllInfoClient, I_roleMem, I_uidsid } from "../common/someInterface";
 // import { svr_info } from "./svr_info";
@@ -12,41 +13,32 @@
 // import { Bag, I_item } from "./bag";
 // import { Equipment } from "./equipment";
 // import { j2x2 } from "../svr_map/map";
-
-import { I_roleInfo, I_roleMem } from "../../../common/interface/IInfo";
-import { Quip } from "./Quip";
-import { Bag } from "./Bag";
-import { InfoConfig } from "./InfoConfig";
-
-export class Player {
-    public uid: number;
-    public delThisTime:number = 0;
-    public roomInfo?: I_roleMem;
-    public role?: I_roleInfo;
-    public bag?: Bag;
-    public equip?: Quip;
-
-    constructor(uid:number,callBack:()=>void) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Player = void 0;
+const InfoConfig_1 = require("./InfoConfig");
+class Player {
+    constructor(uid, callBack) {
+        this.delThisTime = 0;
         this.uid = uid;
         this.queryAllInfo(callBack);
     }
-    queryAllInfo(callBack:()=>void){
-        
+    queryAllInfo(callBack) {
     }
-    private online() {
+    online() {
         this.delThisTime = 0;
     }
-
     offline() {
-        this.delThisTime = game.timeMgr.getCurTime() + InfoConfig.offLineInfoCleanTime;
+        this.delThisTime = game.timeMgr.getCurTime() + InfoConfig_1.InfoConfig.offLineInfoCleanTime;
     }
-    doSqlUpdate(){
-        this.bag?.doSqlUpdate();
-        this.equip?.doSqlUpdate();
+    doSqlUpdate() {
+        var _a, _b;
+        (_a = this.bag) === null || _a === void 0 ? void 0 : _a.doSqlUpdate();
+        (_b = this.equip) === null || _b === void 0 ? void 0 : _b.doSqlUpdate();
     }
-    update(){
-        this.bag?.update();
-        this.equip?.update();
+    update() {
+        var _a, _b;
+        (_a = this.bag) === null || _a === void 0 ? void 0 : _a.update();
+        (_b = this.equip) === null || _b === void 0 ? void 0 : _b.update();
     }
-   
 }
+exports.Player = Player;

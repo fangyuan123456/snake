@@ -1,6 +1,9 @@
 import { SingleBase } from "../base/SingleBase";
-
+let date = new Date();
 export class TimeManager extends SingleBase{
+    getCurTime(){
+        return date.getTime()
+    }
     schedule(callBack:()=>void,time:number):NodeJS.Timeout{
        return setInterval(callBack,time*1000)
     }

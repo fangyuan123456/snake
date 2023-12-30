@@ -30,7 +30,9 @@ class Handler {
             if (userData.length == 0) {
                 userData = yield game.sqlMgr.add("t_user", data);
             }
-            return userData[userData.length - 1];
+            let mData = userData[userData.length - 1];
+            let infoData = yield game.app.rpc(game.utilsMgr.getInfoId(mData.uid)).info.main.getInfo(mData.uid);
+            return mData;
         });
     }
 }

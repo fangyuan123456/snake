@@ -2,7 +2,7 @@ import { createApp } from "mydog";
 import { serverType } from "./common/config/GameCfg";
 import { LoginServer } from "./servers/login/LoginServer";
 import { InfoServer } from "./servers/info/InfoServer";
-import { CentorServer } from "./servers/centor/CentorServer";
+import { CenterServer } from "./servers/center/CenterServer";
 
 let CreateServerApp=function(){
     let app = createApp();
@@ -16,8 +16,8 @@ let CreateServerApp=function(){
         case serverType.info:
             new InfoServer(app);
         break;
-        case serverType.centor:
-            new CentorServer(app);
+        case serverType.center:
+            new CenterServer(app);
         break
     }
 }

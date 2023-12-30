@@ -50,6 +50,7 @@ export class LogManager extends SingleBase{
 
     debug(message: any, ...args: any[]){
         this.gameLog.debug(message,...args);
+        console.log(message,...args)
     };
   
     info(message: any, ...args: any[]){
@@ -58,9 +59,11 @@ export class LogManager extends SingleBase{
   
     warn(message: any, ...args: any[]){
         this.gameLog.warn(message,...args);
+        console.warn(message,...args)
     };
   
     error(message: any, ...args: any[]){
         this.gameLog.error(message,...args);
+        console.error(message,...args)
     };
 }

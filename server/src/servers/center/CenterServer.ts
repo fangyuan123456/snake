@@ -3,10 +3,10 @@ import { GameServerBase } from "../../common/base/GameServerBase";
 import { serverType } from "../../common/config/GameCfg";
 
 
-export class CentorServer extends GameServerBase{
+export class CenterServer extends GameServerBase{
     setConfig(): void {
         super.setConfig();
-        this.app.configure(serverType.centor, this.route);
+        this.app.configure(serverType.center, this.route.bind(this));
     }
     route(){
         this.app.route(serverType.info, (session: Session) => {
