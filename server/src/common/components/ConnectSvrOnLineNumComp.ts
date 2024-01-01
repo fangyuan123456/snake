@@ -20,7 +20,8 @@ export class ConnectSvrOnLineNumComp{
         let svrs = game.app.getServersByType(this.connectServerType);
         for (let one of svrs) {
             callNum++;
-            game.app.rpc(one.id).center.main.getClientNum(function (err, num) {
+            //@ts-ignore
+            game.app.rpc(one.id)[this.connectServerType].main.getClientNum(function (err, num) {
                 if (err) {
                     callBack();
                     return;
