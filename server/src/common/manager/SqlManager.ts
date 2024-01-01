@@ -1,4 +1,4 @@
-import mysql = require("mysql");
+import * as mysql from "mysql";
 interface Dic<T = any> {
     [key: string]: any
 }
