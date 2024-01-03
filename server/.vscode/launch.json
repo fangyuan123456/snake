@@ -5,17 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "test",
             "type": "node",
             "request": "launch",
-            "runtimeArgs": [
-                "-r",
-                "ts-node/register",
-                "src/app.ts"
+            "name": "启动程序",
+            "skipFiles": [
+                "<node_internals>/**"
             ],
-            "cwd": "${workspaceRoot}",
-            "protocol": "inspector",
-            "internalConsoleOptions": "openOnSessionStart"
+            "program": "${workspaceFolder}\\dist\\app.js",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
         }
     ]
 }

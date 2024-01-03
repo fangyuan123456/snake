@@ -1,28 +1,35 @@
 import { SingleBase } from "../base/SingleBase";
-import * as protoMethods from "../proto/proto";
-
+import { Root, Type, load, loadSync } from "protobufjs";
 export class ProtoManager extends SingleBase{
+    root:Root|null = null;
+    encodeDecodeFuncMap:{[key:string]:Type} = {};
     constructor(){
         super();
     }
-    decode(cmd: number, msg: Buffer){
-        let funcName = game.app.getCmdMessageName(cmd);
-        //@ts-ignore
-        if (protoMethods[funcName] && typeof protoMethods[funcName] === 'function') {
-            //@ts-ignore
-            return protoMethods[funcName](msg); // 调用对应的方法
-          } else {
-            console.log('无效的方法名');
-          }
+    getEncodeDecodeFunc(pbName:string){
+      if(!this.encodeDecodeFuncMap[pbName]){
+        if(!this.root){
+          this.root = loadSync("../proto/"+game.app.serverType+".proto")
+        }
+        this.encodeDecodeFuncMap[pbName] = this.root.lookupType(pbName);
+      }
+      return this.encodeDecodeFuncMap[pbName]
     }
-    encode(cmd: number, msg: any){
-        let funcName = game.app.getCmdMessageName(cmd);
-        //@ts-ignore
-        if (protoMethods[funcName] && typeof protoMethods[funcName] === 'function') {
-            //@ts-ignore
-            return protoMethods[funcName](msg); // 调用对应的方法
-          } else {
-            console.log('无效的方法名');
-          }
+    decode(cmd: number, msg: Buffer):any{
+        let routeUrl = game.app.routeConfig[cmd]
+        let strArr = routeUrl.split(".")
+        let funcName = strArr[strArr.length-1];
+        let pbName = game.app.serverType+".CS_"+funcName;
+        return this.getEncodeDecodeFunc(pbName).decode(msg);
+    }
+    encode(cmd: number, msg: any):Buffer{
+      let routeUrl = game.app.routeConfig[cmd]
+      let strArr = routeUrl.split(".")
+      let funcName = strArr[strArr.length-1];
+      let pbName = game.app.serverType+".SC_"+funcName;
+      let decoder = this.getEncodeDecodeFunc(pbName)
+      let message = decoder.create(msg);
+      let buffer = decoder.encode(message).finish();
+      return Buffer.from(buffer);
     }
 }

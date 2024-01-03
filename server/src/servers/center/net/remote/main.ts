@@ -8,7 +8,7 @@ declare global {
 export default class Remote {
     constructor() {
     }
-    getClientNum(cb: (err: number, num: number) => void) {
-        cb(0, game.app.clientNum);
+    getClientNum() {
+        return game.app.clientNum
     }
 }

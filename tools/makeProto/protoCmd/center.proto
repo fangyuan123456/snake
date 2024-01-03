@@ -1,4 +1,0 @@
-message getVipReq{
-    required int32 uid=1;
-    required int32 level=2;
-}

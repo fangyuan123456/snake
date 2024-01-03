@@ -1,0 +1,2355 @@
+[2024-01-03T23:03:40.814] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:41.321] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:41.821] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:42.322] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:42.831] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:43.331] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:43.836] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:44.340] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:44.846] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:45.361] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:45.876] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:46.379] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:46.885] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:47.392] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:47.897] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:48.398] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:48.902] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:49.409] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:49.921] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:50.425] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:50.929] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:51.438] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:51.949] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:52.461] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:52.963] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:53.467] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:53.971] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:54.473] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:54.982] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:55.493] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:55.999] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:56.503] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:57.013] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:57.528] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:58.034] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:58.534] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:59.034] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:03:59.538] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:00.045] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:00.552] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:01.060] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:01.563] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:02.067] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:02.574] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:03.078] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:03.582] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:04.086] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:04.593] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:05.096] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:05.600] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:06.104] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:06.608] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:07.115] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:07.619] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:08.120] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:08.634] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:09.142] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:09.649] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:04:10.161] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'main')
+    at ConnectSvrOnLineNumComp.rpcGetUserNum (D:\fangyuan\gitWrokSpace\snake\server\dist\common\components\ConnectSvrOnLineNumComp.js:23:57)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[2024-01-03T23:08:02.774] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:02.805] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:03.293] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:03.796] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:04.300] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:04.850] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:05.347] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:05.843] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:06.358] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:06.838] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:07.356] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:07.847] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:08.358] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:08.858] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:09.391] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:09.874] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:10.411] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:10.882] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:11.405] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:11.934] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:12.429] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:12.920] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:13.459] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:13.931] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:14.455] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:14.953] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:15.462] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:15.992] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:16.523] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:17.002] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:17.513] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:18.031] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:18.552] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:19.062] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:19.555] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:20.072] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:20.566] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:21.046] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:21.569] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:22.081] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:22.594] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:23.098] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:23.625] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:24.129] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:24.603] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:25.096] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:25.574] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:26.107] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:26.608] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:27.124] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:27.635] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:28.133] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:28.656] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:29.165] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:29.672] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:30.149] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:30.656] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:31.157] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:08:42.873] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:08:42.874] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:08:42.874] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:08:44.883] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:44.884] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:44.884] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:44.885] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:46.896] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:08:46.897] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:08:46.897] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:08:46.897] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:08:48.898] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:08:48.898] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:08:48.899] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:08:48.899] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:08:50.909] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:50.910] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:50.910] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:50.911] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:52.909] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:52.910] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:52.910] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:52.910] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:54.920] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:54.921] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:54.921] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:54.921] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:56.931] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:56.931] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:56.932] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:56.932] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:58.932] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:58.932] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:58.933] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:08:58.933] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:00.933] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:00.934] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:00.934] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:02.943] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:02.943] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:02.943] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:02.944] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:02.944] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:04.951] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:04.951] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:04.952] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:06.959] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:06.960] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:06.960] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:06.961] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:08.964] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:08.964] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:08.965] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:08.965] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:10.978] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:10.979] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:10.979] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:10.979] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:12.985] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:12.986] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:12.986] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:12.986] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:14.991] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:14.991] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:14.992] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:14.992] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:17.001] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:17.001] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:17.001] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:17.002] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:19.002] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:19.002] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:19.003] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:19.003] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:21.009] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:21.010] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:21.010] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:21.010] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:23.010] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:23.010] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:23.011] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:23.011] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:25.015] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:25.016] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:25.016] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:25.016] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:27.021] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:27.022] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:27.022] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:27.022] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:29.033] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:29.034] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:29.034] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:29.035] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:31.035] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:31.035] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:31.036] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:31.036] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:33.037] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:33.038] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:33.038] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:33.038] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:35.047] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:35.048] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:35.048] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:35.048] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:37.056] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:37.057] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:37.057] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:37.057] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:39.065] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:39.065] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:39.065] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:39.066] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:41.069] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:41.070] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:41.070] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:41.070] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:43.069] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:43.070] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:43.070] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:45.072] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:45.072] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:45.072] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:45.073] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:47.086] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:47.086] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:47.086] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:47.087] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:47.087] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:49.090] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:49.091] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:49.091] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:51.097] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:51.097] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:51.098] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:51.098] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:53.105] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:53.106] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:53.106] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:53.106] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:55.107] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:55.108] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:55.108] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:55.108] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:57.112] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:57.112] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:57.113] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:57.113] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:09:59.122] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:59.122] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:59.122] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:59.123] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:09:59.862] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-0
+[2024-01-03T23:09:59.863] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-03T23:10:01.131] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:01.132] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:01.132] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:01.132] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:03.133] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:03.134] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:03.134] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:03.134] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:05.139] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:10:05.140] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:10:05.140] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:10:05.140] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:10:07.150] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:07.150] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:07.150] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:07.150] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:10:09.151] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:10:09.152] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:10:09.152] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:10:09.152] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:10:11.156] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:18:50.689] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:51.236] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:51.729] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:52.210] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:52.723] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:53.249] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:53.768] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:54.278] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:54.763] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:55.292] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:55.779] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:56.254] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:56.816] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:57.272] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:57.811] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:58.328] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:58.841] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:59.306] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:18:59.858] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:00.342] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:00.848] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:01.368] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:01.916] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:02.370] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:02.866] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:03.381] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:03.890] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:04.382] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:04.891] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:05.401] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:05.942] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:06.390] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:06.920] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:07.453] [ERROR] gameLog - RpcError: rpcError
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:100:36)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:106:32)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2024-01-03T23:19:18.262] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:20.268] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:20.268] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:20.269] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:20.269] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:22.276] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:22.277] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:22.277] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:22.277] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:24.284] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:24.284] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:24.284] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:24.285] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:26.294] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:26.294] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:26.294] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:26.295] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:28.299] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:28.299] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:28.300] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:28.300] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:30.301] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:30.302] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:30.302] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:30.302] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:32.301] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:32.302] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:32.302] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:32.302] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:34.306] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:34.307] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:34.307] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:34.307] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:36.312] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:36.312] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:36.312] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:36.313] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:38.319] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:38.319] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:38.320] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:38.320] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:40.327] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:40.328] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:40.328] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:40.328] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:42.333] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:42.334] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:42.334] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:42.334] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:44.346] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:44.346] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:44.347] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:44.347] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:46.349] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:46.349] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:46.349] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:46.350] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:48.359] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:48.359] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:48.360] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:48.360] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:50.374] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:50.375] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:50.375] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:50.375] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:52.387] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:52.388] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:52.388] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:52.388] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:54.399] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:54.400] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:54.400] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:54.401] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:56.405] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:56.406] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:56.407] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:56.407] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:19:58.413] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:58.414] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:19:58.414] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:00.423] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:00.423] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:00.423] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:00.424] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:02.437] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:02.438] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:02.438] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:02.439] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:04.447] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:04.447] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:04.448] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:04.448] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:06.459] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:06.459] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:06.459] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:06.459] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:08.463] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:08.464] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:08.464] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:08.465] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:10.468] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:10.469] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:10.469] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:10.469] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-03T23:20:12.479] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:12.480] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:12.481] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:20:12.481] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:28:51.987] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-03T23:28:51.989] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-03T23:28:54.615] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-03T23:28:54.616] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-03T23:28:54.617] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
+[2024-01-03T23:28:54.618] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-03T23:30:18.520] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)

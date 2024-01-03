@@ -7,7 +7,7 @@ export class ConnectSvrOnLineNumComp{
         this.connectServerType = connectServerType;
         this.minSvr = game.app.serversConfig[this.connectServerType][0];
         this.minSvr.userNum = 0;
-        setInterval(this.rpcGetUserNum.bind(this), 500);
+        setInterval(this.rpcGetUserNum.bind(this), 5000);
     }
     private rpcGetUserNum() {
         let callNum = 1;
@@ -21,11 +21,7 @@ export class ConnectSvrOnLineNumComp{
         for (let one of svrs) {
             callNum++;
             //@ts-ignore
-            game.app.rpc(one.id)[this.connectServerType].main.getClientNum(function (err, num) {
-                if (err) {
-                    callBack();
-                    return;
-                }
+            game.app.rpc(one.id)[this.connectServerType].main.getClientNum().then((num)=>{
                 one.userNum = num;
                 callBack();
             });
