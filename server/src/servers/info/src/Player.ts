@@ -36,6 +36,8 @@ export class Player {
     queryAllInfo(){
         if(!this.queryPromise){
             this.queryPromise =  new Promise((resolve,reject)=>{
+                resolve({});
+            }).then(()=>{
                 this.queryInfoData = {};
                 for(let i in this.queryResolveList){
                     this.queryResolveList[i](this.queryInfoData);
