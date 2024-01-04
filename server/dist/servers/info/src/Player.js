@@ -17,17 +17,29 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Player = void 0;
 const InfoConfig_1 = require("./InfoConfig");
 class Player {
-    constructor(uid, callBack) {
+    constructor(uid) {
         this.delThisTime = 0;
+        this.queryResolveList = [];
         this.uid = uid;
-        this.queryAllInfo(callBack);
+        this.queryAllInfo();
     }
-    queryAllInfo(callBack) {
-        setTimeout(() => {
-            if (callBack) {
-                callBack();
+    queryAllInfo() {
+        if (!this.queryPromise) {
+            this.queryPromise = new Promise((resolve, reject) => {
+                this.queryInfoData = {};
+                for (let i in this.queryResolveList) {
+                    this.queryResolveList[i](this.queryInfoData);
+                }
+            });
+        }
+        return new Promise((resolve, reject) => {
+            if (this.queryInfoData) {
+                resolve(this.queryInfoData);
             }
-        }, 500);
+            else {
+                this.queryResolveList.push(resolve);
+            }
+        });
     }
     online() {
         this.delThisTime = 0;

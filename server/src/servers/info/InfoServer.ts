@@ -34,14 +34,12 @@ export class InfoServer extends GameServerBase{
             }
         }
     }
-    getInfoData(uid:number){
+    async getInfoData(uid:number){
         let player = this.roles[uid];
         if(!player){
-            player = new Player(uid,()=>{
-                return {
-                    hah : 1
-                };
-            });
+            player = new Player(uid);
+            this.roles[uid] = player;
         }
+        return await player.queryAllInfo();
     }
 }

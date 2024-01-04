@@ -17,7 +17,7 @@ import { I_roleInfo, I_roleMem } from "../../../common/interface/IInfo";
 import { Quip } from "./Quip";
 import { Bag } from "./Bag";
 import { InfoConfig } from "./InfoConfig";
-
+type resolveFunc = (value: unknown) => void 
 export class Player {
     public uid: number;
     public delThisTime:number = 0;
@@ -25,17 +25,30 @@ export class Player {
     public role?: I_roleInfo;
     public bag?: Bag;
     public equip?: Quip;
+    public queryInfoData:any;
+    public queryPromise?:Promise<any>;
+    public queryResolveList:resolveFunc[]=  []
 
-    constructor(uid:number,callBack:()=>void) {
+    constructor(uid:number) {
         this.uid = uid;
-        this.queryAllInfo(callBack);
+        this.queryAllInfo();
     }
-    queryAllInfo(callBack:()=>void){
-        setTimeout(()=>{
-            if(callBack){
-                callBack()
+    queryAllInfo(){
+        if(!this.queryPromise){
+            this.queryPromise =  new Promise((resolve,reject)=>{
+                this.queryInfoData = {};
+                for(let i in this.queryResolveList){
+                    this.queryResolveList[i](this.queryInfoData);
+                }
+            })
+        }
+        return new Promise((resolve,reject)=>{
+            if(this.queryInfoData){
+                resolve(this.queryInfoData);
+            }else{
+                this.queryResolveList.push(resolve);
             }
-        },500)
+        })
     }
     private online() {
         this.delThisTime = 0;

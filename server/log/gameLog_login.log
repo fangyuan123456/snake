@@ -2353,3 +2353,23 @@
     at processTicksAndRejections (node:internal/process/task_queues:77:11)
     at runNextTicks (node:internal/process/task_queues:64:3)
     at process.processTimers (node:internal/timers:509:9)
+[2024-01-04T13:39:11.430] [DEBUG] gameLog - undefined
+[2024-01-04T13:39:22.189] [DEBUG] gameLog - undefined
+[2024-01-04T13:39:28.984] [DEBUG] gameLog - undefined
+[2024-01-04T13:45:53.789] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-0
+[2024-01-04T13:45:53.790] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-04T13:45:53.792] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-0
+[2024-01-04T13:45:53.793] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-04T13:45:53.794] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
+[2024-01-04T13:45:53.802] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-04T13:45:53.804] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-04T14:30:44.526] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-0
+[2024-01-04T14:30:45.236] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-04T14:30:45.239] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-0
+[2024-01-04T14:30:45.241] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-04T14:30:45.250] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
+[2024-01-04T14:30:54.708] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\git\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:504:9)
