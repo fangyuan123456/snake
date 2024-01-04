@@ -19,22 +19,27 @@ const InfoConfig_1 = require("./InfoConfig");
 class Player {
     constructor(uid) {
         this.delThisTime = 0;
+        this.isInit = false;
         this.queryResolveList = [];
         this.uid = uid;
         this.queryAllInfo();
     }
     queryAllInfo() {
-        if (!this.queryPromise) {
-            this.queryPromise = new Promise((resolve, reject) => {
-                this.queryInfoData = {};
+        if (!this.isInit) {
+            new Promise((resolve, reject) => {
+                resolve({});
+            }).then(() => {
+                this.isInit = true;
                 for (let i in this.queryResolveList) {
-                    this.queryResolveList[i](this.queryInfoData);
+                    this.queryResolveList[i](this);
                 }
             });
         }
+    }
+    getPlayerInfo() {
         return new Promise((resolve, reject) => {
-            if (this.queryInfoData) {
-                resolve(this.queryInfoData);
+            if (this.isInit) {
+                resolve(this);
             }
             else {
                 this.queryResolveList.push(resolve);

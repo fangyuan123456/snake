@@ -2373,3 +2373,6 @@
     at processTicksAndRejections (node:internal/process/task_queues:77:11)
     at runNextTicks (node:internal/process/task_queues:64:3)
     at process.processTimers (node:internal/timers:504:9)
+[2024-01-04T22:17:17.599] [DEBUG] gameLog - undefined
+[2024-01-04T22:17:21.678] [DEBUG] gameLog - undefined
+[2024-01-04T22:17:48.118] [DEBUG] gameLog - undefined

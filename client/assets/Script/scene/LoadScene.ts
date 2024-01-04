@@ -32,7 +32,8 @@ export default class LoadScene extends SceneBase {
     }
     login(next){
         game.platFormMgr.getLoginCode((data)=>{
-            game.netMgr.sendHttpRequest(data,"login",()=>{
+            game.netMgr.sendHttpRequest(data,"login",(loginData)=>{
+                game.userData.setLoginData(loginData);
                 next();
             })
         });

@@ -1,3 +1,4 @@
+import { SocketType } from "../Game";
 import { SingleBase } from "../base/SingleBase";
 import { SocketBase } from "../base/SocketBase";
 import { ServerCfg } from "../configs/ServerCfg";
@@ -41,22 +42,27 @@ export class NetManager extends SingleBase{
             }
          })
     }
-    sendSocket(socketName:string,data:SocketMsgStruct,callBack?:()=>void){
-        if(!this.socketMap[socketName]){
-            game.logMgr.error("socketName:%s is not find",socketName);
+    sendSocket(socketType:SocketType,data:SocketMsgStruct,callBack?:()=>void){
+        if(!this.socketMap[socketType]){
+            game.logMgr.error("socketName:%s is not find",socketType);
             return;
         }
-        this.socketMap[socketName].send(data,callBack);
+        this.socketMap[socketType].send(data,callBack);
     }
-    createSocket(socketName:string,ip:string,createFunc?:(socketName:string,ip:string)=>SocketBase){
-        if(!this.socketMap[socketName]){
+    createSocket(socketType:SocketType,ip:string){
+        if(!this.socketMap[socketType]){
             return;
         }
-        if(createFunc){
-            this.socketMap[socketName] = createFunc(socketName,ip);
-        }else{
-            this.socketMap[socketName] = new SocketBase(socketName,ip);
-        }
+        this.socketMap[socketType] = new SocketBase(socketType,ip);
+    }
+    onOpen(callBack:(any)=>void,target:cc.Component,socketType:SocketType = SocketType.center){
+        this.socketMap[socketType].onMsgHander("onOpen",callBack,target)
+    }
+    onClose(callBack:(any)=>void,target:cc.Component,socketType:SocketType = SocketType.center){
+        this.socketMap[socketType].onMsgHander("onClose",callBack,target)
+    }
+    onMsg(msgName:string,callBack:(any)=>void,target:cc.Component,socketType:SocketType = SocketType.center){
+        this.socketMap[socketType].onMsgHander(msgName,callBack,target)
     }
     showNetLoadingBar(_b){
         if(_b){

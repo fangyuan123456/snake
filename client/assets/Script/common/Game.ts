@@ -11,11 +11,16 @@ import { TimeManager } from "./manager/TimeManager";
 import { ProtoManager } from "./manager/ProtoManager";
 import { EventManager } from "./manager/EventManager";
 import { NetManager } from "./manager/NetManager";
+import UserData from "./data/UserData";
 
 declare global {
     namespace globalThis {
         var game:Game /* 的类型 */
     }
+}
+export enum SocketType{
+    center = "center",
+    game = "game"
 }
 export class Game extends SingleBase{
     resMgr:ResManager
@@ -28,6 +33,8 @@ export class Game extends SingleBase{
     protoMgr:ProtoManager
     eventMgr:EventManager
     netMgr:NetManager
+
+    userData:UserData
     constructor(){
         super();
         globalThis.game = this;
@@ -42,6 +49,8 @@ export class Game extends SingleBase{
         this.protoMgr = ProtoManager.getInstance();
         this.eventMgr = EventManager.getInstance();
         this.netMgr = NetManager.getInstance();
+
+        this.userData = UserData.getInstance();
         switch(getPlatForm()){
             case PLATFORM_TYPE.ANDROID:
                 this.platFormMgr = AndroidPlatFormManager.getInstance();

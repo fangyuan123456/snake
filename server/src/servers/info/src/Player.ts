@@ -25,7 +25,7 @@ export class Player {
     public role?: I_roleInfo;
     public bag?: Bag;
     public equip?: Quip;
-    public queryInfoData:any;
+    public isInit:boolean = false;
     public queryPromise?:Promise<any>;
     public queryResolveList:resolveFunc[]=  []
 
@@ -34,19 +34,21 @@ export class Player {
         this.queryAllInfo();
     }
     queryAllInfo(){
-        if(!this.queryPromise){
-            this.queryPromise =  new Promise((resolve,reject)=>{
+        if(!this.isInit){
+            new Promise((resolve,reject)=>{
                 resolve({});
             }).then(()=>{
-                this.queryInfoData = {};
+                this.isInit = true;
                 for(let i in this.queryResolveList){
-                    this.queryResolveList[i](this.queryInfoData);
+                    this.queryResolveList[i](this);
                 }
             })
         }
+    }
+    public getPlayerInfo(){
         return new Promise((resolve,reject)=>{
-            if(this.queryInfoData){
-                resolve(this.queryInfoData);
+            if(this.isInit){
+                resolve(this);
             }else{
                 this.queryResolveList.push(resolve);
             }

@@ -10,8 +10,8 @@ declare global {
 export default class Remote {
     constructor() {
     }
-    async getInfoData(uid:number){
+    createPlayerInfo(uid:number){
         let infoGame = game as InfoServer;
-        return await infoGame.getInfoData(uid);
+        infoGame.createPlayerInfo(uid);
     }
 }

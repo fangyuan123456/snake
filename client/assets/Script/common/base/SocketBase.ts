@@ -1,3 +1,4 @@
+import { SocketType } from "../Game";
 import { SocketMsgStruct } from "../manager/NetManager";
 enum SOCKET_STATE{
     OFFLINE,
@@ -7,12 +8,12 @@ enum SOCKET_STATE{
 type  socketCallBack=(any)=>void
 export class SocketBase{
     state:SOCKET_STATE = SOCKET_STATE.OFFLINE
-    name:string
+    socketType:SocketType
     ip:string
     socket:WebSocket
     msgCallBackList:{[key:string]:socketCallBack[]}
-    constructor(name:string,ip:string){
-        this.name = name;
+    constructor(socketType:SocketType,ip:string){
+        this.socketType = socketType;
         this.ip = ip;
         this.connect();
     }
@@ -41,7 +42,10 @@ export class SocketBase{
             }
             delete this.msgCallBackList[msg.msgHead]
         }
-        game.eventMgr.dispatch("OnMsg"+msg.msgHead,msg.msgData);
+        game.eventMgr.dispatch(this.socketType+"OnMsg"+msg.msgHead,msg.msgData);
+    }
+    onMsgHander(msgName:string,callBack:(any)=>void,target:cc.Component){
+        game.eventMgr.on(this.socketType+"OnMsg"+msgName,callBack,target);
     }
     onError(){
         this.close();
@@ -51,7 +55,7 @@ export class SocketBase{
     }
     send(data:SocketMsgStruct,callBack?:()=>void){
         if(this.state != SOCKET_STATE.ONLINE){
-            game.logMgr.error("socket:% state is %d",this.name,this.state);
+            game.logMgr.error("socket:% state is %d",this.socketType,this.state);
             return;
         }
         this._pushInCallBackList(data,callBack);;
