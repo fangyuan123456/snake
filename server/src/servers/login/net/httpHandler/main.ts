@@ -1,5 +1,6 @@
 import { Response } from "express";
 import { I_loginReq, I_loginRes, I_sdkLoginRes } from "../../../../common/interface/ILogin";
+import { TableName } from "../../../../common/manager/SqlManager";
 export default class Handler {
     constructor() {
     }
@@ -16,12 +17,12 @@ export default class Handler {
         });
     }
     async registerAndLogin(data:I_sdkLoginRes){
-        let userData = await game.sqlMgr.select("t_user",data)
+        let userData = await game.sqlMgr.select(TableName.USER,data)
         if(userData.length == 0){
-            userData = await game.sqlMgr.add("t_user",data);
+            userData = await game.sqlMgr.add(TableName.USER,data);
         }
         let mData = userData[userData.length-1];
-        game.app.rpc(game.utilsMgr.getInfoId(mData.uid)).info.main.createPlayerInfo(mData.uid);
+        game.app.rpc(game.utilsMgr.getInfoId(mData.uid)).info.main.createPlayer(mData);
         return mData
     }
 }

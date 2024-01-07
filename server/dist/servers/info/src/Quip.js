@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Quip = void 0;
-const SqlUpdateBase_1 = require("../../../common/base/SqlUpdateBase");
-class Quip extends SqlUpdateBase_1.SqlUpdateBase {
+const SqlUpdateBase_1 = require("../../../common/base/SqlBase");
+class Quip extends SqlUpdateBase_1.SqlBase {
     constructor(player, equip) {
         super("t_quip");
         this.equip = equip;

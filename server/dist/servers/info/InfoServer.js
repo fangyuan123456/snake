@@ -34,7 +34,7 @@ class InfoServer extends GameServerBase_1.GameServerBase {
             }
         }
     }
-    createPlayerInfo(uid) {
+    createPlayer(uid) {
         let player = this.roles[uid];
         if (!player) {
             player = new Player_1.Player(uid);

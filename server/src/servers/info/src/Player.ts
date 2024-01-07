@@ -1,22 +1,7 @@
-// import { gameLog } from "../common/logger";
-// import { friendState, I_friendInfo_client, I_roleAllInfo, I_roleAllInfoClient, I_roleMem, I_uidsid } from "../common/someInterface";
-// import { svr_info } from "./svr_info";
-// import { constKey } from "../common/someConfig";
-// import { app } from "mydog";
-// import { nowMs } from "../common/time";
-// import { cmd } from "../../config/cmd";
-// import { getBit, getDiffDays, randArrElement, setBit, timeFormat } from "../util/util";
-// import { MapIdMgr } from "../svr_map/mapIdMgr";
-// import { I_playerMapJson } from "../../servers/map/handler/main";
-// import { cfg_all, I_cfg_mapDoor } from "../common/configUtil";
-// import { Bag, I_item } from "./bag";
-// import { Equipment } from "./equipment";
-// import { j2x2 } from "../svr_map/map";
-
 import { I_roleInfo, I_roleMem } from "../../../common/interface/IInfo";
-import { Quip } from "./Quip";
 import { Bag } from "./Bag";
 import { InfoConfig } from "./InfoConfig";
+import { TableName } from "../../../common/manager/SqlManager";
 type resolveFunc = (value: unknown) => void 
 export class Player {
     public uid: number;
@@ -24,19 +9,20 @@ export class Player {
     public roomInfo?: I_roleMem;
     public role?: I_roleInfo;
     public bag?: Bag;
-    public equip?: Quip;
     public isInit:boolean = false;
-    public queryPromise?:Promise<any>;
     public queryResolveList:resolveFunc[]=  []
 
-    constructor(uid:number) {
-        this.uid = uid;
+    constructor(role:I_roleInfo) {
+        this.uid = role.uid;
+        this.role = role;
         this.queryAllInfo();
     }
     queryAllInfo(){
         if(!this.isInit){
-            new Promise((resolve,reject)=>{
-                resolve({});
+            new Promise(async (resolve,reject)=>{
+                this.bag = new Bag(this)
+                await this.bag.init();
+                resolve(this);
             }).then(()=>{
                 this.isInit = true;
                 for(let i in this.queryResolveList){
@@ -63,11 +49,9 @@ export class Player {
     }
     doSqlUpdate(){
         this.bag?.doSqlUpdate();
-        this.equip?.doSqlUpdate();
     }
     update(){
         this.bag?.update();
-        this.equip?.update();
     }
    
 }

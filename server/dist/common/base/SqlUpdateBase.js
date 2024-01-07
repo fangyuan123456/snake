@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SqlUpdateBase = void 0;
-class SqlUpdateBase {
+exports.SqlBase = void 0;
+class SqlBase {
     constructor(tb_name) {
         this.tb_name = "";
         this.whileUpdateKeyList = {};
@@ -19,4 +19,4 @@ class SqlUpdateBase {
         }
     }
 }
-exports.SqlUpdateBase = SqlUpdateBase;
+exports.SqlBase = SqlBase;

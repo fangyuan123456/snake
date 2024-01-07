@@ -1,3 +1,4 @@
+import { I_roleInfo } from "../../../../common/interface/IInfo";
 import { InfoServer } from "../../InfoServer";
 
 declare global {
@@ -10,8 +11,8 @@ declare global {
 export default class Remote {
     constructor() {
     }
-    createPlayerInfo(uid:number){
+    createPlayer(role:I_roleInfo){
         let infoGame = game as InfoServer;
-        infoGame.createPlayerInfo(uid);
+        infoGame.createPlayer(role);
     }
 }

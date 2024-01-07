@@ -2,6 +2,10 @@ import * as mysql from "mysql";
 interface Dic<T = any> {
     [key: string]: any
 }
+export enum TableName{
+    USER = "t_user",
+    BAG = "t_bag",
+}
 enum SqlOpsType{
     ADD,
     DEL,
@@ -42,7 +46,7 @@ export class SqlManager extends SingleBase{
             });
         })
     }
-    private getSqlStrByArr(opsType:SqlOpsType,table:string, obj: Dic<any>|null,cond?:Dic<any>|null){
+    private getSqlStrByArr(opsType:SqlOpsType,table:TableName, obj: Dic<any>|null,cond?:Dic<any>|null){
         let getSqlStrFunc=(obj:Dic<any>,isInsert:boolean = false)=>{
             if(!obj){
                 return ""
@@ -87,19 +91,19 @@ export class SqlManager extends SingleBase{
         }
         return sqlStr;
     }
-    add(table:string, obj: Dic<any>): Promise<any>{
+    add(table:TableName, obj: Dic<any>): Promise<any>{
         let sqlStr = this.getSqlStrByArr(SqlOpsType.ADD,table,obj);
         return this.query(sqlStr,null)
     }
-    del(table:string, cond: Dic<any>): Promise<any>{
+    del(table:TableName, cond: Dic<any>): Promise<any>{
         let sqlStr = this.getSqlStrByArr(SqlOpsType.DEL,table,null,cond);
         return this.query(sqlStr,null)
     }
-    update(table:string, obj: Dic<any>, cond?: Dic<any>): Promise<any>{
+    update(table:TableName, obj: Dic<any>, cond?: Dic<any>): Promise<any>{
         let sqlStr = this.getSqlStrByArr(SqlOpsType.UPDATE,table,obj,cond);
         return this.query(sqlStr,null)
     }
-    select(table:string, cond: Dic<any>): Promise<any>{
+    select(table:TableName, cond: Dic<any>): Promise<any>{
         let sqlStr = this.getSqlStrByArr(SqlOpsType.SELECT,table,null,cond);
         return this.query(sqlStr,null)
     }

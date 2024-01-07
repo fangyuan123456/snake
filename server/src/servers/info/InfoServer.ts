@@ -3,6 +3,7 @@ import { GameServerBase } from "../../common/base/GameServerBase";
 import { Dic } from "../../common/interface/ICommon";
 import { Player } from "./src/Player";
 import { InfoConfig } from "./src/InfoConfig";
+import { I_roleInfo } from "../../common/interface/IInfo";
 
 export class InfoServer extends GameServerBase{
     private roles: Dic<Player> = {};    // 所有玩家数据
@@ -34,11 +35,11 @@ export class InfoServer extends GameServerBase{
             }
         }
     }
-    createPlayerInfo(uid:number){
-        let player = this.roles[uid];
+    createPlayer(role:I_roleInfo){
+        let player = this.roles[role.uid];
         if(!player){
-            player = new Player(uid);
-            this.roles[uid] = player;
+            player = new Player(role);
+            this.roles[role.uid] = player;
         }
     }
 }
