@@ -9,12 +9,12 @@ let defaultItems:Dic<I_item> = {
         num: 2,
     }
 }
-export class Bag extends SqlBase{
+export class Asset extends SqlBase{
     private items: Dic<I_item> = {};
     private player:Player
     public whileUpdateSqlKeyMap:{[key:string]:number[]} = {};
     constructor(player: Player) {
-        super(TableName.BAG,{uid:player.uid})
+        super(TableName.ASSET,{uid:player.uid})
         this.player = player;
     }
     init(){

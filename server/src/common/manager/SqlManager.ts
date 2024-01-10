@@ -4,7 +4,7 @@ interface Dic<T = any> {
 }
 export enum TableName{
     USER = "t_user",
-    BAG = "t_bag",
+    ASSET = "t_bag",
 }
 enum SqlOpsType{
     ADD,

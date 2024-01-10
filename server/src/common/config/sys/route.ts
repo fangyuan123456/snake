@@ -38,14 +38,14 @@ export default [
     "onFriendInfoChange",
 
 
-    "info.bag.delItem",
-    "info.bag.dropItem",
+    "info.asset.delItem",
+    "info.asset.dropItem",
     "onItemChanged",
-    "info.bag.changePos",
-    "info.bag.equipItem",   // 装备道具
+    "info.asset.changePos",
+    "info.asset.equipItem",   // 装备道具
     "onEquipChanged",   // 通知 装备改变
     "onHpMpPosChanged", // hp mp 快速使用栏变化
-    "info.bag.useHpMpAdd",  // hp mp 快速使用
+    "info.asset.useHpMpAdd",  // hp mp 快速使用
 
     "info.main.gmCommit",   // gm命令
     "info.main.learnSkill",   // 学习技能

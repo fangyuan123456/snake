@@ -1,5 +1,5 @@
 import { I_roleInfo, I_roleMem } from "../../../common/interface/IInfo";
-import { Bag } from "./Bag";
+import { Asset } from "./Asset";
 import { InfoConfig } from "./InfoConfig";
 import { TableName } from "../../../common/manager/SqlManager";
 type resolveFunc = (value: unknown) => void 
@@ -8,7 +8,7 @@ export class Player {
     public delThisTime:number = 0;
     public roomInfo?: I_roleMem;
     public role?: I_roleInfo;
-    public bag?: Bag;
+    public asset?: Asset;
     public isInit:boolean = false;
     public queryResolveList:resolveFunc[]=  []
 
@@ -20,8 +20,8 @@ export class Player {
     queryAllInfo(){
         if(!this.isInit){
             new Promise(async (resolve,reject)=>{
-                this.bag = new Bag(this)
-                await this.bag.init();
+                this.asset = new Asset(this)
+                await this.asset.init();
                 resolve(this);
             }).then(()=>{
                 this.isInit = true;
@@ -48,10 +48,10 @@ export class Player {
         this.delThisTime = game.timeMgr.getCurTime() + InfoConfig.offLineInfoCleanTime;
     }
     doSqlUpdate(){
-        this.bag?.doSqlUpdate();
+        this.asset?.doSqlUpdate();
     }
     update(){
-        this.bag?.update();
+        this.asset?.update();
     }
    
 }

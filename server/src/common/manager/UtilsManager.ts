@@ -26,5 +26,10 @@ export class UtilsManager extends SingleBase{
     capitalizeFirstLetter(str: string): string {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
-
+    merge(map:{[key:string]:any},newMap:{[key:string]:any}){
+        for(let i in newMap){
+            map[i] = newMap[i];
+        }
+        return map;
+    }
 }

@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Bag = void 0;
+exports.Asset = void 0;
 const SqlUpdateBase_1 = require("../../../common/base/SqlBase");
-class Bag extends SqlUpdateBase_1.SqlBase {
+class Asset extends SqlUpdateBase_1.SqlBase {
     constructor(player, items) {
         super("t_bag");
         this.whileUpdateSqlKeyMap = {};
@@ -17,4 +17,4 @@ class Bag extends SqlUpdateBase_1.SqlBase {
     update() {
     }
 }
-exports.Bag = Bag;
+exports.Asset = Asset;
