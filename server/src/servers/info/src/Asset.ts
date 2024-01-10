@@ -5,11 +5,15 @@ import { TableName } from "../../../common/manager/SqlManager";
 import {Player } from "./Player";
 let defaultItems:Dic<I_item> = {
     1:{
-        id: 1,
-        num: 2,
+        num: 2
+    },
+    2:{
+        num:2
     }
 }
 export class Asset extends SqlBase{
+    compKey: { [key: string]: string[]} = {};
+    defaultCompKey?: string = "items";
     private items: Dic<I_item> = {};
     private player:Player
     public whileUpdateSqlKeyMap:{[key:string]:number[]} = {};
@@ -17,56 +21,29 @@ export class Asset extends SqlBase{
         super(TableName.ASSET,{uid:player.uid})
         this.player = player;
     }
-    init(){
+    async init():Promise<Dic<any>>{
         return new Promise(async (resolve,reject)=>{
-            let bagData = await this.select();
-            if(!bagData){
-                bagData = defaultItems;
-                this.add(defaultItems);
-                this.items = defaultItems;
-            }else{
-                this.items = this.parseDic(bagData)
-            }
-            resolve(this.items);
+            super.init(defaultItems).then((data:Dic<any>)=>{
+                this.items = data;
+                resolve(data);
+            })
         })
     }
-    parseDic(dicData:Dic<any>){
-        let newItem: Dic<I_item> = {}
-        for(let i in dicData){
-            let str:string = dicData[i];
-            let strArr = str.split("#");
-            let id = Number(strArr[0]);
-            let num = Number(strArr[1]);
-            let level = null;
-            if(strArr[2]){
-                level = Number(strArr[2]);
+    getAllDataByCompKey(compKey: string): Dic<any> {
+        let newDic:Dic<I_item> = {};
+        if(compKey == this.defaultCompKey){
+            for(let key in this.items){
+                if(!isNaN(Number(key))){
+                    newDic[key] = this.items[key];
+                }
             }
-            
-            let countEndTime = null;
-            if(strArr[3]){
-                countEndTime = Number(strArr[3])
-            }
-            newItem[id] = {
-                id : id,
-                num:num,
-                level:level!,
-                countEndTime:countEndTime!
+        }else{
+            let keyList = this.compKey[compKey]
+            for(let key in keyList){
+                newDic[key] = this.items[key];
             }
         }
-        return newItem
-    }
-    makeDic(data:Dic<I_item>):Dic<any>{
-        let newDic:Dic<string> = {};
-        for(let i in data){
-            newDic[i] =data[i].id+"#"+data.value;
-            if(data[i].level){
-                newDic[i]+="#"+data[i].level
-            }
-            if(data[i].countEndTime){
-                newDic[i]+="#"+data[i].countEndTime
-            }
-        }
-        return newDic;
+        return newDic
     }
     update(){
         

@@ -2,7 +2,7 @@ import { Dic } from "../interface/ICommon";
 import { TableName } from "../manager/SqlManager";
 export class SqlBase{
     compKey:{[key:string]:string[]} = {}
-    defaultCompKey? = null!
+    defaultCompKey?:string = null!
     cond:Dic<any> = null!
     datasCenter?:Dic<any>
     tb_name:TableName
@@ -27,7 +27,7 @@ export class SqlBase{
         this.datasCenter = datasCenter;
     }
     getCond(){
-        return this.cond;
+        return this.cond
     }
     isCompKey(sqlKey:string){
         if(this.compKey[sqlKey] || sqlKey == this.defaultCompKey){
@@ -97,28 +97,64 @@ export class SqlBase{
         }
         return newDicObj;
     }
+    makeTableKeyDic(dicObj:Dic<any>){
+        let newDicObj:Dic<any> = {};
+        let compKeyList:any[] = [];
+        for(let key in dicObj){
+            let compKey = this.getCompKey(key);
+            if(compKey){
+                newDicObj[compKey] = newDicObj[compKey] || {};
+                newDicObj[compKey][key] = dicObj[key];
+                if(compKeyList.indexOf(compKey)<0){
+                    compKeyList.push(compKey);
+                }
+            }else{
+                newDicObj[key] = dicObj[key];
+                if(typeof newDicObj[key] == "object"){
+                    newDicObj[key] = JSON.stringify(newDicObj[key]);
+                }
+            }
+        }
+        for(let i in compKeyList){
+            let key = compKeyList[i];
+            newDicObj[key] = JSON.stringify(newDicObj[key]);
+        }
+        return newDicObj;
+    }
     add(obj: any){
-        return game.sqlMgr.add(this.tb_name,this.makeDic(obj));
+        let dicObj = this.makeTableKeyDic(obj);
+        let cond = this.getCond();
+        for(let i in cond){
+            dicObj[i] = cond[i];
+        }
+        return game.sqlMgr.add(this.tb_name,dicObj);
     }
     del(){
-        return game.sqlMgr.del(this.tb_name,this.cond);
+        return game.sqlMgr.del(this.tb_name,this.getCond());
     }
-    select(){
-        return game.sqlMgr.select(this.tb_name,this.cond);
+    async select(){
+        let data = await game.sqlMgr.select(this.tb_name,this.getCond());
+        if(data.length>0){
+            let dicData:Dic<any> = data[0];
+            return this.parseTableKeyDic(dicData);
+        }else{
+            return null;
+        }
     }
     updateInstantly(obj: any){
-        let dicObj = this.makeDic(obj);
-        game.sqlMgr.update(this.tb_name,dicObj,this.cond)
+        let dicObj = this.makeTableKeyDic(obj);
+        game.sqlMgr.update(this.tb_name,dicObj,this.getCond())
     }
-    update(obj: any){
-        let dicObj = this.makeDic(obj);
+    update(obj: Dic<any>){
+        obj = this.fullCompKeyData(obj);
+        let dicObj = this.makeTableKeyDic(obj);
         for(let i in dicObj){
-            this.whileUpdateKeyList[dicObj[i].key] = dicObj[i].value
+            this.whileUpdateKeyList[i] = dicObj[i]
         }
     }
     doSqlUpdate(){
         if(Object.keys(this.whileUpdateKeyList).length > 0){
-            game.sqlMgr.update(this.tb_name,this.whileUpdateKeyList,this.cond)
+            game.sqlMgr.update(this.tb_name,this.whileUpdateKeyList,this.getCond())
             this.whileUpdateKeyList = {};
         }
     }

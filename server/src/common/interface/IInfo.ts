@@ -12,7 +12,6 @@ export interface I_roleInfo {
     "isDelete": number,         // 角色是否被删除
 }
 export interface I_item {
-    id: number,
     num: number,
     level?:number,
     countEndTime?:number
