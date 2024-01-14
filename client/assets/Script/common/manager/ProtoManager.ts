@@ -87,17 +87,21 @@ export class ProtoManager extends SingleBase{
             dataBuf = this.encodeProto(data);
             msg_len = dataBuf.length+7;
             buffer = new Uint8Array(msg_len);
-            buffer[index++] = data.msgType & 0xff;  
             buffer[index++] = msg_len >> 24 & 0xff;
             buffer[index++] = msg_len >> 16 & 0xff;
             buffer[index++] = msg_len >> 8 & 0xff;
             buffer[index++] = msg_len & 0xff;
+            buffer[index++] = data.msgType & 0xff;  
             buffer[index++] = protoCode >> 8 & 0xff;
             buffer[index++] = protoCode & 0xff;
         }else{
             dataBuf = this.strencode(JSON.stringify(data.msgData))
             msg_len = dataBuf.length + 1;
-            buffer = new Uint8Array(msg_len);
+            buffer = new Uint8Array(dataBuf.length + 5);
+            buffer[index++] = msg_len >> 24 & 0xff;
+            buffer[index++] = msg_len >> 16 & 0xff;
+            buffer[index++] = msg_len >> 8 & 0xff;
+            buffer[index++] = msg_len & 0xff;
             buffer[index++] = data.msgType & 0xff;  
         }
         game.protoMgr.copyArray(buffer, index, dataBuf, 0, dataBuf.length);
