@@ -1026,3 +1026,6 @@
 [2024-01-04T14:30:45.247] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
 [2024-01-04T14:30:45.263] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
 [2024-01-04T14:44:20.481] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-14T15:02:58.697] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-14T15:02:58.701] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-14T15:02:58.702] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later

@@ -34,11 +34,11 @@ class InfoServer extends GameServerBase_1.GameServerBase {
             }
         }
     }
-    createPlayer(uid) {
-        let player = this.roles[uid];
+    createPlayer(role) {
+        let player = this.roles[role.uid];
         if (!player) {
-            player = new Player_1.Player(uid);
-            this.roles[uid] = player;
+            player = new Player_1.Player(role);
+            this.roles[role.uid] = player;
         }
     }
 }

@@ -1,8 +1,9 @@
 import { SocketType } from "../Game";
 import { SingleBase } from "../base/SingleBase";
-import { SocketBase } from "../base/SocketBase";
+import { MSG_TYPE, SocketBase } from "../base/SocketBase";
 import { ServerCfg } from "../configs/ServerCfg";
 export interface SocketMsgStruct{
+    msgType:MSG_TYPE
     msgHead:string,
     msgData:any
 }
@@ -50,13 +51,16 @@ export class NetManager extends SingleBase{
         this.socketMap[socketType].send(data,callBack);
     }
     createSocket(socketType:SocketType,ip:string){
-        if(!this.socketMap[socketType]){
+        if(this.socketMap[socketType]){
             return;
         }
         this.socketMap[socketType] = new SocketBase(socketType,ip);
     }
     onOpen(callBack:(any)=>void,target:cc.Component,socketType:SocketType = SocketType.center){
         this.socketMap[socketType].onMsgHander("onOpen",callBack,target)
+    }
+    onReady(callBack:(any)=>void,target:cc.Component,socketType:SocketType = SocketType.center){
+        this.socketMap[socketType].onMsgHander("onReady",callBack,target)
     }
     onClose(callBack:(any)=>void,target:cc.Component,socketType:SocketType = SocketType.center){
         this.socketMap[socketType].onMsgHander("onClose",callBack,target)

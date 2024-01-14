@@ -8,7 +8,7 @@ export default class Handler {
         game.platformMgr.getLoginCode(msgData,(data:I_sdkLoginRes)=>{
             this.registerAndLogin(data).then((registerData:any)=>{
                 let loginResData:I_loginRes = {
-                    centerIp:game.svrNumComp!.getMinSvrIp(),
+                    centerIp:"ws://"+game.svrNumComp!.getMinSvrIp(),
                     uid:registerData.uid,
                     nickName:registerData.nickName
                 }

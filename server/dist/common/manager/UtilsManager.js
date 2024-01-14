@@ -49,5 +49,11 @@ class UtilsManager extends SingleBase_1.SingleBase {
     capitalizeFirstLetter(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
+    merge(map, newMap) {
+        for (let i in newMap) {
+            map[i] = newMap[i];
+        }
+        return map;
+    }
 }
 exports.UtilsManager = UtilsManager;

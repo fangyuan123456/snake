@@ -3,9 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class Remote {
     constructor() {
     }
-    createPlayer(uid) {
+    createPlayer(role) {
         let infoGame = game;
-        infoGame.createPlayer(uid);
+        infoGame.createPlayer(role);
     }
 }
 exports.default = Remote;

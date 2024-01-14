@@ -1,34 +1,33 @@
 "use strict";
-// import { gameLog } from "../common/logger";
-// import { friendState, I_friendInfo_client, I_roleAllInfo, I_roleAllInfoClient, I_roleMem, I_uidsid } from "../common/someInterface";
-// import { svr_info } from "./svr_info";
-// import { constKey } from "../common/someConfig";
-// import { app } from "mydog";
-// import { nowMs } from "../common/time";
-// import { cmd } from "../../config/cmd";
-// import { getBit, getDiffDays, randArrElement, setBit, timeFormat } from "../util/util";
-// import { MapIdMgr } from "../svr_map/mapIdMgr";
-// import { I_playerMapJson } from "../../servers/map/handler/main";
-// import { cfg_all, I_cfg_mapDoor } from "../common/configUtil";
-// import { Asset, I_item } from "./asset";
-// import { Equipment } from "./equipment";
-// import { j2x2 } from "../svr_map/map";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Player = void 0;
+const Asset_1 = require("./Asset");
 const InfoConfig_1 = require("./InfoConfig");
 class Player {
-    constructor(uid) {
+    constructor(role) {
         this.delThisTime = 0;
         this.isInit = false;
         this.queryResolveList = [];
-        this.uid = uid;
+        this.uid = role.uid;
+        this.role = role;
         this.queryAllInfo();
     }
     queryAllInfo() {
         if (!this.isInit) {
-            new Promise((resolve, reject) => {
-                resolve({});
-            }).then(() => {
+            new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+                this.asset = new Asset_1.Asset(this);
+                yield this.asset.init();
+                resolve(this);
+            })).then(() => {
                 this.isInit = true;
                 for (let i in this.queryResolveList) {
                     this.queryResolveList[i](this);
@@ -53,14 +52,12 @@ class Player {
         this.delThisTime = game.timeMgr.getCurTime() + InfoConfig_1.InfoConfig.offLineInfoCleanTime;
     }
     doSqlUpdate() {
-        var _a, _b;
+        var _a;
         (_a = this.asset) === null || _a === void 0 ? void 0 : _a.doSqlUpdate();
-        (_b = this.equip) === null || _b === void 0 ? void 0 : _b.doSqlUpdate();
     }
     update() {
-        var _a, _b;
+        var _a;
         (_a = this.asset) === null || _a === void 0 ? void 0 : _a.update();
-        (_b = this.equip) === null || _b === void 0 ? void 0 : _b.update();
     }
 }
 exports.Player = Player;

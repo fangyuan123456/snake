@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const SqlManager_1 = require("../../../../common/manager/SqlManager");
 class Handler {
     constructor() {
     }
@@ -16,7 +17,7 @@ class Handler {
         game.platformMgr.getLoginCode(msgData, (data) => {
             this.registerAndLogin(data).then((registerData) => {
                 let loginResData = {
-                    centerIp: game.svrNumComp.getMinSvrIp(),
+                    centerIp: "ws://" + game.svrNumComp.getMinSvrIp(),
                     uid: registerData.uid,
                     nickName: registerData.nickName
                 };
@@ -26,12 +27,12 @@ class Handler {
     }
     registerAndLogin(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            let userData = yield game.sqlMgr.select("t_user", data);
+            let userData = yield game.sqlMgr.select(SqlManager_1.TableName.USER, data);
             if (userData.length == 0) {
-                userData = yield game.sqlMgr.add("t_user", data);
+                userData = yield game.sqlMgr.add(SqlManager_1.TableName.USER, data);
             }
             let mData = userData[userData.length - 1];
-            game.app.rpc(game.utilsMgr.getInfoId(mData.uid)).info.main.createPlayer(mData.uid);
+            game.app.rpc(game.utilsMgr.getInfoId(mData.uid)).info.main.createPlayer(mData);
             return mData;
         });
     }

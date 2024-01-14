@@ -23,8 +23,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SqlManager = void 0;
+exports.SqlManager = exports.TableName = void 0;
 const mysql = __importStar(require("mysql"));
+var TableName;
+(function (TableName) {
+    TableName["USER"] = "t_user";
+    TableName["ASSET"] = "t_asset";
+})(TableName || (exports.TableName = TableName = {}));
 var SqlOpsType;
 (function (SqlOpsType) {
     SqlOpsType[SqlOpsType["ADD"] = 0] = "ADD";
