@@ -3,7 +3,7 @@ import { SingleBase } from "../base/SingleBase";
 import { MSG_TYPE, SocketBase } from "../base/SocketBase";
 import { ServerCfg } from "../configs/ServerCfg";
 export interface SocketMsgStruct{
-    msgType:MSG_TYPE
+    msgType?:MSG_TYPE
     msgHead:string,
     msgData:any
 }
@@ -43,14 +43,14 @@ export class NetManager extends SingleBase{
             }
          })
     }
-    sendSocket(socketType:SocketType,data:SocketMsgStruct,callBack?:()=>void){
+    sendSocket(data:SocketMsgStruct,callBack?:()=>void,socketType:SocketType = SocketType.center){
         if(!this.socketMap[socketType]){
             game.logMgr.error("socketName:%s is not find",socketType);
             return;
         }
         this.socketMap[socketType].send(data,callBack);
     }
-    createSocket(socketType:SocketType,ip:string){
+    createSocket(ip:string,socketType:SocketType = SocketType.center){
         if(this.socketMap[socketType]){
             return;
         }

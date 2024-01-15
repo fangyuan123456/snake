@@ -57,17 +57,17 @@ export class ProtoManager extends SingleBase{
         }
     }
     decode(buffer):SocketMsgStruct{
-        let msgType = buffer[0];
         let msgData = null;
         let msgHead = null;
+        let index = 0;
+        let msgLen = (buffer[index++] << 24) | (buffer[index++] << 16) | (buffer[index++] << 8) | buffer[index++];
+        let msgType = buffer[index++];
         if(msgType == MSG_TYPE.HANDSHAKE){
-            msgData = JSON.parse(this.strdecode(buffer.slice(1)));
+            msgData = JSON.parse(this.strdecode(buffer.slice(index)));
         }else if(msgType == MSG_TYPE.HEARTBEAT){
-            msgData = JSON.parse(this.strdecode(buffer.slice(1)));
         }else{
-            let msgLen = (buffer[1] << 24) | (buffer[2] << 16) | (buffer[3] << 8) | buffer[4];
-            let protoCode = (buffer[5] << 8) | buffer[6]
-            let dataMsg = this.decodeProto(buffer.slice(7),protoCode);
+            let protoCode = (buffer[index++] << 8) | buffer[index++]
+            let dataMsg = this.decodeProto(buffer.slice(index),protoCode);
             msgHead = dataMsg.msgHead;
             msgData = dataMsg.msgData;
         }
@@ -78,6 +78,7 @@ export class ProtoManager extends SingleBase{
         };
     }
     encode(data:SocketMsgStruct){
+        data.msgType = data.msgType || MSG_TYPE.MSG;
         let index = 0;
         let msg_len = 0;
         let dataBuf = null;

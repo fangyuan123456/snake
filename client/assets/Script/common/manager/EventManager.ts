@@ -7,7 +7,7 @@ interface EVENT_LIST{
 export class EventManager extends SingleBase{
     eventMap:{[eventName: string]:EVENT_LIST[]} = {}
     on(eventName:string,callBack:(data?:any)=>void,target?:cc.Component) {
-        if(this.getEventData(eventName,callBack)){
+        if(!this.getEventData(eventName,callBack)){
             this.eventMap[eventName] = this.eventMap[eventName] || [];
             this.eventMap[eventName].push({
                 target:target,
@@ -54,12 +54,11 @@ export class EventManager extends SingleBase{
         }
     }
     private getEventData(eventName,callBack:(data?:any)=>void){
-        if(this.eventMap[eventName]){
-            for(let i in this.eventMap[eventName]){
-                let eventData = this.eventMap[eventName][i];
-                if(eventData.callBack == callBack){
-                    return eventData;
-                }
+        this.eventMap[eventName] = this.eventMap[eventName] || []
+        for(let i in this.eventMap[eventName]){
+            let eventData = this.eventMap[eventName][i];
+            if(eventData.callBack == callBack){
+                return eventData;
             }
         }
     }

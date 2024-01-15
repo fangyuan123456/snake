@@ -18,6 +18,8 @@ export class SocketBase{
     ip:string
     md5:string = ""
     heartbeat:number = 0
+    heartbeatTimer:NodeJS.Timer
+    heartbeatResTimeoutTimer:NodeJS.Timeout
     socket:WebSocket
     msgCallBackList:{[key:string]:socketCallBack[]}
     constructor(socketType:SocketType,ip:string){
@@ -52,11 +54,29 @@ export class SocketBase{
         })
         this.socket.send(buffer);
     }
-    startHeartBeat(){
+    startHeartBeat() {
+        let sendHeartbeat = ()=>{
+            // 心跳
+            let buffer = game.protoMgr.encode({
+                msgType:MSG_TYPE.HEARTBEAT,
+                msgHead:"",
+                msgData:""
+            })
+            this.socket.send(buffer);
         
+            if (this.heartbeatResTimeoutTimer === null) {
+                this.heartbeatResTimeoutTimer = setTimeout(function () {
+                    this.close();
+                },this.heartbeat);
+            }
+        }
+        if (this.heartbeat > 0) {
+            this.heartbeatTimer = setInterval(sendHeartbeat, this.heartbeat);
+        }
+ 
     }
-    onMessage(buffer){
-        let msg = game.protoMgr.decode(buffer);
+    onMessage(event){
+        let msg = game.protoMgr.decode(new Uint8Array(event.data));
         if(msg.msgType == MSG_TYPE.HANDSHAKE){
             game.protoMgr.setMsgCodeList(msg.msgData.route)
             this.heartbeat = msg.msgData.heartbeat
@@ -64,7 +84,8 @@ export class SocketBase{
             this.dispatchMsgEvent("onReady");
             this.startHeartBeat();
         }else if(msg.msgType == MSG_TYPE.HEARTBEAT){
-
+            clearTimeout(this.heartbeatResTimeoutTimer);
+            this.heartbeatResTimeoutTimer = null;
         }else if(msg.msgType == MSG_TYPE.MSG){
             this._runCallBackList(msg);
             this.dispatchMsgEvent(msg.msgHead,msg.msgData);

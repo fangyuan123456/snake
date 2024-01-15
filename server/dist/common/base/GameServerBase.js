@@ -80,6 +80,7 @@ class GameServerBase {
             "ssl": this.app.env === "production",
             "key": cert.key,
             "cert": cert.cert,
+            "heartbeat": 10000
         });
         this.app.setConfig("rpc", { "interval": 30, "noDelay": false });
         this.app.setConfig("encodeDecode", { "msgDecode": this.protoMgr.decode, "msgEncode": this.protoMgr.encode });

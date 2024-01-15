@@ -81,3 +81,5 @@
 }
 [2024-01-14T13:59:18.770] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-0
 [2024-01-14T13:59:18.772] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-15T21:26:02.286] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-0
+[2024-01-15T21:26:02.288] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1

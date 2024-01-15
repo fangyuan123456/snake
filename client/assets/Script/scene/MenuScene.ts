@@ -23,9 +23,12 @@ export default class NewClass extends cc.Component {
     // onLoad () {}
 
     start () {
-        game.netMgr.createSocket(SocketType.center,game.userData.centerIp)
-        game.netMgr.onOpen((data)=>{
-            
+        game.netMgr.createSocket(game.userData.centerIp)
+        game.netMgr.onReady((data)=>{
+            game.netMgr.sendSocket({
+                msgHead:"test",
+                msgData:{test1:111}
+            })
         },this);
         game.panelMgr.openPanel("testPanel").then((panel)=>{
          });
