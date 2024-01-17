@@ -21,7 +21,7 @@ export class SocketBase{
     heartbeatTimer:NodeJS.Timer
     heartbeatResTimeoutTimer:NodeJS.Timeout
     socket:WebSocket
-    msgCallBackList:{[key:string]:socketCallBack[]}
+    msgCallBackList:{[key:string]:socketCallBack[]} = {}
     constructor(socketType:SocketType,ip:string){
         this.socketType = socketType;
         this.ip = ip;
@@ -102,7 +102,7 @@ export class SocketBase{
         this.close();
         this.dispatchMsgEvent("onClose");
     }
-    send(data:SocketMsgStruct,callBack?:()=>void){
+    send(data:SocketMsgStruct,callBack?:(data:any)=>void){
         if(this.state != SOCKET_STATE.READY){
             game.logMgr.error("socket:% state is %d",this.socketType,this.state);
             return;
@@ -113,7 +113,7 @@ export class SocketBase{
     dispatchMsgEvent(msgName,data?){
         game.eventMgr.dispatch(this.socketType+"OnMsg"+msgName,data);
     }
-    _pushInCallBackList(data:SocketMsgStruct,callBack?:()=>void){
+    _pushInCallBackList(data:SocketMsgStruct,callBack?:(data:any)=>void){
         if(callBack){
             this.msgCallBackList[data.msgHead] = this.msgCallBackList[data.msgHead] || [];
             this.msgCallBackList[data.msgHead].push(callBack);

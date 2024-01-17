@@ -1,3 +1,3 @@
 export default [
-    "center.test"
+    "center.main.test"
 ]

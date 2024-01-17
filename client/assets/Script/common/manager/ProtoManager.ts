@@ -39,27 +39,26 @@ export class ProtoManager extends SingleBase{
             };
         }
     }
-    getMsgDecodeFuncName(protoCode,isReq = false){
+    getMsgDecodeFuncName(protoCode){
         let obj = this.msgList[protoCode];
-        return obj.packageName+"."+obj.msgName+isReq?"Req":"Res";
+        return obj.msgName;
     }
     getMsgDecodeProto(msgName){
-        let name = msgName.split("Re")[0];
         for(let i in this.msgList){
-            if(this.msgList[i].msgName == name){
+            if(this.msgList[i].msgName == msgName){
                 return Number(i);
             }
         }
     }
     encodeProto(data:SocketMsgStruct){
         let protoCode = this.getMsgDecodeProto(data.msgHead);
-        let typeFunc = this.getEncodeDecodeFunc(this.msgList[protoCode].packageName,data.msgHead);
+        let typeFunc = this.getEncodeDecodeFunc(this.msgList[protoCode].packageName,data.msgHead+"Req");
         let message = typeFunc.create(data.msgData);
         return typeFunc.encode(message).finish();
     }
     decodeProto(buffer,protoCode){
         let msgHead = this.getMsgDecodeFuncName(protoCode);
-        let typeFunc = this.getEncodeDecodeFunc(this.msgList[protoCode].packageName,msgHead);
+        let typeFunc = this.getEncodeDecodeFunc(this.msgList[protoCode].packageName,msgHead+"Res");
         let msgData = typeFunc.decode(buffer);
         return {
             msgHead:msgHead,

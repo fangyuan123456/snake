@@ -5,5 +5,8 @@ class Handler {
     }
     getRoomId() {
     }
+    test(msg, session, next) {
+        next({ test1: session.uid + "" });
+    }
 }
 exports.default = Handler;

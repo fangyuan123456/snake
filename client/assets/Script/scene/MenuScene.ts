@@ -26,8 +26,10 @@ export default class MenuScene extends cc.Component {
         game.netMgr.createSocket(game.userData.centerIp)
         game.netMgr.onReady((data)=>{
             game.netMgr.sendSocket({
-                msgHead:"testReq",
-                msgData:{test1:111}
+                msgHead:"test",
+                msgData:{test1:"111"}
+            },(data)=>{
+                console.log(data);
             })
         },this);
         game.panelMgr.openPanel("testPanel").then((panel)=>{

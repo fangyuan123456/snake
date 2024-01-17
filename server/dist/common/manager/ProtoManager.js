@@ -12,7 +12,7 @@ class ProtoManager extends SingleBase_1.SingleBase {
     getEncodeDecodeFunc(pbName) {
         if (!this.encodeDecodeFuncMap[pbName]) {
             if (!this.root) {
-                this.root = (0, protobufjs_1.loadSync)("../proto/" + game.app.serverType + ".proto");
+                this.root = (0, protobufjs_1.loadSync)(__dirname + "/../proto/" + game.app.serverType + ".json");
             }
             this.encodeDecodeFuncMap[pbName] = this.root.lookupType(pbName);
         }
@@ -22,14 +22,14 @@ class ProtoManager extends SingleBase_1.SingleBase {
         let routeUrl = game.app.routeConfig[cmd];
         let strArr = routeUrl.split(".");
         let funcName = strArr[strArr.length - 1];
-        let pbName = game.app.serverType + ".CS_" + funcName;
+        let pbName = game.app.serverType + "." + funcName + "Req";
         return this.getEncodeDecodeFunc(pbName).decode(msg);
     }
     encode(cmd, msg) {
         let routeUrl = game.app.routeConfig[cmd];
         let strArr = routeUrl.split(".");
         let funcName = strArr[strArr.length - 1];
-        let pbName = game.app.serverType + ".SC_" + funcName;
+        let pbName = game.app.serverType + "." + funcName + "Res";
         let decoder = this.getEncodeDecodeFunc(pbName);
         let message = decoder.create(msg);
         let buffer = decoder.encode(message).finish();

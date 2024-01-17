@@ -1032,3 +1032,74 @@
 [2024-01-15T21:28:02.313] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
 [2024-01-15T21:28:02.316] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
 [2024-01-15T21:28:02.317] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
+[2024-01-17T22:40:16.936] [ERROR] gameLog - Error: ENOENT: no such file or directory, open '../proto/center.proto'
+    at Object.openSync (node:fs:603:3)
+    at Object.readFileSync (node:fs:471:35)
+    at fetch (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\root.js:173:34)
+    at Root.load (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\root.js:207:13)
+    at Root.loadSync (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\root.js:248:17)
+    at loadSync (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\index-light.js:69:17)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:15:55)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:26:21)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:164:40
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:48:17) {
+  errno: -4058,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '../proto/center.proto'
+}
+[2024-01-17T22:42:00.712] [ERROR] gameLog - Error: no such type: center.CS_test
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:17:58)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:26:21)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:164:40
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:48:17)
+    at Filter.globalBeforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:55:9)
+    at ClientManager.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:158:29)
+    at ClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:129:32)
+    at WsSocket.emit (node:events:514:28)
+    at WsSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:277:18)
+[2024-01-17T22:42:03.531] [ERROR] gameLog - Error: no such type: center.CS_test
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:17:58)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:26:21)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:164:40
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:48:17)
+    at Filter.globalBeforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:55:9)
+    at ClientManager.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:158:29)
+    at ClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:129:32)
+    at WsSocket.emit (node:events:514:28)
+    at WsSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:277:18)
+[2024-01-17T22:44:29.763] [ERROR] gameLog - TypeError: this.msgHandler[cmdArr[1]][cmdArr[2]] is not a function
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:169:62
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:165:37
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:48:17)
+    at Filter.globalBeforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:55:9)
+    at ClientManager.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:158:29)
+    at ClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:129:32)
+    at WsSocket.emit (node:events:514:28)
+    at WsSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:277:18)
+[2024-01-17T22:44:49.145] [ERROR] gameLog - TypeError: this.msgHandler[cmdArr[1]][cmdArr[2]] is not a function
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:169:62
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:165:37
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:48:17)
+    at Filter.globalBeforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:55:9)
+    at ClientManager.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:158:29)
+    at ClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:129:32)
+    at WsSocket.emit (node:events:514:28)
+    at WsSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:277:18)
+[2024-01-17T22:45:26.098] [ERROR] gameLog - TypeError: this.msgHandler[cmdArr[1]][cmdArr[2]] is not a function
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:169:62
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:165:37
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:48:17)
+    at Filter.globalBeforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:55:9)
+    at ClientManager.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\frontendServer.js:158:29)
+    at ClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:129:32)
+    at WsSocket.emit (node:events:514:28)
+    at WsSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:277:18)

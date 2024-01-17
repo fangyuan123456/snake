@@ -32,7 +32,7 @@ class Handler {
                 userData = yield game.sqlMgr.add(SqlManager_1.TableName.USER, data);
             }
             let mData = userData[userData.length - 1];
-            game.app.rpc(game.utilsMgr.getInfoId(mData.uid)).info.main.createPlayer(mData);
+            game.app.rpc(game.utilsMgr.getSid(mData.uid, "info" /* serverType.info */)).info.main.createPlayer(mData);
             return mData;
         });
     }

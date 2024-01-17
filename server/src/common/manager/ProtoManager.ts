@@ -9,7 +9,7 @@ export class ProtoManager extends SingleBase{
     getEncodeDecodeFunc(pbName:string){
       if(!this.encodeDecodeFuncMap[pbName]){
         if(!this.root){
-          this.root = loadSync("../proto/"+game.app.serverType+".proto")
+          this.root = loadSync(__dirname+"/../proto/"+game.app.serverType+".json")
         }
         this.encodeDecodeFuncMap[pbName] = this.root.lookupType(pbName);
       }
@@ -19,14 +19,14 @@ export class ProtoManager extends SingleBase{
         let routeUrl = game.app.routeConfig[cmd]
         let strArr = routeUrl.split(".")
         let funcName = strArr[strArr.length-1];
-        let pbName = game.app.serverType+".CS_"+funcName;
+        let pbName = game.app.serverType+"."+funcName+"Req";
         return this.getEncodeDecodeFunc(pbName).decode(msg);
     }
     encode(cmd: number, msg: any):Buffer{
       let routeUrl = game.app.routeConfig[cmd]
       let strArr = routeUrl.split(".")
       let funcName = strArr[strArr.length-1];
-      let pbName = game.app.serverType+".SC_"+funcName;
+      let pbName = game.app.serverType+"."+funcName+"Res";
       let decoder = this.getEncodeDecodeFunc(pbName)
       let message = decoder.create(msg);
       let buffer = decoder.encode(message).finish();

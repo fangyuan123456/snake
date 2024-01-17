@@ -9,7 +9,7 @@ class CenterServer extends GameServerBase_1.GameServerBase {
     }
     route() {
         this.app.route("info" /* serverType.info */, (session) => {
-            return game.utilsMgr.getInfoId(session.uid);
+            return game.utilsMgr.getSid(session.uid, "info" /* serverType.info */);
         });
     }
 }

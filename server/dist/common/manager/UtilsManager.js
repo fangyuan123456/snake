@@ -27,8 +27,8 @@ exports.UtilsManager = void 0;
 const SingleBase_1 = require("../base/SingleBase");
 const path = __importStar(require("path"));
 class UtilsManager extends SingleBase_1.SingleBase {
-    getInfoId(uid) {
-        let infoArr = game.app.serversConfig["info" /* serverType.info */];
+    getSid(uid, serverType) {
+        let infoArr = game.app.serversConfig[serverType];
         return infoArr[uid % infoArr.length].id;
     }
     getCharLen(charCode) {
