@@ -10,7 +10,7 @@ import { SocketType } from "../common/Game";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class MenuScene extends cc.Component {
 
     @property(cc.Label)
     label: cc.Label = null;
@@ -26,7 +26,7 @@ export default class NewClass extends cc.Component {
         game.netMgr.createSocket(game.userData.centerIp)
         game.netMgr.onReady((data)=>{
             game.netMgr.sendSocket({
-                msgHead:"test",
+                msgHead:"testReq",
                 msgData:{test1:111}
             })
         },this);

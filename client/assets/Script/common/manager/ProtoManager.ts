@@ -20,7 +20,8 @@ export class ProtoManager extends SingleBase{
            })
         }
     }
-    getEncodeDecodeFunc(pkName:string,pbName:string){
+    getEncodeDecodeFunc(pkName:string,pbName:string){ 
+        this.decodeFuncMap[pkName] = this.decodeFuncMap[pkName] || {};
         if(!this.decodeFuncMap[pkName][pbName]){
             let root = this.protoRoot[pkName];
             this.decodeFuncMap[pkName][pbName] = root.lookupType(pkName+"."+pbName);
@@ -30,7 +31,7 @@ export class ProtoManager extends SingleBase{
     setMsgCodeList(routeStrList:string[]){
         for(let i in routeStrList){
             let strList = routeStrList[i].split(".");
-            let packageName = strList[strList.length-2];
+            let packageName = strList[0];
             let msgName = strList[strList.length-1];
             this.msgList[i] = {
                 packageName:packageName,
@@ -52,11 +53,14 @@ export class ProtoManager extends SingleBase{
     }
     encodeProto(data:SocketMsgStruct){
         let protoCode = this.getMsgDecodeProto(data.msgHead);
-        return this.getEncodeDecodeFunc(this.msgList[protoCode].packageName,data.msgHead).encode(data.msgData);
+        let typeFunc = this.getEncodeDecodeFunc(this.msgList[protoCode].packageName,data.msgHead);
+        let message = typeFunc.create(data.msgData);
+        return typeFunc.encode(message).finish();
     }
     decodeProto(buffer,protoCode){
         let msgHead = this.getMsgDecodeFuncName(protoCode);
-        let msgData = this.getEncodeDecodeFunc(this.msgList[protoCode].packageName,msgHead).encode(buffer);
+        let typeFunc = this.getEncodeDecodeFunc(this.msgList[protoCode].packageName,msgHead);
+        let msgData = typeFunc.decode(buffer);
         return {
             msgHead:msgHead,
             msgData:msgData
