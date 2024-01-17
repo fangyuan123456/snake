@@ -73,7 +73,7 @@ export class GameServerBase{
             "heartbeat":10000
         });
         this.app.setConfig("rpc", { "interval": 30, "noDelay": false });
-        this.app.setConfig("encodeDecode", { "msgDecode": this.protoMgr.decode, "msgEncode": this.protoMgr.encode });
+        this.app.setConfig("encodeDecode", { "msgDecode": this.protoMgr.decode.bind(this.protoMgr), "msgEncode": this.protoMgr.encode.bind(this.protoMgr) });
         this.app.setConfig("logger", (level, info) => {
             if (level !== "debug") {
                 this.logMgr[level](info);

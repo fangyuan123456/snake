@@ -4,8 +4,8 @@ import { serverType } from "../config/GameCfg";
 import * as path from "path";
 
 export class UtilsManager extends SingleBase{
-    getInfoId(uid: number) {
-        let infoArr =  game.app.serversConfig[serverType.info]
+    getSid(uid: number,serverType:serverType) {
+        let infoArr =  game.app.serversConfig[serverType]
         return infoArr[uid % infoArr.length].id;
     }
     getCharLen(charCode: number) {

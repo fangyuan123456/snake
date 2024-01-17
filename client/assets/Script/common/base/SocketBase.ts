@@ -50,7 +50,7 @@ export class SocketBase{
         let buffer = game.protoMgr.encode({
             msgType:MSG_TYPE.HANDSHAKE,
             msgHead:"",
-            msgData:{md5:this.md5}
+            msgData:{md5:this.md5,uid:game.userData.uid}
         })
         this.socket.send(buffer);
     }
