@@ -1,9 +1,0 @@
-package awesomepackage;
-syntax = "proto3";
-
-message testReq {
-    string test1 = 1; // becomes awesomeField
-}
-message testRes {
-    string test1 = 1; // becomes awesomeField
-}

@@ -1,23 +1,29 @@
 import { SingleBase } from "../base/SingleBase";
 import { MSG_TYPE } from "../base/SocketBase";
 import { SocketMsgStruct } from "./NetManager";
-import { Root, Type, load, loadSync } from "protobufjs";
+import * as pbjs from "protobufjs"
 export class ProtoManager extends SingleBase{
-    protoRoot:{[key:string]:Root}  = {};
-    decodeFuncMap:{[key:string]:{[key:string]:Type}}  = {};
+    protoRoot:{[key:string]:pbjs.Root}  = {};
+    decodeFuncMap:{[key:string]:{[key:string]:pbjs.Type}}  = {};
     msgList = []
     constructor(){
         super();
         this.msgList = [];
+        this.loadAllProto();
+    }
+    loadAllProto(){
+        let packageList = ["center"];
+        for(let i in packageList){
+            cc.resources.load("proto/"+packageList[i], (err,jsonAsset:cc.JsonAsset)=> {
+                const root = pbjs.Root.fromJSON(jsonAsset.json);
+                this.protoRoot[packageList[i]] = root;
+           })
+        }
     }
     getEncodeDecodeFunc(pkName:string,pbName:string){
         if(!this.decodeFuncMap[pkName][pbName]){
             let root = this.protoRoot[pkName];
-            if(!root){
-                root = loadSync("../proto/"+pbName+".proto")
-                this.protoRoot[pkName] = root;
-            }
-            this.decodeFuncMap[pkName][pbName] = root.lookupType(pbName);
+            this.decodeFuncMap[pkName][pbName] = root.lookupType(pkName+"."+pbName);
         }
         return this.decodeFuncMap[pkName][pbName]
       }
