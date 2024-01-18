@@ -4,6 +4,8 @@ const mydog_1 = require("mydog");
 const LoginServer_1 = require("./servers/login/LoginServer");
 const InfoServer_1 = require("./servers/info/InfoServer");
 const CenterServer_1 = require("./servers/center/CenterServer");
+const MatchServer_1 = require("./servers/match/MatchServer");
+const GameServer_1 = require("./servers/game/GameServer");
 let CreateServerApp = function () {
     let app = (0, mydog_1.createApp)();
     switch (app.serverType) {
@@ -18,6 +20,12 @@ let CreateServerApp = function () {
             break;
         case "center" /* serverType.center */:
             new CenterServer_1.CenterServer(app);
+            break;
+        case "match" /* serverType.match */:
+            new MatchServer_1.MatchServer(app);
+            break;
+        case "game" /* serverType.game */:
+            new GameServer_1.GameServer(app);
             break;
     }
 };

@@ -40,6 +40,12 @@ export class Player {
             }
         })
     }
+    public setRoomInfo(roomInfo:{roomId:number,roomIp:string}){
+        this.roomInfo = {
+            roomId:roomInfo.roomId,
+            roomIp:roomInfo.roomIp
+        }
+    }
     private online() {
         this.delThisTime = 0;
     }

@@ -1,4 +1,4 @@
-import { Application } from "mydog";
+import { Application, ServerInfo } from "mydog";
 import { SingleBase } from "../base/SingleBase";
 import { serverType } from "../config/GameCfg";
 import * as path from "path";
@@ -7,6 +7,9 @@ export class UtilsManager extends SingleBase{
     getSid(uid: number,serverType:serverType) {
         let infoArr =  game.app.serversConfig[serverType]
         return infoArr[uid % infoArr.length].id;
+    }
+    getServerIp(server:ServerInfo){
+        return server.host+":"+server.clientPort
     }
     getCharLen(charCode: number) {
         if (charCode >= 48 && charCode <= 57) { // 0-9

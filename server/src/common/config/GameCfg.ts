@@ -4,7 +4,8 @@ export const enum serverType {
     login = "login",
     center = "center",
     info = "info",
-    map = "map",
+    match = "match",
+    game = "game"
 }
 export let mysqlConfig = {
     "development": {

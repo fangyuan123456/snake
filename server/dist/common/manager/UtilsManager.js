@@ -31,6 +31,9 @@ class UtilsManager extends SingleBase_1.SingleBase {
         let infoArr = game.app.serversConfig[serverType];
         return infoArr[uid % infoArr.length].id;
     }
+    getServerIp(server) {
+        return server.host + ":" + server.clientPort;
+    }
     getCharLen(charCode) {
         if (charCode >= 48 && charCode <= 57) { // 0-9
             return 1;

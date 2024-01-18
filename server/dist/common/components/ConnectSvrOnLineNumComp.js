@@ -43,7 +43,7 @@ class ConnectSvrOnLineNumComp {
         this.minSvr = minSvr;
     }
     getMinSvrIp() {
-        return this.minSvr.host + ":" + this.minSvr.clientPort;
+        game.utilsMgr.getServerIp(this.minSvr);
     }
 }
 exports.ConnectSvrOnLineNumComp = ConnectSvrOnLineNumComp;

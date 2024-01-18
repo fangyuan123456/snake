@@ -1,9 +1,17 @@
 import { Application, Session } from "mydog";
 import { GameServerBase } from "../../common/base/GameServerBase";
 import { serverType } from "../../common/config/GameCfg";
-
+declare global{
+    namespace globalThis{
+        var centerGame:CenterServer
+    }
+}
 
 export class CenterServer extends GameServerBase{
+    constructor(app:Application){
+        super(app);
+        centerGame = this;
+    }
     setConfig(): void {
         super.setConfig();
         this.app.configure(serverType.center, this.route.bind(this));

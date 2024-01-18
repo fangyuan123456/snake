@@ -1,0 +1,10 @@
+syntax = "proto3";
+package info;
+
+
+message getRoomInfoReq {
+}
+message getRoomInfoRes {
+    int32 roomId = 1; 
+    string roomIp = 2; 
+}

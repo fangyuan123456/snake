@@ -1,0 +1,28 @@
+{
+  "nested": {
+    "match": {
+      "nested": {
+        "matchReq": {
+          "fields": {
+            "isMatch": {
+              "type": "bool",
+              "id": 1
+            }
+          }
+        },
+        "matchRes": {
+          "fields": {
+            "isMatch": {
+              "type": "bool",
+              "id": 1
+            },
+            "uid": {
+              "type": "int32",
+              "id": 2
+            }
+          }
+        }
+      }
+    }
+  }
+}

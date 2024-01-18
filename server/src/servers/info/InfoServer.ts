@@ -4,11 +4,16 @@ import { Dic } from "../../common/interface/ICommon";
 import { Player } from "./src/Player";
 import { InfoConfig } from "./src/InfoConfig";
 import { I_roleInfo } from "../../common/interface/IInfo";
-
+declare global{
+    namespace globalThis{
+        var infoGame:InfoServer
+    }
+}
 export class InfoServer extends GameServerBase{
     private roles: Dic<Player> = {};    // 所有玩家数据
     constructor(app:Application){
         super(app);
+        infoGame = this;
         setInterval(this.update.bind(this),InfoConfig.updateDt)
         setInterval(this.doSqlUpdate.bind(this),InfoConfig.updateSqlDelayTime)
         setInterval(this.check_delRole.bind(this), 60 * 1000);
@@ -41,5 +46,8 @@ export class InfoServer extends GameServerBase{
             player = new Player(role);
             this.roles[role.uid] = player;
         }
+    }
+    getPlayer(uid:number){
+        return this.roles[uid];
     }
 }

@@ -3,6 +3,8 @@ import { serverType } from "./common/config/GameCfg";
 import { LoginServer } from "./servers/login/LoginServer";
 import { InfoServer } from "./servers/info/InfoServer";
 import { CenterServer } from "./servers/center/CenterServer";
+import { MatchServer } from "./servers/match/MatchServer";
+import { GameServer } from "./servers/game/GameServer";
 
 let CreateServerApp=function(){
     let app = createApp();
@@ -18,6 +20,12 @@ let CreateServerApp=function(){
         break;
         case serverType.center:
             new CenterServer(app);
+        break;
+        case serverType.match:
+            new MatchServer(app);
+        break
+        case serverType.game:
+            new GameServer(app);
         break
     }
 }

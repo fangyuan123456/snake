@@ -18,6 +18,15 @@ class ProtoManager extends SingleBase_1.SingleBase {
         }
         return this.encodeDecodeFuncMap[pbName];
     }
+    getProtoCode(pbName) {
+        let routeConfig = game.app.routeConfig;
+        for (let i in routeConfig) {
+            let str = routeConfig[i];
+            if (str.endsWith("." + pbName)) {
+                return Number(i);
+            }
+        }
+    }
     decode(cmd, msg) {
         let routeUrl = game.app.routeConfig[cmd];
         let strArr = routeUrl.split(".");

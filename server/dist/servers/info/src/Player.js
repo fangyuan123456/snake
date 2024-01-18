@@ -45,6 +45,12 @@ class Player {
             }
         });
     }
+    setRoomInfo(roomInfo) {
+        this.roomInfo = {
+            roomId: roomInfo.roomId,
+            roomIp: roomInfo.roomIp
+        };
+    }
     online() {
         this.delThisTime = 0;
     }
