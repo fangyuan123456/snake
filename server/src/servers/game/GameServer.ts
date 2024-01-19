@@ -10,7 +10,7 @@ export class GameServer extends GameServerBase{
     rooms:{[key:number]:Room} = {};
     constructor(app:Application){
         super(app);
-        gameGame = this;
+        globalThis.gameGame = this;
     }
     createRoom(msg:{roomId:number,uidList:number[]}){
         if(this.rooms[msg.roomId]){

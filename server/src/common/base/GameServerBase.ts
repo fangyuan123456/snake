@@ -11,7 +11,6 @@ import { UtilsManager } from "../manager/UtilsManager";
 import { ProtoManager } from "../manager/ProtoManager";
 import { HttpManager } from "../manager/HttpManager";
 import { TimeManager } from "../manager/TimeManager";
-import { ConnectSvrOnLineNumComp } from "../components/ConnectSvrOnLineNumComp";
 import { getConfigByEnv, mysqlConfig, serverType } from "../config/GameCfg";
 import { PlatformManager } from "../manager/PlatformManager";
 import { SqlManager } from "../manager/SqlManager";
@@ -26,7 +25,6 @@ export class GameServerBase{
     httpMgr?:HttpManager
     timeMgr:TimeManager
     platformMgr:PlatformManager
-    svrNumComp?:ConnectSvrOnLineNumComp
     sqlMgr:SqlManager
     constructor(app:Application){
         this.app = app;

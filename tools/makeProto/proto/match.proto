@@ -12,4 +12,10 @@ message matchRes {
 message matchOkRes{
     int32 roomId = 1;
     string roomIp = 2;
+    message RoleInfo{
+        require int32 uid = 1;
+        require string nickName = 2;
+        require string avatarUrl = 3;
+    }
+    repeated RoleInfo roles = 3;
 }

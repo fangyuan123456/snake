@@ -10,7 +10,7 @@ declare global{
 export class CenterServer extends GameServerBase{
     constructor(app:Application){
         super(app);
-        centerGame = this;
+        globalThis.centerGame = this;
     }
     setConfig(): void {
         super.setConfig();

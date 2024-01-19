@@ -13,7 +13,7 @@ export class InfoServer extends GameServerBase{
     private roles: Dic<Player> = {};    // 所有玩家数据
     constructor(app:Application){
         super(app);
-        infoGame = this;
+        globalThis.infoGame = this;
         setInterval(this.update.bind(this),InfoConfig.updateDt)
         setInterval(this.doSqlUpdate.bind(this),InfoConfig.updateSqlDelayTime)
         setInterval(this.check_delRole.bind(this), 60 * 1000);

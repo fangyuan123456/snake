@@ -7,6 +7,7 @@ export default class UserData extends SingleBase{
     setLoginData(loginData){
         this.uid = loginData.uid,
         this.nickName = loginData.nickName
+        this.
         this.centerIp = loginData.centerIp
     }
 }

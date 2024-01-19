@@ -8,6 +8,11 @@ export class UtilsManager extends SingleBase{
         let infoArr =  game.app.serversConfig[serverType]
         return infoArr[uid % infoArr.length].id;
     }
+    getServerByUid(uid:number,serverType:serverType){
+        let sid = this.getSid(uid,serverType);
+        let server = game.app.getServerById(sid);
+        return server;
+    }
     getServerIp(server:ServerInfo){
         return server.host+":"+server.clientPort
     }

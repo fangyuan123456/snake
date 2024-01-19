@@ -31,11 +31,19 @@ export default class LoadScene extends SceneBase {
         },1)
     }
     login(next){
-        game.platFormMgr.getLoginCode((data)=>{
-            game.netMgr.sendHttpRequest(data,"login",(loginData)=>{
-                game.userData.setLoginData(loginData);
-                next();
-            })
+        game.platFormMgr.getLoginCode((data:any)=>{
+            if(data.code){
+                game.netMgr.sendHttpRequest(data,"login",(loginData)=>{
+                    game.userData.setLoginData(loginData);
+                    next();
+                })
+            }else{
+                game.alertMgr.showAlert({title:"提示",content:"code错误!",btnCallBackList:[
+                    {
+                        text:"确定",
+                    }
+                ]})
+            }
         });
     }
     changeScene(next){

@@ -3,8 +3,8 @@ package center;
 
 
 message testReq {
-    string test1 = 1; // becomes awesomeField
+    string test1 = 1;
 }
 message testRes {
-    string test1 = 1; // becomes awesomeField
+    string test1 = 1;
 }

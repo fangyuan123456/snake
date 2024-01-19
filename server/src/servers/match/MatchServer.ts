@@ -12,7 +12,7 @@ export class MatchServer extends GameServerBase{
     roomIdIndex = 10000;
     constructor(app:Application){
         super(app);
-        matchGame = this;
+        globalThis.matchGame = this;
     }
     match(data:{uid:number,isMatch:boolean}){
         let index = this.matchList.indexOf(data.uid);

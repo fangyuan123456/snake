@@ -3,6 +3,7 @@ import { SingleBase } from "../base/SingleBase";
 import { panelCfg } from "../configs/PanelCfg";
 interface OpenStruct{
     closeCallBack?:()=>void,
+    parmeter:any,
     parent?:cc.Node,
     ignoreSize?:boolean
 }
@@ -24,6 +25,9 @@ export class PanelManager extends SingleBase{
                 parent.addChild(node);
                 if(!data || !data.ignoreSize){
                     node.setContentSize(parent.getContentSize())
+                }
+                if(data){
+                    panel.setOpenParmeter(data.parmeter,data.closeCallBack);
                 }
                 this.opendPanel[name] = this.opendPanel[name] || [];
                 this.opendPanel[name].push(panel);

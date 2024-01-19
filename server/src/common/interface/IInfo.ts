@@ -4,11 +4,9 @@ export interface I_roleMem {
 }
 export interface I_roleInfo {
     "uid": number,              // uid
-    "nickname": string,         // 昵称
-    "gold": number,             // 金币
-    "level": number,            // 等级
-    "exp": number,              // 经验值
-    "isDelete": number,         // 角色是否被删除
+    "nickName": string,         // 昵称
+    "avatarUrl":string,
+    "platform"?:string
 }
 export interface I_item {
     num: number,

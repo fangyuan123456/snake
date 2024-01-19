@@ -1,7 +1,7 @@
-import { ConnectSvrOnLineNumComp } from "../../common/components/ConnectSvrOnLineNumComp";
 import { GameServerBase } from "../../common/base/GameServerBase";
 import { Application } from "mydog";
 import { serverType } from "../../common/config/GameCfg";
+import { I_roleInfo } from "../../common/interface/IInfo";
 declare global{
     namespace globalThis{
         var loginGame:LoginServer
@@ -10,7 +10,13 @@ declare global{
 export class LoginServer extends GameServerBase{
     constructor(app:Application){
         super(app);
-        loginGame = this;
-        this.svrNumComp = new ConnectSvrOnLineNumComp(serverType.center);
+        globalThis.loginGame = this;
+    }
+    getDefaultUserData(uid:number):I_roleInfo{
+        return {
+            uid:uid,
+            nickName:"uid_"+uid,
+            avatarUrl:""
+        }
     }
 }
