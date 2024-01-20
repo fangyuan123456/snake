@@ -1,6 +1,6 @@
 {
   "ver": "2.3.7",
-  "uuid": "ac21cf36-f698-412c-b504-9bde6d3c0acf",
+  "uuid": "8f2692f7-04c8-46cc-aa59-968302cbac91",
   "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -14,9 +14,9 @@
   "subMetas": {
     "jiazaibeijing": {
       "ver": "1.0.6",
-      "uuid": "f4b5cb84-fd80-4d0d-95b7-c19ae7226db4",
+      "uuid": "8d48809f-8a97-42ba-ac6a-81b5b5224946",
       "importer": "sprite-frame",
-      "rawTextureUuid": "ac21cf36-f698-412c-b504-9bde6d3c0acf",
+      "rawTextureUuid": "8f2692f7-04c8-46cc-aa59-968302cbac91",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

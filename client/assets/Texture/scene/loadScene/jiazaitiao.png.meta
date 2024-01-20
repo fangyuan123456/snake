@@ -1,6 +1,6 @@
 {
   "ver": "2.3.7",
-  "uuid": "c79b93c6-4d1c-4e5a-89a8-745624da666c",
+  "uuid": "24e4661c-c4d8-42b5-a909-70863a8b6435",
   "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -14,9 +14,9 @@
   "subMetas": {
     "jiazaitiao": {
       "ver": "1.0.6",
-      "uuid": "84ef64a4-9a9c-49f7-b88e-060ab3447f5e",
+      "uuid": "10fb24db-a32b-4b69-84ff-99fa14532d09",
       "importer": "sprite-frame",
-      "rawTextureUuid": "c79b93c6-4d1c-4e5a-89a8-745624da666c",
+      "rawTextureUuid": "24e4661c-c4d8-42b5-a909-70863a8b6435",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

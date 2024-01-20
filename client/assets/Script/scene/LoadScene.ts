@@ -8,14 +8,14 @@
 import { Game } from "../common/Game";
 import { LOAD_ORDER_CFG } from "../platform/PlatformBase";
 import { SceneBase } from "../common/base/SceneBase";
-import LoadingComponent from "../common/components/LoadingComponent";
+import LoadingComp from "../common/components/LoadingComp";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class LoadScene extends SceneBase {
-    @property(LoadingComponent)
-    progressComp:LoadingComponent
+    @property(LoadingComp)
+    progressComp:LoadingComp
     constructor(){
         super();
         Game.getInstance().init();
@@ -38,7 +38,7 @@ export default class LoadScene extends SceneBase {
                     next();
                 })
             }else{
-                game.alertMgr.showAlert({title:"提示",content:"code错误!",btnCallBackList:[
+                game.alertMgr.showTiShiBox({title:"提示",content:"code错误!",btnCallBackList:[
                     {
                         text:"确定",
                     }

@@ -1,6 +1,8 @@
+import { CompBase } from "./CompBase";
+
 const {ccclass, property} = cc._decorator;
 @ccclass
-export class PanelBase extends cc.Component{
+export class PanelBase extends CompBase{
     panelName:string
     closeCallBack:()=>void
     parmeter:any
