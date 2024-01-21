@@ -8,7 +8,7 @@ class InfoServer extends GameServerBase_1.GameServerBase {
     constructor(app) {
         super(app);
         this.roles = {}; // 所有玩家数据
-        infoGame = this;
+        globalThis.infoGame = this;
         setInterval(this.update.bind(this), InfoConfig_1.InfoConfig.updateDt);
         setInterval(this.doSqlUpdate.bind(this), InfoConfig_1.InfoConfig.updateSqlDelayTime);
         setInterval(this.check_delRole.bind(this), 60 * 1000);

@@ -35,19 +35,31 @@ export default class LoadScene extends SceneBase {
             if(data.code){
                 game.netMgr.sendHttpRequest(data,"login",(loginData)=>{
                     game.userData.setLoginData(loginData);
-                    next();
+                    game.netMgr.createSocket(game.userData.centerIp)
+                    game.netMgr.onReady((data)=>{
+                        game.netMgr.sendSocket({
+                            msgHead:"getRoomInfo",
+                            msgData:{}
+                        },(data)=>{
+                            game.userData.setRoomInfo(data);
+                            next();
+                        })
+                    },this);
                 })
             }else{
-                game.alertMgr.showTiShiBox({title:"提示",content:"code错误!",btnCallBackList:[
+                game.alertMgr.showTiShiBox({content:"code错误!",btnCallBackList:[
                     {
-                        text:"确定",
                     }
                 ]})
             }
         });
     }
     changeScene(next){
-        cc.director.loadScene("MenuScene");
+        if(game.userData.roomInfo.roomId){
+            cc.director.loadScene("GameScene");
+        }else{
+            cc.director.loadScene("MenuScene");
+        }
         next();
     }
     // update (dt) {}

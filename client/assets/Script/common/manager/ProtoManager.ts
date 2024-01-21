@@ -12,7 +12,7 @@ export class ProtoManager extends SingleBase{
         this.loadAllProto();
     }
     loadAllProto(){
-        let packageList = ["center"];
+        let packageList = ["center","info","match","game"];
         for(let i in packageList){
             cc.resources.load("proto/"+packageList[i], (err,jsonAsset:cc.JsonAsset)=> {
                 const root = pbjs.Root.fromJSON(jsonAsset.json);

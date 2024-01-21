@@ -3162,3 +3162,279 @@
 [2024-01-17T22:59:37.759] [DEBUG] gameLog - undefined
 [2024-01-17T23:00:58.923] [DEBUG] gameLog - undefined
 [2024-01-17T23:01:57.619] [DEBUG] gameLog - undefined
+[2024-01-21T22:01:14.113] [DEBUG] gameLog - undefined
+[2024-01-21T22:01:14.264] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'platform = 'web',code = 'fy',openId = 'fy'' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Handshake.onConnect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Handshake._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'platform = 'web',code = 'fy',openId = 'fy'' at line 1",
+  sqlState: '42000',
+  index: 0,
+  sql: "select * from t_user where isCeShi = true,platform = 'web',code = 'fy',openId = 'fy'"
+}
+[2024-01-21T22:01:14.267] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'platform = 'web',code = 'fy',openId = 'fy'' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Handshake.onConnect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Handshake._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'platform = 'web',code = 'fy',openId = 'fy'' at line 1",
+  sqlState: '42000',
+  index: 0,
+  sql: "select * from t_user where isCeShi = true,platform = 'web',code = 'fy',openId = 'fy'"
+}
+[2024-01-21T22:04:18.991] [DEBUG] gameLog - undefined
+[2024-01-21T22:05:46.875] [DEBUG] gameLog - undefined
+[2024-01-21T22:05:48.120] [DEBUG] gameLog - undefined
+[2024-01-21T22:11:50.487] [DEBUG] gameLog - undefined
+[2024-01-21T22:11:56.147] [DEBUG] gameLog - undefined
+[2024-01-21T22:11:56.148] [DEBUG] gameLog - undefined
+[2024-01-21T22:11:56.150] [DEBUG] gameLog - undefined
+[2024-01-21T22:11:56.225] [ERROR] gameLog - Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Handshake.onConnect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Handshake._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'undefined' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select * from t_user where openId = undefined'
+}
+[2024-01-21T22:13:50.467] [DEBUG] gameLog - undefined
+[2024-01-21T22:13:51.129] [DEBUG] gameLog - undefined
+[2024-01-21T22:13:53.625] [DEBUG] gameLog - undefined
+[2024-01-21T22:13:53.627] [DEBUG] gameLog - undefined
+[2024-01-21T22:13:53.628] [DEBUG] gameLog - undefined
+[2024-01-21T22:13:53.629] [DEBUG] gameLog - undefined
+[2024-01-21T22:14:06.548] [DEBUG] gameLog - undefined
+[2024-01-21T22:14:36.691] [DEBUG] gameLog - undefined
+[2024-01-21T22:14:46.879] [ERROR] gameLog - Error: ER_BAD_FIELD_ERROR: Unknown column 'code' in 'field list'
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'code' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "insert into t_user (platform,code,openId) values('web','fy','fy')"
+}
+[2024-01-21T22:14:46.881] [ERROR] gameLog - Error: ER_BAD_FIELD_ERROR: Unknown column 'code' in 'field list'
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'code' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "insert into t_user (platform,code,openId) values('web','fy','fy')"
+}
+[2024-01-21T22:15:57.268] [DEBUG] gameLog - undefined
+[2024-01-21T22:15:58.355] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:01.535] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:01.536] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:01.538] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:01.539] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:25.981] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-21T22:16:37.866] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:37.867] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:38.366] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:38.367] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:38.866] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:38.867] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:39.366] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:39.367] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:39.867] [DEBUG] gameLog - undefined
+[2024-01-21T22:16:39.868] [DEBUG] gameLog - undefined
+[2024-01-21T22:17:50.089] [DEBUG] gameLog - undefined
+[2024-01-21T22:17:50.091] [DEBUG] gameLog - undefined
+[2024-01-21T22:17:50.217] [ERROR] gameLog - Error: ER_DUP_ENTRY: Duplicate entry 'fy' for key 'openId'
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: "Duplicate entry 'fy' for key 'openId'",
+  sqlState: '23000',
+  index: 0,
+  sql: "insert into t_user (platform,openId) values('web','fy')"
+}
+[2024-01-21T22:17:50.219] [ERROR] gameLog - Error: ER_DUP_ENTRY: Duplicate entry 'fy' for key 'openId'
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: "Duplicate entry 'fy' for key 'openId'",
+  sqlState: '23000',
+  index: 0,
+  sql: "insert into t_user (platform,openId) values('web','fy')"
+}
+[2024-01-21T22:17:50.589] [DEBUG] gameLog - undefined
+[2024-01-21T22:17:50.590] [DEBUG] gameLog - undefined
+[2024-01-21T22:17:51.089] [DEBUG] gameLog - undefined
+[2024-01-21T22:17:51.090] [DEBUG] gameLog - undefined
+[2024-01-21T22:17:59.799] [DEBUG] gameLog - undefined
+[2024-01-21T22:17:59.802] [DEBUG] gameLog - undefined
+[2024-01-21T22:17:59.980] [DEBUG] gameLog - undefined
+[2024-01-21T22:17:59.981] [DEBUG] gameLog - undefined
+[2024-01-21T22:18:00.246] [DEBUG] gameLog - undefined
+[2024-01-21T22:18:00.248] [DEBUG] gameLog - undefined
+[2024-01-21T22:18:00.481] [DEBUG] gameLog - undefined
+[2024-01-21T22:18:00.482] [DEBUG] gameLog - undefined
+[2024-01-21T22:18:00.749] [DEBUG] gameLog - undefined
+[2024-01-21T22:18:00.750] [DEBUG] gameLog - undefined
+[2024-01-21T22:18:00.982] [DEBUG] gameLog - undefined
+[2024-01-21T22:18:00.984] [DEBUG] gameLog - undefined
+[2024-01-21T22:18:02.483] [DEBUG] gameLog - undefined
+[2024-01-21T22:18:53.771] [DEBUG] gameLog - undefined
+[2024-01-21T22:19:13.142] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-21T22:22:05.046] [DEBUG] gameLog - undefined
+[2024-01-21T22:22:24.588] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-21T22:22:51.619] [DEBUG] gameLog - undefined
+[2024-01-21T22:23:42.568] [DEBUG] gameLog - undefined
+[2024-01-21T22:24:33.206] [DEBUG] gameLog - undefined
+[2024-01-21T22:24:53.156] [DEBUG] gameLog - undefined
+[2024-01-21T22:26:01.175] [DEBUG] gameLog - undefined

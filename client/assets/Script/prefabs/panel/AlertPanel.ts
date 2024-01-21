@@ -11,20 +11,25 @@ const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class AlertPanel extends PanelBase {
-
-    @property(cc.Label)
-    label: cc.Label = null;
-
-    @property
-    text: string = 'hello';
-
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {}
-    
     start () {
-
+        super.start();
     }
-
-    // update (dt) {}
+    fitSize(){}
+    playOpenAction(): void {
+        this.node.runAction(cc.sequence(
+            cc.moveBy(0.2,cc.v2(0,50)),
+            cc.delayTime(1),
+            cc.fadeOut(0.2),
+            cc.callFunc(()=>{
+                this.closePanel();
+            })
+        ))
+    }
+    playCloseAction(callBack: () => void): void {
+        super.playCloseAction(callBack);
+    }
+    init(parmeter:any,closeCallBack){
+        super.init(parmeter,closeCallBack);
+        cc.find("tishiLabel",this.node).getComponent(cc.Label).string = parmeter;
+    }
 }

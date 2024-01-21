@@ -1103,3 +1103,4 @@
     at ClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:129:32)
     at WsSocket.emit (node:events:514:28)
     at WsSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\connectorProxyWs.js:277:18)
+[2024-01-21T22:07:42.233] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login

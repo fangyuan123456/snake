@@ -14,27 +14,39 @@ class Handler {
     constructor() {
     }
     onLoginHandler(msgData, res) {
-        game.platformMgr.getLoginCode(msgData, (data) => {
-            this.registerAndLogin(data).then((registerData) => {
+        game.platformMgr.getLoginCode(msgData, (sdkData) => {
+            delete msgData.isCeShi;
+            delete msgData.code;
+            game.utilsMgr.merge(msgData, sdkData);
+            this.registerAndLogin(msgData).then((registerData) => {
+                let uid = registerData.uid;
+                let server = game.utilsMgr.getServerByUid(uid, "center" /* serverType.center */);
                 let loginResData = {
-                    centerIp: "ws://" + game.svrNumComp.getMinSvrIp(),
-                    uid: registerData.uid,
-                    nickName: registerData.nickName
+                    centerIp: "ws://" + game.utilsMgr.getServerIp(server),
+                    uid: uid,
+                    nickName: registerData.nickName,
+                    avatarUrl: registerData.avatarUrl
                 };
                 game.httpMgr.sendMsg(loginResData, res);
             });
         });
     }
     registerAndLogin(data) {
-        return __awaiter(this, void 0, void 0, function* () {
-            let userData = yield game.sqlMgr.select(SqlManager_1.TableName.USER, data);
+        return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+            let mData;
+            let userData = yield game.sqlMgr.select(SqlManager_1.TableName.USER, { openId: data.openId });
             if (userData.length == 0) {
                 userData = yield game.sqlMgr.add(SqlManager_1.TableName.USER, data);
+                mData = loginGame.getDefaultUserData(userData.insertId);
+                game.utilsMgr.merge(mData, data);
+                game.sqlMgr.update(SqlManager_1.TableName.USER, mData, { uid: mData.uid });
             }
-            let mData = userData[userData.length - 1];
+            else {
+                mData = userData[0];
+            }
             game.app.rpc(game.utilsMgr.getSid(mData.uid, "info" /* serverType.info */)).info.main.createPlayer(mData);
-            return mData;
-        });
+            resolve(mData);
+        }));
     }
 }
 exports.default = Handler;

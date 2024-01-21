@@ -7,7 +7,7 @@ class GameServer extends GameServerBase_1.GameServerBase {
     constructor(app) {
         super(app);
         this.rooms = {};
-        gameGame = this;
+        globalThis.gameGame = this;
     }
     createRoom(msg) {
         if (this.rooms[msg.roomId]) {

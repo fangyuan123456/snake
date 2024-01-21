@@ -3,7 +3,61 @@ interface panelStruct{
     bundleName?:string
 }
 export let panelCfg:{[key: string]: panelStruct} = {
-    testPanel:{
-        url:"prefabs/panel/TestPanel"
+    AlertPanel:{
+        url:"prefabs/panel/AlertPanel"
     },
+    ChatPanel:{
+        url:"prefabs/panel/ChatPanel"
+    },
+    DissMissRoomPanel:{
+        url:"prefabs/panel/DissMissRoomPanel"
+    },
+    DropToolPanel:{
+        url:"prefabs/panel/DropToolPanel"
+    },
+    FuHuoPanel:{
+        url:"prefabs/panel/FuHuoPanel"
+    },
+    GameEndPanel:{
+        url:"prefabs/panel/GameEndPanel"
+    },
+    GetRewardPanel:{
+        url:"prefabs/panel/GetRewardPanel"
+    },
+    InviteReworldPanel:{
+        url:"prefabs/panel/InviteReworldPanel"
+    },
+    LoadingPanel:{
+        url:"prefabs/panel/LoadingPanel"
+    },
+    MatchPanel:{
+        url:"prefabs/panel/MatchPanel"
+    },
+    MenuPrefab:{
+        url:"prefabs/panel/MenuPrefab"
+    },
+    MoreGamePanel:{
+        url:"prefabs/panel/MoreGamePanel"
+    },
+    OffLinePanel:{
+        url:"prefabs/panel/OffLinePanel"
+    },
+    PiFuPanel:{
+        url:"prefabs/panel/PiFuPanel"
+    },
+    SelectRoomPanel:{
+        url:"prefabs/panel/SelectRoomPanel"
+    },
+    SettingPanel:{
+        url:"prefabs/panel/SettingPanel"
+    },
+    ShopPanel:{
+        url:"prefabs/panel/ShopPanel"
+    },
+    SignPanel:{
+        url:"prefabs/panel/SignPanel"
+    },
+    TiShiBoxPanel:{
+        url:"prefabs/panel/TiShiBoxPanel"
+    }
 }

@@ -7,7 +7,7 @@ export class PlatformApiBase{
     getLoginCode(data:I_loginReq,callBack:(resData:I_sdkLoginRes)=>void){
         if(callBack){
             callBack({
-                openid : data.code
+                openId : data.code
             });
         }
     }

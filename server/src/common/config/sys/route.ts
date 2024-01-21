@@ -1,3 +1,6 @@
 export default [
-    "center.main.test"
+    "info.main.getRoomInfo",
+    "match.main.match",
+    "match.main.matchOk",
+    "game.main.enterRoom",
 ]

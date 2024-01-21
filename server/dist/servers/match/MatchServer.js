@@ -8,7 +8,7 @@ class MatchServer extends GameServerBase_1.GameServerBase {
         super(app);
         this.matchList = [];
         this.roomIdIndex = 10000;
-        matchGame = this;
+        globalThis.matchGame = this;
     }
     match(data) {
         let index = this.matchList.indexOf(data.uid);

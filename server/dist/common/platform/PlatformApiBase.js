@@ -7,7 +7,7 @@ class PlatformApiBase {
     getLoginCode(data, callBack) {
         if (callBack) {
             callBack({
-                openid: data.code
+                openId: data.code
             });
         }
     }

@@ -11,13 +11,13 @@ export class WebPlatfromManager extends PlatformBase{
         },
         {
             funcName:"login",
-            progressNum:50,
-            time:0.5,
+            progressNum:100,
+            time:1,
             title:"登录中..."
         },
         {
             funcName:"changeScene",
-            progressNum:50,
+            progressNum:10,
             time:0.5,
             title:"场景准备中..."
         }

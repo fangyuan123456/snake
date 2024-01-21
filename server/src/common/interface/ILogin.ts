@@ -1,9 +1,9 @@
 export interface I_loginReq{
     code:string,
     platform:string,
-    isTest:boolean
+    isCeShi?:boolean
 }
 export interface I_sdkLoginRes{
-    openid:string,
+    openId:string,
 
 }

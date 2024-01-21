@@ -42,10 +42,10 @@ class PlatformManager extends SingleBase_1.SingleBase {
         return api;
     }
     getLoginCode(data, callBack) {
-        if (data.isTest || !this.getPlatformApi(data.platform)) {
+        if (data.isCeShi || !this.getPlatformApi(data.platform)) {
             if (callBack) {
                 callBack({
-                    openid: data.code
+                    openId: data.code
                 });
             }
         }

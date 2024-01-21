@@ -31,6 +31,11 @@ class UtilsManager extends SingleBase_1.SingleBase {
         let infoArr = game.app.serversConfig[serverType];
         return infoArr[uid % infoArr.length].id;
     }
+    getServerByUid(uid, serverType) {
+        let sid = this.getSid(uid, serverType);
+        let server = game.app.getServerById(sid);
+        return server;
+    }
     getServerIp(server) {
         return server.host + ":" + server.clientPort;
     }

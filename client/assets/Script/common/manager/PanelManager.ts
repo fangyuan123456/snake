@@ -19,15 +19,12 @@ export class PanelManager extends SingleBase{
             let node = cc.instantiate(prefab);
             let panel = node.getComponent(PanelBase);
             if(panel){
-                let parent = (data && data.parent) || cc.find("Canvas/scenePanel");
+                let parent = (data && data.parent) || cc.find("Canvas/pubUpPanel");
                 let name = parent.name;
                 panel.panelName = panelName;
                 parent.addChild(node);
-                if(!data || !data.ignoreSize){
-                    node.setContentSize(parent.getContentSize())
-                }
                 if(data){
-                    panel.setOpenParmeter(data.parmeter,data.closeCallBack);
+                    panel.init(data.parmeter,data.closeCallBack);
                 }
                 this.opendPanel[name] = this.opendPanel[name] || [];
                 this.opendPanel[name].push(panel);
@@ -36,18 +33,18 @@ export class PanelManager extends SingleBase{
         }
     }
     closePanel(panelName:string|PanelBase,parent?:cc.Node){
-        parent = parent || cc.find("Canvas/scenePanel");
+        parent = parent || cc.find("Canvas/pubUpPanel");
         let name = parent.name;
         let panelList = this.opendPanel[name];
         for(let i=panelList.length-1;i>=0;i--){
             let panel = panelList[i];
             if(panelName == panel){
-                panel.playClose(()=>{
+                panel.playCloseAction(()=>{
                     panel.node.destroy();
                 })
             }else{
                 if(panel.panelName == panelName){
-                    panel.playClose(()=>{
+                    panel.playCloseAction(()=>{
                         panel.node.destroy();
                     })
                 }

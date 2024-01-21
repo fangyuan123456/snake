@@ -19,10 +19,10 @@ export class PlatformManager extends SingleBase{
         return api
     }
     getLoginCode(data:I_loginReq,callBack:(data:I_sdkLoginRes)=>void){
-        if(data.isTest || !this.getPlatformApi(data.platform)){
+        if(data.isCeShi || !this.getPlatformApi(data.platform)){
             if(callBack){
                 callBack({
-                    openid : data.code
+                    openId : data.code
                 });
             }
         }else{

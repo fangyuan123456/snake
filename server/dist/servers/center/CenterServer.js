@@ -5,7 +5,7 @@ const GameServerBase_1 = require("../../common/base/GameServerBase");
 class CenterServer extends GameServerBase_1.GameServerBase {
     constructor(app) {
         super(app);
-        centerGame = this;
+        globalThis.centerGame = this;
     }
     setConfig() {
         super.setConfig();

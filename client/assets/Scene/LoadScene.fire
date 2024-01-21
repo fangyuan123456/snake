@@ -888,7 +888,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "pubWinPanel",
+    "_name": "pubUpPanel",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
