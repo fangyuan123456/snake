@@ -4,30 +4,16 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/reference/attributes.html
 // Learn life-cycle callbacks:
 
-import { SocketType } from "../common/Game";
+import { SceneBase } from "../../common/base/SceneBase";
+
+
 
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class MenuScene extends cc.Component {
-
-    @property(cc.Label)
-    label: cc.Label = null;
-
-    @property
-    text: string = 'hello';
-
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {}
-
+export default class MenuScene extends SceneBase {
     start () {
- 
-        game.panelMgr.openPanel("testPanel").then((panel)=>{
-         });
-        game.logMgr.debug("hahah");
+        super.start();
     }
-
-    // update (dt) {}
 }

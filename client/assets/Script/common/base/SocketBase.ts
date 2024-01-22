@@ -1,5 +1,6 @@
 import { SocketType } from "../Game";
 import { SocketMsgStruct } from "../manager/NetManager";
+import { CompBase } from "./CompBase";
 enum SOCKET_STATE{
     OFFLINE,
     CONNECTING,
@@ -91,7 +92,7 @@ export class SocketBase{
             this.dispatchMsgEvent(msg.msgHead,msg.msgData);
         }
     }
-    onMsgHander(msgName:string,callBack:(any)=>void,target:cc.Component){
+    onMsgHander(msgName:string,callBack:(any)=>void,target:CompBase){
         game.eventMgr.on(this.socketType+"OnMsg"+msgName,callBack,target);
     }
     onError(){

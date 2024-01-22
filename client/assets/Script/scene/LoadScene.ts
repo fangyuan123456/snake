@@ -56,9 +56,9 @@ export default class LoadScene extends SceneBase {
     }
     changeScene(next){
         if(game.userData.roomInfo.roomId){
-            cc.director.loadScene("GameScene");
+            game.sceneMgr.changeScene("GameScene",true);
         }else{
-            cc.director.loadScene("MenuScene");
+            game.sceneMgr.changeScene("MenuScene",true);
         }
         next();
     }

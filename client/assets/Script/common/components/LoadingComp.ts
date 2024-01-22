@@ -6,11 +6,12 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
 import { LOAD_ORDER_CFG } from "../../platform/PlatformBase";
+import { CompBase } from "../base/CompBase";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class LoadingComp extends cc.Component {
+export default class LoadingComp extends CompBase {
 
     @property(cc.ProgressBar)
     loadingBar: cc.ProgressBar = null;
@@ -32,7 +33,7 @@ export default class LoadingComp extends cc.Component {
             this.totalProgress+=this.progressCfg[i].progressNum
         }
     }
-    startRun(progressCfg:LOAD_ORDER_CFG[],target:cc.Component){
+    startRun(progressCfg:LOAD_ORDER_CFG[],target:CompBase){
         let taskQue = game.taskMgr.createTaskQue("");
         this.progressCfg = progressCfg;
         this.setTotalProgress();

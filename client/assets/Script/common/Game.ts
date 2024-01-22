@@ -13,6 +13,7 @@ import { EventManager } from "./manager/EventManager";
 import { NetManager } from "./manager/NetManager";
 import UserData from "./data/UserData";
 import { AlertManager } from "./manager/AlertManager";
+import { UtilsManager } from "./manager/UtilsManager";
 
 declare global {
     namespace globalThis {
@@ -35,6 +36,7 @@ export class Game extends SingleBase{
     eventMgr:EventManager
     netMgr:NetManager
     alertMgr:AlertManager
+    utilsMgr:UtilsManager
 
     userData:UserData
     constructor(){
@@ -52,6 +54,7 @@ export class Game extends SingleBase{
         this.eventMgr = EventManager.getInstance();
         this.netMgr = NetManager.getInstance();
         this.alertMgr = AlertManager.getInstance();
+        this.utilsMgr = UtilsManager.getInstance();
 
         this.userData = UserData.getInstance();
         switch(getPlatForm()){

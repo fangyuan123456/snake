@@ -1,12 +1,13 @@
+import { CompBase } from "../base/CompBase";
 import { SingleBase } from "../base/SingleBase";
 interface EVENT_LIST{
-    target:cc.Component,
+    target:CompBase,
     callBack:(data?:any)=>void,
     isOnce?:boolean
 }
 export class EventManager extends SingleBase{
     eventMap:{[eventName: string]:EVENT_LIST[]} = {}
-    on(eventName:string,callBack:(data?:any)=>void,target?:cc.Component) {
+    on(eventName:string,callBack:(data?:any)=>void,target?:CompBase) {
         if(!this.getEventData(eventName,callBack)){
             this.eventMap[eventName] = this.eventMap[eventName] || [];
             this.eventMap[eventName].push({
@@ -15,7 +16,7 @@ export class EventManager extends SingleBase{
             })
         }
     }
-    once(eventName:string,callBack:(data?:any)=>void,target?:cc.Component) {
+    once(eventName:string,callBack:(data?:any)=>void,target?:CompBase) {
         if(!this.getEventData(eventName,callBack)){
             this.eventMap[eventName] = this.eventMap[eventName] || [];
             this.eventMap[eventName].push({
@@ -43,7 +44,7 @@ export class EventManager extends SingleBase{
             this.eventMap[eventName].splice(index);
         }
     }
-    removeAll(target:cc.Component){
+    removeAll(target:CompBase){
         for(let i in this.eventMap){
             for(let j = this.eventMap[i].length - 1;j>=0;j--){
                 let eventData = this.eventMap[i][j];

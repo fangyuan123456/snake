@@ -1,4 +1,5 @@
 import { SocketType } from "../Game";
+import { CompBase } from "../base/CompBase";
 import { SingleBase } from "../base/SingleBase";
 import { MSG_TYPE, SocketBase } from "../base/SocketBase";
 import { ServerCfg } from "../configs/ServerCfg";
@@ -56,16 +57,16 @@ export class NetManager extends SingleBase{
         }
         this.socketMap[socketType] = new SocketBase(socketType,ip);
     }
-    onOpen(callBack:(any)=>void,target:cc.Component,socketType:SocketType = SocketType.center){
+    onOpen(callBack:(any)=>void,target:CompBase,socketType:SocketType = SocketType.center){
         this.socketMap[socketType].onMsgHander("onOpen",callBack,target)
     }
-    onReady(callBack:(any)=>void,target:cc.Component,socketType:SocketType = SocketType.center){
+    onReady(callBack:(any)=>void,target:CompBase,socketType:SocketType = SocketType.center){
         this.socketMap[socketType].onMsgHander("onReady",callBack,target)
     }
-    onClose(callBack:(any)=>void,target:cc.Component,socketType:SocketType = SocketType.center){
+    onClose(callBack:(any)=>void,target:CompBase,socketType:SocketType = SocketType.center){
         this.socketMap[socketType].onMsgHander("onClose",callBack,target)
     }
-    onMsg(msgName:string,callBack:(any)=>void,target:cc.Component,socketType:SocketType = SocketType.center){
+    onMsg(msgName:string,callBack:(any)=>void,target:CompBase,socketType:SocketType = SocketType.center){
         this.socketMap[socketType].onMsgHander(msgName,callBack,target)
     }
     showNetLoadingBar(_b){

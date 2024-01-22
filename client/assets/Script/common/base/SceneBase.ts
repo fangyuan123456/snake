@@ -1,14 +1,36 @@
+import { CompBase } from "./CompBase";
+
 const {ccclass, property} = cc._decorator;
 export enum FIT_STYLE{
     FIT_WIDTH,
     FIT_HEIGHT
 }
 @ccclass
-export class SceneBase extends cc.Component{
+export class SceneBase extends CompBase{
     fitStyle:FIT_STYLE
     start(): void {
         this.fitWinSize();
-        game.sceneMgr.setCurrentScene(this);    
+        game.sceneMgr.setCurrentScene(this);
+        this.createGuangBoNode();    
+    }
+    createGuangBoNode(){
+        let guangboNode = cc.find("guangBoNode",this.node);
+        if(guangboNode){
+            let node = cc.find("GuangBo");
+            if(!node){
+                game.resMgr.loadRes<cc.Prefab>("prefabs/GuangBo").then((prefab:cc.Prefab)=>{
+                    node = cc.instantiate(prefab);
+                    cc.director.getScene().addChild(node);
+                    let pos = game.utilsMgr.getNodeInTargetPos(guangboNode,node.parent);
+                    node.setPosition(pos);
+                })
+            }
+        }else{
+           let node = cc.find("GuangBo");
+           if(node){
+             node.destroy();
+           }
+        }   
     }
     fitWinSize(){
         var frameWinSize=cc.view.getFrameSize();
