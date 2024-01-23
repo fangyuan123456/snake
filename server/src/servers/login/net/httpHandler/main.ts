@@ -6,7 +6,7 @@ import { I_roleInfo } from "../../../../common/interface/IInfo";
 export default class Handler {
     constructor() {
     }
-    onLoginHandler(msgData:any,res:Response){
+    onLoginHandler(msgData:I_loginReq,res:Response){
         game.platformMgr.getLoginCode(msgData,(sdkData:I_sdkLoginRes)=>{
             delete msgData.isCeShi;
             delete msgData.code;

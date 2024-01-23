@@ -1,5 +1,6 @@
 import { ServerCfg } from "../common/configs/ServerCfg";
 import { SingleBase } from "../common/base/SingleBase";
+import { I_loginReq } from "../common/interface/Ilogin";
 export interface LOAD_ORDER_CFG{
     funcName:string,
     progressNum:number,
@@ -65,7 +66,7 @@ export abstract class PlatformBase extends SingleBase{
         socketTarget.binaryType=binaryType;
         return socketTarget
     }
-    getLoginCode(callBack:(data:string)=>void){
+    getLoginCode(callBack:(data:I_loginReq)=>void){
         
     }
 };

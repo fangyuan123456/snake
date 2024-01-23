@@ -24,6 +24,6 @@ class SingleBase {
         }
     }
 }
-exports.SingleBase = SingleBase;
 // 是否是通过getInstance实例化
 SingleBase._instantiateByGetInstance = false;
+exports.SingleBase = SingleBase;

@@ -16,8 +16,10 @@ class SqlBase {
         this.defaultCompKey = null;
         this.cond = null;
         this.whileUpdateKeyList = {};
+        this.getInfoResolveCallList = [];
         this.tb_name = tb_name;
         this.cond = cond;
+        this.init();
     }
     init(defaultData) {
         return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
@@ -29,7 +31,26 @@ class SqlBase {
             }
             this.sendDatasCenter(items);
             resolve(items);
+            this.callGetInfoResolve();
         }));
+    }
+    callGetInfoResolve() {
+        let datasCenter = this.datasCenter;
+        if (datasCenter) {
+            for (let i in this.getInfoResolveCallList) {
+                let callBack = this.getInfoResolveCallList[i];
+                if (callBack) {
+                    callBack(datasCenter);
+                }
+            }
+            this.getInfoResolveCallList = [];
+        }
+    }
+    getInfo() {
+        return new Promise((resolve, reject) => {
+            this.getInfoResolveCallList.push(resolve);
+            this.callGetInfoResolve();
+        });
     }
     sendDatasCenter(datasCenter) {
         this.datasCenter = datasCenter;

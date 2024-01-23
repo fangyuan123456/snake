@@ -6,7 +6,7 @@ import { ServerCfg } from "../configs/ServerCfg";
 export interface SocketMsgStruct{
     msgType?:MSG_TYPE
     msgHead:string,
-    msgData:any
+    msgData?:any
 }
 export class NetManager extends SingleBase{
     showLoadTimes:number = 0
@@ -66,7 +66,7 @@ export class NetManager extends SingleBase{
     onClose(callBack:(any)=>void,target:CompBase,socketType:SocketType = SocketType.center){
         this.socketMap[socketType].onMsgHander("onClose",callBack,target)
     }
-    onMsg(msgName:string,callBack:(any)=>void,target:CompBase,socketType:SocketType = SocketType.center){
+    onMsg(msgName:string,callBack:(any)=>void,target?:CompBase,socketType:SocketType = SocketType.center){
         this.socketMap[socketType].onMsgHander(msgName,callBack,target)
     }
     showNetLoadingBar(_b){

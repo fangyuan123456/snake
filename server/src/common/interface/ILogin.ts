@@ -1,5 +1,5 @@
 export interface I_loginReq{
-    code:string,
+    code?:string,
     platform:string,
     isCeShi?:boolean
 }

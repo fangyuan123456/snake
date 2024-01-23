@@ -21,7 +21,7 @@ export class Asset extends SqlBase{
         super(TableName.ASSET,{uid:player.uid})
         this.player = player;
     }
-    async init():Promise<Dic<any>>{
+    init():Promise<Dic<any>>{
         return new Promise(async (resolve,reject)=>{
             super.init(defaultItems).then((data:Dic<any>)=>{
                 this.items = data;

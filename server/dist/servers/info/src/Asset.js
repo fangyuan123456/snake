@@ -33,14 +33,12 @@ class Asset extends SqlBase_1.SqlBase {
         const _super = Object.create(null, {
             init: { get: () => super.init }
         });
-        return __awaiter(this, void 0, void 0, function* () {
-            return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
-                _super.init.call(this, defaultItems).then((data) => {
-                    this.items = data;
-                    resolve(data);
-                });
-            }));
-        });
+        return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+            _super.init.call(this, defaultItems).then((data) => {
+                this.items = data;
+                resolve(data);
+            });
+        }));
     }
     getAllDataByCompKey(compKey) {
         let newDic = {};

@@ -8,3 +8,20 @@ message getRoomInfoRes {
     int32 roomId = 1; 
     string roomIp = 2; 
 }
+
+message getAssetInfoReq {
+}
+message getAssetInfoRes {
+    int32 roomId = 1; 
+    string roomIp = 2; 
+}
+message updateRoleInfoReq{
+    required int32 uid =1;
+    required string openId =2;
+    optional string nickName=3;
+    optional string avatarUrl = 4;
+    optional int32 gender = 5;
+    optional string city = 6;
+    optional string country = 7;
+    optional string province = 8;
+}

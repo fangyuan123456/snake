@@ -9,6 +9,7 @@ import { Game } from "../common/Game";
 import { LOAD_ORDER_CFG } from "../platform/PlatformBase";
 import { SceneBase } from "../common/base/SceneBase";
 import LoadingComp from "../common/components/LoadingComp";
+import { InfoType } from "../common/data/UserData";
 
 const {ccclass, property} = cc._decorator;
 
@@ -31,17 +32,18 @@ export default class LoadScene extends SceneBase {
         },1)
     }
     login(next){
-        game.platFormMgr.getLoginCode((data:any)=>{
+        game.platFormMgr.getLoginCode((data)=>{
             if(data.code){
                 game.netMgr.sendHttpRequest(data,"login",(loginData)=>{
                     game.userData.setLoginData(loginData);
                     game.netMgr.createSocket(game.userData.centerIp)
                     game.netMgr.onReady((data)=>{
+                        game.userData.registerAllInfoMsg();
                         game.netMgr.sendSocket({
                             msgHead:"getRoomInfo",
                             msgData:{}
                         },(data)=>{
-                            game.userData.setRoomInfo(data);
+                            game.userData.setInfo(InfoType.roomInfo,data);
                             next();
                         })
                     },this);

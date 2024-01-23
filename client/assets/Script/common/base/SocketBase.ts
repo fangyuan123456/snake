@@ -92,7 +92,7 @@ export class SocketBase{
             this.dispatchMsgEvent(msg.msgHead,msg.msgData);
         }
     }
-    onMsgHander(msgName:string,callBack:(any)=>void,target:CompBase){
+    onMsgHander(msgName:string,callBack:(any)=>void,target?:CompBase){
         game.eventMgr.on(this.socketType+"OnMsg"+msgName,callBack,target);
     }
     onError(){
@@ -104,6 +104,7 @@ export class SocketBase{
         this.dispatchMsgEvent("onClose");
     }
     send(data:SocketMsgStruct,callBack?:(data:any)=>void){
+        data.msgData = data.msgData || {};
         if(this.state != SOCKET_STATE.READY){
             game.logMgr.error("socket:% state is %d",this.socketType,this.state);
             return;

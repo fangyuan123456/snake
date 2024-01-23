@@ -11,9 +11,10 @@ export class SceneManager extends SingleBase{
     }
     changeScene(sceneName,isPreLoad?:boolean){
         if(isPreLoad){
-            cc.director.loadScene("TransformScene",()=>{
+            cc.director.preloadScene(sceneName,null,()=>{
                 cc.director.loadScene(sceneName);
-            });
+            })
+            cc.director.loadScene("TransformScene");
         }else{
             cc.director.loadScene(sceneName);
         }

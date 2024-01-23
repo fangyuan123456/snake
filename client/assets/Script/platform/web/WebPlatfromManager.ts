@@ -1,3 +1,4 @@
+import { I_loginReq } from "../../common/interface/Ilogin";
 import { PlatformBase } from "../PlatformBase";
 
 export class WebPlatfromManager extends PlatformBase{
@@ -22,7 +23,7 @@ export class WebPlatfromManager extends PlatformBase{
             title:"场景准备中..."
         }
     ]
-    getLoginCode(callBack:(data:any)=>void){
+    getLoginCode(callBack:(data:I_loginReq)=>void){
         var _data={
             isCeShi:true,
             platform:this.platformName,
