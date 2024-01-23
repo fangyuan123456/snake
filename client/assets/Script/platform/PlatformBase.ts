@@ -1,6 +1,6 @@
 import { ServerCfg } from "../common/configs/ServerCfg";
 import { SingleBase } from "../common/base/SingleBase";
-import { I_loginReq } from "../common/interface/Ilogin";
+import { I_loginReq } from "../common/interface/I_Login";
 export interface LOAD_ORDER_CFG{
     funcName:string,
     progressNum:number,

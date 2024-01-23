@@ -6,3 +6,5 @@
 [2024-01-23T18:22:17.868] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
 [2024-01-23T18:22:17.904] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
 [2024-01-23T18:22:17.923] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-23T23:00:33.062] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-0
+[2024-01-23T23:00:33.065] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1

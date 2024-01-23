@@ -22,7 +22,7 @@ export class PlatformManager extends SingleBase{
         if(data.isCeShi || !this.getPlatformApi(data.platform)){
             if(callBack){
                 callBack({
-                    openId : data.code
+                    openId : data.code!
                 });
             }
         }else{

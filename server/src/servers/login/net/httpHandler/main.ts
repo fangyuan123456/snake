@@ -6,25 +6,28 @@ import { I_roleInfo } from "../../../../common/interface/IInfo";
 export default class Handler {
     constructor() {
     }
+    updatePlayInviteData(uid:number,myInviteUid:number){
+        game.app.rpc(game.utilsMgr.getSid(uid,serverType.info)).info.main.updatePlayInviteData(uid,myInviteUid);
+    }
     onLoginHandler(msgData:I_loginReq,res:Response){
         game.platformMgr.getLoginCode(msgData,(sdkData:I_sdkLoginRes)=>{
+            let inviteUid = msgData.inviteUid;
             delete msgData.isCeShi;
             delete msgData.code;
+            delete msgData.inviteUid;
             game.utilsMgr.merge(msgData,sdkData);
-            this.registerAndLogin(msgData).then((registerData:any)=>{
+            this.registerAndLogin(msgData).then((registerData:I_roleInfo)=>{
                 let uid = registerData.uid;
-                let server = game.utilsMgr.getServerByUid(uid,serverType.center);
-                let loginResData = {
-                    centerIp:"ws://"+game.utilsMgr.getServerIp(server),
-                    uid:uid,
-                    nickName:registerData.nickName,
-                    avatarUrl:registerData.avatarUrl
+                if(inviteUid){
+                    this.updatePlayInviteData(inviteUid,uid);
                 }
+                let server = game.utilsMgr.getServerByUid(uid,serverType.center);
+                let loginResData = game.utilsMgr.merge(registerData,{centerIp:"ws://"+game.utilsMgr.getServerIp(server),});
                 game.httpMgr!.sendMsg(loginResData,res);
             });
         });
     }
-    registerAndLogin(data:any){
+    registerAndLogin(data:any):Promise<I_roleInfo>{
         return new Promise(async (resolve,reject)=>{
             let mData:I_roleInfo;
             let userData = await game.sqlMgr.select(TableName.USER,{openId:data.openId})

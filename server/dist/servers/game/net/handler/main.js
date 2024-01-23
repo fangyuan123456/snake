@@ -13,7 +13,7 @@ class Handler {
         //@ts-ignore
         let func = room[msgName];
         if (func) {
-            func(msg, session, next);
+            func.call(room, msg, session, next);
         }
         else {
             game.logMgr.error("msgName:%s is not found in Room", msgName);

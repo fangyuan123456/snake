@@ -16,6 +16,143 @@
               "id": 2
             }
           }
+        },
+        "getAssetInfoReq": {
+          "fields": {}
+        },
+        "getAssetInfoRes": {
+          "fields": {
+            "nowQuipId": {
+              "keyType": "string",
+              "type": "itemData",
+              "id": 1
+            }
+          },
+          "nested": {
+            "itemData": {
+              "oneofs": {
+                "_level": {
+                  "oneof": [
+                    "level"
+                  ]
+                },
+                "_countEndTime": {
+                  "oneof": [
+                    "countEndTime"
+                  ]
+                }
+              },
+              "fields": {
+                "num": {
+                  "rule": "required",
+                  "type": "int32",
+                  "id": 1
+                },
+                "level": {
+                  "type": "int32",
+                  "id": 2,
+                  "options": {
+                    "proto3_optional": true
+                  }
+                },
+                "countEndTime": {
+                  "type": "int32",
+                  "id": 3,
+                  "options": {
+                    "proto3_optional": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "updateRoleInfoReq": {
+          "oneofs": {
+            "_nickName": {
+              "oneof": [
+                "nickName"
+              ]
+            },
+            "_avatarUrl": {
+              "oneof": [
+                "avatarUrl"
+              ]
+            },
+            "_gender": {
+              "oneof": [
+                "gender"
+              ]
+            },
+            "_city": {
+              "oneof": [
+                "city"
+              ]
+            },
+            "_country": {
+              "oneof": [
+                "country"
+              ]
+            },
+            "_province": {
+              "oneof": [
+                "province"
+              ]
+            }
+          },
+          "fields": {
+            "uid": {
+              "rule": "required",
+              "type": "int32",
+              "id": 1
+            },
+            "openId": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            },
+            "nickName": {
+              "type": "string",
+              "id": 3,
+              "options": {
+                "proto3_optional": true
+              }
+            },
+            "avatarUrl": {
+              "type": "string",
+              "id": 4,
+              "options": {
+                "proto3_optional": true
+              }
+            },
+            "gender": {
+              "type": "int32",
+              "id": 5,
+              "options": {
+                "proto3_optional": true
+              }
+            },
+            "city": {
+              "type": "string",
+              "id": 6,
+              "options": {
+                "proto3_optional": true
+              }
+            },
+            "country": {
+              "type": "string",
+              "id": 7,
+              "options": {
+                "proto3_optional": true
+              }
+            },
+            "province": {
+              "type": "string",
+              "id": 8,
+              "options": {
+                "proto3_optional": true
+              }
+            }
+          }
         }
       }
     }

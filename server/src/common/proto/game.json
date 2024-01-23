@@ -2,15 +2,15 @@
   "nested": {
     "game": {
       "nested": {
-        "testReq": {
+        "enterRoomReq": {
           "fields": {
-            "test1": {
-              "type": "string",
+            "roomId": {
+              "type": "int32",
               "id": 1
             }
           }
         },
-        "testRes": {
+        "enterRoomRes": {
           "fields": {
             "test1": {
               "type": "string",

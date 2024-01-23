@@ -13,20 +13,23 @@ const SqlManager_1 = require("../../../../common/manager/SqlManager");
 class Handler {
     constructor() {
     }
+    updatePlayInviteData(uid, myInviteUid) {
+        game.app.rpc(game.utilsMgr.getSid(uid, "info" /* serverType.info */)).info.main.updatePlayInviteData(uid, myInviteUid);
+    }
     onLoginHandler(msgData, res) {
         game.platformMgr.getLoginCode(msgData, (sdkData) => {
+            let inviteUid = msgData.inviteUid;
             delete msgData.isCeShi;
             delete msgData.code;
+            delete msgData.inviteUid;
             game.utilsMgr.merge(msgData, sdkData);
             this.registerAndLogin(msgData).then((registerData) => {
                 let uid = registerData.uid;
+                if (inviteUid) {
+                    this.updatePlayInviteData(inviteUid, uid);
+                }
                 let server = game.utilsMgr.getServerByUid(uid, "center" /* serverType.center */);
-                let loginResData = {
-                    centerIp: "ws://" + game.utilsMgr.getServerIp(server),
-                    uid: uid,
-                    nickName: registerData.nickName,
-                    avatarUrl: registerData.avatarUrl
-                };
+                let loginResData = game.utilsMgr.merge(registerData, { centerIp: "ws://" + game.utilsMgr.getServerIp(server), });
                 game.httpMgr.sendMsg(loginResData, res);
             });
         });

@@ -1,17 +1,20 @@
 import { SingleBase } from "../base/SingleBase";
 import { Root, Type, load, loadSync } from "protobufjs";
 export class ProtoManager extends SingleBase{
-    root:Root|null = null;
+    rootMap:{[key:string]:Root} = {};
     encodeDecodeFuncMap:{[key:string]:Type} = {};
     constructor(){
         super();
     }
     getEncodeDecodeFunc(pbName:string){
+
       if(!this.encodeDecodeFuncMap[pbName]){
-        if(!this.root){
-          this.root = loadSync(__dirname+"/../proto/"+game.app.serverType+".json")
+        let root = this.rootMap[game.app.serverType]
+        if(!root){
+           root = loadSync(__dirname+"/../proto/"+game.app.serverType+".json")
+           this.rootMap[game.app.serverType] = root;
         }
-        this.encodeDecodeFuncMap[pbName] = this.root.lookupType(pbName);
+        this.encodeDecodeFuncMap[pbName] = root.lookupType(pbName);
       }
       return this.encodeDecodeFuncMap[pbName]
     }

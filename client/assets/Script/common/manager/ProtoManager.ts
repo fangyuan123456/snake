@@ -1,3 +1,4 @@
+import { json } from "express";
 import { SingleBase } from "../base/SingleBase";
 import { MSG_TYPE } from "../base/SocketBase";
 import { SocketMsgStruct } from "./NetManager";
@@ -52,6 +53,10 @@ export class ProtoManager extends SingleBase{
     }
     encodeProto(data:SocketMsgStruct){
         let protoCode = this.getMsgDecodeProto(data.msgHead);
+        if(!this.msgList[protoCode]){
+            game.logMgr.error(JSON.stringify(data))
+            return
+        }
         let typeFunc = this.getEncodeDecodeFunc(this.msgList[protoCode].packageName,data.msgHead+"Req");
         let message = typeFunc.create(data.msgData);
         return typeFunc.encode(message).finish();
@@ -59,7 +64,14 @@ export class ProtoManager extends SingleBase{
     decodeProto(buffer,protoCode){
         let msgHead = this.getMsgDecodeFuncName(protoCode);
         let typeFunc = this.getEncodeDecodeFunc(this.msgList[protoCode].packageName,msgHead+"Res");
-        let msgData = typeFunc.decode(buffer);
+        let msgData = null;
+        try{
+            msgData = typeFunc.decode(buffer);
+        }catch(err){
+            debugger;
+            msgData = typeFunc.decode(buffer);
+            return;
+        }
         return {
             msgHead:msgHead,
             msgData:msgData

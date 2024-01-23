@@ -1,24 +1,28 @@
+import { Session } from "mydog";
 import { e_InfoType, I_roleInfo, I_roleMem } from "../../../common/interface/IInfo";
 import { Asset } from "./Asset";
 import { InfoConfig } from "./InfoConfig";
-export class Player {
+import { Role } from "./Role";
+export class Player{
     public uid: number;
     public delThisTime:number = 0;
-    public roomInfo?: I_roleMem;
-    public role?: I_roleInfo;
+    public roomInfo?: I_roleMem = {roomId:0,roomIp:""};
     public asset?: Asset;
+    public role?:Role;
     public isInit:boolean = false;
 
     constructor(role:I_roleInfo) {
         this.uid = role.uid;
-        this.role = role;
-        this.init();
+        this.init(role);
     }
-    init(){
+    init(role:I_roleInfo){
         for(let i in e_InfoType){
             if(i == e_InfoType.asset){
-                this.asset = new Asset(this)
+                this.asset = new Asset(this);
+            }else if(i == e_InfoType.role){
+                this.role = new Role(this,role);
             }
+
         }
     }
     getInfo(infoType:e_InfoType):Promise<any>{
@@ -26,7 +30,7 @@ export class Player {
             return this.asset!.getInfo();
         }else{
             return new Promise((resolve,reject)=>{
-                resolve(this.role);
+                resolve(this.role!.getInfo());
             })
         }
     }
@@ -36,8 +40,21 @@ export class Player {
             roomIp:roomInfo.roomIp
         }
     }
-    public getRoomInfo(){
-        return this.roomInfo;
+    getRoomInfo(msg: {}, session: Session, next: Function){
+        next(this.roomInfo)
+    }
+    getRoleInfo(msg: {}, session: Session, next: Function){
+        this.getInfo(e_InfoType.role).then((data)=>{
+            next(data)
+        })
+    }
+    getAssetInfo(msg: {}, session: Session, next: Function){
+        this.getInfo(e_InfoType.asset).then((data)=>{
+            next({items:data})
+        })
+    }
+    public updateInviteData(inviteUid:number){
+        this.role!.updateInviteData(inviteUid);
     }
     private online() {
         this.delThisTime = 0;

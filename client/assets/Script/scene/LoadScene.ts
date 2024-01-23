@@ -10,6 +10,7 @@ import { LOAD_ORDER_CFG } from "../platform/PlatformBase";
 import { SceneBase } from "../common/base/SceneBase";
 import LoadingComp from "../common/components/LoadingComp";
 import { InfoType } from "../common/data/UserData";
+import { I_loginReq, I_loginRes } from "../common/interface/I_Login";
 
 const {ccclass, property} = cc._decorator;
 
@@ -34,7 +35,7 @@ export default class LoadScene extends SceneBase {
     login(next){
         game.platFormMgr.getLoginCode((data)=>{
             if(data.code){
-                game.netMgr.sendHttpRequest(data,"login",(loginData)=>{
+                game.netMgr.sendHttpRequest(data,"login",(loginData:I_loginRes)=>{
                     game.userData.setLoginData(loginData);
                     game.netMgr.createSocket(game.userData.centerIp)
                     game.netMgr.onReady((data)=>{

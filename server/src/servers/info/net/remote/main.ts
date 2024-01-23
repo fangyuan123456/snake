@@ -21,6 +21,12 @@ export default class Remote {
             player.setRoomInfo({roomId:data.roomId,roomIp:data.roomIp});
         }
     }
+    updatePlayInviteData(uid:number,inviteUid:number){
+        let player = infoGame.getPlayer(uid);
+        if(player){
+            player.updateInviteData(inviteUid);
+        }
+    }
     async getRoomPlayerInfo(uid:number){
         let player = infoGame.getPlayer(uid);
         return {

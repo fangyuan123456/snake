@@ -4,9 +4,17 @@ export interface I_roleMem {
 }
 export interface I_roleInfo {
     uid: number,              // uid
+    openId:string,
     nickName: string,         // 昵称
     avatarUrl:string,
-    platform?:string
+    gender?:number,
+    city?:string,
+    country?:string,
+    province?:string,
+    sceneId?:number,
+    pathId?:number,
+    platform?:string,
+    inviteUids?:string
 }
 export interface I_item {
     num: number,

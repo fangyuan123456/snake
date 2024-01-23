@@ -1,4 +1,4 @@
-import { I_loginReq } from "../../common/interface/Ilogin";
+import { I_loginReq } from "../../common/interface/I_Login";
 import { PlatformBase } from "../PlatformBase";
 
 export class WebPlatfromManager extends PlatformBase{

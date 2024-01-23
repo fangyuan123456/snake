@@ -10,8 +10,9 @@ class LoginServer extends GameServerBase_1.GameServerBase {
     getDefaultUserData(uid) {
         return {
             uid: uid,
+            openId: "",
             nickName: "uid_" + uid,
-            avatarUrl: ""
+            avatarUrl: "",
         };
     }
 }

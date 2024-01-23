@@ -92,3 +92,110 @@
 [2024-01-23T18:22:17.872] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
 [2024-01-23T18:22:17.906] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
 [2024-01-23T18:22:17.924] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-23T22:43:36.609] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'roomInfo')
+    at getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:42:19)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:11:13)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+[2024-01-23T22:48:42.192] [ERROR] gameLog - Error: no such type: info.getAssetInfoReq
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:17:58)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:35:21)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:77:29)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+[2024-01-23T22:48:42.194] [ERROR] gameLog - Error: no such type: info.getAssetInfoReq
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:17:58)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:35:21)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:77:29)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+[2024-01-23T22:49:15.439] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-23T22:49:15.442] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-23T22:49:15.443] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-23T22:49:15.443] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-23T22:51:22.025] [ERROR] gameLog - Error: no such type: info.getAssetInfoReq
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:17:58)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:35:21)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:77:29)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+[2024-01-23T23:01:27.758] [ERROR] gameLog - Error: no such type: info.getAssetInfoReq
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:19:53)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:37:21)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:77:29)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+[2024-01-23T23:01:41.261] [ERROR] gameLog - Error: no such type: info.getAssetInfoReq
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:19:53)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:37:21)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:77:29)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+[2024-01-23T23:01:41.263] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-23T23:01:41.265] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-1
+[2024-01-23T23:01:41.265] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-23T23:01:41.265] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: game-0
+[2024-01-23T23:01:41.266] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-23T23:01:41.266] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: game-1
+[2024-01-23T23:01:41.267] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-23T23:01:41.268] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-23T23:01:41.269] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
+[2024-01-23T23:01:41.269] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0
+[2024-01-23T23:01:41.270] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
+[2024-01-23T23:01:41.271] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-23T23:01:41.272] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-23T23:01:41.272] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-23T23:01:41.273] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-23T23:02:44.476] [ERROR] gameLog - Error: no such type: info.getAssetInfoReq
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:19:53)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:37:21)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:77:29)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+[2024-01-23T23:02:47.052] [ERROR] gameLog - Error: no such type: info.getAssetInfoReq
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:19:53)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:37:21)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:77:29)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)

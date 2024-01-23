@@ -4,18 +4,22 @@ exports.Player = void 0;
 const IInfo_1 = require("../../../common/interface/IInfo");
 const Asset_1 = require("./Asset");
 const InfoConfig_1 = require("./InfoConfig");
+const Role_1 = require("./Role");
 class Player {
     constructor(role) {
         this.delThisTime = 0;
+        this.roomInfo = { roomId: 0, roomIp: "" };
         this.isInit = false;
         this.uid = role.uid;
-        this.role = role;
-        this.init();
+        this.init(role);
     }
-    init() {
+    init(role) {
         for (let i in IInfo_1.e_InfoType) {
             if (i == IInfo_1.e_InfoType.asset) {
                 this.asset = new Asset_1.Asset(this);
+            }
+            else if (i == IInfo_1.e_InfoType.role) {
+                this.role = new Role_1.Role(this, role);
             }
         }
     }
@@ -25,7 +29,7 @@ class Player {
         }
         else {
             return new Promise((resolve, reject) => {
-                resolve(this.role);
+                resolve(this.role.getInfo());
             });
         }
     }
@@ -35,8 +39,21 @@ class Player {
             roomIp: roomInfo.roomIp
         };
     }
-    getRoomInfo() {
-        return this.roomInfo;
+    getRoomInfo(msg, session, next) {
+        next(this.roomInfo);
+    }
+    getRoleInfo(msg, session, next) {
+        this.getInfo(IInfo_1.e_InfoType.role).then((data) => {
+            next(data);
+        });
+    }
+    getAssetInfo(msg, session, next) {
+        this.getInfo(IInfo_1.e_InfoType.asset).then((data) => {
+            next({ items: data });
+        });
+    }
+    updateInviteData(inviteUid) {
+        this.role.updateInviteData(inviteUid);
     }
     online() {
         this.delThisTime = 0;

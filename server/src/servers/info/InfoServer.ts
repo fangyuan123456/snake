@@ -50,4 +50,10 @@ export class InfoServer extends GameServerBase{
     getPlayer(uid:number){
         return this.roles[uid];
     }
+    updatePlayInviteData(uid:number,inviteUid:number){
+        let player = this.roles[uid];
+        if(player){
+            player.updateInviteData(inviteUid);
+        }
+    }
 }

@@ -4,22 +4,14 @@ import { e_InfoType } from "../../../../common/interface/IInfo";
 export default class Handler {
     constructor() {
     }
-    getRoomInfo(msg: {}, session: Session, next: Function){
+    route(msgName:string,msg: any, session: Session, next: Function){
         let player = infoGame.getPlayer(session.uid);
-        if(player){
-            let roomInfo = player.getRoomInfo();
-            if(roomInfo){
-                next({roomId:roomInfo.roomId,roomIp:roomInfo.roomIp})
-                return;
-            }
-        }
-        next({roomId:0,roomIp:""})
-    }
-    async getAssetInfo(msg: {}, session: Session, next: Function){
-        let player = infoGame.getPlayer(session.uid);
-        if(player){
-            let assetInfo = await player.getInfo(e_InfoType.asset)
-            next({assest:assetInfo})
+        //@ts-ignore
+        let func = player[msgName]
+        if(func){
+            func.call(player,msg, session, next);
+        }else{
+            game.logMgr.error("msgName:%s is not found in Room",msgName);
         }
     }
 }

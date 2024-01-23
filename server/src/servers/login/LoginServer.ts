@@ -15,8 +15,9 @@ export class LoginServer extends GameServerBase{
     getDefaultUserData(uid:number):I_roleInfo{
         return {
             uid:uid,
+            openId:"",
             nickName:"uid_"+uid,
-            avatarUrl:""
+            avatarUrl:"",
         }
     }
 }

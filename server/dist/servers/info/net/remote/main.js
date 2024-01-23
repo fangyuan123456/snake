@@ -22,6 +22,12 @@ class Remote {
             player.setRoomInfo({ roomId: data.roomId, roomIp: data.roomIp });
         }
     }
+    updatePlayInviteData(uid, inviteUid) {
+        let player = infoGame.getPlayer(uid);
+        if (player) {
+            player.updateInviteData(inviteUid);
+        }
+    }
     getRoomPlayerInfo(uid) {
         return __awaiter(this, void 0, void 0, function* () {
             let player = infoGame.getPlayer(uid);

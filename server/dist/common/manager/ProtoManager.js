@@ -6,15 +6,17 @@ const protobufjs_1 = require("protobufjs");
 class ProtoManager extends SingleBase_1.SingleBase {
     constructor() {
         super();
-        this.root = null;
+        this.rootMap = {};
         this.encodeDecodeFuncMap = {};
     }
     getEncodeDecodeFunc(pbName) {
         if (!this.encodeDecodeFuncMap[pbName]) {
-            if (!this.root) {
-                this.root = (0, protobufjs_1.loadSync)(__dirname + "/../proto/" + game.app.serverType + ".json");
+            let root = this.rootMap[game.app.serverType];
+            if (!root) {
+                root = (0, protobufjs_1.loadSync)(__dirname + "/../proto/" + game.app.serverType + ".json");
+                this.rootMap[game.app.serverType] = root;
             }
-            this.encodeDecodeFuncMap[pbName] = this.root.lookupType(pbName);
+            this.encodeDecodeFuncMap[pbName] = root.lookupType(pbName);
         }
         return this.encodeDecodeFuncMap[pbName];
     }

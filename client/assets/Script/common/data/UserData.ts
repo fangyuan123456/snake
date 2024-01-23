@@ -1,25 +1,24 @@
 import { CompBase } from "../base/CompBase"
 import { SingleBase } from "../base/SingleBase"
+import { I_assetInfo, I_roleInfo, I_roomInfo } from "../interface/I_Info";
+import { I_loginRes } from "../interface/I_Login";
 export enum InfoType{
     roleInfo="roleInfo",
-    assestInfo = "assestInfo",
+    assetInfo = "assetInfo",
     roomInfo = "roomInfo"
 }
-export type I_roleInfo = {uid:number,nickName:string,avatarUrl:string};
-export type I_roomInfo = {roomId:number,roomIp:string};
-export type I_assestInfo = {};
-
 export default class UserData extends SingleBase{
     uid:number = 0
     centerIp:string  = ""
     roleInfo:I_roleInfo
     roomInfo:I_roomInfo
-    assestInfo:I_assestInfo
+    assetInfo:I_assetInfo
     infoResolveMap:{[key:string]:any} = {};
-    setLoginData(loginData){
+    setLoginData(loginData:I_loginRes){
         this.uid = loginData.uid,
         this.centerIp = loginData.centerIp
-        this.setInfo(InfoType.roleInfo,{uid:loginData.uid,nickName:loginData.nickName,avatarUrl:loginData.avatarUrl})
+        delete loginData.centerIp;
+        this.setInfo(InfoType.roleInfo,loginData)
     }
     registerAllInfoMsg(){
         for(let i in InfoType){
@@ -75,7 +74,7 @@ export default class UserData extends SingleBase{
     getRoomInfo(target:CompBase,isReq?:boolean):Promise<I_roomInfo>{
         return this.getInfo(InfoType.roomInfo,target,isReq)
     }
-    getAssetInfo(target:CompBase,isReq?:boolean):Promise<I_assestInfo>{
-        return this.getInfo(InfoType.assestInfo,target,isReq)
+    getAssetInfo(target:CompBase,isReq?:boolean):Promise<I_assetInfo>{
+        return this.getInfo(InfoType.assetInfo,target,isReq)
     }
 }
