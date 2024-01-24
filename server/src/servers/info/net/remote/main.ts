@@ -11,7 +11,7 @@ declare global {
 export default class Remote {
     constructor() {
     }
-    createPlayer(role:I_roleInfo){
+    async createPlayer(role:I_roleInfo){
         infoGame.createPlayer(role.uid,role);
     }
     setRoomInfo(data:{uid:number,roomId:number,roomIp:string}){

@@ -13,8 +13,9 @@ class Remote {
     constructor() {
     }
     createPlayer(role) {
-        let infoGame = game;
-        infoGame.createPlayer(role);
+        return __awaiter(this, void 0, void 0, function* () {
+            infoGame.createPlayer(role.uid, role);
+        });
     }
     setRoomInfo(data) {
         let player = infoGame.getPlayer(data.uid);

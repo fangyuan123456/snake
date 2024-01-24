@@ -19,6 +19,6 @@ export default class MoneyPanel extends CompBase {
        
     }
     updateMoney(num){
-        cc.find("diamondNum",this.node).getComponent(cc.Label).string = num;
+        cc.find("moneyNum",this.node).getComponent(cc.Label).string = num;
     }
 }

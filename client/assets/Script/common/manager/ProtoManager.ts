@@ -77,7 +77,7 @@ export class ProtoManager extends SingleBase{
             msgData:msgData
         }
     }
-    decode(buffer):SocketMsgStruct{
+    decode(buffer:Uint8Array):SocketMsgStruct{
         let msgData = null;
         let msgHead = null;
         let index = 0;

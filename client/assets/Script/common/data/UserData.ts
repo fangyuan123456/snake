@@ -3,12 +3,11 @@ import DataBase from "../base/DataBase";
 import { I_assetInfo, I_roleInfo, I_roomInfo } from "../interface/I_Info";
 import { I_loginRes } from "../interface/I_Login";
 export default class UserData extends DataBase{
-    netDataKeyList:string[] = [];
     uid:number = 0
     centerIp:string  = ""
-    offLineReReqInfoList:string[] = []
+    offLineReReqInfoList:string[] = ["assetInfo"]
     constructor(){
-        super();
+        super(["assetInfo","roleInfo","roomInfo"]);
     }
     setLoginData(loginData:I_loginRes){
         this.uid = loginData.uid,

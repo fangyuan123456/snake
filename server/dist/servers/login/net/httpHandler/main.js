@@ -47,8 +47,9 @@ class Handler {
             else {
                 mData = userData[0];
             }
-            game.app.rpc(game.utilsMgr.getSid(mData.uid, "info" /* serverType.info */)).info.main.createPlayer(mData);
-            resolve(mData);
+            game.app.rpc(game.utilsMgr.getSid(mData.uid, "info" /* serverType.info */)).info.main.createPlayer(mData).then(() => {
+                resolve(mData);
+            });
         }));
     }
 }

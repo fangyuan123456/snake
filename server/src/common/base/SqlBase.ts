@@ -63,7 +63,11 @@ export class SqlBase{
         for(let key in dicObj){
             if(!cond[key]){
                 if(typeof dicObj[key] == "string"){
-                    newDicObj[key] = JSON.parse(dicObj[key]);
+                    try{
+                        newDicObj[key] = JSON.parse(dicObj[key]);
+                    }catch(err){
+                        newDicObj[key] = dicObj[key];
+                    }
                 }else{
                     newDicObj[key] = dicObj[key];
                 }

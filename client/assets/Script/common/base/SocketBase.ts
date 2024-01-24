@@ -77,19 +77,31 @@ export class SocketBase{
  
     }
     onMessage(event){
-        let msg = game.protoMgr.decode(new Uint8Array(event.data));
-        if(msg.msgType == MSG_TYPE.HANDSHAKE){
-            game.protoMgr.setMsgCodeList(msg.msgData.route)
-            this.heartbeat = msg.msgData.heartbeat
-            this.state = SOCKET_STATE.READY
-            this.dispatchMsgEvent("onReady");
-            this.startHeartBeat();
-        }else if(msg.msgType == MSG_TYPE.HEARTBEAT){
-            clearTimeout(this.heartbeatResTimeoutTimer);
-            this.heartbeatResTimeoutTimer = null;
-        }else if(msg.msgType == MSG_TYPE.MSG){
-            this._runCallBackList(msg);
-            this.dispatchMsgEvent(msg.msgHead,msg.msgData);
+        let buffer = new Uint8Array(event.data);
+        let num = 0;
+        while(buffer.length>0){
+            let msgLen = (buffer[0] << 24) | (buffer[1] << 16) | (buffer[2] << 8) | buffer[3];
+            let msgBuffer = buffer.slice(0,msgLen+4);
+            let msg = game.protoMgr.decode(msgBuffer);
+            game.logMgr.debug("onMessage:"+JSON.stringify(msg));
+            if(msg.msgType == MSG_TYPE.HANDSHAKE){
+                game.protoMgr.setMsgCodeList(msg.msgData.route)
+                this.heartbeat = msg.msgData.heartbeat
+                this.state = SOCKET_STATE.READY
+                this.dispatchMsgEvent("onReady");
+                this.startHeartBeat();
+            }else if(msg.msgType == MSG_TYPE.HEARTBEAT){
+                clearTimeout(this.heartbeatResTimeoutTimer);
+                this.heartbeatResTimeoutTimer = null;
+            }else if(msg.msgType == MSG_TYPE.MSG){
+                this._runCallBackList(msg);
+                this.dispatchMsgEvent(msg.msgHead,msg.msgData);
+            }
+            buffer = buffer.slice(msgLen+4)
+            num++;
+            if(num>10){
+                break;
+            }
         }
     }
     onMsgHander(msgName:string,callBack:(any)=>void,target?:CompBase){
@@ -109,6 +121,7 @@ export class SocketBase{
             game.logMgr.error("socket:% state is %d",this.socketType,this.state);
             return;
         }
+        game.logMgr.debug("sendMsg:"+JSON.stringify(data));
         this.socket.send(game.protoMgr.encode(data));
         this._pushInCallBackList(data,callBack);
     }

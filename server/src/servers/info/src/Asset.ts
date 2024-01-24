@@ -5,12 +5,14 @@ import { TableName } from "../../../common/manager/SqlManager";
 import {Player } from "./Player";
 export class Asset extends SqlBase{
     data?: I_asset;
-    defaultItems?:Dic<I_item> = {
-        1:{
-            num: 2
-        },
-        2:{
-            num:2
+    defaultItems?:Dic<any> = {
+        items:{
+            1:{
+                num: 2
+            },
+            2:{
+                num:2
+            }
         }
     }
     private player:Player

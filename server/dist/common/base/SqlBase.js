@@ -19,18 +19,26 @@ class SqlBase {
         this.cond = cond;
         this.init();
     }
-    init(defaultData) {
-        return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
-            let data = yield this.select();
-            if (!data) {
-                defaultData = defaultData || {};
-                data = defaultData;
-                this.add(defaultData);
-            }
-            this.data = data;
-            resolve(this.data);
-            this.callGetInfoResolve();
-        }));
+    init() {
+        if (this.data) {
+            return new Promise((resolve, reject) => {
+                resolve(this.data);
+                this.callGetInfoResolve();
+            });
+        }
+        else {
+            return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+                let data = yield this.select();
+                if (!data) {
+                    let defaultData = this.defaultItems || {};
+                    data = defaultData;
+                    this.add(defaultData);
+                }
+                this.data = data;
+                resolve(this.data);
+                this.callGetInfoResolve();
+            }));
+        }
     }
     callGetInfoResolve() {
         let data = this.data;
@@ -62,7 +70,12 @@ class SqlBase {
         for (let key in dicObj) {
             if (!cond[key]) {
                 if (typeof dicObj[key] == "string") {
-                    newDicObj[key] = JSON.parse(dicObj[key]);
+                    try {
+                        newDicObj[key] = JSON.parse(dicObj[key]);
+                    }
+                    catch (err) {
+                        newDicObj[key] = dicObj[key];
+                    }
                 }
                 else {
                     newDicObj[key] = dicObj[key];

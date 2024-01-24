@@ -7,46 +7,47 @@ const InfoConfig_1 = require("./src/InfoConfig");
 class InfoServer extends GameServerBase_1.GameServerBase {
     constructor(app) {
         super(app);
-        this.roles = {}; // 所有玩家数据
+        this.players = {}; // 所有玩家数据
         globalThis.infoGame = this;
         setInterval(this.update.bind(this), InfoConfig_1.InfoConfig.updateDt);
         setInterval(this.doSqlUpdate.bind(this), InfoConfig_1.InfoConfig.updateSqlDelayTime);
         setInterval(this.check_delRole.bind(this), 60 * 1000);
     }
     update() {
-        for (let i in this.roles) {
-            let player = this.roles[i];
+        for (let i in this.players) {
+            let player = this.players[i];
             player.update();
         }
     }
     doSqlUpdate() {
-        for (let i in this.roles) {
-            let player = this.roles[i];
+        for (let i in this.players) {
+            let player = this.players[i];
             player.doSqlUpdate();
         }
     }
     // 检测过期玩家，删除缓存数据
     check_delRole() {
         let nowTime = game.timeMgr.getCurTime();
-        for (let i in this.roles) {
-            let one = this.roles[i];
+        for (let i in this.players) {
+            let one = this.players[i];
             if (one.delThisTime !== 0 && nowTime > one.delThisTime) {
-                delete this.roles[i];
+                delete this.players[i];
             }
         }
     }
-    createPlayer(role) {
-        let player = this.roles[role.uid];
+    createPlayer(uid, role) {
+        let player = this.players[uid];
         if (!player) {
-            player = new Player_1.Player(role);
-            this.roles[role.uid] = player;
+            player = new Player_1.Player(uid, { role: role });
+            this.players[uid] = player;
         }
+        return player;
     }
     getPlayer(uid) {
-        return this.roles[uid];
+        return this.players[uid];
     }
     updatePlayInviteData(uid, inviteUid) {
-        let player = this.roles[uid];
+        let player = this.players[uid];
         if (player) {
             player.updateInviteData(inviteUid);
         }

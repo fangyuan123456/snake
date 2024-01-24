@@ -46,6 +46,7 @@ export class InfoServer extends GameServerBase{
             player = new Player(uid,{role:role});
             this.players[uid] = player;
         }
+        return player
     }
     getPlayer(uid:number){
         return this.players[uid];

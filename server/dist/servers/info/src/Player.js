@@ -6,20 +6,20 @@ const Asset_1 = require("./Asset");
 const InfoConfig_1 = require("./InfoConfig");
 const Role_1 = require("./Role");
 class Player {
-    constructor(role) {
+    constructor(uid, data) {
         this.delThisTime = 0;
         this.roomInfo = { roomId: 0, roomIp: "" };
         this.isInit = false;
-        this.uid = role.uid;
-        this.init(role);
+        this.uid = uid;
+        this.init(data);
     }
-    init(role) {
+    init(data) {
         for (let i in IInfo_1.e_InfoType) {
             if (i == IInfo_1.e_InfoType.asset) {
-                this.asset = new Asset_1.Asset(this);
+                this.asset = new Asset_1.Asset(this, data === null || data === void 0 ? void 0 : data.asset);
             }
             else if (i == IInfo_1.e_InfoType.role) {
-                this.role = new Role_1.Role(this, role);
+                this.role = new Role_1.Role(this, data === null || data === void 0 ? void 0 : data.role);
             }
         }
     }

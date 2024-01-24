@@ -210,3 +210,648 @@
     at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
     at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
     at Socket.emit (node:events:514:28)
+[2024-01-24T22:00:48.867] [ERROR] gameLog - Error: illegal token 'Usage' (D:/fangyuan/gitWrokSpace/snake/server/dist/common/proto/info.json, line 1)
+    at illegal (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\parse.js:96:16)
+    at parse (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\parse.js:848:23)
+    at process (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\root.js:127:30)
+    at fetch (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\root.js:179:13)
+    at Root.load (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\root.js:207:13)
+    at Root.loadSync (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\root.js:248:17)
+    at loadSync (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\index-light.js:69:17)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:16:50)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:37:21)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:77:29)
+[2024-01-24T22:03:01.231] [ERROR] gameLog - Error: illegal token 'Usage' (D:/fangyuan/gitWrokSpace/snake/server/dist/common/proto/info.json, line 1)
+    at illegal (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\parse.js:96:16)
+    at parse (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\parse.js:848:23)
+    at process (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\root.js:127:30)
+    at fetch (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\root.js:179:13)
+    at Root.load (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\root.js:207:13)
+    at Root.loadSync (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\root.js:248:17)
+    at loadSync (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\index-light.js:69:17)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:16:50)
+    at ProtoManager.decode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:37:21)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:77:29)
+[2024-01-24T22:03:01.233] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-24T22:08:11.451] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-24T22:08:11.455] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-24T22:08:11.455] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-24T22:08:11.455] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-24T22:09:23.748] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-24T22:09:23.751] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-24T22:09:23.752] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-24T22:09:23.752] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-24T22:23:32.386] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:23:32.484] [ERROR] gameLog - SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Role.parseTableKeyDic (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:73:43)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:108:29)
+    at Generator.next (<anonymous>)
+    at fulfilled (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:5:58)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-01-24T22:23:32.506] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T22:34:23.841] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:34:23.959] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T22:34:23.964] [ERROR] gameLog - SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Role.parseTableKeyDic (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:73:43)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:108:29)
+    at Generator.next (<anonymous>)
+    at fulfilled (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:5:58)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-01-24T22:35:58.147] [ERROR] gameLog - SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Role.parseTableKeyDic (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:73:43)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:108:29)
+    at Generator.next (<anonymous>)
+    at fulfilled (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:5:58)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-01-24T22:35:58.149] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:35:58.150] [DEBUG] gameLog - cmd:1,msg:{"1":{"num":2},"2":{"num":2}}
+[2024-01-24T22:35:58.208] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',18)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',18)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',18)`
+}
+[2024-01-24T22:35:58.210] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',18)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',18)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',18)`
+}
+[2024-01-24T22:36:31.186] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-1
+[2024-01-24T22:36:31.187] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
+[2024-01-24T22:37:23.006] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
+[2024-01-24T22:37:48.076] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getAssetInfo')
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:12:26)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+[2024-01-24T22:38:07.809] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-24T22:38:07.815] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:38:07.956] [DEBUG] gameLog - cmd:1,msg:{"1":{"num":2},"2":{"num":2}}
+[2024-01-24T22:38:08.010] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',20)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',20)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',20)`
+}
+[2024-01-24T22:38:08.012] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',20)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',20)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',20)`
+}
+[2024-01-24T22:38:19.221] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getAssetInfo')
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:12:26)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+[2024-01-24T22:38:19.404] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',20)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',20)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',20)`
+}
+[2024-01-24T22:38:19.406] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',20)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',20)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',20)`
+}
+[2024-01-24T22:38:20.147] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getAssetInfo')
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:12:26)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+[2024-01-24T22:38:21.143] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-24T22:40:39.644] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getAssetInfo')
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:12:26)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+[2024-01-24T22:40:41.168] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:40:42.034] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getAssetInfo')
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:12:26)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+[2024-01-24T22:40:44.810] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:40:44.811] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:40:44.882] [DEBUG] gameLog - cmd:1,msg:{"1":{"num":2},"2":{"num":2}}
+[2024-01-24T22:40:44.936] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',24)`
+}
+[2024-01-24T22:40:44.938] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',24)`
+}
+[2024-01-24T22:41:49.715] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getAssetInfo')
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:12:26)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+[2024-01-24T22:45:10.004] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',24)`
+}
+[2024-01-24T22:45:10.008] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',24)`
+}
+[2024-01-24T22:45:14.436] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:45:14.438] [DEBUG] gameLog - cmd:1,msg:{"1":{"num":2},"2":{"num":2}}
+[2024-01-24T22:45:58.100] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:45:58.126] [DEBUG] gameLog - cmd:1,msg:{"1":{"num":2},"2":{"num":2}}
+[2024-01-24T22:45:58.189] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',24)`
+}
+[2024-01-24T22:45:58.192] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:54:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: `You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,2,uid) values('{"num":2}','{"num":2}',24)' at line 1`,
+  sqlState: '42000',
+  index: 0,
+  sql: `insert into t_asset (1,2,uid) values('{"num":2}','{"num":2}',24)`
+}
+[2024-01-24T22:46:33.771] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:46:33.811] [DEBUG] gameLog - cmd:1,msg:{"1":{"num":2},"2":{"num":2}}
+[2024-01-24T22:47:31.095] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:50:27.491] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:50:27.495] [DEBUG] gameLog - cmd:1,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T22:51:52.814] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:52:13.626] [ERROR] gameLog - Error: Handshake inactivity timeout
+    at Handshake.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:160:17)
+    at Handshake.emit (node:events:514:28)
+    at Handshake._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:124:8)
+    at Timer._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Timer.js:32:23)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  code: 'PROTOCOL_SEQUENCE_TIMEOUT',
+  fatal: true,
+  timeout: 10000
+}
+[2024-01-24T22:52:18.083] [ERROR] gameLog - Error: Handshake inactivity timeout
+    at Handshake.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:160:17)
+    at Handshake.emit (node:events:514:28)
+    at Handshake._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:124:8)
+    at Timer._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Timer.js:32:23)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  code: 'PROTOCOL_SEQUENCE_TIMEOUT',
+  fatal: true,
+  timeout: 10000
+}
+[2024-01-24T22:52:25.815] [ERROR] gameLog - Error: Handshake inactivity timeout
+    at Handshake.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:160:17)
+    at Handshake.emit (node:events:514:28)
+    at Handshake._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:124:8)
+    at Timer._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Timer.js:32:23)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  code: 'PROTOCOL_SEQUENCE_TIMEOUT',
+  fatal: true,
+  timeout: 10000
+}
+[2024-01-24T22:52:25.816] [ERROR] gameLog - Error: Handshake inactivity timeout
+    at Handshake.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:160:17)
+    at Handshake.emit (node:events:514:28)
+    at Handshake._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:124:8)
+    at Timer._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Timer.js:32:23)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  code: 'PROTOCOL_SEQUENCE_TIMEOUT',
+  fatal: true,
+  timeout: 10000
+}
+[2024-01-24T22:52:38.627] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:52:54.132] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-24T22:52:54.134] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-24T22:53:27.373] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:53:37.352] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:54:00.984] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:54:01.020] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T22:54:10.230] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:54:10.232] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T22:55:18.644] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:55:25.530] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T22:56:33.031] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-24T22:56:33.033] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-24T22:56:33.034] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-24T22:56:33.034] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-24T22:56:41.996] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T22:56:47.520] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:03:38.994] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:06:16.680] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:06:16.686] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:06:35.139] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:06:35.140] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:06:46.714] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:06:46.715] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:08:21.339] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:28:02.563] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:28:02.565] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-24T23:28:02.566] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-24T23:28:02.566] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0
+[2024-01-24T23:28:02.567] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
+[2024-01-24T23:28:02.568] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
+[2024-01-24T23:28:02.568] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: game-0
+[2024-01-24T23:28:02.569] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-24T23:28:02.569] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-1
+[2024-01-24T23:28:02.569] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-24T23:28:02.570] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: game-1
+[2024-01-24T23:28:02.570] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-24T23:28:02.572] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-24T23:28:02.572] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-24T23:28:02.573] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-24T23:28:02.573] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-24T23:28:21.591] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:30:24.634] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:30:24.683] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:30:34.227] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:30:34.227] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:31:44.866] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:31:44.867] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:36:16.857] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:36:16.857] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:36:36.503] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:36:36.504] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:40:08.541] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:40:08.542] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:41:15.210] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:41:15.210] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:41:23.271] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:41:28.658] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:41:28.726] [DEBUG] gameLog - cmd:1,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:41:33.241] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:42:08.187] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:42:08.238] [DEBUG] gameLog - cmd:1,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-24T23:42:16.266] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-24T23:42:16.267] [DEBUG] gameLog - cmd:1,msg:{"items":{"1":{"num":2},"2":{"num":2}}}

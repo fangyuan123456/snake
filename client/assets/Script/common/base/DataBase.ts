@@ -3,14 +3,15 @@ import { CompBase } from "../base/CompBase"
 import { SingleBase } from "../base/SingleBase"
 import { Dic } from "../interface/I_Common";
 export default class DataBase extends SingleBase{
-    netDataKeyList?:string[];
-    netDatas?:Dic<any>
+    netDataKeyList:string[];
+    netDatas?:Dic<any> = {};
     infoResolveMap:{[key:string]:any} = {};
     offLineReReqInfoList:string[] = []
     socketType:SocketType
-    constructor(socketType:SocketType = SocketType.center){
+    constructor(netDataKeyList?:string[],socketType:SocketType = SocketType.center){
         super();
         this.socketType = socketType;
+        this.netDataKeyList = netDataKeyList;
         if(this.netDataKeyList){
             this.registerAllInfoMsg();
             this.getAllInfoFromServer();
@@ -50,7 +51,7 @@ export default class DataBase extends SingleBase{
                 for(let i = resoleCallList.length-1;i>=0;i--){
                     let target = resoleCallList[i].target;
                     let callBack = resoleCallList[i].callBack;
-                    if(target && target.node.parent){
+                    if(target && target.node && target.node.parent){
                         callBack(data);
                     }else{
                         resoleCallList.splice(i,1);
