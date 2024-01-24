@@ -9,7 +9,6 @@ import { Game } from "../common/Game";
 import { LOAD_ORDER_CFG } from "../platform/PlatformBase";
 import { SceneBase } from "../common/base/SceneBase";
 import LoadingComp from "../common/components/LoadingComp";
-import { InfoType } from "../common/data/UserData";
 import { I_loginReq, I_loginRes } from "../common/interface/I_Login";
 
 const {ccclass, property} = cc._decorator;
@@ -51,12 +50,14 @@ export default class LoadScene extends SceneBase {
         });
     }
     changeScene(next){
-        if(game.userData.roomInfo.roomId){
-            game.sceneMgr.changeScene("GameScene",true);
-        }else{
-            game.sceneMgr.changeScene("MenuScene",true);
-        }
-        next();
+        game.userData.getRoomInfo(this).then((data)=>{
+            if(data.roomId){
+                game.sceneMgr.changeScene("GameScene",true);
+            }else{
+                game.sceneMgr.changeScene("MenuScene",true);
+            }
+            next();
+        })
     }
     // update (dt) {}
 }
