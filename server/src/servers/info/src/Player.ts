@@ -29,9 +29,7 @@ export class Player{
        if(infoType == e_InfoType.asset){
             return this.asset!.getInfo();
         }else{
-            return new Promise((resolve,reject)=>{
-                resolve(this.role!.getInfo());
-            })
+            return this.role!.getInfo();
         }
     }
     public setRoomInfo(roomInfo:{roomId:number,roomIp:string}){
@@ -39,19 +37,6 @@ export class Player{
             roomId:roomInfo.roomId,
             roomIp:roomInfo.roomIp
         }
-    }
-    getRoomInfo(msg: {}, session: Session, next: Function){
-        next(this.roomInfo)
-    }
-    getRoleInfo(msg: {}, session: Session, next: Function){
-        this.getInfo(e_InfoType.role).then((data)=>{
-            next(data)
-        })
-    }
-    getAssetInfo(msg: {}, session: Session, next: Function){
-        this.getInfo(e_InfoType.asset).then((data)=>{
-            next({items:data})
-        })
     }
     public updateInviteData(inviteUid:number){
         this.role!.updateInviteData(inviteUid);
@@ -70,4 +55,23 @@ export class Player{
         this.asset?.update();
     }
    
+
+
+
+
+
+
+    getRoomInfo(msg: {}, session: Session, next: Function){
+        next(this.roomInfo)
+    }
+    getRoleInfo(msg: {}, session: Session, next: Function){
+        this.getInfo(e_InfoType.role).then((data)=>{
+            next(data)
+        })
+    }
+    getAssetInfo(msg: {}, session: Session, next: Function){
+        this.getInfo(e_InfoType.asset).then((data)=>{
+            next(data)
+        })
+    }
 }

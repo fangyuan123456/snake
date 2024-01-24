@@ -2,10 +2,8 @@ import { Dic } from "../interface/ICommon";
 import { TableName } from "../manager/SqlManager";
 type resolveType = (data:any)=>void;
 export class SqlBase{
-    compKey:{[key:string]:string[]} = {}
-    defaultCompKey?:string = null!
     cond:Dic<any> = null!
-    datasCenter?:Dic<any>
+    data?:Dic<any>
     tb_name:TableName
     whileUpdateKeyList:Dic<any> = {}
     getInfoResolveCallList:resolveType[] = [];
@@ -16,24 +14,24 @@ export class SqlBase{
     }
     init(defaultData?:Dic<any>){
         return new Promise(async (resolve:(data:Dic<any>)=>void,reject)=>{
-            let items = await this.select();
-            if(!items){
+            let data = await this.select();
+            if(!data){
                 defaultData = defaultData || {};
-                items = defaultData;
+                data = defaultData;
                 this.add(defaultData);
             }
-            this.sendDatasCenter(items);
-            resolve(items);
+            this.data = data;
+            resolve(this.data);
             this.callGetInfoResolve();
         })
     }
     callGetInfoResolve(){
-        let datasCenter = this.datasCenter;
-        if(datasCenter){
+        let data = this.data;
+        if(data){
             for(let i in this.getInfoResolveCallList){
                 let callBack = this.getInfoResolveCallList[i];
                 if(callBack){
-                    callBack(datasCenter);
+                    callBack(this.data);
                 }
             }
             this.getInfoResolveCallList=[];
@@ -45,101 +43,30 @@ export class SqlBase{
             this.callGetInfoResolve();
         })
     }
-    sendDatasCenter(datasCenter:Dic<any>){
-        this.datasCenter = datasCenter;
-    }
     getCond(){
         return this.cond
     }
-    isCompKey(sqlKey:string){
-        if(this.compKey[sqlKey] || sqlKey == this.defaultCompKey){
-            return true;
-        }
-        return false;
-    }
-    getCompKey(key:string){
-        if(!isNaN(Number(key))){
-            return this.defaultCompKey;
-        }
-        for(let sqlKey in this.compKey){
-            let keyList = this.compKey[key];
-            if(keyList.indexOf(key)>=0){
-                return sqlKey
-            }
-        }
-        return key;
-    }
-    getAllDataByCompKey(compKey:string){
-        let newDic:Dic<any> = {};
-        if(compKey == this.defaultCompKey){
-            for(let key in this.datasCenter){
-                if(!isNaN(Number(key))){
-                    newDic[key] = this.datasCenter[key];
-                }
-            }
-        }else{
-            let keyList = this.compKey[compKey];
-            for(let key in keyList){
-                newDic[key] = this.datasCenter![key];
-            }
-        }
-        return newDic
-    }
-    fullCompKeyData(obj:Dic<any>){
-        let fullCompKeyList:string[] = [];
-        let newDicObj:Dic<any> = {};
-        for(let i in obj){
-            let compKey = this.getCompKey(i);
-            if(compKey){
-                if(fullCompKeyList.indexOf(compKey)<0){
-                    fullCompKeyList.push(compKey);
-                    game.utilsMgr.merge(newDicObj,this.getAllDataByCompKey(compKey));
-                }
-            }else{
-                newDicObj[i] = obj[i];
-            }
-        }
-        return newDicObj;
+    fullCompKeyData(obj:Dic<any>,compKey:string){
+        return this.data![compKey];
     }
     parseTableKeyDic(dicObj:Dic<any>){
         let newDicObj:Dic<any> = {};
         for(let key in dicObj){
-            if(this.isCompKey(key)){
-                let compDicObj = JSON.parse(dicObj[key]);
-                for(let newKey in compDicObj){
-                    newDicObj[newKey] = compDicObj[newKey];
-                }
+            if(typeof dicObj[key] == "string"){
+                newDicObj[key] = JSON.parse(dicObj[key]);
             }else{
-                if(typeof dicObj[key] == "string"){
-                    newDicObj[key] = JSON.parse(dicObj[key]);
-                }else{
-                    newDicObj[key] = dicObj[key];
-                }
+                newDicObj[key] = dicObj[key];
             }
         }
         return newDicObj;
     }
     makeTableKeyDic(dicObj:Dic<any>){
         let newDicObj:Dic<any> = {};
-        let compKeyList:any[] = [];
         for(let key in dicObj){
-            let compKey = this.getCompKey(key);
-            if(compKey){
-                newDicObj[compKey] = newDicObj[compKey] || {};
-                newDicObj[compKey][key] = dicObj[key];
-                if(compKeyList.indexOf(compKey)<0){
-                    compKeyList.push(compKey);
-                }
-            }else{
-                newDicObj[key] = dicObj[key];
-                if(typeof newDicObj[key] == "object"){
-                    newDicObj[key] = JSON.stringify(newDicObj[key]);
-                }
+            newDicObj[key] = dicObj[key];
+            if(typeof newDicObj[key] == "object"){
+                newDicObj[key] = JSON.stringify(newDicObj[key]);
             }
-        }
-        for(let i in compKeyList){
-            let key = compKeyList[i];
-            newDicObj[key] = JSON.stringify(newDicObj[key]);
         }
         return newDicObj;
     }
@@ -163,12 +90,17 @@ export class SqlBase{
             return null;
         }
     }
-    updateInstantly(obj: any){
+    updateInstantly(obj: any,compKey?:string){
+        if(compKey){
+            obj = this.fullCompKeyData(obj,compKey);
+        }
         let dicObj = this.makeTableKeyDic(obj);
         game.sqlMgr.update(this.tb_name,dicObj,this.getCond())
     }
-    update(obj: Dic<any>){
-        obj = this.fullCompKeyData(obj);
+    update(obj: Dic<any>,compKey?:string){
+        if(compKey){
+            obj = this.fullCompKeyData(obj,compKey);
+        }
         let dicObj = this.makeTableKeyDic(obj);
         for(let i in dicObj){
             this.whileUpdateKeyList[i] = dicObj[i]

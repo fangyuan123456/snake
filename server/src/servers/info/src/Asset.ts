@@ -1,6 +1,6 @@
 import { SqlBase } from "../../../common/base/SqlBase";
 import { Dic } from "../../../common/interface/ICommon";
-import {I_item } from "../../../common/interface/IInfo";
+import {I_asset, I_item } from "../../../common/interface/IInfo";
 import { TableName } from "../../../common/manager/SqlManager";
 import {Player } from "./Player";
 let defaultItems:Dic<I_item> = {
@@ -12,9 +12,7 @@ let defaultItems:Dic<I_item> = {
     }
 }
 export class Asset extends SqlBase{
-    compKey: { [key: string]: string[]} = {};
-    defaultCompKey?: string = "items";
-    private items: Dic<I_item> = {};
+    data?: I_asset;
     private player:Player
     public whileUpdateSqlKeyMap:{[key:string]:number[]} = {};
     constructor(player: Player) {
@@ -24,26 +22,9 @@ export class Asset extends SqlBase{
     init():Promise<Dic<any>>{
         return new Promise(async (resolve,reject)=>{
             super.init(defaultItems).then((data:Dic<any>)=>{
-                this.items = data;
                 resolve(data);
             })
         })
-    }
-    getAllDataByCompKey(compKey: string): Dic<any> {
-        let newDic:Dic<I_item> = {};
-        if(compKey == this.defaultCompKey){
-            for(let key in this.items){
-                if(!isNaN(Number(key))){
-                    newDic[key] = this.items[key];
-                }
-            }
-        }else{
-            let keyList = this.compKey[compKey]
-            for(let key in keyList){
-                newDic[key] = this.items[key];
-            }
-        }
-        return newDic
     }
     update(){
         

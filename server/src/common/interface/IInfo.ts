@@ -1,3 +1,5 @@
+import { Dic } from "./ICommon"
+
 export interface I_roleMem {
     "roomId": number,        // 场景序号（主图序号即地图id，副本序号则是从1000开始的）
     "roomIp": string,           // token
@@ -15,6 +17,12 @@ export interface I_roleInfo {
     pathId?:number,
     platform?:string,
     inviteUids?:string
+}
+export interface I_asset {
+    uid: number,              // uid
+    money:number,
+    diamond: number,         // 昵称
+    items:Dic<I_item>,
 }
 export interface I_item {
     num: number,

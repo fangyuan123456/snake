@@ -4,26 +4,25 @@ import {I_item, I_roleInfo } from "../../../common/interface/IInfo";
 import { TableName } from "../../../common/manager/SqlManager";
 import {Player } from "./Player";
 export class Role extends SqlBase{
-    private role: I_roleInfo;
+    data: I_roleInfo;
     private player:Player
-    public whileUpdateSqlKeyMap:{[key:string]:number[]} = {};
     constructor(player: Player,role:I_roleInfo) {
-        super(TableName.ASSET,{uid:player.uid})
-        this.role = role;
+        super(TableName.USER,{uid:player.uid})
+        this.data = role;
         this.player = player;
     }
     getInfo(){
         return new Promise((resolve,reject)=>{
-            resolve(this.role);
+            resolve(this.data);
         })
     }
     init():Promise<Dic<any>>{
         return new Promise(async (resolve:(data:Dic<any>)=>void,reject)=>{
-            resolve(this.role);
+            resolve(this.data);
         })
     }
     updateInviteData(inviteUid:number){
-        let role = this.role;
+        let role = this.data;
         if(role){
             role.inviteUids = role.inviteUids || "";
             if(role.inviteUids == ""){
@@ -35,6 +34,6 @@ export class Role extends SqlBase{
         this.update({inviteUids:role.inviteUids})
 
         let session = game.app.getSession(this.player.uid);
-        session.send(game.protoMgr.getProtoCode("getRoleInfo")!,this.role)
+        session.send(game.protoMgr.getProtoCode("getRoleInfo")!,this.data)
     }
 }
