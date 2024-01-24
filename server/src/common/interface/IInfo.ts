@@ -19,7 +19,6 @@ export interface I_roleInfo {
     inviteUids?:string
 }
 export interface I_asset {
-    uid: number,              // uid
     money:number,
     diamond: number,         // 昵称
     items:Dic<I_item>,

@@ -18,4 +18,13 @@ export interface I_roomInfo {
     roomId:number,
     roomIp:string
 }
-export type I_assetInfo = Dic<any>
+export interface I_item {
+    num: number,
+    level?:number,
+    countEndTime?:number
+}
+export interface I_assetInfo {
+    money:number,
+    diamond: number,         // 昵称
+    items:Dic<I_item>,
+}

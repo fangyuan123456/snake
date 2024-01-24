@@ -28,9 +28,7 @@ class Player {
             return this.asset.getInfo();
         }
         else {
-            return new Promise((resolve, reject) => {
-                resolve(this.role.getInfo());
-            });
+            return this.role.getInfo();
         }
     }
     setRoomInfo(roomInfo) {
@@ -38,19 +36,6 @@ class Player {
             roomId: roomInfo.roomId,
             roomIp: roomInfo.roomIp
         };
-    }
-    getRoomInfo(msg, session, next) {
-        next(this.roomInfo);
-    }
-    getRoleInfo(msg, session, next) {
-        this.getInfo(IInfo_1.e_InfoType.role).then((data) => {
-            next(data);
-        });
-    }
-    getAssetInfo(msg, session, next) {
-        this.getInfo(IInfo_1.e_InfoType.asset).then((data) => {
-            next({ items: data });
-        });
     }
     updateInviteData(inviteUid) {
         this.role.updateInviteData(inviteUid);
@@ -68,6 +53,19 @@ class Player {
     update() {
         var _a;
         (_a = this.asset) === null || _a === void 0 ? void 0 : _a.update();
+    }
+    getRoomInfo(msg, session, next) {
+        next(this.roomInfo);
+    }
+    getRoleInfo(msg, session, next) {
+        this.getInfo(IInfo_1.e_InfoType.role).then((data) => {
+            next(data);
+        });
+    }
+    getAssetInfo(msg, session, next) {
+        this.getInfo(IInfo_1.e_InfoType.asset).then((data) => {
+            next(data);
+        });
     }
 }
 exports.Player = Player;

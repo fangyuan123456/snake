@@ -50,12 +50,15 @@ export class SqlBase{
         return this.data![compKey];
     }
     parseTableKeyDic(dicObj:Dic<any>){
+        let cond = this.getCond();
         let newDicObj:Dic<any> = {};
         for(let key in dicObj){
-            if(typeof dicObj[key] == "string"){
-                newDicObj[key] = JSON.parse(dicObj[key]);
-            }else{
-                newDicObj[key] = dicObj[key];
+            if(!cond[key]){
+                if(typeof dicObj[key] == "string"){
+                    newDicObj[key] = JSON.parse(dicObj[key]);
+                }else{
+                    newDicObj[key] = dicObj[key];
+                }
             }
         }
         return newDicObj;

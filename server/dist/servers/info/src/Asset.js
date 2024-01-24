@@ -23,9 +23,6 @@ let defaultItems = {
 class Asset extends SqlBase_1.SqlBase {
     constructor(player) {
         super(SqlManager_1.TableName.ASSET, { uid: player.uid });
-        this.compKey = {};
-        this.defaultCompKey = "items";
-        this.items = {};
         this.whileUpdateSqlKeyMap = {};
         this.player = player;
     }
@@ -35,27 +32,9 @@ class Asset extends SqlBase_1.SqlBase {
         });
         return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
             _super.init.call(this, defaultItems).then((data) => {
-                this.items = data;
                 resolve(data);
             });
         }));
-    }
-    getAllDataByCompKey(compKey) {
-        let newDic = {};
-        if (compKey == this.defaultCompKey) {
-            for (let key in this.items) {
-                if (!isNaN(Number(key))) {
-                    newDic[key] = this.items[key];
-                }
-            }
-        }
-        else {
-            let keyList = this.compKey[compKey];
-            for (let key in keyList) {
-                newDic[key] = this.items[key];
-            }
-        }
-        return newDic;
     }
     update() {
     }
