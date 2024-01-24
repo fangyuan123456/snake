@@ -7,23 +7,31 @@ export class SqlBase{
     tb_name:TableName
     whileUpdateKeyList:Dic<any> = {}
     getInfoResolveCallList:resolveType[] = [];
+    defaultItems?:Dic<any>
     constructor(tb_name:TableName,cond:Dic<any>){
         this.tb_name = tb_name;
         this.cond = cond;
         this.init();
     }
-    init(defaultData?:Dic<any>){
-        return new Promise(async (resolve:(data:Dic<any>)=>void,reject)=>{
-            let data = await this.select();
-            if(!data){
-                defaultData = defaultData || {};
-                data = defaultData;
-                this.add(defaultData);
-            }
-            this.data = data;
-            resolve(this.data);
-            this.callGetInfoResolve();
-        })
+    init(){
+        if(this.data){
+            return new Promise((resolve,reject)=>{
+                resolve(this.data);
+                this.callGetInfoResolve();
+            })
+        }else{
+            return new Promise(async (resolve:(data:Dic<any>)=>void,reject)=>{
+                let data = await this.select();
+                if(!data){
+                    let defaultData = this.defaultItems || {};
+                    data = defaultData;
+                    this.add(defaultData);
+                }
+                this.data = data;
+                resolve(this.data);
+                this.callGetInfoResolve();
+            })
+        }
     }
     callGetInfoResolve(){
         let data = this.data;

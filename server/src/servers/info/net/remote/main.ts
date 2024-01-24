@@ -12,8 +12,7 @@ export default class Remote {
     constructor() {
     }
     createPlayer(role:I_roleInfo){
-        let infoGame = game as InfoServer;
-        infoGame.createPlayer(role);
+        infoGame.createPlayer(role.uid,role);
     }
     setRoomInfo(data:{uid:number,roomId:number,roomIp:string}){
         let player = infoGame.getPlayer(data.uid);

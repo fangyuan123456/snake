@@ -7,6 +7,7 @@ export enum InfoType{
     assetInfo = "assetInfo",
     roomInfo = "roomInfo"
 }
+const offLineReReqInfoList:InfoType[] = [InfoType.roleInfo];
 export default class UserData extends SingleBase{
     uid:number = 0
     centerIp:string  = ""
@@ -14,6 +15,26 @@ export default class UserData extends SingleBase{
     roomInfo:I_roomInfo
     assetInfo:I_assetInfo
     infoResolveMap:{[key:string]:any} = {};
+    constructor(){
+        super();
+        this.registerAllInfoMsg();
+        this.getAllInfoFromServer();
+    }
+    getAllInfoFromServer(){
+        game.netMgr.onReady(()=>{
+            for(let i in InfoType){
+                let infoType = InfoType[i];
+                let info = this[infoType];
+                if(!info || offLineReReqInfoList.indexOf(infoType)>=0){
+                    let _infoName = game.utilsMgr.capitalizeFirstLetter(infoType);
+                    let msgName = "get"+_infoName;
+                    game.netMgr.sendSocket({
+                        msgHead:msgName,
+                    })
+                }
+            }
+        })
+    }
     setLoginData(loginData:I_loginRes){
         this.uid = loginData.uid,
         this.centerIp = loginData.centerIp
@@ -33,23 +54,25 @@ export default class UserData extends SingleBase{
     }
     _callResolveFunc(infoType:InfoType){
         let info = this[infoType];
-        let resoleCallList = this.infoResolveMap[infoType];
-        if(resoleCallList){
-            for(let i = resoleCallList.length-1;i>=0;i--){
-                let target = resoleCallList[i].target;
-                let callBack = resoleCallList[i].callBack;
-                if(target && target.node.parent){
-                    callBack(info);
-                }else{
-                    resoleCallList.splice(i,1);
-                }
-            } 
+        if(info){
+            let resoleCallList = this.infoResolveMap[infoType];
+            if(resoleCallList){
+                for(let i = resoleCallList.length-1;i>=0;i--){
+                    let target = resoleCallList[i].target;
+                    let callBack = resoleCallList[i].callBack;
+                    if(target && target.node.parent){
+                        callBack(info);
+                    }else{
+                        resoleCallList.splice(i,1);
+                    }
+                } 
+            }
         }
     }
     setInfo(infoType,data){
         this[infoType] = data;
     }
-    private getInfo(infoType:InfoType,target:CompBase,isReq?:boolean):Promise<any>{
+    private getInfo(infoType:InfoType,target:CompBase):Promise<any>{
         let promise = new Promise((resolve,reject)=>{
             this.infoResolveMap[infoType] =  this.infoResolveMap[infoType]||[]
             this.infoResolveMap[infoType].push({
@@ -57,24 +80,16 @@ export default class UserData extends SingleBase{
                 callBack:resolve
             });
         })
-        if(!this[infoType] || isReq){
-            let _infoName = game.utilsMgr.capitalizeFirstLetter(infoType);
-            let msgName = "get"+_infoName;
-            game.netMgr.sendSocket({
-                msgHead:msgName,
-            })
-        }else{
-            this._callResolveFunc(infoType);
-        }
+        this._callResolveFunc(infoType);
         return promise;
     }
-    getRoleInfo(target:CompBase,isReq?:boolean):Promise<I_roleInfo>{
-        return this.getInfo(InfoType.roleInfo,target,isReq)
+    getRoleInfo(target:CompBase):Promise<I_roleInfo>{
+        return this.getInfo(InfoType.roleInfo,target)
     }
-    getRoomInfo(target:CompBase,isReq?:boolean):Promise<I_roomInfo>{
-        return this.getInfo(InfoType.roomInfo,target,isReq)
+    getRoomInfo(target:CompBase):Promise<I_roomInfo>{
+        return this.getInfo(InfoType.roomInfo,target)
     }
-    getAssetInfo(target:CompBase,isReq?:boolean):Promise<I_assetInfo>{
-        return this.getInfo(InfoType.assetInfo,target,isReq)
+    getAssetInfo(target:CompBase):Promise<I_assetInfo>{
+        return this.getInfo(InfoType.assetInfo,target)
     }
 }

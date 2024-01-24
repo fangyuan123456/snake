@@ -131,7 +131,6 @@ export class SocketBase{
         }
     }
     close(){
-        this.msgCallBackList = {};
         this.socket.close();
         this.socket = null;
         this.state = SOCKET_STATE.OFFLINE

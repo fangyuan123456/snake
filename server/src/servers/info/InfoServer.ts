@@ -10,7 +10,7 @@ declare global{
     }
 }
 export class InfoServer extends GameServerBase{
-    private roles: Dic<Player> = {};    // 所有玩家数据
+    private players: Dic<Player> = {};    // 所有玩家数据
     constructor(app:Application){
         super(app);
         globalThis.infoGame = this;
@@ -19,39 +19,39 @@ export class InfoServer extends GameServerBase{
         setInterval(this.check_delRole.bind(this), 60 * 1000);
     }
     update(){
-        for(let i in this.roles){
-            let player = this.roles[i];
+        for(let i in this.players){
+            let player = this.players[i];
             player.update();
         }
     }
     private doSqlUpdate(){
-        for(let i in this.roles){
-            let player = this.roles[i];
+        for(let i in this.players){
+            let player = this.players[i];
             player.doSqlUpdate();
         }
     }
     // 检测过期玩家，删除缓存数据
     private check_delRole() {
         let nowTime = game.timeMgr.getCurTime();
-        for (let i in this.roles) {
-            let one = this.roles[i];
+        for (let i in this.players) {
+            let one = this.players[i];
             if (one.delThisTime !== 0 && nowTime > one.delThisTime) {
-                delete this.roles[i];
+                delete this.players[i];
             }
         }
     }
-    createPlayer(role:I_roleInfo){
-        let player = this.roles[role.uid];
+    createPlayer(uid:number,role?:I_roleInfo){
+        let player = this.players[uid];
         if(!player){
-            player = new Player(role);
-            this.roles[role.uid] = player;
+            player = new Player(uid,{role:role});
+            this.players[uid] = player;
         }
     }
     getPlayer(uid:number){
-        return this.roles[uid];
+        return this.players[uid];
     }
     updatePlayInviteData(uid:number,inviteUid:number){
-        let player = this.roles[uid];
+        let player = this.players[uid];
         if(player){
             player.updateInviteData(inviteUid);
         }

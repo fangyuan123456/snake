@@ -38,16 +38,9 @@ export default class LoadScene extends SceneBase {
                 game.netMgr.sendHttpRequest(data,"login",(loginData:I_loginRes)=>{
                     game.userData.setLoginData(loginData);
                     game.netMgr.createSocket(game.userData.centerIp)
-                    game.netMgr.onReady((data)=>{
-                        game.userData.registerAllInfoMsg();
-                        game.netMgr.sendSocket({
-                            msgHead:"getRoomInfo",
-                            msgData:{}
-                        },(data)=>{
-                            game.userData.setInfo(InfoType.roomInfo,data);
-                            next();
-                        })
-                    },this);
+                    game.userData.getRoleInfo(this).then(()=>{
+                        next();
+                    })
                 })
             }else{
                 game.alertMgr.showTiShiBox({content:"code错误!",btnCallBackList:[

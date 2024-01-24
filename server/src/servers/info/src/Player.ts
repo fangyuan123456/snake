@@ -1,5 +1,5 @@
 import { Session } from "mydog";
-import { e_InfoType, I_roleInfo, I_roleMem } from "../../../common/interface/IInfo";
+import { e_InfoType, I_asset, I_roleInfo, I_roleMem } from "../../../common/interface/IInfo";
 import { Asset } from "./Asset";
 import { InfoConfig } from "./InfoConfig";
 import { Role } from "./Role";
@@ -11,16 +11,16 @@ export class Player{
     public role?:Role;
     public isInit:boolean = false;
 
-    constructor(role:I_roleInfo) {
-        this.uid = role.uid;
-        this.init(role);
+    constructor(uid:number,data?:{role?:I_roleInfo,asset?:I_asset}) {
+        this.uid = uid;
+        this.init(data);
     }
-    init(role:I_roleInfo){
+    init(data?:{role?:I_roleInfo,asset?:I_asset}){
         for(let i in e_InfoType){
             if(i == e_InfoType.asset){
-                this.asset = new Asset(this);
+                this.asset = new Asset(this,data?.asset);
             }else if(i == e_InfoType.role){
-                this.role = new Role(this,role);
+                this.role = new Role(this,data?.role);
             }
 
         }

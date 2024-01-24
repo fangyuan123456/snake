@@ -57,17 +57,17 @@ export class NetManager extends SingleBase{
         }
         this.socketMap[socketType] = new SocketBase(socketType,ip);
     }
-    onOpen(callBack:(any)=>void,target:CompBase,socketType:SocketType = SocketType.center){
-        this.socketMap[socketType].onMsgHander("onOpen",callBack,target)
+    onOpen(callBack:(any)=>void,target?:CompBase,socketType:SocketType = SocketType.center){
+        this.onMsg("onOpen",callBack,target,socketType);
     }
-    onReady(callBack:(any)=>void,target:CompBase,socketType:SocketType = SocketType.center){
-        this.socketMap[socketType].onMsgHander("onReady",callBack,target)
+    onReady(callBack:(any)=>void,target?:CompBase,socketType:SocketType = SocketType.center){
+        this.onMsg("onReady",callBack,target,socketType);
     }
-    onClose(callBack:(any)=>void,target:CompBase,socketType:SocketType = SocketType.center){
-        this.socketMap[socketType].onMsgHander("onClose",callBack,target)
+    onClose(callBack:(any)=>void,target?:CompBase,socketType:SocketType = SocketType.center){
+        this.onMsg("onClose",callBack,target,socketType);
     }
     onMsg(msgName:string,callBack:(any)=>void,target?:CompBase,socketType:SocketType = SocketType.center){
-        this.socketMap[socketType].onMsgHander(msgName,callBack,target)
+        game.eventMgr.on(socketType+"OnMsg"+msgName,callBack,target);
     }
     showNetLoadingBar(_b){
         if(_b){
