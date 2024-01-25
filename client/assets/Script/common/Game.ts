@@ -14,6 +14,7 @@ import { NetManager } from "./manager/NetManager";
 import UserData from "./data/UserData";
 import { AlertManager } from "./manager/AlertManager";
 import { UtilsManager } from "./manager/UtilsManager";
+import { PushMsgManager } from "./manager/PushMsgManager";
 
 declare global {
     namespace globalThis {
@@ -37,6 +38,7 @@ export class Game extends SingleBase{
     netMgr:NetManager
     alertMgr:AlertManager
     utilsMgr:UtilsManager
+    pushMsgMgr:PushMsgManager
 
     userData:UserData
     constructor(){
@@ -55,6 +57,7 @@ export class Game extends SingleBase{
         this.netMgr = NetManager.getInstance();
         this.alertMgr = AlertManager.getInstance();
         this.utilsMgr = UtilsManager.getInstance();
+        this.pushMsgMgr = PushMsgManager.getInstance();
 
         this.userData = UserData.getInstance();
         switch(getPlatForm()){
