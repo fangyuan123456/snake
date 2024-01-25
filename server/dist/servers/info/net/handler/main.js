@@ -6,7 +6,7 @@ class Handler {
     route(msgName, msg, session, next) {
         let player = infoGame.getPlayer(session.uid);
         if (!player) {
-            infoGame.createPlayer(session.uid);
+            player = infoGame.createPlayer(session.uid);
         }
         //@ts-ignore
         let func = player[msgName];

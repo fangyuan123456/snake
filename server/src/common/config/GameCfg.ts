@@ -20,6 +20,9 @@ export let mysqlConfig = {
 
     }
 }
+export enum pushMsgType{
+    KICK_ROOM = 1,
+}
 /** 根据环境获取配置 */
 export function getConfigByEnv( config: { [env: string]: any }) {
     if (config[game.app.env] === undefined) {

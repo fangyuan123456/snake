@@ -19,7 +19,7 @@ export class SocketBase{
     ip:string
     md5:string = ""
     heartbeat:number = 0
-    heartbeatTimer:NodeJS.Timer
+    heartbeatTimer:NodeJS.Timeout
     heartbeatResTimeoutTimer:NodeJS.Timeout
     socket:WebSocket
     msgCallBackList:{[key:string]:socketCallBack[]} = {}
@@ -56,6 +56,7 @@ export class SocketBase{
         this.socket.send(buffer);
     }
     startHeartBeat() {
+        clearInterval(this.heartbeatTimer);
         let sendHeartbeat = ()=>{
             // 心跳
             let buffer = game.protoMgr.encode({
@@ -144,6 +145,7 @@ export class SocketBase{
         }
     }
     close(){
+        clearInterval(this.heartbeatTimer);
         this.socket.close();
         this.socket = null;
         this.state = SOCKET_STATE.OFFLINE

@@ -5,7 +5,7 @@ declare global{
 }
 import * as fs from "fs";
 import * as path from "path";
-import { Application, connector } from "mydog";
+import { Application, Session, connector } from "mydog";
 import { LogManager } from "../manager/LogManager";
 import { UtilsManager } from "../manager/UtilsManager";
 import { ProtoManager } from "../manager/ProtoManager";
@@ -14,6 +14,7 @@ import { TimeManager } from "../manager/TimeManager";
 import { getConfigByEnv, mysqlConfig, serverType } from "../config/GameCfg";
 import { PlatformManager } from "../manager/PlatformManager";
 import { SqlManager } from "../manager/SqlManager";
+import { EventManager } from "../manager/EventManager";
 
 export class GameServerBase{
     clientNum:number = 0
@@ -25,6 +26,7 @@ export class GameServerBase{
     httpMgr?:HttpManager
     timeMgr:TimeManager
     platformMgr:PlatformManager
+    eventMgr:EventManager
     sqlMgr:SqlManager
     constructor(app:Application){
         this.app = app;
@@ -34,6 +36,7 @@ export class GameServerBase{
         this.protoMgr = ProtoManager.getInstance();
         this.timeMgr = TimeManager.getInstance();
         this.platformMgr = PlatformManager.getInstance();
+        this.eventMgr = EventManager.getInstance();
         this.sqlMgr = SqlManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
@@ -97,10 +100,10 @@ export class GameServerBase{
             this.cpuUsage = ((diff.user + diff.system) / (5000 * 1000) * 100).toFixed(1);
         }, 5000);
     }
-    onUserIn(){
-
+    onUserIn(session: Session){
+        
     }
-    onUserLeave(){
+    onUserLeave(session: Session){
 
     }
     uncaughtException(){

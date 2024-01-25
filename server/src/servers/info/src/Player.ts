@@ -41,10 +41,9 @@ export class Player{
     public updateInviteData(inviteUid:number){
         this.role!.updateInviteData(inviteUid);
     }
-    private online() {
+    onLine(){
         this.delThisTime = 0;
     }
-
     offline() {
         this.delThisTime = game.timeMgr.getCurTime() + InfoConfig.offLineInfoCleanTime;
     }

@@ -1,10 +1,6 @@
 syntax = "proto3";
 package center;
-
-
-message testReq {
-    string test1 = 1;
-}
-message testRes {
-    string test1 = 1;
+message pushMsgRes{
+    optional string msgText=1;
+    optional int32 msgType=2;
 }

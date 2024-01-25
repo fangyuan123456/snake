@@ -1,4 +1,4 @@
-import { Application } from "mydog";
+import { Application, Session } from "mydog";
 import { GameServerBase } from "../../common/base/GameServerBase";
 import { Dic } from "../../common/interface/ICommon";
 import { Player } from "./src/Player";
@@ -55,6 +55,21 @@ export class InfoServer extends GameServerBase{
         let player = this.players[uid];
         if(player){
             player.updateInviteData(inviteUid);
+        }
+    }
+    onUserIn(session: Session){
+        let uid = session.uid;
+        let player = infoGame.getPlayer(uid);
+        if(!player){
+            player = infoGame.createPlayer(uid);
+        }
+        player.onLine();
+    }
+    onUserLeave(session: Session){
+        let uid = session.uid;
+        let player = infoGame.getPlayer(uid);
+        if(player){
+            player.offline();
         }
     }
 }
