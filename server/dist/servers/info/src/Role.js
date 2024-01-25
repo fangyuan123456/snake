@@ -21,8 +21,7 @@ class Role extends SqlBase_1.SqlBase {
             }
         }
         this.update({ inviteUids: role.inviteUids });
-        let session = game.app.getSession(this.player.uid);
-        session.send(game.protoMgr.getProtoCode("getRoleInfo"), this.data);
+        game.sendMsg(this.player.uid, { msgHead: "getRoleInfo", msgData: this.data });
     }
 }
 exports.Role = Role;

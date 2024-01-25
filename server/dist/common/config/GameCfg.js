@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getConfigByEnv = exports.mysqlConfig = void 0;
+exports.getConfigByEnv = exports.pushMsgType = exports.mysqlConfig = void 0;
 exports.mysqlConfig = {
     "development": {
         "host": "120.76.217.84",
@@ -12,6 +12,10 @@ exports.mysqlConfig = {
     },
     "production": {}
 };
+var pushMsgType;
+(function (pushMsgType) {
+    pushMsgType[pushMsgType["KICK_ROOM"] = 1] = "KICK_ROOM";
+})(pushMsgType || (exports.pushMsgType = pushMsgType = {}));
 /** 根据环境获取配置 */
 function getConfigByEnv(config) {
     if (config[game.app.env] === undefined) {

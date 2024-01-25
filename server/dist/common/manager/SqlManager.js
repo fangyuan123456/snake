@@ -29,7 +29,7 @@ var TableName;
 (function (TableName) {
     TableName["USER"] = "t_user";
     TableName["ASSET"] = "t_asset";
-})(TableName = exports.TableName || (exports.TableName = {}));
+})(TableName || (exports.TableName = TableName = {}));
 var SqlOpsType;
 (function (SqlOpsType) {
     SqlOpsType[SqlOpsType["ADD"] = 0] = "ADD";

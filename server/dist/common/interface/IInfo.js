@@ -5,4 +5,4 @@ var e_InfoType;
 (function (e_InfoType) {
     e_InfoType["role"] = "role";
     e_InfoType["asset"] = "asset";
-})(e_InfoType = exports.e_InfoType || (exports.e_InfoType = {}));
+})(e_InfoType || (exports.e_InfoType = e_InfoType = {}));

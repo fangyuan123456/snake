@@ -29,6 +29,12 @@ class ProtoManager extends SingleBase_1.SingleBase {
             }
         }
     }
+    getServerName(cmd) {
+        let routeUrl = game.app.routeConfig[cmd];
+        let strArr = routeUrl.split(".");
+        // @ts-ignore
+        return strArr[0];
+    }
     decode(cmd, msg) {
         let routeUrl = game.app.routeConfig[cmd];
         let strArr = routeUrl.split(".");

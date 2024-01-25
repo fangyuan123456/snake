@@ -54,14 +54,9 @@ export class Player{
         this.asset?.update();
     }
    
-
-
-
-
-
-
     getRoomInfo(msg: {}, session: Session, next: Function){
         next(this.roomInfo)
+        game.sendMsg(session.uid, { msgHead: "pushMsg", msgData: { msgText: "哈哈哈哈" } });
     }
     getRoleInfo(msg: {}, session: Session, next: Function){
         this.getInfo(e_InfoType.role).then((data)=>{

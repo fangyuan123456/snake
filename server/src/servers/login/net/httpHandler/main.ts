@@ -3,8 +3,10 @@ import { I_loginReq, I_sdkLoginRes } from "../../../../common/interface/ILogin";
 import { TableName } from "../../../../common/manager/SqlManager";
 import { serverType } from "../../../../common/config/GameCfg";
 import { I_roleInfo } from "../../../../common/interface/IInfo";
-export default class Handler {
+import HandlerBase from "../../../../common/base/HandlerBase";
+export default class Handler extends HandlerBase {
     constructor() {
+        super();
     }
     updatePlayInviteData(uid:number,myInviteUid:number){
         game.app.rpc(game.utilsMgr.getSid(uid,serverType.info)).info.main.updatePlayInviteData(uid,myInviteUid);

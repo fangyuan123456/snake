@@ -111,5 +111,20 @@ export class GameServerBase{
             game.logMgr.error(err)
         });
     }
+    sendMsg(uid:number,data:{msgHead:string,msgData:any}){
+        let cmd = game.protoMgr.getProtoCode(data.msgHead)
+        if(cmd || cmd == 0){
+            let serverName = game.protoMgr.getServerName(cmd);
+            if(serverName == game.app.serverType){
+                let session = this.app.getSession(uid);
+                session.send(cmd,data.msgData);
+            }else{
+                let sid = game.utilsMgr.getSid(uid,serverName);
+                this.app.rpc(sid).center.main.notify(uid,data);
+            }
+        }else{
+            game.logMgr.error("msgHead:%s is not find",data.msgHead)
+        }
+    }
 
 }

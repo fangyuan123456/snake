@@ -40,7 +40,7 @@ class Player {
     updateInviteData(inviteUid) {
         this.role.updateInviteData(inviteUid);
     }
-    online() {
+    onLine() {
         this.delThisTime = 0;
     }
     offline() {
@@ -56,6 +56,7 @@ class Player {
     }
     getRoomInfo(msg, session, next) {
         next(this.roomInfo);
+        game.sendMsg(session.uid, { msgHead: "pushMsg", msgData: { msgText: "哈哈哈哈" } });
     }
     getRoleInfo(msg, session, next) {
         this.getInfo(IInfo_1.e_InfoType.role).then((data) => {

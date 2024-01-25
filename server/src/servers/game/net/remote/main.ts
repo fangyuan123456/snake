@@ -1,3 +1,5 @@
+import RemoteBase from "../../../../common/base/RemoteBase";
+
 declare global {
     interface Rpc {
         game: {
@@ -5,8 +7,9 @@ declare global {
         }
     }
 }
-export default class Remote {
+export default class Remote extends RemoteBase {
     constructor() {
+        super();
     }
     createRoom(msg:{roomId:number,uidList:number[]}){
         gameGame.createRoom(msg);

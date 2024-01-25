@@ -8,10 +8,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const SqlManager_1 = require("../../../../common/manager/SqlManager");
-class Handler {
+const HandlerBase_1 = __importDefault(require("../../../../common/base/HandlerBase"));
+class Handler extends HandlerBase_1.default {
     constructor() {
+        super();
     }
     updatePlayInviteData(uid, myInviteUid) {
         game.app.rpc(game.utilsMgr.getSid(uid, "info" /* serverType.info */)).info.main.updatePlayInviteData(uid, myInviteUid);

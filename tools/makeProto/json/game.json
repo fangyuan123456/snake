@@ -1,0 +1,24 @@
+{
+  "nested": {
+    "game": {
+      "nested": {
+        "enterRoomReq": {
+          "fields": {
+            "roomId": {
+              "type": "int32",
+              "id": 1
+            }
+          }
+        },
+        "enterRoomRes": {
+          "fields": {
+            "test1": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -16759,3 +16759,417 @@
 [2024-01-25T16:09:20.527] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0
 [2024-01-25T16:09:20.548] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
 [2024-01-25T16:40:54.503] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-25T22:19:14.501] [DEBUG] gameLog - undefined
+[2024-01-25T22:20:15.269] [DEBUG] gameLog - undefined
+[2024-01-25T22:21:00.670] [DEBUG] gameLog - undefined
+[2024-01-25T22:21:35.031] [DEBUG] gameLog - undefined
+[2024-01-25T22:23:31.135] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-0
+[2024-01-25T22:23:31.136] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-25T22:23:50.395] [DEBUG] gameLog - undefined
+[2024-01-25T22:24:01.843] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-25T22:24:44.563] [DEBUG] gameLog - undefined
+[2024-01-25T22:25:26.379] [DEBUG] gameLog - undefined
+[2024-01-25T22:26:44.707] [DEBUG] gameLog - undefined
+[2024-01-25T22:27:10.727] [DEBUG] gameLog - undefined
+[2024-01-25T22:27:34.229] [DEBUG] gameLog - undefined
+[2024-01-25T22:28:19.885] [DEBUG] gameLog - undefined
+[2024-01-25T22:28:43.670] [DEBUG] gameLog - undefined
+[2024-01-25T22:28:54.608] [DEBUG] gameLog - undefined
+[2024-01-25T22:29:20.794] [DEBUG] gameLog - undefined
+[2024-01-25T22:30:35.496] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-0
+[2024-01-25T22:30:35.497] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-25T22:33:10.709] [DEBUG] gameLog - undefined
+[2024-01-25T22:33:36.094] [DEBUG] gameLog - undefined
+[2024-01-25T22:36:17.556] [DEBUG] gameLog - undefined
+[2024-01-25T22:36:40.473] [DEBUG] gameLog - undefined
+[2024-01-25T22:37:03.157] [DEBUG] gameLog - undefined
+[2024-01-25T22:38:39.076] [DEBUG] gameLog - undefined
+[2024-01-25T22:38:50.941] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-25T22:39:57.433] [DEBUG] gameLog - undefined
+[2024-01-25T22:39:57.436] [DEBUG] gameLog - undefined
+[2024-01-25T22:39:57.874] [DEBUG] gameLog - undefined
+[2024-01-25T22:39:57.876] [DEBUG] gameLog - undefined
+[2024-01-25T22:40:08.612] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-25T22:40:08.614] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-25T22:43:59.769] [DEBUG] gameLog - undefined
+[2024-01-25T22:45:59.786] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-0
+[2024-01-25T22:45:59.787] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-25T22:56:51.438] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:02.829] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:02.835] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:02.837] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:02.839] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:03.262] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:03.264] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:03.762] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:03.763] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:04.262] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:04.263] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:04.762] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:04.763] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:41.591] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:41.592] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:42.091] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:42.092] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:42.592] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:42.593] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:43.091] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:43.093] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:43.592] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:43.593] [DEBUG] gameLog - undefined
+[2024-01-25T22:57:45.379] [DEBUG] gameLog - undefined
+[2024-01-25T22:59:11.241] [DEBUG] gameLog - undefined
+[2024-01-25T22:59:21.797] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-25T23:02:25.804] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:25.809] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:25.813] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:25.816] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:25.818] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:25.819] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.134] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.136] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.138] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.139] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.140] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.141] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.224] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.256] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.257] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.258] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.259] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.316] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.347] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.348] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.349] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.391] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.392] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.421] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.452] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.453] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.454] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.512] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.514] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.542] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.579] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.580] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.581] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.581] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.614] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.615] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.646] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.707] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.708] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.709] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.742] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.743] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.744] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.773] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.805] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.806] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.837] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.838] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.839] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.871] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.904] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.905] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.906] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.969] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.970] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:26.970] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.031] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.032] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.033] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.092] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.093] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.093] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.153] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.154] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.155] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.184] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.185] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.185] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.276] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.277] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.277] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.308] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.309] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.339] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.375] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.376] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.377] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.378] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.406] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.407] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.478] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.479] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.480] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.481] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.482] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.506] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.602] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.603] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.604] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.604] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.632] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.664] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.725] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.726] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.727] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.727] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.759] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.760] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.791] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.823] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.824] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.824] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.854] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.855] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.887] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.919] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.920] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.921] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.921] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.952] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:27.953] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.017] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.018] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.019] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.019] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.077] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.108] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.141] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.142] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.143] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.144] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.204] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.234] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.267] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.268] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.269] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.269] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.330] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.361] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.395] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.397] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.398] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.399] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.399] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.429] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.461] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.493] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.494] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.494] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.524] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.525] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.557] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.589] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.590] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.591] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.591] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.652] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.684] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.717] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.719] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.720] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.720] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.777] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.809] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.841] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.842] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.843] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.843] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.904] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.935] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.967] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.968] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.969] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:28.969] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.030] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.061] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.092] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.093] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.094] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.094] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.154] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.185] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.216] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.217] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.218] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.218] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.279] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.309] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.341] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.342] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.343] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.343] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.403] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.435] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.467] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.468] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.468] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.469] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.529] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.561] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.592] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.593] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.594] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.594] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.622] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.657] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.657] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.690] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.692] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.692] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.722] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.723] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.755] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.787] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.788] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.789] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.789] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.853] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.884] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.916] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.917] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.918] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.918] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:29.978] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.010] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.042] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.043] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.044] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.045] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.105] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.134] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.165] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.166] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.167] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.168] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.227] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.258] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.291] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.292] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.292] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.293] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.351] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.383] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.413] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.414] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.415] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.416] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.474] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.504] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.534] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.535] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.536] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.537] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.596] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.626] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.627] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.671] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.672] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.673] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.701] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.732] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.733] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.795] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.796] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.797] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.825] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.857] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.857] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.920] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.921] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.922] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.952] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.983] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:30.984] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.045] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.046] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.047] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.076] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.106] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.107] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.137] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.138] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.139] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.198] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.228] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:31.230] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:32.720] [DEBUG] gameLog - undefined
+[2024-01-25T23:02:42.277] [DEBUG] gameLog - undefined
+[2024-01-25T23:03:06.712] [DEBUG] gameLog - undefined
+[2024-01-25T23:04:09.463] [DEBUG] gameLog - undefined
+[2024-01-25T23:04:19.762] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-01-25T23:04:28.198] [DEBUG] gameLog - undefined
+[2024-01-25T23:04:28.201] [DEBUG] gameLog - undefined
+[2024-01-25T23:04:28.645] [DEBUG] gameLog - undefined
+[2024-01-25T23:04:28.648] [DEBUG] gameLog - undefined
+[2024-01-25T23:04:29.143] [DEBUG] gameLog - undefined
+[2024-01-25T23:04:29.145] [DEBUG] gameLog - undefined
+[2024-01-25T23:04:29.644] [DEBUG] gameLog - undefined
+[2024-01-25T23:04:29.645] [DEBUG] gameLog - undefined
+[2024-01-25T23:04:40.116] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-25T23:04:40.117] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-25T23:04:40.117] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-25T23:04:40.118] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-25T23:04:40.118] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-25T23:04:40.118] [ERROR] gameLog - RpcError: rpcTimeout
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-01-25T23:05:42.089] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.092] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.417] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.418] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.421] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.423] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.425] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.426] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.522] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.523] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.553] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.584] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.585] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.616] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.617] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.618] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.646] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.677] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.678] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:42.708] [DEBUG] gameLog - undefined
+[2024-01-25T23:05:44.303] [DEBUG] gameLog - undefined
+[2024-01-25T23:07:39.970] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-0
+[2024-01-25T23:07:39.971] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-25T23:29:07.128] [DEBUG] gameLog - undefined
+[2024-01-25T23:29:18.861] [DEBUG] gameLog - undefined
+[2024-01-25T23:29:39.109] [DEBUG] gameLog - undefined
+[2024-01-25T23:30:46.735] [DEBUG] gameLog - undefined
+[2024-01-25T23:33:45.577] [DEBUG] gameLog - undefined

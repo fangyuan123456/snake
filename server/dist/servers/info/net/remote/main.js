@@ -8,9 +8,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-class Remote {
+const RemoteBase_1 = __importDefault(require("../../../../common/base/RemoteBase"));
+const SqlManager_1 = require("../../../../common/manager/SqlManager");
+class Remote extends RemoteBase_1.default {
     constructor() {
+        super();
     }
     createPlayer(role) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -27,6 +33,18 @@ class Remote {
         let player = infoGame.getPlayer(uid);
         if (player) {
             player.updateInviteData(inviteUid);
+        }
+        else {
+            game.sqlMgr.select(SqlManager_1.TableName.USER, { uid: uid }).then((data) => {
+                let inviteUids = data.inviteUids || "";
+                if (inviteUids == "") {
+                    inviteUids += inviteUid;
+                }
+                else {
+                    inviteUids += "#" + inviteUid;
+                }
+                game.sqlMgr.update(SqlManager_1.TableName.USER, { inviteUids: inviteUids }, { uid: uid });
+            });
         }
     }
     getRoomPlayerInfo(uid) {

@@ -1,3 +1,4 @@
+import RemoteBase from "../../../../common/base/RemoteBase";
 import { I_roleInfo } from "../../../../common/interface/IInfo";
 import { TableName } from "../../../../common/manager/SqlManager";
 
@@ -8,8 +9,9 @@ declare global {
         }
     }
 }
-export default class Remote {
+export default class Remote extends RemoteBase {
     constructor() {
+        super();
     }
     async createPlayer(role:I_roleInfo){
         infoGame.createPlayer(role.uid,role);

@@ -1,5 +1,6 @@
 import { SingleBase } from "../base/SingleBase";
 import { Root, Type, load, loadSync } from "protobufjs";
+import { serverType } from "../config/GameCfg";
 export class ProtoManager extends SingleBase{
     rootMap:{[key:string]:Root} = {};
     encodeDecodeFuncMap:{[key:string]:Type} = {};
@@ -26,6 +27,12 @@ export class ProtoManager extends SingleBase{
           return Number(i);
         }
       }
+    }
+    getServerName(cmd:number):serverType{
+      let routeUrl = game.app.routeConfig[cmd]
+      let strArr = routeUrl.split(".")
+      // @ts-ignore
+      return strArr[0];
     }
     decode(cmd: number, msg: Buffer):any{
         let routeUrl = game.app.routeConfig[cmd]

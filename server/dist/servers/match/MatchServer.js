@@ -32,8 +32,7 @@ class MatchServer extends GameServerBase_1.GameServerBase {
             for (let i in matchUidList) {
                 let uid = matchUidList[i];
                 game.app.rpc(game.utilsMgr.getSid(uid, "info" /* serverType.info */)).info.main.setRoomInfo({ uid: uid, roomId: roomId, roomIp: roomIp });
-                let session = game.app.getSession(uid);
-                session.send(game.protoMgr.getProtoCode("matchOk"), { roomId: roomId, roomIp: roomIp });
+                game.sendMsg(uid, { msgHead: "matchOk", msgData: { roomId: roomId, roomIp: roomIp } });
             }
             game.app.rpc(gameServer.id).game.main.createRoom({ roomId: roomId, uidList: matchUidList });
         };

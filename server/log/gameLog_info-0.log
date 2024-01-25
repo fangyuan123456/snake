@@ -906,3 +906,750 @@
 [2024-01-25T16:09:20.460] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
 [2024-01-25T16:09:20.466] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
 [2024-01-25T16:40:54.440] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-25T22:19:14.777] [ERROR] gameLog - msgHead:pushMsg is not find
+[2024-01-25T22:19:14.822] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:20:15.432] [ERROR] gameLog - msgHead:pushMsg is not find
+[2024-01-25T22:20:15.433] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:21:32.292] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getAssetInfo')
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:9:26)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+[2024-01-25T22:21:32.295] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getRoomInfo')
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:9:26)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+[2024-01-25T22:21:33.265] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getAssetInfo')
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:9:26)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+[2024-01-25T22:21:33.266] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getRoomInfo')
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:9:26)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at NetSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpServer.js:75:31)
+    at Socket.emit (node:events:514:28)
+[2024-01-25T22:24:49.782] [ERROR] gameLog - TypeError: Cannot read properties of null (reading 'send')
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:126:21)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:14:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+[2024-01-25T22:24:49.786] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:24:49.787] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:24:49.788] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:24:49.789] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:24:49.794] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-25T22:24:54.018] [ERROR] gameLog - TypeError: Cannot read properties of null (reading 'send')
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:126:21)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:14:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+[2024-01-25T22:25:26.587] [ERROR] gameLog - TypeError: Cannot read properties of null (reading 'send')
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:126:21)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:14:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+[2024-01-25T22:26:44.949] [ERROR] gameLog - TypeError: Cannot read properties of null (reading 'send')
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:126:21)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:14:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+[2024-01-25T22:27:30.648] [ERROR] gameLog - TypeError: Cannot read properties of null (reading 'send')
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:126:21)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:14:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+[2024-01-25T22:28:15.899] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:28:15.902] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:28:15.903] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:28:15.904] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:28:16.016] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-25T22:28:16.019] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-25T22:28:16.019] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-25T22:28:16.019] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-25T22:28:16.019] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-25T22:28:16.020] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-25T22:28:16.020] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-25T22:28:16.020] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-25T22:28:38.719] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:28:43.911] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:29:16.068] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:33:04.626] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:33:04.628] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-25T22:33:04.629] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
+[2024-01-25T22:33:04.630] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0
+[2024-01-25T22:33:04.630] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
+[2024-01-25T22:33:04.631] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-25T22:33:04.632] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-1
+[2024-01-25T22:33:04.632] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-25T22:33:04.632] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: game-0
+[2024-01-25T22:33:04.633] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-25T22:33:04.633] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: game-1
+[2024-01-25T22:33:04.633] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-25T22:33:04.635] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-25T22:33:04.636] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-25T22:33:04.636] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-25T22:33:04.637] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-25T22:33:27.184] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:33:48.189] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:36:17.758] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:36:40.679] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:37:31.413] [DEBUG] gameLog - cmd:5,msg:{"msgText":"哈哈哈哈"}
+[2024-01-25T22:37:38.859] [ERROR] gameLog - Error: no such type: info.pushMsgRes
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:19:53)
+    at ProtoManager.encode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:45:28)
+    at Application.protoEncode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\protocol.js:20:26)
+    at Application.sendMsgByUid (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\application.js:167:27)
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:125:22)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:14:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+[2024-01-25T22:38:21.645] [DEBUG] gameLog - cmd:5,msg:{"msgText":"哈哈哈哈"}
+[2024-01-25T22:38:21.925] [ERROR] gameLog - Error: no such type: info.pushMsgRes
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:19:53)
+    at ProtoManager.encode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:45:28)
+    at Application.protoEncode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\protocol.js:20:26)
+    at Application.sendMsgByUid (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\application.js:167:27)
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:125:22)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:14:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+[2024-01-25T22:38:24.921] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:38:24.923] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:38:24.924] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:38:24.925] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:38:24.925] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:38:24.926] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:38:24.927] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:38:24.928] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T22:40:09.274] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-25T22:40:12.943] [DEBUG] gameLog - cmd:5,msg:{"msgText":"哈哈哈哈"}
+[2024-01-25T22:40:12.944] [ERROR] gameLog - Error: no such type: info.pushMsgRes
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:19:53)
+    at ProtoManager.encode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:45:28)
+    at Application.protoEncode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\protocol.js:20:26)
+    at Application.sendMsgByUid (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\application.js:167:27)
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:125:22)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:14:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+[2024-01-25T22:40:12.946] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:57:09.639] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-25T22:57:09.642] [DEBUG] gameLog - cmd:5,msg:{"msgText":"哈哈哈哈"}
+[2024-01-25T22:57:09.643] [ERROR] gameLog - Error: no such type: info.pushMsgRes
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:19:53)
+    at ProtoManager.encode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:51:28)
+    at Application.protoEncode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\protocol.js:20:26)
+    at BackendServer.sendMsgByUidSid (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:131:26)
+    at Application.sendMsgByUidSid (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\application.js:202:28)
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:131:26)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:14:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+[2024-01-25T22:57:09.683] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:57:45.576] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-25T22:58:51.528] [DEBUG] gameLog - cmd:5,msg:{"msgText":"哈哈哈哈"}
+[2024-01-25T22:58:51.529] [ERROR] gameLog - Error: no such type: info.pushMsgRes
+    at Root.lookupType (D:\fangyuan\gitWrokSpace\snake\server\node_modules\protobufjs\src\namespace.js:382:15)
+    at ProtoManager.getEncodeDecodeFunc (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:19:53)
+    at ProtoManager.encode (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\ProtoManager.js:51:28)
+    at Application.protoEncode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\connector\protocol.js:20:26)
+    at BackendServer.sendMsgByUidSid (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:131:26)
+    at Application.sendMsgByUidSid (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\application.js:202:28)
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:131:26)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:14:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+[2024-01-25T22:58:51.529] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T22:58:51.531] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-25T22:58:51.533] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-25T22:58:51.534] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-25T22:58:51.534] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-25T23:02:26.228] [ERROR] gameLog - msgHead:getRoomInfo is not find
+[2024-01-25T23:02:26.264] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T23:02:32.916] [ERROR] gameLog - msgHead:getRoomInfo is not find
+[2024-01-25T23:02:32.917] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T23:03:02.437] [ERROR] gameLog - msgHead:getRoomInfo is not find
+[2024-01-25T23:03:02.438] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T23:28:55.638] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-25T23:29:00.348] [ERROR] gameLog - TypeError: Cannot read properties of null (reading 'send')
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:128:25)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:19:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+[2024-01-25T23:29:00.351] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-25T23:29:00.351] [ERROR] gameLog - TypeError: Cannot read properties of null (reading 'send')
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:128:25)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:19:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+[2024-01-25T23:29:00.353] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T23:29:00.355] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T23:29:00.356] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T23:29:00.357] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:51:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:137:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-25T23:29:00.469] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-25T23:29:07.385] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-25T23:29:07.386] [ERROR] gameLog - TypeError: Cannot read properties of null (reading 'send')
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:128:25)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:19:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+[2024-01-25T23:29:19.042] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-25T23:29:19.042] [ERROR] gameLog - TypeError: Cannot read properties of null (reading 'send')
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:128:25)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:19:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+[2024-01-25T23:30:45.394] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-25T23:30:45.399] [ERROR] gameLog - TypeError: this.app.rpc(...).center.main.notify is not a function
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:132:47)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:19:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+[2024-01-25T23:30:45.516] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T23:30:46.981] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-25T23:30:46.981] [ERROR] gameLog - TypeError: this.app.rpc(...).center.main.notify is not a function
+    at InfoServer.sendMsg (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\GameServerBase.js:132:47)
+    at Player.getRoomInfo (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\Player.js:59:14)
+    at Handler.route (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\handler\main.js:19:18)
+    at D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:86:52
+    at cbFunc (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:23:17)
+    at Filter.beforeFilter (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\filter.js:30:9)
+    at BackendServer.handleMsg (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\backendServer.js:78:25)
+    at RpcServerSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcServer.js:103:44)
+    at NetSocket.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+[2024-01-25T23:30:46.982] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-25T23:33:43.969] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}

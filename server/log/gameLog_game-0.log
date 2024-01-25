@@ -80,3 +80,21 @@
 [2024-01-25T16:09:20.352] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
 [2024-01-25T16:09:20.425] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
 [2024-01-25T16:40:54.270] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: game-1
+[2024-01-25T22:22:39.036] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-01-25T22:22:39.039] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-25T22:23:31.136] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-25T22:29:44.855] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-01-25T22:29:44.858] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-25T22:30:35.497] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-25T22:39:26.223] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-01-25T22:39:26.227] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-25T22:45:59.772] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-25T22:58:13.199] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-01-25T22:58:13.202] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-25T23:03:33.109] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-01-25T23:03:33.112] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-25T23:06:49.874] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-01-25T23:06:49.877] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-25T23:07:39.971] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-25T23:29:57.971] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-01-25T23:29:57.974] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0

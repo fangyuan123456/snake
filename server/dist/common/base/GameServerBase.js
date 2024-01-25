@@ -34,6 +34,7 @@ const HttpManager_1 = require("../manager/HttpManager");
 const TimeManager_1 = require("../manager/TimeManager");
 const PlatformManager_1 = require("../manager/PlatformManager");
 const SqlManager_1 = require("../manager/SqlManager");
+const EventManager_1 = require("../manager/EventManager");
 class GameServerBase {
     constructor(app) {
         this.clientNum = 0;
@@ -45,6 +46,7 @@ class GameServerBase {
         this.protoMgr = ProtoManager_1.ProtoManager.getInstance();
         this.timeMgr = TimeManager_1.TimeManager.getInstance();
         this.platformMgr = PlatformManager_1.PlatformManager.getInstance();
+        this.eventMgr = EventManager_1.EventManager.getInstance();
         this.sqlMgr = SqlManager_1.SqlManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
@@ -108,14 +110,31 @@ class GameServerBase {
             this.cpuUsage = ((diff.user + diff.system) / (5000 * 1000) * 100).toFixed(1);
         }, 5000);
     }
-    onUserIn() {
+    onUserIn(session) {
     }
-    onUserLeave() {
+    onUserLeave(session) {
     }
     uncaughtException() {
         process.on("uncaughtException", function (err) {
             game.logMgr.error(err);
         });
+    }
+    sendMsg(uid, data) {
+        let cmd = game.protoMgr.getProtoCode(data.msgHead);
+        if (cmd || cmd == 0) {
+            let serverName = game.protoMgr.getServerName(cmd);
+            if (serverName == game.app.serverType) {
+                let session = this.app.getSession(uid);
+                session.send(cmd, data.msgData);
+            }
+            else {
+                let sid = game.utilsMgr.getSid(uid, serverName);
+                this.app.rpc(sid).center.main.notify(uid, data);
+            }
+        }
+        else {
+            game.logMgr.error("msgHead:%s is not find", data.msgHead);
+        }
     }
 }
 exports.GameServerBase = GameServerBase;

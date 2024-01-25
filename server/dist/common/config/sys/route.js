@@ -6,4 +6,5 @@ exports.default = [
     "match.main.match",
     "match.main.matchOk",
     "game.main.enterRoom",
+    "center.main.pushMsg"
 ];
