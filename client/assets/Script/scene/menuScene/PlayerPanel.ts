@@ -13,6 +13,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class PlayerPanele extends CompBase {
     start () {
+        super.start();
         game.userData.getRoleInfo(this).then((data)=>{
            this.updateInfo(data);
         });

@@ -5,13 +5,16 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
-import { PanelBase } from "../../common/base/PanelBase";
+import { PanelBase } from "../../../common/base/PanelBase";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class MenuPrefab extends PanelBase {
-    start () {
+export default class RankingPanel extends PanelBase {
 
+    start () {
+        super.start();
     }
+
+    // update (dt) {}
 }

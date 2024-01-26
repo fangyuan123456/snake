@@ -26,7 +26,7 @@ export default class LoadingComp extends CompBase {
     curProgress:number = 0
     totalProgress:number = 0
     start () {
-
+        super.start();
     }
     setTotalProgress(){
         for(let i in this.progressCfg){

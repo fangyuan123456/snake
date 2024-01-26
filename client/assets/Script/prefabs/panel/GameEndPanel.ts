@@ -23,7 +23,7 @@ export default class GameEndPanel extends PanelBase {
     // onLoad () {}
     
     start () {
-
+        super.start();
     }
 
     // update (dt) {}

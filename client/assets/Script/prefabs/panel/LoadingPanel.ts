@@ -12,6 +12,6 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class LoadingPanel extends PanelBase {
     start () {
-
+        super.start();
     }
 }

@@ -28,6 +28,7 @@ export class PanelManager extends SingleBase{
                 }
                 this.opendPanel[name] = this.opendPanel[name] || [];
                 this.opendPanel[name].push(panel);
+                game.eventMgr.dispatch("openPanelChange")
                 return panel;
             }
         }
@@ -38,16 +39,14 @@ export class PanelManager extends SingleBase{
         let panelList = this.opendPanel[name];
         for(let i=panelList.length-1;i>=0;i--){
             let panel = panelList[i];
-            if(panelName == panel){
+            if(panel == panelName || panel.panelName == panelName){
+                panelList.splice(i);
                 panel.playCloseAction(()=>{
                     panel.node.destroy();
+                    game.timeMgr.scheduleOnce(()=>{
+                        game.eventMgr.dispatch("openPanelChange")
+                    },0.01)
                 })
-            }else{
-                if(panel.panelName == panelName){
-                    panel.playCloseAction(()=>{
-                        panel.node.destroy();
-                    })
-                }
             }
           
         }

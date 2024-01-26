@@ -1090,9 +1090,11 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "bb617RxczBJcY7D+T6fk/n8",
+    "_componentId": "b3a4aefPCFJY73x0c+PtGGd",
     "handler": "btn_shop",
     "customEventData": ""
   },
@@ -1478,9 +1480,11 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "bb617RxczBJcY7D+T6fk/n8",
+    "_componentId": "b3a4aefPCFJY73x0c+PtGGd",
     "handler": "btn_shop",
     "customEventData": ""
   },
@@ -4113,10 +4117,12 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "bb617RxczBJcY7D+T6fk/n8",
-    "handler": "btn_sheZhi",
+    "_componentId": "b3a4aefPCFJY73x0c+PtGGd",
+    "handler": "btn_setting",
     "customEventData": ""
   },
   {
@@ -4452,9 +4458,11 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "bb617RxczBJcY7D+T6fk/n8",
+    "_componentId": "b3a4aefPCFJY73x0c+PtGGd",
     "handler": "btn_rank",
     "customEventData": ""
   },
@@ -4791,10 +4799,12 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "bb617RxczBJcY7D+T6fk/n8",
-    "handler": "btn_buyPiFu",
+    "_componentId": "b3a4aefPCFJY73x0c+PtGGd",
+    "handler": "btn_piFu",
     "customEventData": ""
   },
   {
@@ -5347,9 +5357,11 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "bb617RxczBJcY7D+T6fk/n8",
+    "_componentId": "b3a4aefPCFJY73x0c+PtGGd",
     "handler": "btn_shop",
     "customEventData": ""
   },
@@ -5686,9 +5698,11 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "bb617RxczBJcY7D+T6fk/n8",
+    "_componentId": "b3a4aefPCFJY73x0c+PtGGd",
     "handler": "btn_sign",
     "customEventData": ""
   },
@@ -6025,10 +6039,12 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "bb617RxczBJcY7D+T6fk/n8",
-    "handler": "btn_getInviteReworld",
+    "_componentId": "b3a4aefPCFJY73x0c+PtGGd",
+    "handler": "btn_sign",
     "customEventData": ""
   },
   {
@@ -6364,10 +6380,12 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "bb617RxczBJcY7D+T6fk/n8",
-    "handler": "btn_fuZhu",
+    "_componentId": "b3a4aefPCFJY73x0c+PtGGd",
+    "handler": "btn_tool",
     "customEventData": ""
   },
   {

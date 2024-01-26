@@ -23,7 +23,7 @@ export default class ChatPanel extends PanelBase {
     // onLoad () {}
     
     start () {
-
+        super.start();
     }
 
     // update (dt) {}

@@ -16,4 +16,25 @@ export default class MenuScene extends SceneBase {
     start () {
         super.start();
     }
+    btn_setting(){
+        game.panelMgr.openPanel("SettingPanel");
+    }
+    btn_rank(){
+        game.panelMgr.openPanel("RankingPanel");
+    }
+    btn_piFu(){
+        game.panelMgr.openPanel("PiFuPanel");
+    }
+    btn_shop(){
+        game.panelMgr.openPanel("ShopPanel");
+    }
+    btn_sign(){
+        game.panelMgr.openPanel("SignPanel");
+    }
+    btn_invite(){
+        game.panelMgr.openPanel("InviteReworldPanel");
+    }
+    btn_tool(){
+        game.panelMgr.openPanel("DropToolPanel");
+    }
 }

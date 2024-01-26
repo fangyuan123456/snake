@@ -3,12 +3,13 @@ import { SingleBase } from "../base/SingleBase";
 export class TimeManager extends SingleBase{
     scheduleOnce(callBack:()=>void,delayTime:number,target:cc.Node = cc.find("Canvas")){
         let scheduler = cc.director.getScheduler();
-        scheduler.schedule(()=>{
-            this.unSchedule(callBack,target);
+        let callFunc = ()=>{
+            this.unSchedule(callFunc,target);
             if(callBack){
                 callBack();
             }
-        },target,delayTime)
+        }
+        scheduler.schedule(callFunc,target,delayTime)
     }
     unSchedule(callBack:()=>void,target?:cc.Node){
         let scheduler = cc.director.getScheduler();

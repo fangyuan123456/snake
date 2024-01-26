@@ -15,7 +15,7 @@ exports.mysqlConfig = {
 var pushMsgType;
 (function (pushMsgType) {
     pushMsgType[pushMsgType["KICK_ROOM"] = 1] = "KICK_ROOM";
-})(pushMsgType || (exports.pushMsgType = pushMsgType = {}));
+})(pushMsgType = exports.pushMsgType || (exports.pushMsgType = {}));
 /** 根据环境获取配置 */
 function getConfigByEnv(config) {
     if (config[game.app.env] === undefined) {

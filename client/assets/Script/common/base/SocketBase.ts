@@ -145,12 +145,14 @@ export class SocketBase{
         }
     }
     close(){
-        clearInterval(this.heartbeatTimer);
-        this.socket.close();
-        this.socket = null;
-        this.state = SOCKET_STATE.OFFLINE
-        game.timeMgr.scheduleOnce(()=>{
-            this.connect();
-        },1);
+        if(this.socket){
+            clearInterval(this.heartbeatTimer);
+            this.socket.close();
+            this.socket = null;
+            this.state = SOCKET_STATE.OFFLINE
+            game.timeMgr.scheduleOnce(()=>{
+                this.connect();
+            },1);
+        }
     }
 }

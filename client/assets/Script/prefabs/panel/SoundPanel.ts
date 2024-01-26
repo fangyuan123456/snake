@@ -5,17 +5,13 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
-import { CompBase } from "../base/CompBase";
+import { PanelBase } from "../../common/base/PanelBase";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class FitBgComp extends CompBase {
+export default class SettingPanel extends PanelBase {
     start () {
         super.start();
-        var winSize=cc.view.getFrameSize()
-        var scaleX=this.node.width/winSize.width;
-        var scaleY=this.node.height/winSize.height;
-        this.node.scale=scaleX>scaleY?scaleX/scaleY:scaleY/scaleX;
     }
 }

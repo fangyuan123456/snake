@@ -6,6 +6,9 @@ export let panelCfg:{[key: string]: panelStruct} = {
     AlertPanel:{
         url:"prefabs/panel/AlertPanel"
     },
+    RankingPanel:{
+        url:"prefabs/panel/rank/RankingPanel"
+    },
     ChatPanel:{
         url:"prefabs/panel/ChatPanel"
     },
@@ -33,8 +36,8 @@ export let panelCfg:{[key: string]: panelStruct} = {
     MatchPanel:{
         url:"prefabs/panel/MatchPanel"
     },
-    MenuPrefab:{
-        url:"prefabs/panel/MenuPrefab"
+    SoundPanel:{
+        url:"prefabs/panel/SoundPanel"
     },
     MoreGamePanel:{
         url:"prefabs/panel/MoreGamePanel"

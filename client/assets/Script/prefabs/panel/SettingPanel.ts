@@ -10,8 +10,8 @@ import { PanelBase } from "../../common/base/PanelBase";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class SettingPanel extends PanelBase {
+export default class MenuPrefab extends PanelBase {
     start () {
-
+        super.start();
     }
 }

@@ -5,17 +5,26 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
-import { CompBase } from "../base/CompBase";
+import { CompBase } from "../../../common/base/CompBase";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class FitBgComp extends CompBase {
+export default class NewClass extends CompBase {
+
+    @property(cc.Label)
+    label: cc.Label = null;
+
+    @property
+    text: string = 'hello';
+
+    // LIFE-CYCLE CALLBACKS:
+
+    // onLoad () {}
+
     start () {
         super.start();
-        var winSize=cc.view.getFrameSize()
-        var scaleX=this.node.width/winSize.width;
-        var scaleY=this.node.height/winSize.height;
-        this.node.scale=scaleX>scaleY?scaleX/scaleY:scaleY/scaleX;
     }
+
+    // update (dt) {}
 }

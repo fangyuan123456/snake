@@ -78,6 +78,7 @@ export class PanelBase extends CompBase{
         game.panelMgr.closePanel(this);
     }
     protected onDestroy(): void {
+        super.onDestroy();
         if(this.closeCallBack){
             this.closeCallBack();
         }

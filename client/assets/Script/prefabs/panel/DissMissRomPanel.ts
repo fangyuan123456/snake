@@ -23,7 +23,7 @@ export default class DissMissRomPanel extends PanelBase {
     // onLoad () {}
     
     start () {
-
+        super.start();
     }
 
     // update (dt) {}
