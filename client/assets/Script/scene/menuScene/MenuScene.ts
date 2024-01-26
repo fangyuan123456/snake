@@ -37,4 +37,7 @@ export default class MenuScene extends SceneBase {
     btn_tool(){
         game.panelMgr.openPanel("DropToolPanel");
     }
+    btn_match(){
+        game.panelMgr.openPanel("MatchPanel");
+    }
 }

@@ -1,4 +1,6 @@
+import Item from "../../prefabs/Item";
 import { SingleBase } from "../base/SingleBase";
+import { I_item } from "../interface/I_Info";
 
 export class ResManager extends SingleBase{
     async loadRes<T extends cc.Asset>(url:string,bundleName?:string): Promise<T>{
@@ -39,5 +41,24 @@ export class ResManager extends SingleBase{
         if(bundle){
             return bundle.get<T>(url);
         }
+    }
+    setSpImg(sp:cc.Node,url:string,callBack?:()=>void){
+        this.loadRes<cc.SpriteFrame>(url).then((spriteFrame)=>{
+            sp.getComponent(cc.Sprite).spriteFrame = spriteFrame
+            if(callBack){
+                callBack()
+            }
+        })
+    }
+    createItem(data:{item:I_item,scale?:number},parent:cc.Node){
+        this.loadRes<cc.Prefab>("prefabs/Item").then((prefab:cc.Prefab)=>{
+            let node = cc.instantiate(prefab);
+            parent.addChild(node);
+            if(data.scale){
+                node.scale = data.scale;
+            }
+            let comp = node.getComponent(Item);
+            comp.setItemData(data);
+        })
     }
 }

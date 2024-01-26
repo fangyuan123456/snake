@@ -12,11 +12,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class FuHuoPanel extends PanelBase {
 
-    @property(cc.Label)
-    label: cc.Label = null;
 
-    @property
-    text: string = 'hello';
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -24,7 +20,28 @@ export default class FuHuoPanel extends PanelBase {
     
     start () {
         super.start();
-    }
+        this.runTimer();
 
+    }
+    private runTimer(){
+        var time=10;
+        var callback=()=>{
+            cc.find("panel/bg/clockBg/time",this.node).getComponent(cc.Label).string=time+"";
+            time--;
+            if(time==0){
+                this.unschedule(callback);
+                this.closePanel();
+            }
+        }
+        this.schedule(callback,1);
+        callback();
+    }
+    btn_fuHuo(){
+        game.aduintMgr.playVideoAd().then((isOk)=>{
+            if(isOk){
+                this.closePanel(true);
+            }
+        });
+    }
     // update (dt) {}
 }

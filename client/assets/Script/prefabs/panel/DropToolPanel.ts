@@ -12,11 +12,6 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class DropToolPanel extends PanelBase {
 
-    @property(cc.Label)
-    label: cc.Label = null;
-
-    @property
-    text: string = 'hello';
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -25,6 +20,15 @@ export default class DropToolPanel extends PanelBase {
     start () {
         super.start();
     }
-
+    btn_playMove(){
+        var that=this;
+        game.aduintMgr.playVideoAd().then((isOn)=>{
+            if(isOn){
+                game.gameData.isDropToolOn=true;
+                game.alertMgr.showAlert("辅助方块功能已开启！");
+                that.closePanel();
+            }
+        })
+    }
     // update (dt) {}
 }

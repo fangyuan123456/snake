@@ -157,3 +157,19 @@
 [2024-01-26T11:28:51.736] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
 [2024-01-26T11:28:51.743] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
 [2024-01-26T11:28:51.754] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
+[2024-01-26T15:14:21.563] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-1
+[2024-01-26T15:14:22.185] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-26T15:14:22.188] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-0
+[2024-01-26T15:14:22.190] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-26T15:14:22.198] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-26T15:14:22.201] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0
+[2024-01-26T15:14:22.210] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: game-1
+[2024-01-26T15:14:22.211] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-26T15:14:22.523] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
+[2024-01-26T15:14:22.531] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
+[2024-01-26T15:34:48.850] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-26T15:34:48.860] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-26T15:34:48.876] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-26T15:34:48.884] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
+[2024-01-26T15:34:48.887] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-01-26T15:34:48.890] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0

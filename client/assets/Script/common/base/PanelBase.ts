@@ -5,7 +5,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export class PanelBase extends CompBase{
     panelName:string
-    closeCallBack:()=>void
+    closeCallBack:(any)=>void
     parmeter:any
     start(): void { 
         this.playOpenAction(); 
@@ -74,13 +74,15 @@ export class PanelBase extends CompBase{
             if(callBack)callBack();
         }
     }
-    closePanel(){
+    closeParmter?:any
+    closePanel(closeParmter?:any){
+        this.closeParmter = closeParmter
         game.panelMgr.closePanel(this);
     }
     protected onDestroy(): void {
         super.onDestroy();
         if(this.closeCallBack){
-            this.closeCallBack();
+            this.closeCallBack(this.closeParmter);
         }
     }
 }

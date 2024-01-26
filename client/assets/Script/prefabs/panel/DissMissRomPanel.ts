@@ -12,11 +12,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class DissMissRomPanel extends PanelBase {
 
-    @property(cc.Label)
-    label: cc.Label = null;
 
-    @property
-    text: string = 'hello';
 
     // LIFE-CYCLE CALLBACKS:
 

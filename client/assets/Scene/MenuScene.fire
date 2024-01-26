@@ -6044,7 +6044,7 @@
     },
     "component": "",
     "_componentId": "b3a4aefPCFJY73x0c+PtGGd",
-    "handler": "btn_sign",
+    "handler": "btn_invite",
     "customEventData": ""
   },
   {

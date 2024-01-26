@@ -5,22 +5,18 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
-import { CompBase } from "../../../common/base/CompBase";
+import { CompBase } from "../common/base/CompBase";
+import { I_item } from "../common/interface/I_Info";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends CompBase {
-
-
-
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {}
-
+export default class Item extends CompBase {
     start () {
         super.start();
     }
-
-    // update (dt) {}
+    setItemData(data:{item:I_item,scale?:number}){
+        this.node.scale = data.scale || 1;
+        
+    }
 }
