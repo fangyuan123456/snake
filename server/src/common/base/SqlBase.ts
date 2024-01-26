@@ -81,7 +81,7 @@ export class SqlBase{
             newDicObj[key] = dicObj[key];
             if(typeof newDicObj[key] == "object"){
                 newDicObj[key] = JSON.stringify(newDicObj[key]);
-            }
+            } 
         }
         return newDicObj;
     }

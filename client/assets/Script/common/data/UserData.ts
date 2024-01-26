@@ -1,13 +1,13 @@
 import { CompBase } from "../base/CompBase"
 import DataBase from "../base/DataBase";
-import { I_assetInfo, I_roleInfo, I_roomInfo } from "../interface/I_Info";
+import { I_assetInfo, I_inviteReward, I_roleInfo, I_roomInfo } from "../interface/I_Info";
 import { I_loginRes } from "../interface/I_Login";
 export default class UserData extends DataBase{
     uid:number = 0
     centerIp:string  = ""
-    offLineReReqInfoList:string[] = ["assetInfo"]
+    offLineReReqInfoList:string[] = ["inviteRewardInfo"]
     constructor(){
-        super(["assetInfo","roleInfo","roomInfo"]);
+        super(["assetInfo","roleInfo","roomInfo","inviteRewardInfo"]);
     }
     setLoginData(loginData:I_loginRes){
         this.uid = loginData.uid,
@@ -23,5 +23,8 @@ export default class UserData extends DataBase{
     }
     getAssetInfo(target:CompBase):Promise<I_assetInfo>{
         return this.getInfo("assetInfo",target)
+    }
+    getInviteRewardInfo(target:CompBase):Promise<I_inviteReward>{
+        return this.getInfo("inviteRewardInfo",target)
     }
 }

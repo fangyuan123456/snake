@@ -1,5 +1,5 @@
 import RemoteBase from "../../../../common/base/RemoteBase";
-import { I_roleInfo } from "../../../../common/interface/IInfo";
+import { I_inviteReward, I_roleInfo } from "../../../../common/interface/IInfo";
 import { TableName } from "../../../../common/manager/SqlManager";
 
 declare global {
@@ -24,17 +24,16 @@ export default class Remote extends RemoteBase {
     }
     updatePlayInviteData(uid:number,inviteUid:number){
         let player = infoGame.getPlayer(uid);
-        if(player){
-            player.updateInviteData(inviteUid);
+        if(player && player.inviteReward){
+            player.inviteReward.updateInviteData(inviteUid);
         }else{
-            game.sqlMgr.select(TableName.USER,{uid:uid}).then((data:I_roleInfo)=>{
+            game.sqlMgr.select(TableName.INVITE_REWARD,{uid:uid}).then((data:any)=>{
                 let inviteUids = data.inviteUids || "";
-                if(inviteUids == ""){
-                    inviteUids+=inviteUid;
-                }else{
-                    inviteUids+="#"+inviteUid;
+                let inviteData = JSON.parse(inviteUids);
+                if(inviteData.indexOf(inviteUid)<0){
+                    inviteData.push(inviteUid) 
                 }
-                game.sqlMgr.update(TableName.USER,{inviteUids:inviteUids},{uid:uid})
+                game.sqlMgr.update(TableName.INVITE_REWARD,{inviteUids:inviteData},{uid:uid})
             })
         }
     }

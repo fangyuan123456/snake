@@ -4,3 +4,11 @@ message pushMsgRes{
     optional string msgText=1;
     optional int32 msgType=2;
 }
+message guangBoReq{
+    required int32 uid=1;
+    required string msg=2;
+}
+message guangBoRes{
+    required string nickName=1;
+    required string msg=2;
+}

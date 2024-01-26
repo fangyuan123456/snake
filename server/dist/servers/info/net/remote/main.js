@@ -31,19 +31,17 @@ class Remote extends RemoteBase_1.default {
     }
     updatePlayInviteData(uid, inviteUid) {
         let player = infoGame.getPlayer(uid);
-        if (player) {
-            player.updateInviteData(inviteUid);
+        if (player && player.inviteReward) {
+            player.inviteReward.updateInviteData(inviteUid);
         }
         else {
-            game.sqlMgr.select(SqlManager_1.TableName.USER, { uid: uid }).then((data) => {
+            game.sqlMgr.select(SqlManager_1.TableName.INVITE_REWARD, { uid: uid }).then((data) => {
                 let inviteUids = data.inviteUids || "";
-                if (inviteUids == "") {
-                    inviteUids += inviteUid;
+                let inviteData = JSON.parse(inviteUids);
+                if (inviteData.indexOf(inviteUid) < 0) {
+                    inviteData.push(inviteUid);
                 }
-                else {
-                    inviteUids += "#" + inviteUid;
-                }
-                game.sqlMgr.update(SqlManager_1.TableName.USER, { inviteUids: inviteUids }, { uid: uid });
+                game.sqlMgr.update(SqlManager_1.TableName.INVITE_REWARD, { inviteUids: inviteData }, { uid: uid });
             });
         }
     }

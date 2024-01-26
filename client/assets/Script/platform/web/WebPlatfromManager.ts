@@ -24,10 +24,12 @@ export class WebPlatfromManager extends PlatformBase{
         }
     ]
     getLoginCode(callBack:(data:I_loginReq)=>void){
+        let inviteUid = this.getWebParm("inviteUid")
         var _data={
             isCeShi:true,
             platform:this.platformName,
-            code:this.getWebParm("code")
+            code:this.getWebParm("code"),
+            inviteUid:inviteUid?Number(inviteUid):null
         };
         callBack(_data)
     }

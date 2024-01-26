@@ -16,12 +16,15 @@ export interface I_roleInfo {
     sceneId?:number,
     pathId?:number,
     platform?:string,
-    inviteUids?:string
 }
 export interface I_asset {
     money:number,
     diamond: number,         // 昵称
     items:Dic<I_item>,
+}
+export interface I_inviteReward {
+    inviteUids:number[],
+    getRewardIndexs:number[]
 }
 export interface I_item {
     num: number,
@@ -31,4 +34,5 @@ export interface I_item {
 export enum e_InfoType{
     role="role",
     asset="asset",
+    inviteReward = "inviteReward"
 }

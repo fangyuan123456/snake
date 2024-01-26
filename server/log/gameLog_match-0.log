@@ -124,3 +124,9 @@
 [2024-01-26T15:34:48.852] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: login, ::ffff:127.0.0.1
 [2024-01-26T15:34:48.860] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
 [2024-01-26T15:34:48.878] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-27T00:08:08.068] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-1
+[2024-01-27T00:08:08.072] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1
+[2024-01-27T00:17:00.505] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-0
+[2024-01-27T00:17:00.508] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-27T00:17:10.322] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-1
+[2024-01-27T00:17:10.323] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1

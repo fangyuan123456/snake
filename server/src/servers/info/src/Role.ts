@@ -11,18 +11,4 @@ export class Role extends SqlBase{
         this.data = role;
         this.player = player;
     }
-    updateInviteData(inviteUid:number){
-        let role = this.data!;
-        if(role){
-            role.inviteUids = role.inviteUids || "";
-            if(role.inviteUids == ""){
-                role.inviteUids+=inviteUid;
-            }else{
-                role.inviteUids+="#"+inviteUid;
-            }
-        }
-        this.update({inviteUids:role.inviteUids})
-
-        game.sendMsg(this.player.uid,{msgHead:"getRoleInfo",msgData:this.data});
-    }
 }

@@ -28,3 +28,7 @@ export interface I_assetInfo {
     diamond: number,         // 昵称
     items:Dic<I_item>,
 }
+export interface I_inviteReward {
+    inviteUids:number[],
+    getRewardIndexs:number[]
+}

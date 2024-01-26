@@ -8,3 +8,13 @@ message enterRoomReq {
 message enterRoomRes {
     string test1 = 1;
 }
+message chatroomReq{
+   required int32 uid=1;
+   required int32 type=2;
+   required string chat=3;
+}
+message chatroomRes{
+   required  int32 uid=1;
+   required  int32 type=2;
+   required string chat=3;
+}

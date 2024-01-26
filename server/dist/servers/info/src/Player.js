@@ -5,6 +5,7 @@ const IInfo_1 = require("../../../common/interface/IInfo");
 const Asset_1 = require("./Asset");
 const InfoConfig_1 = require("./InfoConfig");
 const Role_1 = require("./Role");
+const InviteReward_1 = require("./InviteReward");
 class Player {
     constructor(uid, data) {
         this.delThisTime = 0;
@@ -21,11 +22,17 @@ class Player {
             else if (i == IInfo_1.e_InfoType.role) {
                 this.role = new Role_1.Role(this, data === null || data === void 0 ? void 0 : data.role);
             }
+            else if (i == IInfo_1.e_InfoType.inviteReward) {
+                this.inviteReward = new InviteReward_1.InviteReward(this, data === null || data === void 0 ? void 0 : data.inviteReward);
+            }
         }
     }
     getInfo(infoType) {
         if (infoType == IInfo_1.e_InfoType.asset) {
             return this.asset.getInfo();
+        }
+        else if (infoType == IInfo_1.e_InfoType.inviteReward) {
+            return this.inviteReward.getInfo();
         }
         else {
             return this.role.getInfo();
@@ -37,9 +44,6 @@ class Player {
             roomIp: roomInfo.roomIp
         };
     }
-    updateInviteData(inviteUid) {
-        this.role.updateInviteData(inviteUid);
-    }
     onLine() {
         this.delThisTime = 0;
     }
@@ -48,11 +52,20 @@ class Player {
     }
     doSqlUpdate() {
         var _a;
-        (_a = this.asset) === null || _a === void 0 ? void 0 : _a.doSqlUpdate();
+        for (let i in IInfo_1.e_InfoType) {
+            //@ts-ignore
+            (_a = this[IInfo_1.e_InfoType[i]]) === null || _a === void 0 ? void 0 : _a.doSqlUpdate();
+        }
     }
     update() {
-        var _a;
-        (_a = this.asset) === null || _a === void 0 ? void 0 : _a.update();
+        var _a, _b;
+        for (let i in IInfo_1.e_InfoType) {
+            //@ts-ignore
+            if (this[IInfo_1.e_InfoType[i]] && ((_a = this[IInfo_1.e_InfoType[i]]) === null || _a === void 0 ? void 0 : _a.updateDt)) {
+                //@ts-ignore
+                (_b = this[IInfo_1.e_InfoType[i]]) === null || _b === void 0 ? void 0 : _b.updateDt();
+            }
+        }
     }
     getRoomInfo(msg, session, next) {
         next(this.roomInfo);
@@ -64,6 +77,11 @@ class Player {
     }
     getAssetInfo(msg, session, next) {
         this.getInfo(IInfo_1.e_InfoType.asset).then((data) => {
+            next(data);
+        });
+    }
+    getInviteRewardInfo(msg, session, next) {
+        this.getInfo(IInfo_1.e_InfoType.inviteReward).then((data) => {
             next(data);
         });
     }

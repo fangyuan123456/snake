@@ -5,6 +5,7 @@ interface Dic<T = any> {
 export enum TableName{
     USER = "t_user",
     ASSET = "t_asset",
+    INVITE_REWARD = "t_inviteReward"
 }
 enum SqlOpsType{
     ADD,

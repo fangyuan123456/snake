@@ -66,6 +66,9 @@ export abstract class PlatformBase extends SingleBase{
         socketTarget.binaryType=binaryType;
         return socketTarget
     }
+    share(text:string){
+        
+    }
     getLoginCode(callBack:(data:I_loginReq)=>void){
         
     }

@@ -46,12 +46,6 @@ class InfoServer extends GameServerBase_1.GameServerBase {
     getPlayer(uid) {
         return this.players[uid];
     }
-    updatePlayInviteData(uid, inviteUid) {
-        let player = this.players[uid];
-        if (player) {
-            player.updateInviteData(inviteUid);
-        }
-    }
     onUserIn(session) {
         let uid = session.uid;
         let player = infoGame.getPlayer(uid);

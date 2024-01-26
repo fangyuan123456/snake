@@ -326,3 +326,447 @@
 [2024-01-26T15:34:48.855] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
 [2024-01-26T15:34:48.861] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
 [2024-01-26T15:34:48.877] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-26T23:43:10.446] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-01-26T23:43:10.449] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-26T23:46:43.007] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-26T23:46:43.013] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-26T23:46:43.019] [DEBUG] gameLog - cmd:1,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-26T23:47:10.484] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-26T23:47:28.568] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16,16],"getRewardIndexs":[]}
+[2024-01-26T23:47:50.156] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-01-26T23:47:50.158] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-26T23:49:47.245] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-26T23:49:53.760] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'indexOf')
+    at InviteReward.updateInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\InviteReward.js:20:33)
+    at Remote.updatePlayInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\remote\main.js:35:33)
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:113:52)
+    at RpcClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcClient.js:193:32)
+    at TcpClient.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at TcpClient.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpClient.js:66:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+[2024-01-26T23:50:08.899] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'indexOf')
+    at InviteReward.updateInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\InviteReward.js:20:33)
+    at Remote.updatePlayInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\remote\main.js:35:33)
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:113:52)
+    at RpcClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcClient.js:193:32)
+    at TcpClient.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at TcpClient.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpClient.js:66:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+[2024-01-26T23:50:33.911] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'indexOf')
+    at InviteReward.updateInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\InviteReward.js:20:33)
+    at Remote.updatePlayInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\remote\main.js:35:33)
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:113:52)
+    at RpcClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcClient.js:193:32)
+    at TcpClient.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at TcpClient.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpClient.js:66:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+[2024-01-26T23:51:33.962] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'indexOf')
+    at InviteReward.updateInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\InviteReward.js:20:33)
+    at Remote.updatePlayInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\remote\main.js:35:33)
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:113:52)
+    at RpcClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcClient.js:193:32)
+    at TcpClient.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at TcpClient.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpClient.js:66:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+[2024-01-26T23:52:11.742] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-26T23:52:17.133] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-26T23:52:17.135] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-26T23:52:17.138] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-26T23:53:56.078] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-26T23:53:56.122] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-26T23:53:56.128] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-26T23:54:10.425] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-26T23:55:16.578] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-26T23:55:16.701] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-26T23:55:25.968] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-26T23:55:25.970] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-26T23:55:25.970] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-26T23:55:25.971] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-27T00:01:46.081] [ERROR] gameLog - Error: ER_BAD_FIELD_ERROR: Unknown column 'inviteUids' in 'field list'
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:55:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'inviteUids' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "update t_user set inviteUids = '16' where uid = 17"
+}
+[2024-01-27T00:01:46.085] [ERROR] gameLog - Error: ER_BAD_FIELD_ERROR: Unknown column 'inviteUids' in 'field list'
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:55:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'inviteUids' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "update t_user set inviteUids = '16' where uid = 17"
+}
+[2024-01-27T00:02:55.175] [ERROR] gameLog - Error: ER_BAD_FIELD_ERROR: Unknown column 'inviteUids' in 'field list'
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:55:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'inviteUids' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "update t_user set inviteUids = '16' where uid = 17"
+}
+[2024-01-27T00:02:55.177] [ERROR] gameLog - Error: ER_BAD_FIELD_ERROR: Unknown column 'inviteUids' in 'field list'
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:55:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'inviteUids' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "update t_user set inviteUids = '16' where uid = 17"
+}
+[2024-01-27T00:03:52.426] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-27T00:03:52.455] [ERROR] gameLog - Error: ER_BAD_FIELD_ERROR: Unknown column 'inviteUids' in 'field list'
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:55:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'inviteUids' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "update t_user set inviteUids = '16' where uid = 17"
+}
+[2024-01-27T00:03:52.456] [ERROR] gameLog - Error: ER_BAD_FIELD_ERROR: Unknown column 'inviteUids' in 'field list'
+    at Sequence._packetToError (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:55:32
+    at Ping.onOperationComplete (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'inviteUids' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "update t_user set inviteUids = '16' where uid = 17"
+}
+[2024-01-27T00:06:08.056] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-27T00:06:08.058] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-27T00:10:21.764] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: game-1
+[2024-01-27T00:10:21.765] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-27T00:10:21.766] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-0
+[2024-01-27T00:10:21.766] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-27T00:10:21.766] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: game-0
+[2024-01-27T00:10:21.767] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-27T00:10:21.767] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-0
+[2024-01-27T00:10:21.767] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-27T00:10:21.768] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-1
+[2024-01-27T00:10:21.768] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-27T00:10:21.769] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-27T00:10:21.770] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
+[2024-01-27T00:10:21.770] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0
+[2024-01-27T00:10:21.773] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-27T00:10:21.774] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-27T00:10:21.774] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-27T00:10:21.775] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-27T00:10:21.776] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-27T00:10:31.197] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:10:31.232] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:10:34.822] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-27T00:11:20.775] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:11:20.808] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-27T00:11:20.814] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:11:31.449] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16]}
+[2024-01-27T00:12:19.757] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:12:19.795] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-27T00:12:19.809] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:12:37.508] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16]}
+[2024-01-27T00:12:51.901] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-27T00:12:55.291] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:12:55.293] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:12:55.295] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-27T00:13:22.096] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16]}
+[2024-01-27T00:14:07.335] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-27T00:14:09.284] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:14:09.285] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:14:09.287] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-27T00:15:07.295] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16]}
+[2024-01-27T00:15:10.319] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-27T00:15:10.320] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-27T00:19:06.403] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-27T00:19:20.797] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:19:20.799] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:19:20.801] [DEBUG] gameLog - cmd:3,msg:{}
+[2024-01-27T00:20:29.812] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16]}
+[2024-01-27T00:21:20.587] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-01-27T00:21:20.588] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-27T00:22:11.626] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-27T00:22:18.448] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:22:18.449] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:22:18.451] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-27T00:22:40.621] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-27T00:24:42.815] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":16}
+[2024-01-27T00:24:44.546] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:24:44.548] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:24:44.550] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":16}
+[2024-01-27T00:24:56.366] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:24:56.367] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:24:56.367] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":16}
+[2024-01-27T00:25:46.223] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:124:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-27T00:25:46.226] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:124:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-27T00:25:46.227] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:124:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-27T00:25:46.228] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Asset.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:124:42)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-27T00:25:51.460] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":16}
+[2024-01-27T00:26:05.762] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":16}
+[2024-01-27T00:26:17.761] [ERROR] gameLog - TypeError: data.inviteUids.indexOf is not a function
+    at InviteReward.updateInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\InviteReward.js:21:33)
+    at Remote.updatePlayInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\remote\main.js:35:33)
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:113:52)
+    at RpcClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcClient.js:193:32)
+    at TcpClient.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at TcpClient.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpClient.js:66:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+[2024-01-27T00:26:59.599] [ERROR] gameLog - TypeError: data.inviteUids.indexOf is not a function
+    at InviteReward.updateInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\InviteReward.js:21:33)
+    at Remote.updatePlayInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\remote\main.js:35:33)
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:113:52)
+    at RpcClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcClient.js:193:32)
+    at TcpClient.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at TcpClient.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpClient.js:66:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+[2024-01-27T00:27:19.821] [ERROR] gameLog - TypeError: data.inviteUids.indexOf is not a function
+    at InviteReward.updateInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\src\InviteReward.js:21:33)
+    at Remote.updatePlayInviteData (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\remote\main.js:35:33)
+    at Object.handleMsgAwait (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:113:52)
+    at RpcClientSocket.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\rpcClient.js:193:32)
+    at TcpClient.emit (node:events:514:28)
+    at decode (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\msgCoder.js:53:28)
+    at TcpClient.onData (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mydog\lib\components\tcpClient.js:66:31)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+[2024-01-27T00:35:45.285] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:35:47.777] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:35:47.783] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-27T00:36:33.280] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-27T00:36:47.634] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-27T00:37:21.192] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:37:21.195] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:37:21.199] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-27T00:38:08.369] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T00:38:08.385] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T00:38:08.411] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-27T00:38:42.622] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
