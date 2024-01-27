@@ -29,11 +29,11 @@ export class SocketBase{
         this.connect();
     }
     connect(){
-        if(this.socket && this.state==SOCKET_STATE.OFFLINE){
-            this.close();
+        if(this.state==SOCKET_STATE.OFFLINE){
+            this.state=SOCKET_STATE.CONNECTING
+            this.socket = game.platFormMgr.createSocket(this.ip);
+            this.registerCallBack();
         }
-        this.socket = game.platFormMgr.createSocket(this.ip);
-        this.registerCallBack();
     }
     registerCallBack(){
         this.socket.onopen = this.onOpen.bind(this);
@@ -145,14 +145,14 @@ export class SocketBase{
         }
     }
     close(){
+        clearInterval(this.heartbeatTimer);
         if(this.socket){
-            clearInterval(this.heartbeatTimer);
             this.socket.close();
             this.socket = null;
-            this.state = SOCKET_STATE.OFFLINE
-            game.timeMgr.scheduleOnce(()=>{
-                this.connect();
-            },1);
         }
+        this.state = SOCKET_STATE.OFFLINE
+        game.timeMgr.scheduleOnce(()=>{
+            this.connect();
+        },1);
     }
 }

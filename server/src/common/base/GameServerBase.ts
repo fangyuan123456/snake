@@ -15,6 +15,7 @@ import { getConfigByEnv, mysqlConfig, serverType } from "../config/GameCfg";
 import { PlatformManager } from "../manager/PlatformManager";
 import { SqlManager } from "../manager/SqlManager";
 import { EventManager } from "../manager/EventManager";
+import { ConfigManager } from "../manager/ConfigManager";
 
 export class GameServerBase{
     clientNum:number = 0
@@ -28,6 +29,7 @@ export class GameServerBase{
     platformMgr:PlatformManager
     eventMgr:EventManager
     sqlMgr:SqlManager
+    configMgr: ConfigManager;
     constructor(app:Application){
         this.app = app;
         globalThis.game = this;
@@ -38,6 +40,7 @@ export class GameServerBase{
         this.platformMgr = PlatformManager.getInstance();
         this.eventMgr = EventManager.getInstance();
         this.sqlMgr = SqlManager.getInstance();
+        this.configMgr = ConfigManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
         this.setConfig();

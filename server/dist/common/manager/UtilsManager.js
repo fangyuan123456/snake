@@ -63,5 +63,27 @@ class UtilsManager extends SingleBase_1.SingleBase {
         }
         return map;
     }
+    deepCopy(obj) {
+        if (typeof obj !== 'object' || obj === null) {
+            return obj;
+        }
+        let copy;
+        if (Array.isArray(obj)) {
+            copy = [];
+            for (let i = 0; i < obj.length; i++) {
+                copy[i] = this.deepCopy(obj[i]);
+            }
+        }
+        else {
+            copy = {};
+            for (let key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    //@ts-ignore
+                    copy[key] = this.deepCopy(obj[key]);
+                }
+            }
+        }
+        return copy;
+    }
 }
 exports.UtilsManager = UtilsManager;

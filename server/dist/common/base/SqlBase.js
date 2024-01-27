@@ -43,7 +43,7 @@ class SqlBase {
     callGetInfoResolve() {
         let data = this.data;
         if (data) {
-            for (let i in this.getInfoResolveCallList) {
+            for (let i = this.getInfoResolveCallList.length; i >= 0; i--) {
                 let callBack = this.getInfoResolveCallList[i];
                 if (callBack) {
                     callBack(this.data);

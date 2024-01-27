@@ -1,13 +1,31 @@
 import { CompBase } from "../base/CompBase"
-import DataBase from "../base/DataBase";
+import DataBase, { dataKeyCfg } from "../base/DataBase";
+import { Dic } from "../interface/I_Common";
 import { I_assetInfo, I_inviteReward, I_roleInfo, I_roomInfo } from "../interface/I_Info";
 import { I_loginRes } from "../interface/I_Login";
+const dataKeyCfg:dataKeyCfg = {
+    assetInfo:{
+        isLoginGet:true,
+        isOffLineReq:false
+    },
+    roleInfo:{
+        isLoginGet:true,
+        isOffLineReq:false
+    },
+    roomInfo:{
+        isLoginGet:true,
+        isOffLineReq:false
+    },
+    inviteRewardInfo:{
+        isLoginGet:false,
+        isOffLineReq:false
+    }
+}
 export default class UserData extends DataBase{
     uid:number = 0
     centerIp:string  = ""
-    offLineReReqInfoList:string[] = ["inviteRewardInfo"]
     constructor(){
-        super(["assetInfo","roleInfo","roomInfo","inviteRewardInfo"]);
+        super(dataKeyCfg);
     }
     setLoginData(loginData:I_loginRes){
         this.uid = loginData.uid,
@@ -15,16 +33,16 @@ export default class UserData extends DataBase{
         delete loginData.centerIp;
         this.setInfo("roleInfo",loginData)
     }
-    getRoleInfo(target:CompBase):Promise<I_roleInfo>{
-        return this.getInfo("roleInfo",target)
+    getRoleInfo(callBack:(any)=>void,target:CompBase){
+        this.getInfo("roleInfo",callBack,target)
     }
-    getRoomInfo(target:CompBase):Promise<I_roomInfo>{
-        return this.getInfo("roomInfo",target)
+    getRoomInfo(callBack:(any)=>void,target:CompBase){
+        this.getInfo("roomInfo",callBack,target)
     }
-    getAssetInfo(target:CompBase):Promise<I_assetInfo>{
-        return this.getInfo("assetInfo",target)
+    getAssetInfo(callBack:(any)=>void,target:CompBase){
+        this.getInfo("assetInfo",callBack,target)
     }
-    getInviteRewardInfo(target:CompBase):Promise<I_inviteReward>{
-        return this.getInfo("inviteRewardInfo",target)
+    getInviteRewardInfo(callBack:(any)=>void,target:CompBase){
+        this.getInfo("inviteRewardInfo",callBack,target)
     }
 }

@@ -35,6 +35,7 @@ const TimeManager_1 = require("../manager/TimeManager");
 const PlatformManager_1 = require("../manager/PlatformManager");
 const SqlManager_1 = require("../manager/SqlManager");
 const EventManager_1 = require("../manager/EventManager");
+const ConfigManager_1 = require("../manager/ConfigManager");
 class GameServerBase {
     constructor(app) {
         this.clientNum = 0;
@@ -48,6 +49,7 @@ class GameServerBase {
         this.platformMgr = PlatformManager_1.PlatformManager.getInstance();
         this.eventMgr = EventManager_1.EventManager.getInstance();
         this.sqlMgr = SqlManager_1.SqlManager.getInstance();
+        this.configMgr = ConfigManager_1.ConfigManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
         this.setConfig();

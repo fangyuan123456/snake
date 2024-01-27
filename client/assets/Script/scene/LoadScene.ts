@@ -23,6 +23,9 @@ export default class LoadScene extends SceneBase {
     }
     start () {
         super.start();
+        game.configMgr.getCfg("inviteReward",(data)=>{
+            console.log(data);
+        },this)
         let loadingCfg = game.platFormMgr.getLoadPercentCfg();
         this.progressComp.startRun(loadingCfg,this);
     }
@@ -37,9 +40,9 @@ export default class LoadScene extends SceneBase {
                 game.netMgr.sendHttpRequest(data,"login",(loginData:I_loginRes)=>{
                     game.userData.setLoginData(loginData);
                     game.netMgr.createSocket(game.userData.centerIp)
-                    game.userData.getRoleInfo(this).then(()=>{
+                    game.userData.getRoleInfo(()=>{
                         next();
-                    })
+                    },this)
                 })
             }else{
                 game.alertMgr.showTiShiBox({content:"code错误!",btnCallBackList:[
@@ -50,14 +53,14 @@ export default class LoadScene extends SceneBase {
         });
     }
     changeScene(next){
-        game.userData.getRoomInfo(this).then((data)=>{
+        game.userData.getRoomInfo((data)=>{
             if(data.roomId){
                 game.sceneMgr.changeScene("GameScene",true);
             }else{
                 game.sceneMgr.changeScene("MenuScene",true);
             }
             next();
-        })
+        },this)
     }
     // update (dt) {}
 }

@@ -14,9 +14,9 @@ const {ccclass, property} = cc._decorator;
 export default class DiamondPanel extends CompBase {
     start () {
         super.start();
-        game.userData.getAssetInfo(this).then((asset:I_assetInfo)=>{
+        game.userData.getAssetInfo((asset:I_assetInfo)=>{
             this.updateDiamond(asset.diamond);
-        })
+        },this)
        
     }
     updateDiamond(num){

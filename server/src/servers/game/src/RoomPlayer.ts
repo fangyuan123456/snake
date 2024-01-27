@@ -9,23 +9,25 @@ export class RoomPlayer{
     public isInit:boolean = false;
     constructor(uid:number){
         this.uid = uid;
-        let callInitResolve=()=>{
-            for(let i in this.initResolveList){
-                let resolve = this.initResolveList[i];
-                resolve(this);
-            }
-        }
         game.app.rpc(game.utilsMgr.getSid(this.uid,serverType.info)).info.main.getRoomPlayerInfo(this.uid).then((data:any)=>{
             this.role = data.role;
             this.isInit = true;
-            callInitResolve();
+            this.callInitResolve();
         })
+    }
+    callInitResolve(){
+        if(this.isInit){
+            for(let i = this.initResolveList.length-1;i>=0;i--){
+                let resolve = this.initResolveList[i];
+                resolve(this);
+                this.initResolveList.splice(Number(i),1);
+            }
+        }
     }
     getMyInfo():Promise<RoomPlayer>{
         return new Promise((resolve,reject)=>{
-            if(this.isInit){
-                resolve(this);
-            }
+            this.initResolveList.push(resolve);
+            this.callInitResolve();
         })
     }
 }

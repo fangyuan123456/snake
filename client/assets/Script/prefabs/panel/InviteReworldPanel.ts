@@ -14,9 +14,9 @@ const {ccclass, property} = cc._decorator;
 export default class InviteReworldPanel extends PanelBase {
     start () {
         super.start();
-        game.userData.getInviteRewardInfo(this).then((data)=>{
+        game.userData.getInviteRewardInfo((data)=>{
             this.initPanel(data);
-        })
+        },this)
     }
     initPanel(data:I_inviteReward){
         this.initPlayerPanel(data.getRewardIndexs);

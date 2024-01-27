@@ -14,9 +14,9 @@ const {ccclass, property} = cc._decorator;
 export default class MoneyPanel extends CompBase {
     start () {
         super.start();
-        game.userData.getAssetInfo(this).then((asset:I_assetInfo)=>{
+        game.userData.getAssetInfo((asset:I_assetInfo)=>{
             this.updateMoney(asset.money);
-        })
+        },this)
        
     }
     updateMoney(num){

@@ -18,6 +18,7 @@ import { PushMsgManager } from "./manager/PushMsgManager";
 import { RoomManager } from "./manager/RoomManager";
 import { AduintManager } from "./manager/AduintManager";
 import GameData from "./data/GameData";
+import { ConfigManager } from "./manager/ConfigManager";
 
 declare global {
     namespace globalThis {
@@ -47,6 +48,7 @@ export class Game extends SingleBase{
     roomMgr: RoomManager;
     aduintMgr: AduintManager;
     gameData: GameData;
+    configMgr: ConfigManager;
     constructor(){
         super();
         globalThis.game = this;
@@ -66,6 +68,7 @@ export class Game extends SingleBase{
         this.pushMsgMgr = PushMsgManager.getInstance();
         this.roomMgr = RoomManager.getInstance();
         this.aduintMgr = AduintManager.getInstance();
+        this.configMgr = ConfigManager.getInstance();
     
 
         this.userData = UserData.getInstance();

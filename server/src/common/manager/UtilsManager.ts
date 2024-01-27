@@ -2,6 +2,7 @@ import { Application, ServerInfo } from "mydog";
 import { SingleBase } from "../base/SingleBase";
 import { serverType } from "../config/GameCfg";
 import * as path from "path";
+import { Dic } from "../interface/ICommon";
 
 export class UtilsManager extends SingleBase{
     getSid(uid: number,serverType:serverType) {
@@ -39,5 +40,27 @@ export class UtilsManager extends SingleBase{
             map[i] = newMap[i];
         }
         return map;
+    }
+    deepCopy(obj: any): any {
+        if (typeof obj !== 'object' || obj === null) {
+          return obj;
+        }
+        let copy;
+        if (Array.isArray(obj)) {
+          copy = [];
+      
+          for (let i = 0; i < obj.length; i++) {
+            copy[i] = this.deepCopy(obj[i]);
+          }
+        } else {
+          copy = {};
+          for (let key in obj) {
+            if (obj.hasOwnProperty(key)) {
+              //@ts-ignore
+              copy[key] = this.deepCopy(obj[key]);
+            }
+          }
+        }
+        return copy;
     }
 }

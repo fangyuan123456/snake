@@ -1,0 +1,72 @@
+{
+    "1": {
+        "id": 1,
+        "inviteNum": 1,
+        "reward": {
+            "3": "5*A",
+            "5": "Layer('level',B)*A"
+        }
+    },
+    "2": {
+        "id": 2,
+        "inviteNum": 3,
+        "reward": {
+            "3": "5*A",
+            "6": "Layer('level',B)*A"
+        }
+    },
+    "3": {
+        "id": 3,
+        "inviteNum": 5,
+        "reward": {
+            "3": "5*A",
+            "7": "Layer('level',B)*A"
+        }
+    },
+    "4": {
+        "id": 4,
+        "inviteNum": 10,
+        "reward": {
+            "3": "5*A",
+            "8": "Layer('level',B)*A"
+        }
+    },
+    "5": {
+        "id": 5,
+        "inviteNum": 15,
+        "reward": {
+            "3": "5*A",
+            "9": "Layer('level',B)*A"
+        }
+    },
+    "6": {
+        "id": 6,
+        "inviteNum": 20,
+        "reward": {
+            "3": "5*A",
+            "10": "Layer('level',B)*A"
+        }
+    },
+    "7": {
+        "id": 7,
+        "inviteNum": 25,
+        "reward": {
+            "3": "5*A",
+            "11": "Layer('level',B)*A"
+        }
+    },
+    "8": {
+        "id": 8,
+        "inviteNum": 30,
+        "reward": {
+            "3": "5*A",
+            "12": "Layer('level',B)*A"
+        }
+    },
+    "var": {
+        "reward": [
+            "A",
+            "B"
+        ]
+    }
+}
