@@ -1,10 +1,9 @@
 import { Dic } from "../interface/I_Common";
-
 export default class TableBase {
     tbName: string;
     orginData: any;
     data:any;
-    resolveList:any[] = [];
+    getCfgCallBackList:any[] = [];
     tbVarKeyList:string[] = [];
     varCond:Dic<any> = {};
     constructor(tbName:string) {
@@ -13,9 +12,11 @@ export default class TableBase {
     private setOrginData(){
         cc.resources.load("tableCfg/"+this.tbName, (err,jsonAsset:cc.JsonAsset)=> {
             this.orginData = jsonAsset.json;
-            this.varCond = this.orginData["var"];
-            this.setTbVarKeyList();
-            delete this.orginData["var"];
+            if(this.orginData["var"]){
+                this.varCond = this.orginData["var"];
+                this.setTbVarKeyList();
+                delete this.orginData["var"];
+            }
             this.setData();
        })
     }
@@ -28,7 +29,7 @@ export default class TableBase {
             }
         }
     }
-    private  resplceVar(str,varList){
+    private  resplceVar(str:string,varList:string[]){
         return new Promise<number>(async (resolve, reject) => {
             for(let i in varList){
                 if(game.configMgr.tbVar[varList[i]]){
@@ -43,8 +44,8 @@ export default class TableBase {
                 if(match){
                     for(let j =  0;j<match.length;j++){
                         let matchStr:string = match[j];
-                        let newStr = matchStr.replace(i,"game.configMgr."+game.configMgr.magicKeyCfg[i])
-                        let evalData =await eval(newStr)
+                        let funcStr = matchStr.replace(i,"game.configMgr."+game.configMgr.magicKeyCfg[i])
+                        let evalData =await eval(funcStr)
                         str = str.replace(matchStr,evalData+"")
                     }  
                 }
@@ -52,7 +53,10 @@ export default class TableBase {
             resolve(eval(str));
         })
     }
-    public async setData(){
+    onVarChange(){
+        this.setData();
+    }
+    async setData(){
         this.data = {};
         for(let i in this.orginData){
             this.data[i] = game.utilsMgr.deepCopy(this.orginData[i]);
@@ -67,28 +71,32 @@ export default class TableBase {
                 }
             }
         }
-        this.callResolveFunc();
+        this.callGetCfgFunc();
     }
-    private callResolveFunc(){
+    private callGetCfgFunc(){
         let data = this.data;
         if(data){
-            for(let i = this.resolveList.length-1;i>=0;i--){
-                let target = this.resolveList[i].target;
-                let callBack = this.resolveList[i].callBack;
+            for(let i = this.getCfgCallBackList.length-1;i>=0;i--){
+                let target = this.getCfgCallBackList[i].target;
+                let callBack = this.getCfgCallBackList[i].callBack;
                 if(!target || (target&&target.node && target.node.parent)){
                     callBack(data);
+                    if(this.getCfgCallBackList[i].isCallOnce){
+                        this.getCfgCallBackList.splice(i,1);
+                    }
                 }else{
-                    this.resolveList.splice(i,1);
+                    this.getCfgCallBackList.splice(i,1);
                 }
             } 
         }
     }
-    getData(callBack:(data:any)=>void,target?:any){
-        this.resolveList.push({
+    getData(callBack:(data:any)=>void,target?:cc.Node,isCallOnce?:boolean){
+        this.getCfgCallBackList.push({
             target:target,
-            callBack:callBack
+            callBack:callBack,
+            isCallOnce:isCallOnce
         });
-        this.callResolveFunc();
+        this.callGetCfgFunc();
         if(!this.orginData){
             this.setOrginData();
         }

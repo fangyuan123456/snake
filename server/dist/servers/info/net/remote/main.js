@@ -35,13 +35,16 @@ class Remote extends RemoteBase_1.default {
             player.inviteReward.updateInviteData(inviteUid);
         }
         else {
-            game.sqlMgr.select(SqlManager_1.TableName.INVITE_REWARD, { uid: uid }).then((data) => {
-                let inviteUids = data.inviteUids || "";
-                let inviteData = JSON.parse(inviteUids);
-                if (inviteData.indexOf(inviteUid) < 0) {
-                    inviteData.push(inviteUid);
+            game.sqlMgr.select(SqlManager_1.TableName.INVITE_REWARD, { uid: uid }).then((allData) => {
+                let data = allData[0];
+                if (data) {
+                    let inviteUids = data.inviteUids || "";
+                    let inviteData = JSON.parse(inviteUids);
+                    if (inviteData.indexOf(inviteUid) < 0) {
+                        inviteData.push(inviteUid);
+                        game.sqlMgr.update(SqlManager_1.TableName.INVITE_REWARD, { inviteUids: inviteData }, { uid: uid });
+                    }
                 }
-                game.sqlMgr.update(SqlManager_1.TableName.INVITE_REWARD, { inviteUids: inviteData }, { uid: uid });
             });
         }
     }

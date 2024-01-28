@@ -12,23 +12,32 @@ const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class InviteReworldPanel extends PanelBase {
+    getRewardIndexs: number[];
+    inviteUids: number[];
+    rewardCfg: any;
     start () {
         super.start();
         game.userData.getInviteRewardInfo((data)=>{
-            this.initPanel(data);
+            this.getRewardIndexs = data.getRewardIndexs;
+            this.inviteUids = data.inviteUids;
+            this.initPanel();
+        },this)
+        game.configMgr.getCfg("inviteReward",(data)=>{
+            this.rewardCfg = data;
+            this.initReWorldPanel();
         },this)
     }
-    initPanel(data:I_inviteReward){
-        this.initPlayerPanel(data.getRewardIndexs);
-        this.initReWorldPanel(data.inviteUids);
+    initPanel(){
+        this.initPlayerPanel();
+        this.initReWorldPanel();
     }
-    initPlayerPanel(uids:number[]){
+    initPlayerPanel(){
         let playerNodeArr=cc.find("panel/bg/playerPanel/view/content",this.node).children;
         for(let i=0;i<playerNodeArr.length;i++){
             if(i<6){
                 let icon=cc.find("iconBg/mask/icon",playerNodeArr[i]);
                 icon.getComponent(cc.Sprite).spriteFrame=null;
-                if(!uids[i]){
+                if(!this.inviteUids[i]){
                     playerNodeArr[i].on(cc.Node.EventType.TOUCH_END,this.btn_share.bind(this));
                 }
             }else{
@@ -36,87 +45,64 @@ export default class InviteReworldPanel extends PanelBase {
                 i--;
             }
         }
-        for(let j in uids){
+        for(let j in this.inviteUids){
             let _node=playerNodeArr[j];
             if(!_node){
                 _node=cc.instantiate(playerNodeArr[0]);
                 cc.find("panel/bg/playerPanel/view/content",this.node).addChild(_node);
             }
             let icon=cc.find("iconBg/mask/icon",_node);
-            // GlobalScript.loadHttpIcon(icon,playerArr[i].avatarUrl);
+            game.resMgr.setSpImg(icon,"http://127.0.0.1:8080/fileDownLoad/default.png",null,true);
         }
+        cc.find("panel/bg/inviteNumPanel/inviteNum",this.node).getComponent(cc.Label).string=this.inviteUids.length+"";
     }
-    private initReWorldPanel(getRewardIndexs:number[]){
-        // let inviteNum=this.configData.player.length;
-        // cc.find("panel/bg/inviteNumPanel/inviteNum",this.node).getComponent(cc.Label).string=inviteNum;
-        // let rewroldNodeArr=cc.find("panel/bg/reworldPanel/view/content",this.node).children;
-        // for(let i=0;i<rewroldNodeArr.length;i++){
-        //     let _data=this._reworldDataArr[i];
-        //     if(!_data){
-        //         rewroldNodeArr.splice(i,1);
-        //         i--;
-        //     }
-        // }
-        // for(let i in this._reworldDataArr){
-        //     let _item=rewroldNodeArr[i];
-        //     if(!_item){
-        //         _item=cc.instantiate(rewroldNodeArr[0]);
-        //         cc.find("panel/bg/reworldPanel/view/content",this.node).addChild(_item);
-        //     }
-        //     _item._tag=i;
-        //     _item.active=true;
-        //     cc.find("btn",_item).on(cc.Node.EventType.TOUCH_END,(event)=>{
-        //         this.btn_getReworld(event,Number(i));
-        //     });
-        // }
+    private initReWorldPanel(){
+        if(!this.rewardCfg || !this.inviteUids){
+            return;
+        }
+        let rewroldNodeArr=cc.find("panel/bg/reworldPanel/view/content",this.node).children;
+        for(let i=0;i<rewroldNodeArr.length;i++){
+            let _data=this.rewardCfg[i+1];
+            if(!_data){
+                rewroldNodeArr.splice(i,1);
+                i--;
+            }
+        }
+        for(let i in this.rewardCfg){
+            let _item=rewroldNodeArr[Number(i)-1];
+            if(!_item){
+                _item=cc.instantiate(rewroldNodeArr[0]);
+                cc.find("panel/bg/reworldPanel/view/content",this.node).addChild(_item);
+            }
+            _item.active=true;
+            cc.find("btn",_item).on(cc.Node.EventType.TOUCH_END,(event)=>{
+                this.btn_getReworld(event,Number(i));
+            });
+        }
 
-        // for(let i in this._reworldDataArr){
-        //     let _data=this._reworldDataArr[i];
-        //     let _item=rewroldNodeArr[i];
-        //     cc.find("numLabel",_item).getComponent(cc.Label).string=inviteNum+"/"+_data.inviteNum;
-        //     let _str="";
-        //     cc.find("rewroldBg",_item).active=false;
-        //     cc.find("propPanel",_item).active=false;
-        //     let itemIndex=0;
-        //     for(let j in this._reworldDataArr[i].prop){
-        //         _str=this._reworldDataArr[i].prop[j].num;
-        //         if(j>2){
-        //             cc.find("propPanel",_item).active=true;
-        //             let propNodeArr=cc.find("propPanel",_item).children;
-        //             let item=propNodeArr[itemIndex];
-        //             if(!item){
-        //                 item=cc.instantiate(propNodeArr[0])
-        //                 cc.find("propPanel",_item).addChild(item)
-        //             }
-        //             GlobalScript.loadSp(cc.find("sp",item),"loadRes/propPic/prop"+j);
-        //             cc.find("num",item).getComponent(cc.Label).string=_str;
-        //             itemIndex++;
-        //         }else{
-        //             cc.find("rewroldBg",_item).active=true;
-        //             GlobalScript.loadSp(cc.find("rewroldBg/rewroldIcon",_item),"loadRes/propPic/prop"+j);
-        //             cc.find("rewroldBg/reworldNum",_item).getComponent(cc.Label).string=_str;
-        //         }
-        //     }
-        //     for(let j in this._reworldDataArr[i].havePiFu){
-        //         GlobalScript.loadSp(cc.find("rewroldBg/rewroldIcon",_item),"loadRes/piFuPic/piFu"+j);
-        //         cc.find("rewroldBg/reworldNum",_item).getComponent(cc.Label).string=_str;
-        //     }
-        //     cc.find("btn/state1",_item).active=false;
-        //     cc.find("btn/state2",_item).active=false;
-        //     cc.find("btn/state3",_item).active=false;
-        //     if(inviteNum<_data.inviteNum){
-        //         cc.find("btn",_item).getComponent(cc.Button).interactable=false;
-        //         cc.find("btn/state2",_item).active=true;
-        //     }else{
-        //         if(_data.isGetReworld=="1"){
-        //             cc.find("btn/state3",_item).active=true;
-        //             cc.find("btn",_item).getComponent(cc.Button).interactable=false;
-        //         }else{
-        //             cc.find("btn/state1",_item).active=true;
-        //             cc.find("btn",_item).getComponent(cc.Button).interactable=true;
-        //         }
-        //     }
-        // }
+        for(let i in this.rewardCfg){
+            let _data=this.rewardCfg[i];
+            let _item=rewroldNodeArr[Number(i)-1];
+            cc.find("numLabel",_item).getComponent(cc.Label).string=this.inviteUids.length+"/"+_data.inviteNum;
+            for(let j in _data.reward){
+                game.resMgr.createItem({item:{id:Number(j),num:_data.reward[j]},scale:0.6},cc.find("itemPanel",_item))
+            }
+            cc.find("btn/state1",_item).active=false;
+            cc.find("btn/state2",_item).active=false;
+            cc.find("btn/state3",_item).active=false;
+            if(this.inviteUids.length<_data.inviteNum){
+                cc.find("btn",_item).getComponent(cc.Button).interactable=false;
+                cc.find("btn/state2",_item).active=true;
+            }else{
+                if(_data.isGetReworld=="1"){
+                    cc.find("btn/state3",_item).active=true;
+                    cc.find("btn",_item).getComponent(cc.Button).interactable=false;
+                }else{
+                    cc.find("btn/state1",_item).active=true;
+                    cc.find("btn",_item).getComponent(cc.Button).interactable=true;
+                }
+            }
+        }
     }
 
     btn_share(){

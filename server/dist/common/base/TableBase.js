@@ -19,10 +19,11 @@ class TableBase {
     setOrginData() {
         let jsonData = require("../config/tables/" + this.tbName);
         this.orginData = jsonData;
-        this.varCond = this.orginData["var"];
-        this.setTbVarKeyList();
-        delete this.orginData["var"];
-        this.setData();
+        if (this.orginData["var"]) {
+            this.varCond = this.orginData["var"];
+            this.setTbVarKeyList();
+            delete this.orginData["var"];
+        }
     }
     setTbVarKeyList() {
         for (let i in this.varCond) {
@@ -49,14 +50,17 @@ class TableBase {
                 if (match) {
                     for (let j = 0; j < match.length; j++) {
                         let matchStr = match[j];
-                        let newStr = matchStr.replace(i, "game.configMgr." + game.configMgr.magicKeyCfg[i]);
-                        let evalData = yield eval(newStr);
+                        let funcStr = matchStr.replace(i, "game.configMgr." + game.configMgr.magicKeyCfg[i]);
+                        let evalData = yield eval(funcStr);
                         str = str.replace(matchStr, evalData + "");
                     }
                 }
             }
             resolve(eval(str));
         }));
+    }
+    onVarChange() {
+        this.setData();
     }
     setData() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -86,6 +90,9 @@ class TableBase {
                 let callBack = this.getCfgCallBackList[i].callBack;
                 if (!target || (target && target.node && target.node.parent)) {
                     callBack(data);
+                    if (this.getCfgCallBackList[i].isCallOnce) {
+                        this.getCfgCallBackList.splice(i, 1);
+                    }
                 }
                 else {
                     this.getCfgCallBackList.splice(i, 1);
@@ -93,9 +100,10 @@ class TableBase {
             }
         }
     }
-    getData(callBack, target) {
+    getData(callBack, target, isCallOnce) {
         this.getCfgCallBackList.push({
             target: target,
+            isCallOnce: isCallOnce,
             callBack: callBack
         });
         this.callGetCfgFunc();

@@ -10,6 +10,9 @@ export class HttpManager extends SingleBase{
         super();
         this.loadMoudles();
         this.createHttpServer();
+        if(game.app.serverInfo.isNeedDownLoad){
+            this.createDownLoadServer();
+        }
     }
     loadMoudles(){
         let moduleDir = path.join(game.utilsMgr.getAppPath(),"net/HttpHandler")
@@ -35,15 +38,19 @@ export class HttpManager extends SingleBase{
             res.header('Content-Type', 'application/json;charset=utf-8');
             next();
         });
-        app.get('/img',this.OnGetImageHander.bind(this))
+      
         app.post("*",this.OnGetDataHander.bind(this));
         app.listen(game.app.serverInfo.HttpPort, function () {
             console.log("应用实例，访问地址为 http://%s:%s", game.app.serverInfo.host, game.app.serverInfo.HttpPort)
         })
     }
-    OnGetImageHander(req: Request, res: Response){
-        let pathname=url.parse(req.url).pathname;
-        res.sendFile(game.utilsMgr.getAppPath() + "/fileDownLoad/"+pathname);
+    createDownLoadServer(){
+        app.use(express.static('fileDownLoad'));
+        app.get('/fileDownLoad/*',(req, res)=>{
+            let pathname = url.parse(req.url).pathname!;
+            let fileUrl = path.join(game.utilsMgr.getAppPath(),pathname);
+            res.sendFile(fileUrl)
+        })
     }
     OnGetDataHander(req: Request, res: Response){
         req.on('data',(data:any)=>{

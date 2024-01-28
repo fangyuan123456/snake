@@ -27,13 +27,16 @@ export default class Remote extends RemoteBase {
         if(player && player.inviteReward){
             player.inviteReward.updateInviteData(inviteUid);
         }else{
-            game.sqlMgr.select(TableName.INVITE_REWARD,{uid:uid}).then((data:any)=>{
-                let inviteUids = data.inviteUids || "";
-                let inviteData = JSON.parse(inviteUids);
-                if(inviteData.indexOf(inviteUid)<0){
-                    inviteData.push(inviteUid) 
+            game.sqlMgr.select(TableName.INVITE_REWARD,{uid:uid}).then((allData:any)=>{
+                let data = allData[0];
+                if(data){
+                    let inviteUids = data.inviteUids || "";
+                    let inviteData = JSON.parse(inviteUids);
+                    if(inviteData.indexOf(inviteUid)<0){
+                        inviteData.push(inviteUid) 
+                        game.sqlMgr.update(TableName.INVITE_REWARD,{inviteUids:inviteData},{uid:uid})
+                    }
                 }
-                game.sqlMgr.update(TableName.INVITE_REWARD,{inviteUids:inviteData},{uid:uid})
             })
         }
     }

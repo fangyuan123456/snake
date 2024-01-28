@@ -22,7 +22,7 @@ console.log("\n");
 function parseBuffToJson(buff, outputDir, outputClientDir, filename) {
     var sheets = xlsx.parse(buff, { "raw": false });
     var lists = sheets[0].data;
-    if (lists.length <= 5) {
+    if (lists.length <= 4) {
         return;
     }
     var keyarr = lists[1];

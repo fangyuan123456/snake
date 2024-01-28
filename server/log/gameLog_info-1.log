@@ -770,3 +770,244 @@
 [2024-01-27T00:38:08.385] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
 [2024-01-27T00:38:08.411] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
 [2024-01-27T00:38:42.622] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-27T23:56:21.079] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-0
+[2024-01-27T23:56:21.082] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-28T15:13:17.005] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-01-28T15:13:17.008] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-28T15:14:07.560] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-28T16:48:09.253] [ERROR] gameLog - SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\remote\main.js:40:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-01-28T16:48:40.505] [ERROR] gameLog - SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\remote\main.js:40:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-01-28T16:49:29.520] [ERROR] gameLog - SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\remote\main.js:40:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-01-28T16:49:29.523] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-28T16:49:29.525] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-28T16:50:22.577] [ERROR] gameLog - SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\servers\info\net\remote\main.js:40:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-01-28T16:52:49.626] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:52:49.632] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:52:49.637] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:52:54.071] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T16:53:02.212] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:53:02.213] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:53:02.214] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:53:05.664] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T16:54:19.505] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:54:19.506] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:54:19.506] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:54:23.780] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T17:05:30.785] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-01-28T17:05:30.786] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-28T17:06:03.190] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-28T20:04:58.026] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:04:58.031] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","uid":17,"openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:04:58.063] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:05:00.035] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:18:13.407] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:18:13.408] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:18:13.408] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:19:27.311] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:19:27.312] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:19:27.313] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:19:37.510] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:19:57.761] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:19:57.762] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:19:57.763] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:20:00.157] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:20:08.839] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:20:08.840] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:20:08.840] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:20:10.371] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:20:28.101] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:20:28.102] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:20:28.102] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:20:30.113] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:21:02.832] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:21:02.833] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:21:02.833] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:21:05.848] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:23:25.193] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:23:25.194] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:23:25.195] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:23:27.607] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:23:40.228] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:23:40.229] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:23:40.230] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:23:42.367] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:35:47.496] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:35:47.497] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:35:47.497] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:35:52.444] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:38:22.638] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:38:22.639] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:38:22.639] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:38:24.658] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:39:28.729] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:39:28.730] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:39:28.730] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:39:34.944] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:40:05.051] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:40:05.052] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:40:05.052] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:40:07.424] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:41:35.859] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:41:35.860] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:41:35.860] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:41:37.887] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:43:28.339] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:43:28.340] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:43:28.341] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:43:30.236] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:50:41.894] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:50:41.895] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:50:41.895] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:50:45.351] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:51:10.151] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:51:10.152] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:51:10.153] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:51:15.102] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:51:57.428] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:51:57.429] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:51:57.429] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:51:59.914] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T20:53:46.975] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:53:46.976] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:53:46.977] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:09:30.369] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:09:30.370] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:09:30.370] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:13:13.009] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:13:13.010] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:13:13.010] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:13:52.793] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:13:52.794] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:13:52.795] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:13:54.757] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:14:06.499] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:14:06.499] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:14:06.499] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:14:09.279] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:14:27.061] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:14:27.062] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:14:27.063] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:14:28.939] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:17:09.825] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:17:09.825] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:17:09.825] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:17:11.760] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:17:51.999] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:17:52.000] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:17:52.000] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:17:56.428] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:19:08.181] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:19:08.182] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:19:08.182] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:19:13.582] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:19:13.582] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:19:13.583] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:19:16.748] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:20:44.780] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:20:44.781] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:20:44.781] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:20:47.268] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:21:23.365] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:21:23.365] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:21:23.365] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:21:26.186] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:21:57.076] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:21:57.077] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:21:57.077] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:21:58.886] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:25:19.737] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:25:19.738] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:25:19.738] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:25:21.763] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:25:30.971] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:25:30.972] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:25:30.972] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:25:39.538] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:26:01.301] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:26:01.302] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:26:01.303] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:26:05.344] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:26:37.344] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:26:37.345] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:26:37.345] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:26:39.126] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:27:02.905] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:27:02.907] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:27:02.908] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:27:06.929] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:30:51.170] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:30:51.170] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:30:51.171] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:31:30.329] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:32:58.013] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:32:58.014] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:32:58.014] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:33:00.236] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:34:38.014] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:34:38.015] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:34:38.015] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:34:40.447] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:37:32.496] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:37:32.496] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:37:32.497] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:37:36.032] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:39:08.053] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:39:08.054] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:39:08.054] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:40:23.274] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:40:23.275] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:40:23.275] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:40:24.983] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:40:44.639] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:40:44.640] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:40:44.640] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:40:48.017] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:41:19.453] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:41:19.453] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:41:19.454] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:41:21.667] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-01-28T21:44:06.570] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:44:06.571] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:44:06.571] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:44:10.415] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:44:10.416] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:44:10.416] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:44:16.824] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:44:16.825] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:44:16.825] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:44:46.879] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:44:46.880] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:44:46.880] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:45:28.895] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:45:28.896] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:45:28.896] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:46:19.896] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:46:19.897] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:46:19.897] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:48:02.289] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:48:02.289] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:48:02.289] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:48:41.118] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:48:41.118] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:48:41.119] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:49:14.379] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:49:14.380] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:49:14.380] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:49:49.257] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:49:49.257] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:49:49.258] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T21:49:54.190] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T21:49:54.191] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T21:49:54.191] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_17","avatarUrl":"","openId":"fy1","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}

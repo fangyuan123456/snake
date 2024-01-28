@@ -31,7 +31,7 @@ console.log("\n");
 function parseBuffToJson(buff: Buffer, outputDir: string, outputClientDir: string, filename: string) {
     let sheets = xlsx.parse(buff, { "raw": false });
     let lists: any = sheets[0].data;
-    if (lists.length <= 3) {
+    if (lists.length <= 4) {
         return;
     }
     let keyarr = lists[1];

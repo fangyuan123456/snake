@@ -20,6 +20,14 @@ export class ResManager extends SingleBase{
             })
         })
     }
+    async loadImgRemote(url:string): Promise<cc.SpriteFrame>{
+        return new Promise(async (resolve, reject)=>{
+            cc.assetManager.loadRemote(url,(err, data:any)=>{
+                let sp = new cc.SpriteFrame(data)
+                resolve(sp);
+            })
+        })
+    }
     async loadBundle(bundleName:string): Promise<cc.AssetManager.Bundle>{
         return new Promise((resolve, reject)=>{
             let bundle = cc.assetManager.getBundle(bundleName);
@@ -42,13 +50,22 @@ export class ResManager extends SingleBase{
             return bundle.get<T>(url);
         }
     }
-    setSpImg(sp:cc.Node,url:string,callBack?:()=>void){
-        this.loadRes<cc.SpriteFrame>(url).then((spriteFrame)=>{
-            sp.getComponent(cc.Sprite).spriteFrame = spriteFrame
-            if(callBack){
-                callBack()
-            }
-        })
+    setSpImg(sp:cc.Node,url:string,callBack?:()=>void,isRemote?:boolean){
+        if(isRemote){
+            this.loadImgRemote(url).then((spriteFrame)=>{
+                sp.getComponent(cc.Sprite).spriteFrame = spriteFrame
+                if(callBack){
+                    callBack()
+                }
+            })
+        }else{
+            this.loadRes<cc.SpriteFrame>(url).then((spriteFrame)=>{
+                sp.getComponent(cc.Sprite).spriteFrame = spriteFrame
+                if(callBack){
+                    callBack()
+                }
+            })
+        }
     }
     createItem(data:{item:I_item,scale?:number},parent:cc.Node){
         this.loadRes<cc.Prefab>("prefabs/Item").then((prefab:cc.Prefab)=>{

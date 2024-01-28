@@ -24,7 +24,7 @@ class ConfigManager extends SingleBase_1.SingleBase {
             let tbVarKeyList = this.tables[i].tbVarKeyList;
             for (let j in tbVarKeyList) {
                 if (tbVar[tbVarKeyList[j]]) {
-                    this.tables[i].setData();
+                    this.tables[i].onVarChange();
                 }
             }
         }
@@ -49,7 +49,7 @@ class ConfigManager extends SingleBase_1.SingleBase {
                     }
                 }
                 resolve(dataValue);
-            });
+            }, null, true);
         });
     }
 }

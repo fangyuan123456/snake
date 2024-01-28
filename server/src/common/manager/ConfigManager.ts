@@ -19,16 +19,16 @@ export class ConfigManager extends SingleBase{
             let tbVarKeyList = this.tables[i].tbVarKeyList;
             for(let j in tbVarKeyList){
                 if(tbVar[tbVarKeyList[j]]){
-                    this.tables[i].setData();
+                    this.tables[i].onVarChange();
                 }
             }
         }
     }
-    getCfg(tbName:string,target:any){
+    getCfg(tbName:string,callBack:(data:any)=>void,target:any){
         if(!this.tables[tbName]){
             this.tables[tbName] = new TableBase(tbName);
         }
-        return this.tables[tbName].getData(target);
+        return this.tables[tbName].getData(callBack,target);
     }
     getLayer(key:string,value:number,tbName:string = "userLayer"){
         if(!this.tables[tbName]){
@@ -44,7 +44,7 @@ export class ConfigManager extends SingleBase{
                     }
                 }
                 resolve(dataValue);
-            })
+            },null,true)
         })
     }
 }

@@ -2718,3 +2718,162 @@
 [2024-01-27T00:38:39.240] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
 [2024-01-27T00:38:39.289] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
 [2024-01-27T00:38:39.294] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-27T23:56:50.521] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T23:56:50.524] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","uid":16,"openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-27T23:56:50.527] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-27T23:56:50.529] [ERROR] gameLog - Error: Handshake inactivity timeout
+    at Handshake.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:160:17)
+    at Handshake.emit (node:events:514:28)
+    at Handshake._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:124:8)
+    at Timer._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Timer.js:32:23)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  code: 'PROTOCOL_SEQUENCE_TIMEOUT',
+  fatal: true,
+  timeout: 10000
+}
+[2024-01-27T23:56:50.530] [ERROR] gameLog - Error: Handshake inactivity timeout
+    at Handshake.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:160:17)
+    at Handshake.emit (node:events:514:28)
+    at Handshake._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:124:8)
+    at Timer._onTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Timer.js:32:23)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Role.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\common\base\SqlBase.js:110:42)
+    at Generator.next (<anonymous>) {
+  code: 'PROTOCOL_SEQUENCE_TIMEOUT',
+  fatal: true,
+  timeout: 10000
+}
+[2024-01-27T23:56:50.532] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-1
+[2024-01-27T23:56:50.532] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-27T23:56:50.532] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: game-0
+[2024-01-27T23:56:50.532] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-27T23:56:50.533] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: game-1
+[2024-01-27T23:56:50.533] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-27T23:56:50.534] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T23:56:50.538] [ERROR] gameLog - [monitor.ts] socket closed, try to reconnect master later
+[2024-01-27T23:56:50.539] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-27T23:56:50.539] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
+[2024-01-27T23:56:50.540] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0
+[2024-01-27T23:56:50.542] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-27T23:56:50.543] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-27T23:56:50.543] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-27T23:56:50.544] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-27T23:56:55.678] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T23:56:55.678] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T23:56:55.679] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","uid":16,"openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-27T23:58:45.617] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T23:58:45.618] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T23:58:45.618] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","uid":16,"openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-27T23:59:09.872] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-27T23:59:09.873] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-27T23:59:09.873] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","uid":16,"openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T00:01:11.580] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T00:01:11.580] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T00:01:11.581] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","uid":16,"openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T14:29:27.541] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T14:29:27.545] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T14:29:27.547] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T14:29:50.086] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-28T14:30:08.233] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T14:30:08.353] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T14:30:08.373] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T14:30:10.964] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T14:30:10.965] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T14:30:10.966] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T14:30:20.778] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T14:30:20.779] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T14:30:20.779] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T15:13:15.469] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-01-28T15:13:15.473] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-28T15:14:07.560] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-28T16:16:10.273] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:16:10.279] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","uid":16,"openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:16:10.313] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:16:36.661] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:16:36.662] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:16:36.662] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:17:00.634] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-28T16:17:12.029] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:17:12.030] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:17:12.030] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:25:14.348] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:25:14.349] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:25:14.349] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:46:40.170] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:46:40.170] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:46:40.171] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:46:43.373] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-28T16:46:58.048] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:46:58.048] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:46:58.049] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:47:00.250] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-28T16:47:28.257] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:47:28.258] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:47:28.258] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:47:30.652] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-28T16:48:09.101] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:48:19.231] [DEBUG] gameLog - cmd:2,msg:{}
+[2024-01-28T16:48:19.238] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-28T16:48:40.492] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:48:40.493] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-28T16:48:40.493] [DEBUG] gameLog - cmd:2,msg:{}
+[2024-01-28T16:48:59.676] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:48:59.677] [DEBUG] gameLog - cmd:1,msg:{"uid":0,"money":0,"diamond":0,"items":""}
+[2024-01-28T16:48:59.677] [DEBUG] gameLog - cmd:2,msg:{}
+[2024-01-28T16:50:17.657] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:50:17.657] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:50:17.658] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:50:52.271] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:50:52.272] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:50:52.272] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:51:04.094] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-1
+[2024-01-28T16:51:04.095] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
+[2024-01-28T16:51:17.832] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:51:17.836] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","uid":16,"openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:51:17.874] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:52:16.243] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:52:16.247] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","uid":16,"openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T16:52:16.256] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:52:24.692] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-28T16:52:37.813] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T16:52:37.814] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T16:52:37.815] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T17:05:16.685] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-01-28T17:05:16.686] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-28T17:06:03.190] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-28T20:04:26.899] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:04:26.902] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","uid":16,"openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:04:26.905] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:04:28.675] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:04:28.676] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:04:28.676] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:04:31.601] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-28T20:04:46.747] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:04:46.748] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:04:46.748] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-28T20:04:48.921] [DEBUG] gameLog - cmd:3,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-28T20:39:25.674] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
+[2024-01-28T20:39:25.675] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-28T20:39:25.675] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}

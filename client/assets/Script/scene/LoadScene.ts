@@ -23,9 +23,6 @@ export default class LoadScene extends SceneBase {
     }
     start () {
         super.start();
-        game.configMgr.getCfg("inviteReward",(data)=>{
-            console.log(data);
-        },this)
         let loadingCfg = game.platFormMgr.getLoadPercentCfg();
         this.progressComp.startRun(loadingCfg,this);
     }

@@ -19542,3 +19542,359 @@
 [2024-01-27T00:37:21.004] [DEBUG] gameLog - undefined
 [2024-01-27T00:38:08.020] [DEBUG] gameLog - undefined
 [2024-01-27T00:38:38.999] [DEBUG] gameLog - undefined
+[2024-01-27T23:54:31.761] [DEBUG] gameLog - undefined
+[2024-01-27T23:56:21.079] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: info-0
+[2024-01-27T23:56:21.080] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-27T23:56:53.542] [DEBUG] gameLog - undefined
+[2024-01-27T23:58:45.447] [DEBUG] gameLog - undefined
+[2024-01-27T23:59:09.698] [DEBUG] gameLog - undefined
+[2024-01-27T23:59:26.931] [DEBUG] gameLog - undefined
+[2024-01-28T00:00:08.527] [DEBUG] gameLog - undefined
+[2024-01-28T00:01:06.140] [DEBUG] gameLog - undefined
+[2024-01-28T00:07:01.328] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-28T00:07:01.329] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-28T00:07:01.330] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-01-28T00:07:01.330] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1
+[2024-01-28T00:07:01.331] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-28T00:07:01.331] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0
+[2024-01-28T00:07:01.335] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-01-28T14:19:15.662] [DEBUG] gameLog - undefined
+[2024-01-28T14:19:25.662] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Handler.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:45:46)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-28T14:19:25.664] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Handler.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:45:46)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-28T14:20:00.815] [DEBUG] gameLog - undefined
+[2024-01-28T14:20:00.818] [DEBUG] gameLog - undefined
+[2024-01-28T14:20:03.037] [DEBUG] gameLog - undefined
+[2024-01-28T14:20:10.827] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Handler.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:45:46)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-28T14:20:10.829] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Handler.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:45:46)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-28T14:20:10.830] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Handler.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:45:46)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-28T14:20:10.831] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Handler.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:45:46)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-28T14:20:13.044] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Handler.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:45:46)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-28T14:20:13.045] [ERROR] gameLog - Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (node:events:628:28)
+    at Socket.emit (node:events:514:28)
+    at Socket._onTimeout (node:net:571:8)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (D:\fangyuan\gitWrokSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:53:23
+    at new Promise (<anonymous>)
+    at SqlManager.query (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:52:16)
+    at SqlManager.select (D:\fangyuan\gitWrokSpace\snake\server\dist\common\manager\SqlManager.js:138:21)
+    at Handler.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:45:46)
+    at Generator.next (<anonymous>) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+[2024-01-28T14:29:20.359] [DEBUG] gameLog - undefined
+[2024-01-28T14:30:10.701] [DEBUG] gameLog - undefined
+[2024-01-28T14:30:20.605] [DEBUG] gameLog - undefined
+[2024-01-28T15:00:31.878] [ERROR] gameLog - APIConnectionError: Connection error.
+    at OpenAI.makeRequest (D:\fangyuan\gitWrokSpace\snake\server\node_modules\openai\core.js:291:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  status: undefined,
+  headers: undefined,
+  error: undefined,
+  code: undefined,
+  param: undefined,
+  type: undefined,
+  cause: FetchError: request to https://api.openai.com/v1/chat/completions failed, reason: connect ETIMEDOUT 2a03:2880:f12a:83:face:b00c:0:25de:443
+      at ClientRequest.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\node-fetch\lib\index.js:1501:11)
+      at ClientRequest.emit (node:events:514:28)
+      at TLSSocket.socketErrorListener (node:_http_client:501:9)
+      at TLSSocket.emit (node:events:526:35)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    type: 'system',
+    errno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT'
+  }
+}
+[2024-01-28T15:03:43.037] [ERROR] gameLog - APIConnectionError: Connection error.
+    at OpenAI.makeRequest (D:\fangyuan\gitWrokSpace\snake\server\node_modules\openai\core.js:291:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  status: undefined,
+  headers: undefined,
+  error: undefined,
+  code: undefined,
+  param: undefined,
+  type: undefined,
+  cause: FetchError: request to https://api.openai.com/v1/chat/completions failed, reason: connect ETIMEDOUT 2a03:2880:f129:83:face:b00c:0:25de:443
+      at ClientRequest.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\node-fetch\lib\index.js:1501:11)
+      at ClientRequest.emit (node:events:514:28)
+      at TLSSocket.socketErrorListener (node:_http_client:501:9)
+      at TLSSocket.emit (node:events:526:35)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    type: 'system',
+    errno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT'
+  }
+}
+[2024-01-28T15:26:12.779] [ERROR] gameLog - APIConnectionError: Connection error.
+    at OpenAI.makeRequest (D:\fangyuan\gitWrokSpace\snake\server\node_modules\openai\core.js:291:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  status: undefined,
+  headers: undefined,
+  error: undefined,
+  code: undefined,
+  param: undefined,
+  type: undefined,
+  cause: FetchError: request to https://api.openai.com/v1/chat/completions failed, reason: connect ETIMEDOUT 2a03:2880:f10e:83:face:b00c:0:25de:443
+      at ClientRequest.<anonymous> (D:\fangyuan\gitWrokSpace\snake\server\node_modules\node-fetch\lib\index.js:1501:11)
+      at ClientRequest.emit (node:events:514:28)
+      at TLSSocket.socketErrorListener (node:_http_client:501:9)
+      at TLSSocket.emit (node:events:526:35)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    type: 'system',
+    errno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT'
+  }
+}
+[2024-01-28T16:16:09.943] [DEBUG] gameLog - undefined
+[2024-01-28T16:16:36.468] [DEBUG] gameLog - undefined
+[2024-01-28T16:17:11.847] [DEBUG] gameLog - undefined
+[2024-01-28T16:25:04.081] [DEBUG] gameLog - undefined
+[2024-01-28T16:46:37.910] [DEBUG] gameLog - undefined
+[2024-01-28T16:46:39.913] [DEBUG] gameLog - undefined
+[2024-01-28T16:46:57.876] [DEBUG] gameLog - undefined
+[2024-01-28T16:47:28.051] [DEBUG] gameLog - undefined
+[2024-01-28T16:48:08.931] [DEBUG] gameLog - undefined
+[2024-01-28T16:48:40.273] [DEBUG] gameLog - undefined
+[2024-01-28T16:48:59.455] [DEBUG] gameLog - undefined
+[2024-01-28T16:50:17.432] [DEBUG] gameLog - undefined
+[2024-01-28T16:50:52.043] [DEBUG] gameLog - undefined
+[2024-01-28T16:51:17.537] [DEBUG] gameLog - undefined
+[2024-01-28T16:52:15.335] [DEBUG] gameLog - undefined
+[2024-01-28T16:52:15.500] [DEBUG] gameLog - undefined
+[2024-01-28T16:52:15.501] [DEBUG] gameLog - undefined
+[2024-01-28T16:52:15.503] [DEBUG] gameLog - undefined
+[2024-01-28T16:52:37.592] [DEBUG] gameLog - undefined
+[2024-01-28T16:52:49.417] [DEBUG] gameLog - undefined
+[2024-01-28T16:53:01.995] [DEBUG] gameLog - undefined
+[2024-01-28T16:54:19.271] [DEBUG] gameLog - undefined
+[2024-01-28T18:06:27.054] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-01-28T18:06:27.056] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-01-28T20:04:26.540] [DEBUG] gameLog - undefined
+[2024-01-28T20:04:28.445] [DEBUG] gameLog - undefined
+[2024-01-28T20:04:46.528] [DEBUG] gameLog - undefined
+[2024-01-28T20:04:57.752] [DEBUG] gameLog - undefined
+[2024-01-28T20:18:03.149] [DEBUG] gameLog - undefined
+[2024-01-28T20:19:27.133] [DEBUG] gameLog - undefined
+[2024-01-28T20:19:57.558] [DEBUG] gameLog - undefined
+[2024-01-28T20:20:08.630] [DEBUG] gameLog - undefined
+[2024-01-28T20:20:27.914] [DEBUG] gameLog - undefined
+[2024-01-28T20:21:02.623] [DEBUG] gameLog - undefined
+[2024-01-28T20:23:24.976] [DEBUG] gameLog - undefined
+[2024-01-28T20:23:39.996] [DEBUG] gameLog - undefined
+[2024-01-28T20:35:37.192] [DEBUG] gameLog - undefined
+[2024-01-28T20:38:22.407] [DEBUG] gameLog - undefined
+[2024-01-28T20:39:25.468] [DEBUG] gameLog - undefined
+[2024-01-28T20:39:28.536] [DEBUG] gameLog - undefined
+[2024-01-28T20:40:04.867] [DEBUG] gameLog - undefined
+[2024-01-28T20:41:35.688] [DEBUG] gameLog - undefined
+[2024-01-28T20:43:28.108] [DEBUG] gameLog - undefined
+[2024-01-28T20:50:31.590] [DEBUG] gameLog - undefined
+[2024-01-28T20:51:09.920] [DEBUG] gameLog - undefined
+[2024-01-28T20:51:57.191] [DEBUG] gameLog - undefined
+[2024-01-28T20:53:46.742] [DEBUG] gameLog - undefined
+[2024-01-28T21:09:20.089] [DEBUG] gameLog - undefined
+[2024-01-28T21:13:12.821] [DEBUG] gameLog - undefined
+[2024-01-28T21:13:52.603] [DEBUG] gameLog - undefined
+[2024-01-28T21:14:06.313] [DEBUG] gameLog - undefined
+[2024-01-28T21:14:26.846] [DEBUG] gameLog - undefined
+[2024-01-28T21:17:09.673] [DEBUG] gameLog - undefined
+[2024-01-28T21:17:51.840] [DEBUG] gameLog - undefined
+[2024-01-28T21:19:08.000] [DEBUG] gameLog - undefined
+[2024-01-28T21:19:13.420] [DEBUG] gameLog - undefined
+[2024-01-28T21:20:44.591] [DEBUG] gameLog - undefined
+[2024-01-28T21:21:23.172] [DEBUG] gameLog - undefined
+[2024-01-28T21:21:56.882] [DEBUG] gameLog - undefined
+[2024-01-28T21:25:19.574] [DEBUG] gameLog - undefined
+[2024-01-28T21:25:30.783] [DEBUG] gameLog - undefined
+[2024-01-28T21:26:01.139] [DEBUG] gameLog - undefined
+[2024-01-28T21:26:37.151] [DEBUG] gameLog - undefined
+[2024-01-28T21:27:02.703] [DEBUG] gameLog - undefined
+[2024-01-28T21:30:50.978] [DEBUG] gameLog - undefined
+[2024-01-28T21:32:57.781] [DEBUG] gameLog - undefined
+[2024-01-28T21:34:37.809] [DEBUG] gameLog - undefined
+[2024-01-28T21:37:32.329] [DEBUG] gameLog - undefined
+[2024-01-28T21:39:07.837] [DEBUG] gameLog - undefined
+[2024-01-28T21:40:23.096] [DEBUG] gameLog - undefined
+[2024-01-28T21:40:44.446] [DEBUG] gameLog - undefined
+[2024-01-28T21:41:19.190] [DEBUG] gameLog - undefined
+[2024-01-28T21:44:06.388] [DEBUG] gameLog - undefined
+[2024-01-28T21:44:10.240] [DEBUG] gameLog - undefined
+[2024-01-28T21:44:16.665] [DEBUG] gameLog - undefined
+[2024-01-28T21:44:46.686] [DEBUG] gameLog - undefined
+[2024-01-28T21:45:28.719] [DEBUG] gameLog - undefined
+[2024-01-28T21:46:19.692] [DEBUG] gameLog - undefined
+[2024-01-28T21:48:02.088] [DEBUG] gameLog - undefined
+[2024-01-28T21:48:40.902] [DEBUG] gameLog - undefined
+[2024-01-28T21:49:14.228] [DEBUG] gameLog - undefined
+[2024-01-28T21:49:49.089] [DEBUG] gameLog - undefined
+[2024-01-28T21:49:53.977] [DEBUG] gameLog - undefined

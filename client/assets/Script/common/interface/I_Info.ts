@@ -19,6 +19,7 @@ export interface I_roomInfo {
     roomIp:string
 }
 export interface I_item {
+    id?:number,
     num: number,
     level?:number,
     countEndTime?:number

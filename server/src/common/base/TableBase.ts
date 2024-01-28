@@ -14,10 +14,11 @@ export default class TableBase {
     private setOrginData(){
         let jsonData = require("../config/tables/"+this.tbName)
         this.orginData = jsonData;
-        this.varCond = this.orginData["var"];
-        this.setTbVarKeyList();
-        delete this.orginData["var"];
-        this.setData();
+        if(this.orginData["var"]){
+            this.varCond = this.orginData["var"];
+            this.setTbVarKeyList();
+            delete this.orginData["var"];
+        }
     }
     private setTbVarKeyList(){
         for(let i in this.varCond){
@@ -43,8 +44,8 @@ export default class TableBase {
                 if(match){
                     for(let j =  0;j<match.length;j++){
                         let matchStr:string = match[j];
-                        let newStr = matchStr.replace(i,"game.configMgr."+game.configMgr.magicKeyCfg[i])
-                        let evalData =await eval(newStr)
+                        let funcStr = matchStr.replace(i,"game.configMgr."+game.configMgr.magicKeyCfg[i])
+                        let evalData =await eval(funcStr)
                         str = str.replace(matchStr,evalData+"")
                     }  
                 }
@@ -52,7 +53,10 @@ export default class TableBase {
             resolve(eval(str));
         })
     }
-    public async setData(){
+    onVarChange(){
+        this.setData();
+    }
+    async setData(){
         this.data = {};
         for(let i in this.orginData){
             this.data[i] = game.utilsMgr.deepCopy(this.orginData[i]);
@@ -77,15 +81,19 @@ export default class TableBase {
                 let callBack = this.getCfgCallBackList[i].callBack;
                 if(!target || (target&&target.node && target.node.parent)){
                     callBack(data);
+                    if(this.getCfgCallBackList[i].isCallOnce){
+                        this.getCfgCallBackList.splice(i,1);
+                    }
                 }else{
                     this.getCfgCallBackList.splice(i,1);
                 }
             } 
         }
     }
-    getData(callBack:(data:any)=>void,target?:any){
+    getData(callBack:(data:any)=>void,target?:any,isCallOnce?:boolean){
         this.getCfgCallBackList.push({
             target:target,
+            isCallOnce:isCallOnce,
             callBack:callBack
         });
         this.callGetCfgFunc();

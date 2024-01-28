@@ -12,11 +12,27 @@ const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class Item extends CompBase {
+    itemData: { item: I_item; scale?: number; } = null;
+    itemCfgs: any;
     start () {
         super.start();
+        game.configMgr.getCfg("items",(data:any)=>{
+            this.itemCfgs = data;
+            this.updateItemShow();
+        },this)
     }
     setItemData(data:{item:I_item,scale?:number}){
+        console.log(data);
+        this.itemData = data;
         this.node.scale = data.scale || 1;
-        
+        this.updateItemShow();
+    }
+    updateItemShow(){
+        if(this.itemCfgs&& this.itemData){
+            let cfg = this.itemCfgs[this.itemData.item.id];
+            cc.find("num",this.node).getComponent(cc.Label).string = this.itemData.item.num+"";
+            cc.find("name",this.node).getComponent(cc.Label).string = cfg.name+"";
+            game.resMgr.setSpImg(cc.find("icon",this.node),"pic/items/item"+this.itemData.item.id)
+        }
     }
 }
