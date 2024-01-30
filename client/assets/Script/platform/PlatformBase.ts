@@ -7,6 +7,19 @@ export interface LOAD_ORDER_CFG{
     time:number,
     title:string
 }
+export interface I_webSocket{
+    send:(buffer:ArrayBuffer)=>void,
+    close:()=>void,
+    onopen:()=>void,
+    onmessage:(buffer:ArrayBuffer)=>void,
+    onerror:()=>void,
+    onclose:()=>void
+}
+export interface I_updSocket{
+    send:(buffer:ArrayBufferView)=>void,
+    close:()=>void,
+    onmessage:(event:Event)=>void,
+}
 export enum PLATFORM_TYPE{
     WEB,
     TT,
@@ -29,7 +42,27 @@ export function getPlatForm():PLATFORM_TYPE{
 }
 export abstract class PlatformBase extends SingleBase{
     platformName = ""
-    loadOrderCfg:LOAD_ORDER_CFG[];
+    isSupportUdp = false
+    loadOrderCfg:LOAD_ORDER_CFG[]=[
+        {
+            funcName:"loadRes",
+            progressNum:20,
+            time:0.3,
+            title:"加载资源中..."
+        },
+        {
+            funcName:"login",
+            progressNum:100,
+            time:1,
+            title:"登录中..."
+        },
+        {
+            funcName:"changeScene",
+            progressNum:10,
+            time:0.5,
+            title:"场景准备中..."
+        }
+    ];
     getLoadPercentCfg(){
         return this.loadOrderCfg;
     }
@@ -61,10 +94,38 @@ export abstract class PlatformBase extends SingleBase{
         }
         xhr.send(JSON.stringify(sendData));
     }
-    createSocket(ip:string,binaryType:BinaryType="arraybuffer"){
-        var socketTarget = new WebSocket(ip);
-        socketTarget.binaryType=binaryType;
-        return socketTarget
+    createWebSocket(ip:string):I_webSocket{
+        var webSocket = new WebSocket(ip);
+        webSocket.binaryType="arraybuffer";
+        let socketTarget:I_webSocket = {
+            send:webSocket.send,
+            close:webSocket.close,
+            onopen:()=>{},
+            onmessage:()=>{},
+            onerror:()=>{},
+            onclose:()=>{}
+        }
+        webSocket.onopen = ()=>{
+            socketTarget.onopen();
+        };
+        webSocket.onmessage = (event)=>{
+            socketTarget.onmessage(event.data);
+        };
+        webSocket.onclose = ()=>{
+            socketTarget.onclose();
+        };
+        webSocket.onerror = ()=>{
+            socketTarget.onerror();
+        };
+        return socketTarget;
+    }
+    createUdpSocket(ip:string):I_updSocket{
+        let socketTarget:I_updSocket = {
+            send:null,
+            close:null,
+            onmessage:null,
+        }
+        return socketTarget;
     }
     share(text:string){
         

@@ -1,8 +1,9 @@
 import { SocketType } from "../Game";
 import { CompBase } from "../base/CompBase";
 import { SingleBase } from "../base/SingleBase";
-import { MSG_TYPE, SocketBase } from "../base/SocketBase";
+import { MSG_TYPE, m_WebSocket} from "../net/m_WebSocket";
 import { ServerCfg } from "../configs/ServerCfg";
+import { m_UdpSocket } from "../net/m_UdpSocket";
 export interface SocketMsgStruct{
     msgType?:MSG_TYPE
     msgHead:string,
@@ -10,7 +11,7 @@ export interface SocketMsgStruct{
 }
 export class NetManager extends SingleBase{
     showLoadTimes:number = 0
-    socketMap:{[key:string]:SocketBase} = {}
+    socketMap:{[key:string]:m_WebSocket|m_UdpSocket} = {}
     sendHttpRequest(data:any,className:string,_callBack:(data:any)=>void,_fileCallback?:()=>void,retryTime:number = -1,_isShowLoading = true){
         let msgData = {
             msgHead:className,
@@ -51,11 +52,19 @@ export class NetManager extends SingleBase{
         }
         this.socketMap[socketType].send(data,callBack);
     }
-    createSocket(ip:string,socketType:SocketType = SocketType.center){
+    createSocket(ip:string,socketType:SocketType = SocketType.center,isUdp:boolean = false){
         if(this.socketMap[socketType]){
             return;
         }
-        this.socketMap[socketType] = new SocketBase(socketType,ip);
+        if(isUdp && game.platFormMgr.isSupportUdp){
+            this.socketMap[socketType] = new m_UdpSocket(socketType,ip);
+        }else{
+            this.socketMap[socketType] = new m_WebSocket(socketType,ip);
+        }
+    }
+    closeAndDestroySocket(socketType:SocketType = SocketType.center){
+        this.socketMap[socketType].close();
+        delete this.socketMap[socketType];
     }
     onOpen(callBack:(any)=>void,target?:CompBase,socketType:SocketType = SocketType.center){
         this.onMsg("onOpen",callBack,target,socketType);

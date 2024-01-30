@@ -1,6 +1,7 @@
 import { SocketType } from "../Game";
 import { SocketMsgStruct } from "../manager/NetManager";
-import { CompBase } from "./CompBase";
+import { CompBase } from "../base/CompBase";
+import { I_webSocket } from "../../platform/PlatformBase";
 enum SOCKET_STATE{
     OFFLINE,
     CONNECTING,
@@ -13,7 +14,7 @@ export enum MSG_TYPE{
     HEARTBEAT
 }
 type  socketCallBack=(any)=>void
-export class SocketBase{
+export class m_WebSocket{
     state:SOCKET_STATE = SOCKET_STATE.OFFLINE
     socketType:SocketType
     ip:string
@@ -21,7 +22,7 @@ export class SocketBase{
     heartbeat:number = 0
     heartbeatTimer:NodeJS.Timeout
     heartbeatResTimeoutTimer:NodeJS.Timeout
-    socket:WebSocket
+    socket:I_webSocket
     msgCallBackList:{[key:string]:socketCallBack[]} = {}
     constructor(socketType:SocketType,ip:string){
         this.socketType = socketType;
@@ -31,7 +32,7 @@ export class SocketBase{
     connect(){
         if(this.state==SOCKET_STATE.OFFLINE){
             this.state=SOCKET_STATE.CONNECTING
-            this.socket = game.platFormMgr.createSocket(this.ip);
+            this.socket = game.platFormMgr.createWebSocket(this.ip)
             this.registerCallBack();
         }
     }

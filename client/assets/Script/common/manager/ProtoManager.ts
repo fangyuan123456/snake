@@ -1,6 +1,6 @@
 import { json } from "express";
 import { SingleBase } from "../base/SingleBase";
-import { MSG_TYPE } from "../base/SocketBase";
+import { MSG_TYPE } from "../net/m_WebSocket";
 import { SocketMsgStruct } from "./NetManager";
 import * as pbjs from "protobufjs"
 export class ProtoManager extends SingleBase{

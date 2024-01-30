@@ -42,8 +42,7 @@ export default class LoadingComp extends CompBase {
             let runFunc = (next)=>{
                 let progress = this.curProgress;
                 let nextFunc = ()=>{
-                    this.curProgress = progress + cfg.progressNum;
-                    this.setProgress(this.curProgress);
+                    this.setProgress(progress + cfg.progressNum);
                     if(cfg.time){
                         this.stopRunProgress();
                     }
@@ -92,6 +91,9 @@ export default class LoadingComp extends CompBase {
     }
     setProgress(progress){
         let precent = +(progress/this.totalProgress).toFixed(2);
+        if(precent<this.loadingBar.progress){
+            precent = this.loadingBar.progress;
+        }
         this.loadingBar.progress = precent;
         if(this.progressText){
             this.progressText.string = Math.ceil(precent*100)+"%"
