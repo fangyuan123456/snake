@@ -6,6 +6,7 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
 import { CompBase } from "../../common/base/CompBase";
+import { ITEM_ID } from "../../common/configs/CommonCfg";
 import { I_assetInfo } from "../../common/interface/I_Info";
 
 const {ccclass, property} = cc._decorator;
@@ -15,11 +16,11 @@ export default class MoneyPanel extends CompBase {
     start () {
         super.start();
         game.userData.getAssetInfo((asset:I_assetInfo)=>{
-            this.updateMoney(asset.money);
+            this.updateMoney(asset.items[ITEM_ID.COINS].num);
         },this)
        
     }
-    updateMoney(num){
-        cc.find("moneyNum",this.node).getComponent(cc.Label).string = num;
+    updateMoney(num:number){
+        cc.find("moneyNum",this.node).getComponent(cc.Label).string = num+"";
     }
 }

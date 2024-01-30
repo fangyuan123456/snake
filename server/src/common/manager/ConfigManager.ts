@@ -34,17 +34,14 @@ export class ConfigManager extends SingleBase{
         if(!this.tables[tbName]){
             this.tables[tbName] = new TableBase(tbName);
         }
-        return new Promise<number>((resolve, reject) => {
-            this.tables[tbName].getData((data)=>{
-                let dataValue = 0;
-                let layer = data[key].layer;
-                for(let i in layer){
-                    if(value>=Number(i)){
-                        dataValue = layer[i];
-                    }
-                }
-                resolve(dataValue);
-            },null,true)
-        })
+        let data = this.tables[tbName].getDataSync();
+        let dataValue = 0;
+        let layer = data[key].layer;
+        for(let i in layer){
+            if(dataValue>=Number(i)){
+                dataValue = layer[i];
+            }
+        }
+        return dataValue;
     }
 }

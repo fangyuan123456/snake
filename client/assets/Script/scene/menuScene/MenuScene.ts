@@ -17,7 +17,7 @@ export default class MenuScene extends SceneBase {
         super.start();
     }
     btn_setting(){
-        game.panelMgr.openPanel("SettingPanel");
+        game.panelMgr.openPanel("SoundPanel");
     }
     btn_rank(){
         game.panelMgr.openPanel("RankingPanel");

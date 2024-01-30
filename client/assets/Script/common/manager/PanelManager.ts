@@ -12,9 +12,9 @@ export class PanelManager extends SingleBase{
     async openPanel(panelName:string,data?:OpenStruct){
         let _panelCfg = panelCfg[panelName];
         if(_panelCfg){
-            let prefab = game.resMgr.getRes<cc.Prefab>(_panelCfg.url,_panelCfg.bundleName);
+            let prefab = game.resMgr.getRes<cc.Prefab>(_panelCfg.url,cc.Prefab,_panelCfg.bundleName);
             if(!prefab){
-                prefab = await game.resMgr.loadRes<cc.Prefab>(_panelCfg.url,_panelCfg.bundleName)
+                prefab = await game.resMgr.loadRes<cc.Prefab>(_panelCfg.url,cc.Prefab,_panelCfg.bundleName)
             }
             let node = cc.instantiate(prefab);
             let panel = node.getComponent(PanelBase);
@@ -23,9 +23,7 @@ export class PanelManager extends SingleBase{
                 let name = parent.name;
                 panel.panelName = panelName;
                 parent.addChild(node);
-                if(data){
-                    panel.init(data.parmeter,data.closeCallBack);
-                }
+                panel.init(data);
                 this.opendPanel[name] = this.opendPanel[name] || [];
                 this.opendPanel[name].push(panel);
                 game.eventMgr.dispatch("openPanelChange")

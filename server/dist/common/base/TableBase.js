@@ -1,18 +1,10 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 class TableBase {
     constructor(tbName) {
         this.getCfgCallBackList = [];
         this.tbVarKeyList = [];
+        this.extableCfgData = {};
         this.varCond = {};
         this.tbName = tbName;
     }
@@ -23,6 +15,44 @@ class TableBase {
             this.varCond = this.orginData["var"];
             this.setTbVarKeyList();
             delete this.orginData["var"];
+        }
+        if (this.orginData["extable"]) {
+            for (let i in this.orginData["extable"]) {
+                let cfgs = this.orginData["extable"][i];
+                for (let j in cfgs) {
+                    this.extableCfgData[cfgs[j]] = null;
+                }
+            }
+            delete this.orginData["extable"];
+        }
+        this.loadAllExTable(() => {
+            this.setData();
+        });
+    }
+    loadAllExTable(callBack) {
+        if (Object.keys(this.extableCfgData).length > 0) {
+            let callEndFunc = () => {
+                for (let i in this.extableCfgData) {
+                    if (!this.extableCfgData[i]) {
+                        return;
+                    }
+                }
+                callBack();
+            };
+            for (let i in this.extableCfgData) {
+                let table = game.configMgr.tables[i];
+                if (!table) {
+                    table = new TableBase(i);
+                    game.configMgr.tables[i] = table;
+                }
+                table.getData((data) => {
+                    this.extableCfgData[i] = data;
+                    callEndFunc();
+                });
+            }
+        }
+        else {
+            callBack();
         }
     }
     setTbVarKeyList() {
@@ -35,52 +65,48 @@ class TableBase {
         }
     }
     resplceVar(str, varList) {
-        return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
-            for (let i in varList) {
-                if (game.configMgr.tbVar[varList[i]]) {
-                    str = str.replace(varList[i], game.configMgr.tbVar[varList[i]]);
-                }
-                else {
-                    game.logMgr.error("var:%d is not set", game.configMgr.tbVar[varList[i]]);
+        for (let i in varList) {
+            if (game.configMgr.tbVar[varList[i]]) {
+                str = str.replace(varList[i], game.configMgr.tbVar[varList[i]]);
+            }
+            else {
+                game.logMgr.error("var:%d is not set", game.configMgr.tbVar[varList[i]]);
+            }
+        }
+        for (let i in game.configMgr.magicKeyCfg) {
+            const regexString = i + "\\([^()]*\\)";
+            const match = str.match(regexString);
+            if (match) {
+                for (let j = 0; j < match.length; j++) {
+                    let matchStr = match[j];
+                    let funcStr = matchStr.replace(i, "game.configMgr." + game.configMgr.magicKeyCfg[i]);
+                    let evalData = eval(funcStr);
+                    str = str.replace(matchStr, evalData + "");
                 }
             }
-            for (let i in game.configMgr.magicKeyCfg) {
-                const regexString = i + "\\([^()]*\\)";
-                const match = str.match(regexString);
-                if (match) {
-                    for (let j = 0; j < match.length; j++) {
-                        let matchStr = match[j];
-                        let funcStr = matchStr.replace(i, "game.configMgr." + game.configMgr.magicKeyCfg[i]);
-                        let evalData = yield eval(funcStr);
-                        str = str.replace(matchStr, evalData + "");
-                    }
-                }
-            }
-            resolve(eval(str));
-        }));
+        }
+        return eval(str);
     }
     onVarChange() {
         this.setData();
     }
     setData() {
-        return __awaiter(this, void 0, void 0, function* () {
-            this.data = {};
-            for (let i in this.orginData) {
-                this.data[i] = game.utilsMgr.deepCopy(this.orginData[i]);
-                for (let key in this.varCond) {
-                    let data = this.data[i][key];
-                    if (typeof data == 'object') {
-                        for (let j in data) {
-                            this.data[i][key][j] = yield this.resplceVar(data[j], this.varCond[key]);
-                        }
-                    }
-                    else {
-                        this.data[i][key] = yield this.resplceVar(data, this.varCond[key]);
+        this.data = {};
+        for (let i in this.orginData) {
+            this.data[i] = game.utilsMgr.deepCopy(this.orginData[i]);
+            for (let key in this.varCond) {
+                let data = this.data[i][key];
+                if (typeof data == 'object') {
+                    for (let j in data) {
+                        this.data[i][key][j] = this.resplceVar(data[j], this.varCond[key]);
                     }
                 }
+                else {
+                    this.data[i][key] = this.resplceVar(data, this.varCond[key]);
+                }
             }
-            this.callGetCfgFunc();
-        });
+        }
+        this.callGetCfgFunc();
     }
     callGetCfgFunc() {
         let data = this.data;
@@ -99,6 +125,9 @@ class TableBase {
                 }
             }
         }
+    }
+    getDataSync() {
+        return this.data;
     }
     getData(callBack, target, isCallOnce) {
         this.getCfgCallBackList.push({

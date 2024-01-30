@@ -4,6 +4,7 @@ var xlsx = require("node-xlsx");
 var fs = require("fs");
 var path = require("path");
 console.log("\n");
+var specailKeyList = ["var","extable"];
 var config = require("./config.json");
 var inputfiles = fs.readdirSync(config.input);
 inputfiles.forEach(function (filename) {
@@ -67,7 +68,7 @@ function createObj(indexId, keyarr, typearr, csArr, dataarr, isSvr) {
     return obj;
 }
 function changeValue(indexId, key, value, type) {
-    if(indexId == "var" && (type != "json" || !value)){
+    if(specailKeyList.indexOf(indexId)>=0 && (type != "json" || !value)){
         return
     }
     if (value === undefined) {
@@ -94,7 +95,7 @@ function changeValue(indexId, key, value, type) {
     else if (type === "json") {
         var data = void 0;
         try {
-            if(indexId == "var"){
+            if(specailKeyList.indexOf(indexId)>=0){
                 data = value.split("#");
             }else{
                 data = JSON.parse(value.trim());

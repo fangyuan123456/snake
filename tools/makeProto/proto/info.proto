@@ -28,14 +28,12 @@ message getRoleInfoRes {
 message getAssetInfoReq {
 }
 message getAssetInfoRes {
-    required int32 money=1;
-    required int32 diamond=2;
     message itemData{
         required int32 num=1;
         optional int32 level=2;
         optional int32 countEndTime=3;
     }
-    map<string,itemData> items=3;
+    map<string,itemData> items=1;
 }
 
 message getInviteRewardInfoReq {
@@ -61,4 +59,10 @@ message updateRoleInfoReq{
     optional string city = 6;
     optional string country = 7;
     optional string province = 8;
+}
+message getPlayersInfoReq{
+    repeated int32 uids = 1;
+}
+message getPlayersInfoRes{
+    map<int32,getRoleInfoRes> infos = 1;
 }

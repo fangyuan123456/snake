@@ -6,7 +6,7 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
 import { PanelBase } from "../../common/base/PanelBase";
-import { I_inviteReward } from "../../common/interface/I_Info";
+import { I_inviteReward, I_roleInfo } from "../../common/interface/I_Info";
 
 const {ccclass, property} = cc._decorator;
 
@@ -20,6 +20,7 @@ export default class InviteReworldPanel extends PanelBase {
         game.userData.getInviteRewardInfo((data)=>{
             this.getRewardIndexs = data.getRewardIndexs;
             this.inviteUids = data.inviteUids;
+            game.otherInfoData.querPlayersInfo(this.inviteUids);
             this.initPanel();
         },this)
         game.configMgr.getCfg("inviteReward",(data)=>{
@@ -52,7 +53,9 @@ export default class InviteReworldPanel extends PanelBase {
                 cc.find("panel/bg/playerPanel/view/content",this.node).addChild(_node);
             }
             let icon=cc.find("iconBg/mask/icon",_node);
-            game.resMgr.setSpImg(icon,"http://127.0.0.1:8080/fileDownLoad/default.png",null,true);
+            game.otherInfoData.getOtherPlayerInfo(this.inviteUids[j],(data:I_roleInfo)=>{
+                game.resMgr.setSpImg(icon,data.avatarUrl,null,true);
+            },this)
         }
         cc.find("panel/bg/inviteNumPanel/inviteNum",this.node).getComponent(cc.Label).string=this.inviteUids.length+"";
     }

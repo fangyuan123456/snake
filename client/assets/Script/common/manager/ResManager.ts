@@ -3,7 +3,7 @@ import { SingleBase } from "../base/SingleBase";
 import { I_item } from "../interface/I_Info";
 
 export class ResManager extends SingleBase{
-    async loadRes<T extends cc.Asset>(url:string,bundleName?:string): Promise<T>{
+    async loadRes<T extends cc.Asset>(url:string,type:{prototype:T},bundleName?:string): Promise<T>{
         return new Promise(async (resolve, reject)=>{
             let bundle:cc.AssetManager.Bundle  = null;
             if(bundleName){
@@ -11,7 +11,7 @@ export class ResManager extends SingleBase{
             }else{
                 bundle = cc.resources;
             }
-            bundle.load<T>(url,(err,res:T)=>{
+            bundle.load<T>(url,type,(err,res:T)=>{
                 if(err){
                     reject(err);
                 }else{
@@ -44,10 +44,10 @@ export class ResManager extends SingleBase{
             }  
         })
     }
-    getRes<T extends cc.Asset>(url:string,bundleName?:string){
+    getRes<T extends cc.Asset>(url:string,type:{prototype:T},bundleName?:string){
         let bundle = cc.assetManager.getBundle(bundleName);
         if(bundle){
-            return bundle.get<T>(url);
+            return bundle.get(url,type);
         }
     }
     setSpImg(sp:cc.Node,url:string,callBack?:()=>void,isRemote?:boolean){
@@ -59,7 +59,7 @@ export class ResManager extends SingleBase{
                 }
             })
         }else{
-            this.loadRes<cc.SpriteFrame>(url).then((spriteFrame)=>{
+            this.loadRes(url,cc.SpriteFrame).then((spriteFrame)=>{
                 sp.getComponent(cc.Sprite).spriteFrame = spriteFrame
                 if(callBack){
                     callBack()
@@ -68,7 +68,7 @@ export class ResManager extends SingleBase{
         }
     }
     createItem(data:{item:I_item,scale?:number},parent:cc.Node){
-        this.loadRes<cc.Prefab>("prefabs/Item").then((prefab:cc.Prefab)=>{
+        this.loadRes("prefabs/Item",cc.Prefab).then((prefab:cc.Prefab)=>{
             let node = cc.instantiate(prefab);
             parent.addChild(node);
             if(data.scale){

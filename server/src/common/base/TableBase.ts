@@ -7,6 +7,7 @@ export default class TableBase {
     data:any;
     getCfgCallBackList:any[] = [];
     tbVarKeyList:string[] = [];
+    extableCfgData:Dic<any> = {};
     varCond:Dic<any> = {};
     constructor(tbName:string) {
         this.tbName = tbName;
@@ -19,6 +20,43 @@ export default class TableBase {
             this.setTbVarKeyList();
             delete this.orginData["var"];
         }
+        if(this.orginData["extable"]){
+            for(let i in this.orginData["extable"]){
+                let cfgs = this.orginData["extable"][i];
+                for(let j in cfgs){
+                    this.extableCfgData[cfgs[j]] = null;
+                }
+            }
+            delete this.orginData["extable"];
+        }
+        this.loadAllExTable(()=>{
+            this.setData();
+        })
+    }
+    private loadAllExTable(callBack:()=>void){
+        if(Object.keys(this.extableCfgData).length>0){
+            let callEndFunc = ()=>{
+                for(let i in this.extableCfgData){
+                    if(!this.extableCfgData[i]){
+                        return;
+                    }
+                }
+                callBack();
+            }
+            for(let i in this.extableCfgData){
+                let table = game.configMgr.tables[i];
+                if(!table){
+                    table = new TableBase(i);
+                    game.configMgr.tables[i] = table;
+                }
+                table.getData((data)=>{
+                    this.extableCfgData[i] = data;
+                    callEndFunc();
+                })
+            }
+        }else{
+            callBack();
+        }
     }
     private setTbVarKeyList(){
         for(let i in this.varCond){
@@ -30,33 +68,31 @@ export default class TableBase {
         }
     }
     private  resplceVar(str:string,varList:string[]){
-        return new Promise<number>(async (resolve, reject) => {
-            for(let i in varList){
-                if(game.configMgr.tbVar[varList[i]]){
-                    str = str.replace(varList[i],game.configMgr.tbVar[varList[i]])
-                }else{
-                    game.logMgr.error("var:%d is not set",game.configMgr.tbVar[varList[i]])
-                }
+        for(let i in varList){
+            if(game.configMgr.tbVar[varList[i]]){
+                str = str.replace(varList[i],game.configMgr.tbVar[varList[i]])
+            }else{
+                game.logMgr.error("var:%d is not set",game.configMgr.tbVar[varList[i]])
             }
-            for(let i in game.configMgr.magicKeyCfg){
-                const regexString = i + "\\([^()]*\\)";
-                const match = str.match(regexString);
-                if(match){
-                    for(let j =  0;j<match.length;j++){
-                        let matchStr:string = match[j];
-                        let funcStr = matchStr.replace(i,"game.configMgr."+game.configMgr.magicKeyCfg[i])
-                        let evalData =await eval(funcStr)
-                        str = str.replace(matchStr,evalData+"")
-                    }  
-                }
+        }
+        for(let i in game.configMgr.magicKeyCfg){
+            const regexString = i + "\\([^()]*\\)";
+            const match = str.match(regexString);
+            if(match){
+                for(let j =  0;j<match.length;j++){
+                    let matchStr:string = match[j];
+                    let funcStr = matchStr.replace(i,"game.configMgr."+game.configMgr.magicKeyCfg[i])
+                    let evalData = eval(funcStr)
+                    str = str.replace(matchStr,evalData+"")
+                }  
             }
-            resolve(eval(str));
-        })
+        }
+        return eval(str);
     }
     onVarChange(){
         this.setData();
     }
-    async setData(){
+    setData(){
         this.data = {};
         for(let i in this.orginData){
             this.data[i] = game.utilsMgr.deepCopy(this.orginData[i]);
@@ -64,10 +100,10 @@ export default class TableBase {
                 let data = this.data[i][key];
                 if(typeof data == 'object'){
                     for(let j in data){
-                        this.data[i][key][j] = await this.resplceVar(data[j],this.varCond[key])
+                        this.data[i][key][j] = this.resplceVar(data[j],this.varCond[key])
                     }
                 }else{
-                    this.data[i][key] = await this.resplceVar(data,this.varCond[key])
+                    this.data[i][key] = this.resplceVar(data,this.varCond[key])
                 }
             }
         }
@@ -89,6 +125,9 @@ export default class TableBase {
                 }
             } 
         }
+    }
+    getDataSync(){
+        return this.data;
     }
     getData(callBack:(data:any)=>void,target?:any,isCallOnce?:boolean){
         this.getCfgCallBackList.push({

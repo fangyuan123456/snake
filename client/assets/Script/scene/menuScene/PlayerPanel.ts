@@ -20,7 +20,7 @@ export default class PlayerPanele extends CompBase {
     }
     updateInfo(data:I_roleInfo){
         cc.find("namePanel/name",this.node).getComponent(cc.Label).string = data.nickName
-        cc.find("id",this.node).getComponent(cc.Label).string = "id"+game.userData.uid;
+        cc.find("id",this.node).getComponent(cc.Label).string = "id:"+game.userData.uid;
     }
 
     // update (dt) {}

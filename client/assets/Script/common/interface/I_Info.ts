@@ -25,8 +25,6 @@ export interface I_item {
     countEndTime?:number
 }
 export interface I_assetInfo {
-    money:number,
-    diamond: number,         // 昵称
     items:Dic<I_item>,
 }
 export interface I_inviteReward {

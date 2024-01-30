@@ -10,8 +10,19 @@ import { PanelBase } from "../../common/base/PanelBase";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class MenuPrefab extends PanelBase {
+export default class SettingPanel extends PanelBase {
     start () {
         super.start();
+    }
+    btn_sound(){
+        this.closePanel();
+        game.panelMgr.openPanel("SoundPanel");
+    }
+    btn_exit(){
+        this.closePanel();
+        game.sceneMgr.changeScene("MenuScene",true);
+    }
+    btn_resume(){
+        this.closePanel();
     }
 }

@@ -10,3 +10,7 @@ export let chatKuaiJie:string[]=[
     "你是GG还是MM！",
     "不要走，下局接着来！"
 ]
+export enum ITEM_ID{
+    COINS = 1,
+    DIAMOND = 2
+}

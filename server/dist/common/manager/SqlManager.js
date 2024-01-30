@@ -30,7 +30,7 @@ var TableName;
     TableName["USER"] = "t_user";
     TableName["ASSET"] = "t_asset";
     TableName["INVITE_REWARD"] = "t_inviteReward";
-})(TableName || (exports.TableName = TableName = {}));
+})(TableName = exports.TableName || (exports.TableName = {}));
 var SqlOpsType;
 (function (SqlOpsType) {
     SqlOpsType[SqlOpsType["ADD"] = 0] = "ADD";
@@ -135,6 +135,10 @@ class SqlManager extends SingleBase_1.SingleBase {
     }
     select(table, cond) {
         let sqlStr = this.getSqlStrByArr(SqlOpsType.SELECT, table, null, cond);
+        return this.query(sqlStr, null);
+    }
+    selectMorePlayer(table, uids) {
+        let sqlStr = "select * from " + table + " where uid in " + "(" + uids.toString() + ")";
         return this.query(sqlStr, null);
     }
 }

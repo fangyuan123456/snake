@@ -43,8 +43,8 @@ export default class DataBase extends SingleBase{
             })
         }
     }
-    _callResolveFunc(dataKey:string){
-        let data = this.netDatas[dataKey];
+    _callResolveFunc(dataKey:string,data?:any){
+         data = data||this.netDatas[dataKey];
         if(data){
             let resoleCallList = this.infoResolveMap[dataKey];
             if(resoleCallList){

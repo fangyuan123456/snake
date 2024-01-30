@@ -10,9 +10,11 @@ export class PanelBase extends CompBase{
     start(): void { 
         this.playOpenAction(); 
     }
-    init(parmeter:any,closeCallBack){
-        this.parmeter = parmeter;
-        this.closeCallBack = closeCallBack;
+    init(data:{parmeter?:any,closeCallBack?:(any)=>void}){
+        if(data){
+            this.parmeter = data.parmeter;
+            this.closeCallBack = data.closeCallBack;
+        }
         this.fitSize();
         this.setPanelSwallowTouch(true);
     }

@@ -24,6 +24,7 @@ const dataKeyCfg:dataKeyCfg = {
 export default class UserData extends DataBase{
     uid:number = 0
     centerIp:string  = ""
+    otherPlayerInfo: Dic<I_roleInfo> = {};
     constructor(){
         super(dataKeyCfg);
     }

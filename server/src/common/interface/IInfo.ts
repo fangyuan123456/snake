@@ -18,8 +18,6 @@ export interface I_roleInfo {
     platform?:string,
 }
 export interface I_asset {
-    money:number,
-    diamond: number,         // 昵称
     items:Dic<I_item>,
 }
 export interface I_inviteReward {

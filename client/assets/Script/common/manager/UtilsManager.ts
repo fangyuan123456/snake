@@ -42,5 +42,11 @@ export class UtilsManager extends SingleBase{
         }
         return copy;
     }
+    merge(map:{[key:string]:any},newMap:{[key:string]:any}){
+      for(let i in newMap){
+          map[i] = newMap[i];
+      }
+      return map;
+  }
 
 }

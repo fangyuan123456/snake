@@ -1,4 +1,5 @@
 export default [
+    "info.main.getPlayersInfo",
     "info.main.getRoomInfo",
     "info.main.getAssetInfo",
     "info.main.getRoleInfo",

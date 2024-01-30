@@ -108,5 +108,9 @@ export class SqlManager extends SingleBase{
         let sqlStr = this.getSqlStrByArr(SqlOpsType.SELECT,table,null,cond);
         return this.query(sqlStr,null)
     }
+    selectMorePlayer(table:TableName,uids:number[]){
+        let sqlStr = "select * from " + table + " where uid in "+"("+uids.toString()+")"
+        return this.query(sqlStr,null);
+    }
 
 }

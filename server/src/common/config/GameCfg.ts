@@ -20,6 +20,10 @@ export let mysqlConfig = {
 
     }
 }
+export enum ITEM_ID{
+    COINS = 1,
+    DIAMOND = 2
+}
 export enum pushMsgType{
     KICK_ROOM = 1,
 }

@@ -29,28 +29,25 @@ class ConfigManager extends SingleBase_1.SingleBase {
             }
         }
     }
-    getCfg(tbName, target) {
+    getCfg(tbName, callBack, target) {
         if (!this.tables[tbName]) {
             this.tables[tbName] = new TableBase_1.default(tbName);
         }
-        return this.tables[tbName].getData(target);
+        return this.tables[tbName].getData(callBack, target);
     }
     getLayer(key, value, tbName = "userLayer") {
         if (!this.tables[tbName]) {
             this.tables[tbName] = new TableBase_1.default(tbName);
         }
-        return new Promise((resolve, reject) => {
-            this.tables[tbName].getData((data) => {
-                let dataValue = 0;
-                let layer = data[key].layer;
-                for (let i in layer) {
-                    if (value >= Number(i)) {
-                        dataValue = layer[i];
-                    }
-                }
-                resolve(dataValue);
-            }, null, true);
-        });
+        let data = this.tables[tbName].getDataSync();
+        let dataValue = 0;
+        let layer = data[key].layer;
+        for (let i in layer) {
+            if (dataValue >= Number(i)) {
+                dataValue = layer[i];
+            }
+        }
+        return dataValue;
     }
 }
 exports.ConfigManager = ConfigManager;

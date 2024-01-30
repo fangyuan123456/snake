@@ -68,5 +68,10 @@
             "A",
             "B"
         ]
+    },
+    "extable": {
+        "reward": [
+            "userLayer"
+        ]
     }
 }

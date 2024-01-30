@@ -19,6 +19,7 @@ import { RoomManager } from "./manager/RoomManager";
 import { AduintManager } from "./manager/AduintManager";
 import GameData from "./data/GameData";
 import { ConfigManager } from "./manager/ConfigManager";
+import { OtherInfoData } from "./data/OtherInfoData";
 
 declare global {
     namespace globalThis {
@@ -49,6 +50,7 @@ export class Game extends SingleBase{
     aduintMgr: AduintManager;
     gameData: GameData;
     configMgr: ConfigManager;
+    otherInfoData: OtherInfoData;
     constructor(){
         super();
         globalThis.game = this;
@@ -73,6 +75,7 @@ export class Game extends SingleBase{
 
         this.userData = UserData.getInstance();
         this.gameData = GameData.getInstance();
+        this.otherInfoData = OtherInfoData.getInstance();
         switch(getPlatForm()){
             case PLATFORM_TYPE.ANDROID:
                 this.platFormMgr = AndroidPlatFormManager.getInstance();
