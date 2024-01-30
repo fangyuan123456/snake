@@ -2877,3 +2877,173 @@
 [2024-01-28T20:39:25.674] [DEBUG] gameLog - cmd:0,msg:{"roomId":0,"roomIp":""}
 [2024-01-28T20:39:25.675] [DEBUG] gameLog - cmd:1,msg:{"money":0,"diamond":0,"items":{"1":{"num":2},"2":{"num":2}}}
 [2024-01-28T20:39:25.675] [DEBUG] gameLog - cmd:2,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T14:35:33.530] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-30T14:35:33.561] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-30T14:41:48.184] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T14:41:48.273] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T14:41:48.291] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T14:41:58.405] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T14:41:58.408] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T14:41:58.410] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T14:42:08.009] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T14:42:08.012] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T14:42:08.026] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T14:42:15.824] [DEBUG] gameLog - cmd:4,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-30T14:42:16.067] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+    at Sequence._packetToError (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\git\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\git\snake\server\dist\common\manager\SqlManager.js:55:32
+    at Ping.onOperationComplete (E:\git\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\git\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1",
+  sqlState: '42000',
+  index: 0,
+  sql: 'select * from t_user where uid in ()'
+}
+[2024-01-30T14:42:16.077] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+    at Sequence._packetToError (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\git\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\git\snake\server\dist\common\manager\SqlManager.js:55:32
+    at Ping.onOperationComplete (E:\git\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\git\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1",
+  sqlState: '42000',
+  index: 0,
+  sql: 'select * from t_user where uid in ()'
+}
+[2024-01-30T14:45:52.896] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-01-30T14:45:52.901] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-01-30T14:46:29.976] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T14:46:29.993] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","uid":16,"openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T14:46:30.040] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T14:47:26.357] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T14:47:26.360] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T14:47:26.363] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T14:47:29.180] [DEBUG] gameLog - cmd:4,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-01-30T14:47:29.447] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+    at Sequence._packetToError (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\git\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\git\snake\server\dist\common\manager\SqlManager.js:55:32
+    at Ping.onOperationComplete (E:\git\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\git\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1",
+  sqlState: '42000',
+  index: 0,
+  sql: 'select * from t_user where uid in ()'
+}
+[2024-01-30T14:47:29.460] [ERROR] gameLog - Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+    at Sequence._packetToError (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\git\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\git\snake\server\dist\common\manager\SqlManager.js:55:32
+    at Ping.onOperationComplete (E:\git\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\git\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\git\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\git\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\git\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1",
+  sqlState: '42000',
+  index: 0,
+  sql: 'select * from t_user where uid in ()'
+}
+[2024-01-30T14:53:29.046] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T14:53:29.063] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T14:53:29.077] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T14:53:36.709] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T14:53:36.716] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T14:53:36.720] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T14:53:42.999] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T14:53:43.002] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T14:53:43.004] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T14:54:49.397] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T14:54:49.400] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T14:54:49.404] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T14:55:07.190] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T14:55:07.192] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T14:55:07.194] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T15:00:48.932] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T15:00:48.933] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T15:00:48.934] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T15:04:22.060] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T15:04:22.062] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T15:04:22.063] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T15:04:34.559] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T15:04:34.561] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T15:04:34.562] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T15:04:40.238] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T15:04:40.239] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T15:04:40.240] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T15:04:47.870] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T15:04:47.872] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T15:04:47.874] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}
+[2024-01-30T15:06:38.780] [DEBUG] gameLog - cmd:1,msg:{"roomId":0,"roomIp":""}
+[2024-01-30T15:06:38.782] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-01-30T15:06:38.783] [DEBUG] gameLog - cmd:3,msg:{"nickName":"uid_16","avatarUrl":"","openId":"fy","gender":0,"city":null,"country":null,"province":null,"sceneid":null,"pathid":null,"platform":"web"}

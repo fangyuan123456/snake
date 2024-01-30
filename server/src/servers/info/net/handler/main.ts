@@ -9,13 +9,17 @@ export default class Handler extends HandlerBase {
         super();
     }
     getPlayersInfo(msg:{uids:number[]}, session: Session, next: Function){
-        game.sqlMgr.selectMorePlayer(TableName.USER,msg.uids).then((data)=>{
-            let playersInfo:Dic<I_roleInfo> = {};
-            for(let i in data){
-                playersInfo[data[i].uid] = data[i];
-            }
-            next({infos:playersInfo});
-        })
+        if(msg.uids.length>0){
+            game.sqlMgr.selectMorePlayer(TableName.USER,msg.uids).then((data)=>{
+                let playersInfo:Dic<I_roleInfo> = {};
+                for(let i in data){
+                    playersInfo[data[i].uid] = data[i];
+                }
+                next({infos:playersInfo});
+            })
+        }else{
+            next({infos:{}});
+        }
     }
     route(msgName:string,msg: any, session: Session, next: Function){
         let player = infoGame.getPlayer(session.uid);

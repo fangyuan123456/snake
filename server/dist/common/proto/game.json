@@ -1,0 +1,62 @@
+{
+  "nested": {
+    "game": {
+      "nested": {
+        "enterRoomReq": {
+          "fields": {
+            "roomId": {
+              "type": "int32",
+              "id": 1
+            }
+          }
+        },
+        "enterRoomRes": {
+          "fields": {
+            "test1": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "chatroomReq": {
+          "fields": {
+            "uid": {
+              "rule": "required",
+              "type": "int32",
+              "id": 1
+            },
+            "type": {
+              "rule": "required",
+              "type": "int32",
+              "id": 2
+            },
+            "chat": {
+              "rule": "required",
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "chatroomRes": {
+          "fields": {
+            "uid": {
+              "rule": "required",
+              "type": "int32",
+              "id": 1
+            },
+            "type": {
+              "rule": "required",
+              "type": "int32",
+              "id": 2
+            },
+            "chat": {
+              "rule": "required",
+              "type": "string",
+              "id": 3
+            }
+          }
+        }
+      }
+    }
+  }
+}

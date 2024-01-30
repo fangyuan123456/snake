@@ -15,12 +15,14 @@ export class OtherInfoData extends DataBase{
                 newUids.push(uids[i]);
             }
         }
-        game.netMgr.sendSocket({msgHead:"getPlayersInfo",msgData:{
-            uids:newUids
-        }},(datas:any)=>{
-            this.otherPlayerInfo = game.utilsMgr.merge(this.otherPlayerInfo,datas.infos);
-            this._callResolveFunc("otherPlayerInfo",this.otherPlayerInfo);
-         })
+        if(newUids.length>0){
+            game.netMgr.sendSocket({msgHead:"getPlayersInfo",msgData:{
+                uids:newUids
+            }},(datas:any)=>{
+                this.otherPlayerInfo = game.utilsMgr.merge(this.otherPlayerInfo,datas.infos);
+                this._callResolveFunc("otherPlayerInfo",this.otherPlayerInfo);
+            })
+        }
     }
     getOtherPlayerInfo(uid:number,callBack:(data:any)=>void,target:CompBase){
         if(this.otherPlayerInfo[uid]){

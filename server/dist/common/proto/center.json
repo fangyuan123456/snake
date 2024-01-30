@@ -1,0 +1,66 @@
+{
+  "nested": {
+    "center": {
+      "nested": {
+        "pushMsgRes": {
+          "oneofs": {
+            "_msgText": {
+              "oneof": [
+                "msgText"
+              ]
+            },
+            "_msgType": {
+              "oneof": [
+                "msgType"
+              ]
+            }
+          },
+          "fields": {
+            "msgText": {
+              "type": "string",
+              "id": 1,
+              "options": {
+                "proto3_optional": true
+              }
+            },
+            "msgType": {
+              "type": "int32",
+              "id": 2,
+              "options": {
+                "proto3_optional": true
+              }
+            }
+          }
+        },
+        "guangBoReq": {
+          "fields": {
+            "uid": {
+              "rule": "required",
+              "type": "int32",
+              "id": 1
+            },
+            "msg": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "guangBoRes": {
+          "fields": {
+            "nickName": {
+              "rule": "required",
+              "type": "string",
+              "id": 1
+            },
+            "msg": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        }
+      }
+    }
+  }
+}

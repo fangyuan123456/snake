@@ -10,13 +10,18 @@ class Handler extends HandlerBase_1.default {
         super();
     }
     getPlayersInfo(msg, session, next) {
-        game.sqlMgr.selectMorePlayer(SqlManager_1.TableName.USER, msg.uids).then((data) => {
-            let playersInfo = {};
-            for (let i in data) {
-                playersInfo[data[i].uid] = data[i];
-            }
-            next({ infos: playersInfo });
-        });
+        if (msg.uids.length > 0) {
+            game.sqlMgr.selectMorePlayer(SqlManager_1.TableName.USER, msg.uids).then((data) => {
+                let playersInfo = {};
+                for (let i in data) {
+                    playersInfo[data[i].uid] = data[i];
+                }
+                next({ infos: playersInfo });
+            });
+        }
+        else {
+            next({ infos: {} });
+        }
     }
     route(msgName, msg, session, next) {
         let player = infoGame.getPlayer(session.uid);
