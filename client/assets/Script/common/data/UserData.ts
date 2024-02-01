@@ -46,4 +46,7 @@ export default class UserData extends DataBase{
     getInviteRewardInfo(callBack:(any)=>void,target:CompBase){
         this.getInfo("inviteRewardInfo",callBack,target)
     }
+    getRankLevel(){
+        return 1;
+    }
 }

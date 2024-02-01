@@ -11,7 +11,7 @@ import { PanelBase } from "../common/base/PanelBase";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class GuangBo extends CompBase {
+export default class GuangBoNode extends CompBase {
     isBoarding:boolean = false;
     start () {
         super.start();

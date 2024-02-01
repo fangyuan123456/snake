@@ -5,13 +5,15 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
-import { CompBase } from "../../common/base/CompBase";
-import { I_roleInfo } from "../../common/interface/I_Info";
+import { CompBase } from "../common/base/CompBase";
+import { I_roleInfo } from "../common/interface/I_Info";
+
+
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class PlayerPanele extends CompBase {
+export default class PlayerNode extends CompBase {
     start () {
         super.start();
         game.userData.getRoleInfo((data)=>{

@@ -1,4 +1,4 @@
-import Item from "../../prefabs/Item";
+import ItemNode from "../../prefabs/ItemNode";
 import { SingleBase } from "../base/SingleBase";
 import { I_item } from "../interface/I_Info";
 
@@ -68,14 +68,23 @@ export class ResManager extends SingleBase{
         }
     }
     createItem(data:{item:I_item,scale?:number},parent:cc.Node){
-        this.loadRes("prefabs/Item",cc.Prefab).then((prefab:cc.Prefab)=>{
+        this.loadRes("prefabs/itemNode",cc.Prefab).then((prefab:cc.Prefab)=>{
             let node = cc.instantiate(prefab);
             parent.addChild(node);
             if(data.scale){
                 node.scale = data.scale;
             }
-            let comp = node.getComponent(Item);
+            let comp = node.getComponent(ItemNode);
             comp.setItemData(data);
+        })
+    }
+    createRankLevelIcon(parent:cc.Node){
+        let rankLevel = game.userData.getRankLevel();
+        this.loadRes("pic/rankLevel/level"+rankLevel,cc.SpriteFrame).then((spriteFrame)=>{
+            let node = new cc.Node();
+            let sp = node.addComponent(cc.Sprite);
+            sp.spriteFrame = spriteFrame;
+            parent.addChild(node);
         })
     }
 }
