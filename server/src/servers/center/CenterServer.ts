@@ -1,6 +1,6 @@
 import { Application, Session } from "mydog";
 import { GameServerBase } from "../../common/base/GameServerBase";
-import { serverType } from "../../common/config/GameCfg";
+import { serverType } from "../../common/config/CommonCfg";
 declare global{
     namespace globalThis{
         var centerGame:CenterServer

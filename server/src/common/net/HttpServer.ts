@@ -1,13 +1,11 @@
-import { SingleBase } from "../base/SingleBase";
 import  express , { NextFunction, Request, Response } from "express"
 import url from "url"
 import * as fs from "fs";
 import * as path from "path";
 let app = express();
-export class HttpManager extends SingleBase{
+export class HttpServer{
     moudles:{[key:string]:any} = {}
     constructor(){
-        super();
         this.loadMoudles();
         this.createHttpServer();
         if(game.app.serverInfo.isNeedDownLoad){

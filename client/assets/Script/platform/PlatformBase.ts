@@ -16,9 +16,9 @@ export interface I_webSocket{
     onclose:()=>void
 }
 export interface I_updSocket{
-    send:(buffer:ArrayBufferView)=>void,
+    send:(buffer:ArrayBuffer)=>void,
     close:()=>void,
-    onmessage:(event:Event)=>void,
+    onmessage:(buffer:ArrayBuffer)=>void,
 }
 export enum PLATFORM_TYPE{
     WEB,
@@ -67,7 +67,7 @@ export abstract class PlatformBase extends SingleBase{
         return this.loadOrderCfg;
     }
     sendHttpRequest(data:any,callBack:(callDataStr:any)=>void,failCallBack:()=>void){
-        var xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest();
         xhr.open("POST",data.url);
         xhr.setRequestHeader("Content-Type","text/plain;charset=UTF-8");
         xhr.responseType="json";
@@ -95,7 +95,7 @@ export abstract class PlatformBase extends SingleBase{
         xhr.send(JSON.stringify(sendData));
     }
     createWebSocket(ip:string):I_webSocket{
-        var webSocket = new WebSocket(ip);
+        let webSocket = new WebSocket(ip);
         webSocket.binaryType="arraybuffer";
         let socketTarget:I_webSocket = {
             send:webSocket.send,

@@ -1,4 +1,4 @@
-import { serverType } from "../../../common/config/GameCfg";
+import { serverType } from "../../../common/config/CommonCfg";
 import { I_roleInfo } from "../../../common/interface/IInfo";
 type resolveFunc = (data:any)=>void;
 export class RoomPlayer{

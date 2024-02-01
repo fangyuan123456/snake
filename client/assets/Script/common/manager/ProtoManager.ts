@@ -1,8 +1,7 @@
 import { json } from "express";
 import { SingleBase } from "../base/SingleBase";
-import { MSG_TYPE } from "../net/m_WebSocket";
-import { SocketMsgStruct } from "./NetManager";
 import * as pbjs from "protobufjs"
+import { I_msg, MSG_TYPE } from "../interface/I_Common";
 export class ProtoManager extends SingleBase{
     protoRoot:{[key:string]:pbjs.Root}  = {};
     decodeFuncMap:{[key:string]:{[key:string]:pbjs.Type}}  = {};
@@ -51,7 +50,7 @@ export class ProtoManager extends SingleBase{
             }
         }
     }
-    encodeProto(data:SocketMsgStruct){
+    encodeProto(data:I_msg){
         let protoCode = this.getMsgDecodeProto(data.msgHead);
         if(!this.msgList[protoCode]){
             game.logMgr.error(JSON.stringify(data))
@@ -77,15 +76,15 @@ export class ProtoManager extends SingleBase{
             msgData:msgData
         }
     }
-    decode(buffer:Uint8Array):SocketMsgStruct{
+    decode(buffer:Uint8Array):I_msg{
         let msgData = null;
         let msgHead = null;
         let index = 0;
         let msgLen = (buffer[index++] << 24) | (buffer[index++] << 16) | (buffer[index++] << 8) | buffer[index++];
         let msgType = buffer[index++];
-        if(msgType == MSG_TYPE.HANDSHAKE){
+        if(msgType == MSG_TYPE.handshake){
             msgData = JSON.parse(this.strdecode(buffer.slice(index)));
-        }else if(msgType == MSG_TYPE.HEARTBEAT){
+        }else if(msgType == MSG_TYPE.heartbeat){
         }else{
             let protoCode = (buffer[index++] << 8) | buffer[index++]
             let dataMsg = this.decodeProto(buffer.slice(index),protoCode);
@@ -98,13 +97,13 @@ export class ProtoManager extends SingleBase{
             msgData:msgData
         };
     }
-    encode(data:SocketMsgStruct){
-        data.msgType = data.msgType || MSG_TYPE.MSG;
+    encode(data:I_msg){
+        data.msgType = data.msgType || MSG_TYPE.msg;
         let index = 0;
         let msg_len = 0;
         let dataBuf = null;
         let buffer = null;
-        if(data.msgType == MSG_TYPE.MSG){
+        if(data.msgType == MSG_TYPE.msg){
             let protoCode = this.getMsgDecodeProto(data.msgHead);
             dataBuf = this.encodeProto(data);
             msg_len = dataBuf.length+7;

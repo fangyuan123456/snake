@@ -1,7 +1,7 @@
 import { Response } from "express";
 import { I_loginReq, I_sdkLoginRes } from "../../../../common/interface/ILogin";
 import { TableName } from "../../../../common/manager/SqlManager";
-import { serverType } from "../../../../common/config/GameCfg";
+import { serverType } from "../../../../common/config/CommonCfg";
 import { I_roleInfo } from "../../../../common/interface/IInfo";
 import HandlerBase from "../../../../common/base/HandlerBase";
 export default class Handler extends HandlerBase {

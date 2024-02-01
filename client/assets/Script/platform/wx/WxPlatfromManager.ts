@@ -26,7 +26,7 @@ export class WebPlatfromManager extends PlatformBase{
     ]
     getLoginCode(callBack:(data:I_loginReq)=>void){
         let inviteUid = this.getWebParm("inviteUid")
-        var _data={
+        let _data={
             isCeShi:true,
             platform:this.platformName,
             code:this.getWebParm("code"),
@@ -38,7 +38,7 @@ export class WebPlatfromManager extends PlatformBase{
         let getWebParmFunc = (name)=> {
             let r = null;
             if(window && window.location){
-                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
                 r = window.location.search.substr(1).match(reg);
             }
             if (r != null) return unescape(r[2]); return null;
@@ -46,7 +46,7 @@ export class WebPlatfromManager extends PlatformBase{
         return getWebParmFunc(key)
     }
     createWebSocket(ip:string):I_webSocket{
-        var webSocket = wx.connectSocket({
+        let webSocket = wx.connectSocket({
             url: ip,
             header:{ 
               'content-type': 'application/json'
@@ -100,11 +100,25 @@ export class WebPlatfromManager extends PlatformBase{
         })
     }
     createUdpSocket(ip:string):I_updSocket{
+        let ipArr = ip.split(":");
+        let address = ipArr[0];
+        let port = Number(ipArr[1]);
+        let udpSocket = wx.createUDPSocket();
+        udpSocket.bind();
         let socketTarget:I_updSocket = {
-            send:null,
-            close:null,
-            onmessage:null,
+            send:(buffer)=>{
+                udpSocket.send({
+                    address:address,
+                    port:port,
+                    message:buffer
+                })
+            },
+            close:udpSocket.close,
+            onmessage:()=>{},
         }
+        udpSocket.onMessage((msg)=>{
+            socketTarget.onmessage(msg.message);
+        })
         return socketTarget;
     }
 }

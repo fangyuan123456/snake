@@ -1,6 +1,7 @@
 import { SingleBase } from "../base/SingleBase";
 import { Root, Type, load, loadSync } from "protobufjs";
-import { serverType } from "../config/GameCfg";
+import { serverType } from "../config/CommonCfg";
+import { I_msg, MSG_TYPE } from "../interface/ICommon";
 export class ProtoManager extends SingleBase{
     rootMap:{[key:string]:Root} = {};
     encodeDecodeFuncMap:{[key:string]:Type} = {};
@@ -51,5 +52,38 @@ export class ProtoManager extends SingleBase{
       let message = decoder.create(msg);
       let buffer = decoder.encode(message).finish();
       return Buffer.from(buffer);
+    }
+    decodeMsg(data:Buffer){
+      let msgLen = data.readUInt32BE(0);
+      let msgHead = "";
+      let msgData = null;
+      let type = data.readUint8(4);
+      if(type == MSG_TYPE.handshake){
+        msgData = JSON.parse(data.slice(5).toString());
+      }else if(type == MSG_TYPE.msg){
+        let cmd = data.readUInt16BE(5);
+        let routeUrl = game.app.routeConfig[cmd];
+        let strArr = routeUrl.split(".");
+        msgHead = strArr[strArr.length-1];
+        msgData = game.protoMgr.decode(cmd,data.slice(7));
+      }
+      let msg = {
+        msgHead:"msgHead",
+        msgType:type,
+        msgData:msgData
+      }
+      return msg;
+    }
+    encodeMsg(msg:I_msg){
+      let dataBuffer = null;
+      let msgBuffer = null;
+      let len = 5;
+      if(msg.msgType == MSG_TYPE.handshake){
+        dataBuffer = Buffer.from(msg.msgData);
+        len+=dataBuffer.length;
+        msgBuffer = Buffer.alloc(len);
+      }else{
+
+      }
     }
 }

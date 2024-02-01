@@ -5,7 +5,7 @@ export class WebPlatfromManager extends PlatformBase{
     platformName = "web"
     getLoginCode(callBack:(data:I_loginReq)=>void){
         let inviteUid = this.getWebParm("inviteUid")
-        var _data={
+        let _data={
             isCeShi:true,
             platform:this.platformName,
             code:this.getWebParm("code"),
@@ -17,7 +17,7 @@ export class WebPlatfromManager extends PlatformBase{
         let getWebParmFunc = (name)=> {
             let r = null;
             if(window && window.location){
-                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
                 r = window.location.search.substr(1).match(reg);
             }
             if (r != null) return unescape(r[2]); return null;

@@ -1,17 +1,18 @@
 import { SocketType } from "../Game";
 import { CompBase } from "../base/CompBase";
 import { SingleBase } from "../base/SingleBase";
-import { MSG_TYPE, m_WebSocket} from "../net/m_WebSocket";
 import { ServerCfg } from "../configs/ServerCfg";
+import { I_msg } from "../interface/I_Common";
+import { SocketBase } from "../net/SocketBase";
 import { m_UdpSocket } from "../net/m_UdpSocket";
-export interface SocketMsgStruct{
-    msgType?:MSG_TYPE
-    msgHead:string,
-    msgData?:any
-}
+import { m_WebSocket } from "../net/m_WebSocket";
 export class NetManager extends SingleBase{
     showLoadTimes:number = 0
-    socketMap:{[key:string]:m_WebSocket|m_UdpSocket} = {}
+    socketMap:{[key:string]:SocketBase} = {}
+    constructor(){
+        super();
+        game.timeMgr.schedule(this.update,0.01);
+    }
     sendHttpRequest(data:any,className:string,_callBack:(data:any)=>void,_fileCallback?:()=>void,retryTime:number = -1,_isShowLoading = true){
         let msgData = {
             msgHead:className,
@@ -45,7 +46,7 @@ export class NetManager extends SingleBase{
             }
          })
     }
-    sendSocket(data:SocketMsgStruct,callBack?:(data:any)=>void,socketType:SocketType = SocketType.center){
+    sendSocket(data:I_msg,callBack?:(data:any)=>void,socketType:SocketType = SocketType.center){
         if(!this.socketMap[socketType]){
             game.logMgr.error("socketName:%s is not find",socketType);
             return;
@@ -57,6 +58,8 @@ export class NetManager extends SingleBase{
             return;
         }
         if(isUdp && game.platFormMgr.isSupportUdp){
+            let addressArr = ip.split(":");
+            ip = addressArr[0]+":"+Number(addressArr[1])+1;
             this.socketMap[socketType] = new m_UdpSocket(socketType,ip);
         }else{
             this.socketMap[socketType] = new m_WebSocket(socketType,ip);
@@ -78,11 +81,20 @@ export class NetManager extends SingleBase{
     onMsg(msgName:string,callBack:(any)=>void,target?:CompBase,socketType:SocketType = SocketType.center){
         game.eventMgr.on(socketType+"OnMsg"+msgName,callBack,target);
     }
+    delaySocketMsg(msgName:string,delayTime:number,socketType:SocketType = SocketType.center){
+        this.socketMap[socketType].delaySocketMsg(msgName,delayTime);
+    }
     showNetLoadingBar(_b){
         if(_b){
             this.showLoadTimes++
         }else{
             this.showLoadTimes--;
+        }
+    }
+    update(dt){
+        for(let i in this.socketMap){
+            let socket = this.socketMap[i];
+            socket.update(dt);
         }
     }
 }

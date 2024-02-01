@@ -1,7 +1,7 @@
 import { Application } from "mydog";
 import { GameServerBase } from "../../common/base/GameServerBase";
 import { MatchConfig } from "./src/MatchConfig";
-import { serverType } from "../../common/config/GameCfg";
+import { serverType } from "../../common/config/CommonCfg";
 declare global{
     namespace globalThis{
         var matchGame:MatchServer

@@ -1,6 +1,6 @@
 import { GameServerBase } from "../../common/base/GameServerBase";
 import { Application } from "mydog";
-import { serverType } from "../../common/config/GameCfg";
+import { serverType } from "../../common/config/CommonCfg";
 import { I_roleInfo } from "../../common/interface/IInfo";
 import { ChatGptManager } from "../../common/manager/ChatGptManager";
 declare global{

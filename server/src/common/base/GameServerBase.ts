@@ -9,9 +9,9 @@ import { Application, Session, connector } from "mydog";
 import { LogManager } from "../manager/LogManager";
 import { UtilsManager } from "../manager/UtilsManager";
 import { ProtoManager } from "../manager/ProtoManager";
-import { HttpManager } from "../manager/HttpManager";
+import { HttpServer } from "../net/HttpServer";
 import { TimeManager } from "../manager/TimeManager";
-import { getConfigByEnv, mysqlConfig, serverType } from "../config/GameCfg";
+import { serverType } from "../config/CommonCfg";
 import { PlatformManager } from "../manager/PlatformManager";
 import { SqlManager } from "../manager/SqlManager";
 import { EventManager } from "../manager/EventManager";
@@ -24,7 +24,7 @@ export class GameServerBase{
     logMgr:LogManager
     utilsMgr:UtilsManager
     protoMgr:ProtoManager
-    httpMgr?:HttpManager
+    httpServer?:HttpServer
     timeMgr:TimeManager
     platformMgr:PlatformManager
     eventMgr:EventManager
@@ -46,7 +46,7 @@ export class GameServerBase{
         this.setConfig();
         this.app.start();
         if(this.app.serverInfo.HttpPort){
-            this.httpMgr = HttpManager.getInstance();
+            this.httpServer = new HttpServer();
         }
     }
     getCert(){

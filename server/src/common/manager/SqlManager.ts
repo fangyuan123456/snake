@@ -15,7 +15,7 @@ enum SqlOpsType{
 }
 type callback = (err: mysql.MysqlError | null, res?: any) => void
 import { SingleBase } from "../base/SingleBase";
-import { getConfigByEnv, mysqlConfig } from "../config/GameCfg";
+import { getConfigByEnv, mysqlConfig } from "../config/CommonCfg";
 export class SqlManager extends SingleBase{
     private pool?: mysql.Pool;
     constructor() {

@@ -1,6 +1,6 @@
 import { Application, ServerInfo } from "mydog";
 import { SingleBase } from "../base/SingleBase";
-import { serverType } from "../config/GameCfg";
+import { serverType } from "../config/CommonCfg";
 import * as path from "path";
 import { Dic } from "../interface/ICommon";
 

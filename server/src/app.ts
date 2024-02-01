@@ -1,5 +1,5 @@
 import { createApp } from "mydog";
-import { serverType } from "./common/config/GameCfg";
+import { serverType } from "./common/config/CommonCfg";
 import { LoginServer } from "./servers/login/LoginServer";
 import { InfoServer } from "./servers/info/InfoServer";
 import { CenterServer } from "./servers/center/CenterServer";
