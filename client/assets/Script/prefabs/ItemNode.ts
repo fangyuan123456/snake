@@ -11,7 +11,7 @@ import { I_item } from "../common/interface/I_Info";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Item extends CompBase {
+export default class ItemNode extends CompBase {
     itemData: { item: I_item; scale?: number; } = null;
     itemCfgs: any;
     start () {
