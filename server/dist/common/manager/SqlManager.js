@@ -39,14 +39,14 @@ var SqlOpsType;
     SqlOpsType[SqlOpsType["SELECT"] = 3] = "SELECT";
 })(SqlOpsType || (SqlOpsType = {}));
 const SingleBase_1 = require("../base/SingleBase");
-const GameCfg_1 = require("../config/GameCfg");
+const CommonCfg_1 = require("../config/CommonCfg");
 class SqlManager extends SingleBase_1.SingleBase {
     constructor() {
         super();
     }
     query(sql, args, cb) {
         if (!this.pool) {
-            let config = (0, GameCfg_1.getConfigByEnv)(GameCfg_1.mysqlConfig);
+            let config = (0, CommonCfg_1.getConfigByEnv)(CommonCfg_1.mysqlConfig);
             this.pool = mysql.createPool(config);
         }
         return new Promise((resolve, reject) => {

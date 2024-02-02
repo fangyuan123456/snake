@@ -82,8 +82,20 @@ export class ProtoManager extends SingleBase{
         dataBuffer = Buffer.from(msg.msgData);
         len+=dataBuffer.length;
         msgBuffer = Buffer.alloc(len);
+        msgBuffer.writeUint32BE(len,0);
+        msgBuffer.writeUint8(msg.msgType,4);
+        msgBuffer.copy(dataBuffer,5);
       }else{
-
+        let msgHead = msg.msgHead!;
+        let cmd = this.getProtoCode(msgHead)!;
+        dataBuffer = this.encode(cmd,msg.msgData);
+        len += (dataBuffer.length+2);
+        msgBuffer = Buffer.alloc(len);
+        msgBuffer.writeUInt32BE(len,0);
+        msgBuffer.writeUint8(msg.msgType!,4);
+        msgBuffer.writeUint16BE(cmd,5)
+        msgBuffer.copy(dataBuffer,7);
       }
+      return msgBuffer;
     }
 }

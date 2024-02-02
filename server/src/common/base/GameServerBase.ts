@@ -16,6 +16,7 @@ import { PlatformManager } from "../manager/PlatformManager";
 import { SqlManager } from "../manager/SqlManager";
 import { EventManager } from "../manager/EventManager";
 import { ConfigManager } from "../manager/ConfigManager";
+import { I_msg } from "../interface/ICommon";
 
 export class GameServerBase{
     clientNum:number = 0
@@ -114,8 +115,8 @@ export class GameServerBase{
             game.logMgr.error(err)
         });
     }
-    sendMsg(uid:number,data:{msgHead:string,msgData:any},frontServer:serverType = serverType.center){
-        let cmd = game.protoMgr.getProtoCode(data.msgHead)
+    sendMsg(uid:number,data:I_msg,frontServer:serverType = serverType.center){
+        let cmd = game.protoMgr.getProtoCode(data.msgHead!)
         if(cmd || cmd == 0){
             let sid = game.utilsMgr.getSid(uid,frontServer);
             this.app.sendMsgByUidSid(cmd,data.msgData,[{uid:uid,sid:sid}])

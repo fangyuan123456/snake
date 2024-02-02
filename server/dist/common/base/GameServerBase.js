@@ -30,7 +30,7 @@ const mydog_1 = require("mydog");
 const LogManager_1 = require("../manager/LogManager");
 const UtilsManager_1 = require("../manager/UtilsManager");
 const ProtoManager_1 = require("../manager/ProtoManager");
-const HttpManager_1 = require("../manager/HttpManager");
+const HttpServer_1 = require("../net/HttpServer");
 const TimeManager_1 = require("../manager/TimeManager");
 const PlatformManager_1 = require("../manager/PlatformManager");
 const SqlManager_1 = require("../manager/SqlManager");
@@ -55,7 +55,7 @@ class GameServerBase {
         this.setConfig();
         this.app.start();
         if (this.app.serverInfo.HttpPort) {
-            this.httpMgr = HttpManager_1.HttpManager.getInstance();
+            this.httpServer = new HttpServer_1.HttpServer();
         }
     }
     getCert() {
