@@ -34,7 +34,7 @@ class Handler extends HandlerBase_1.default {
                     this.updatePlayInviteData(inviteUid, uid);
                 }
                 let server = game.utilsMgr.getServerByUid(uid, "center" /* serverType.center */);
-                let loginResData = game.utilsMgr.merge(registerData, { centerIp: "ws://" + game.utilsMgr.getServerIp(server), });
+                let loginResData = game.utilsMgr.merge(registerData, { centerIp: game.utilsMgr.getServerIp(server), });
                 game.httpServer.sendMsg(loginResData, res);
             });
         });

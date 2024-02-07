@@ -9,19 +9,20 @@ class Handler extends HandlerBase_1.default {
         super();
     }
     enterRoom(msg, session, next) {
-        session.set({ "roomId": msg.roomId });
         this.route("enterRoom", msg, session, next);
     }
     route(msgName, msg, session, next) {
         let roomId = session.get("roomId");
         let room = gameGame.getRoom(roomId);
-        //@ts-ignore
-        let func = room[msgName];
-        if (func) {
-            func.call(room, msg, session, next);
-        }
-        else {
-            game.logMgr.error("msgName:%s is not found in Room", msgName);
+        if (room) {
+            //@ts-ignore
+            let func = room[msgName + "Handler"];
+            if (func) {
+                func.call(room, msg, session, next);
+            }
+            else {
+                game.logMgr.error("msgName:%s is not found in Room", msgName);
+            }
         }
     }
 }

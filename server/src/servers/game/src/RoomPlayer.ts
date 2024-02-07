@@ -1,11 +1,11 @@
 import { serverType } from "../../../common/config/CommonCfg";
-import { I_roleInfo } from "../../../common/interface/IInfo";
+import { I_asset, I_roleInfo } from "../../../common/interface/IInfo";
 import { Room } from "./Room";
 type resolveFunc = (data:any)=>void;
 export class RoomPlayer{
     public uid:number;
     public role?: I_roleInfo;
-    public asset?: any;
+    public asset?: I_asset;
     private initResolveList:resolveFunc[] = [];
     private isInit:boolean = false;
     private isOnLine:boolean = false;
@@ -17,8 +17,9 @@ export class RoomPlayer{
     constructor(room:Room,uid:number){
         this.room = room;
         this.uid = uid;
-        game.app.rpc(game.utilsMgr.getSid(this.uid,serverType.info)).info.main.getRoomPlayerInfo(this.uid).then((data:any)=>{
-            this.role = data.role;
+        game.app.rpc(game.utilsMgr.getSid(this.uid,serverType.info)).info.main.getRoomPlayerInfo(this.uid).then((data:{roleInfo:I_roleInfo,assetInfo:I_asset})=>{
+            this.role = data.roleInfo;
+            this.asset = data.assetInfo
             this.isInit = true;
             this.callInitResolve();
         })

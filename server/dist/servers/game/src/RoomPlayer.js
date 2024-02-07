@@ -13,7 +13,8 @@ class RoomPlayer {
         this.room = room;
         this.uid = uid;
         game.app.rpc(game.utilsMgr.getSid(this.uid, "info" /* serverType.info */)).info.main.getRoomPlayerInfo(this.uid).then((data) => {
-            this.role = data.role;
+            this.role = data.roleInfo;
+            this.asset = data.assetInfo;
             this.isInit = true;
             this.callInitResolve();
         });

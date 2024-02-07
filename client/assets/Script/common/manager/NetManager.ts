@@ -11,7 +11,6 @@ export class NetManager extends SingleBase{
     socketMap:{[key:string]:SocketBase} = {}
     constructor(){
         super();
-        game.timeMgr.schedule(this.update,0.01);
     }
     sendHttpRequest(data:any,className:string,_callBack:(data:any)=>void,_fileCallback?:()=>void,retryTime:number = -1,_isShowLoading = true){
         let msgData = {
@@ -66,8 +65,10 @@ export class NetManager extends SingleBase{
         }
     }
     closeAndDestroySocket(socketType:SocketType = SocketType.center){
-        this.socketMap[socketType].close();
-        delete this.socketMap[socketType];
+        if(this.socketMap[socketType]){
+            this.socketMap[socketType].close(true);
+            delete this.socketMap[socketType];
+        }
     }
     onOpen(callBack:(any)=>void,target?:CompBase,socketType:SocketType = SocketType.center){
         this.onMsg("onOpen",callBack,target,socketType);
@@ -89,12 +90,6 @@ export class NetManager extends SingleBase{
             this.showLoadTimes++
         }else{
             this.showLoadTimes--;
-        }
-    }
-    update(dt){
-        for(let i in this.socketMap){
-            let socket = this.socketMap[i];
-            socket.update(dt);
         }
     }
 }

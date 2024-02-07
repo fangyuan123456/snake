@@ -1,7 +1,7 @@
 import { SingleBase } from "../base/SingleBase";
 
 export class TimeManager extends SingleBase{
-    scheduleOnce(callBack:()=>void,delayTime:number,target:cc.Node = cc.find("Canvas")){
+    scheduleOnce(callBack:()=>void,delayTime:number,target:cc.Node = game.getPersistNode()){
         let scheduler = cc.director.getScheduler();
         let callFunc = ()=>{
             this.unSchedule(callFunc,target);
@@ -15,7 +15,7 @@ export class TimeManager extends SingleBase{
         let scheduler = cc.director.getScheduler();
         scheduler.unschedule(callBack,target)
     }
-    schedule(callBack:(dt:number)=>void,delayTime:number,target:cc.Node = cc.find("Canvas")){
+    schedule(callBack:(dt:number)=>void,delayTime:number,target:cc.Node = game.getPersistNode()){
         let scheduler = cc.director.getScheduler();
         scheduler.schedule((dt)=>{
             if(callBack){

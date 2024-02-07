@@ -64,19 +64,6 @@ export class GameServerBase{
         }
     }
     setConfig(){
-        let cert = this.getCert();
-        this.app.setConfig("mydogList", this.mydogList);
-        this.app.setConfig("connector", {
-            "connector": connector.Ws,
-            "clientOnCb": this.onUserIn,
-            "clientOffCb": this.onUserLeave,
-            "interval": 50,
-            "noDelay": false,
-            "ssl": this.app.env === "production",
-            "key": cert.key,
-            "cert": cert.cert,
-            "heartbeat":10000
-        });
         this.app.setConfig("rpc", { "interval": 30, "noDelay": false });
         this.app.setConfig("encodeDecode", { "msgDecode": this.protoMgr.decode.bind(this.protoMgr), "msgEncode": this.protoMgr.encode.bind(this.protoMgr) });
         this.app.setConfig("logger", (level, info) => {
@@ -104,25 +91,26 @@ export class GameServerBase{
             this.cpuUsage = ((diff.user + diff.system) / (5000 * 1000) * 100).toFixed(1);
         }, 5000);
     }
-    onUserIn(session: Session){
-        
-    }
-    onUserLeave(session: Session){
-
-    }
     uncaughtException(){
         process.on("uncaughtException", function (err: any) {
             game.logMgr.error(err)
         });
     }
-    sendMsg(uid:number,data:I_msg,frontServer:serverType = serverType.center){
-        let cmd = game.protoMgr.getProtoCode(data.msgHead!)
-        if(cmd || cmd == 0){
-            let sid = game.utilsMgr.getSid(uid,frontServer);
-            this.app.sendMsgByUidSid(cmd,data.msgData,[{uid:uid,sid:sid}])
+    sendMsg(uid:number|number[],data:I_msg,frontServer:serverType = serverType.center){
+        if(Array.isArray(uid)){
+            for(let i in uid){
+                this.sendMsg(uid[i],data,frontServer)
+            }
         }else{
-            game.logMgr.error("msgHead:%s is not find",data.msgHead)
+            let cmd = game.protoMgr.getProtoCode(data.msgHead!)
+            if(cmd || cmd == 0){
+                let sid = game.utilsMgr.getSid(uid,frontServer);
+                this.app.sendMsgByUidSid(cmd,data.msgData,[{uid:uid,sid:sid}])
+            }else{
+                game.logMgr.error("msgHead:%s is not find",data.msgHead)
+            }
         }
+    
     }
 
 }

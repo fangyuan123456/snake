@@ -28,8 +28,13 @@ export class EventManager extends SingleBase{
     }
     dispatch(eventName,data?:any){
         let eventList = this.eventMap[eventName] || [];
-        for(let i in eventList){
-            eventList[i].callBack(data);
+        for(let i = 0;i<eventList.length;i++){
+            if(eventList[i].target && (!eventList[i].target.node || !eventList[i].target.node.parent)){
+                eventList.splice(i);
+                i--
+            }else{
+                eventList[i].callBack(data);
+            }
         }
         for(let i = eventList.length-1;i>=0;i--){
             if(eventList[i].isOnce){

@@ -27,7 +27,7 @@ export default class Handler extends HandlerBase {
             player = infoGame.createPlayer(session.uid)
         }
         //@ts-ignore
-        let func = player[msgName]
+        let func = player[msgName+"Handler"]
         if(func){
             func.call(player,msg, session, next);
         }else{

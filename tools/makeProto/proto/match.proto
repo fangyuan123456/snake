@@ -6,16 +6,25 @@ message matchReq {
     bool isMatch = 1;
 }
 message matchRes {
-    bool isMatch = 1;
-    int32 uid = 2;
-}
-message matchOkRes{
-    int32 roomId = 1;
-    string roomIp = 2;
     message RoleInfo{
         required int32 uid = 1;
-        required string nickName = 2;
-        required string avatarUrl = 3;
+        required int32 rankScore = 2;
+        required string nickName = 3;
+        required string avatarUrl = 4;
     }
-    repeated RoleInfo roles = 3;
+    repeated RoleInfo roles = 1;
+}
+message inviteFriendReq{
+    string inviteKey = 1;
+    bool isMatch = 2;
+}
+message inviteFriendRes{
+    message RoleInfo{
+        required int32 uid = 1;
+        required int32 rankScore = 2;
+        required string nickName = 3;
+        required string avatarUrl = 4;
+    }
+    repeated RoleInfo roles = 1;
+    required bool isStart = 2;
 }

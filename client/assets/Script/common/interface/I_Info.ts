@@ -26,6 +26,7 @@ export interface I_item {
 }
 export interface I_assetInfo {
     items:Dic<I_item>,
+    rankScore:number
 }
 export interface I_inviteReward {
     inviteUids:number[],

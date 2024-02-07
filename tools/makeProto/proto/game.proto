@@ -3,10 +3,17 @@ package game;
 
 
 message enterRoomReq {
-    int32 roomId = 1;
 }
 message enterRoomRes {
-    string test1 = 1;
+    message roomPlayerInfo{
+        required int32 uid = 1;
+        required string nickName = 2;
+        required string avatarUrl = 3;
+        required int32 rankScore = 4;
+        repeated int32 frames = 5;
+    }
+    repeated roomPlayerInfo playerInfos = 1;
+    required int32 gameTime = 2;
 }
 message chatroomReq{
    required int32 uid=1;

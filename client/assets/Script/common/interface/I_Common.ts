@@ -9,5 +9,5 @@ export enum MSG_TYPE{
 export interface I_msg{
     msgHead?:string,
     msgType?:MSG_TYPE,
-    msgData:any
+    msgData?:any
 }

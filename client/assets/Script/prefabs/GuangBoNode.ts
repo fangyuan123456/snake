@@ -15,7 +15,6 @@ export default class GuangBoNode extends CompBase {
     isBoarding:boolean = false;
     start () {
         super.start();
-        cc.game.addPersistRootNode(this.node)
         this.updateActive();
         this.onEvent("openPanelChange",()=>{
             this.updateActive();;

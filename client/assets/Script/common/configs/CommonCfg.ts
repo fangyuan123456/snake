@@ -10,6 +10,23 @@ export let chatKuaiJie:string[]=[
     "你是GG还是MM！",
     "不要走，下局接着来！"
 ]
+export let rankLevelCfg = [
+    {
+        score:0,name:"青铜",
+    },
+    {
+        score:500,name:"白银",
+    },
+    {
+        score:1000,name:"黄金",
+    },
+    {
+        score:2000,name:"白金",
+    },
+    {
+        score:5000,name:"钻石",
+    }
+]
 export enum ITEM_ID{
     COINS = 1,
     DIAMOND = 2

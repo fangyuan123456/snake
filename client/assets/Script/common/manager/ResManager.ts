@@ -67,6 +67,14 @@ export class ResManager extends SingleBase{
             })
         }
     }
+    setPlayerIcon(sp:cc.Node,url:string,callBack?:()=>void){
+        let isRemote = true;
+        if(!url || url == ""){
+            url = "pic/default"
+            isRemote = false;
+        }
+        this.setSpImg(sp,url,callBack,isRemote)
+    }
     createItem(data:{item:I_item,scale?:number},parent:cc.Node){
         this.loadRes("prefabs/itemNode",cc.Prefab).then((prefab:cc.Prefab)=>{
             let node = cc.instantiate(prefab);
@@ -78,9 +86,9 @@ export class ResManager extends SingleBase{
             comp.setItemData(data);
         })
     }
-    createRankLevelIcon(parent:cc.Node){
-        let rankLevel = game.userData.getRankLevel();
-        this.loadRes("pic/rankLevel/level"+rankLevel,cc.SpriteFrame).then((spriteFrame)=>{
+    createRankLevelIcon(parent:cc.Node,rankScore:number){
+        let rankLevel = game.utilsMgr.getRankLevel(rankScore).level;
+        this.loadRes("pic/ranking/rankLevelSp"+rankLevel,cc.SpriteFrame).then((spriteFrame)=>{
             let node = new cc.Node();
             let sp = node.addComponent(cc.Sprite);
             sp.spriteFrame = spriteFrame;

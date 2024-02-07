@@ -5,20 +5,13 @@ import { I_assetInfo, I_inviteReward, I_roleInfo, I_roomInfo } from "../interfac
 import { I_loginRes } from "../interface/I_Login";
 const dataKeyCfg:dataKeyCfg = {
     assetInfo:{
-        isLoginGet:true,
-        isOffLineReq:false
+        isConnectReq:true,
     },
     roleInfo:{
-        isLoginGet:true,
-        isOffLineReq:false
-    },
-    roomInfo:{
-        isLoginGet:true,
-        isOffLineReq:false
+        isConnectReq:true,
     },
     inviteRewardInfo:{
-        isLoginGet:false,
-        isOffLineReq:false
+        isConnectReq:false,
     }
 }
 export default class UserData extends DataBase{
@@ -34,19 +27,13 @@ export default class UserData extends DataBase{
         delete loginData.centerIp;
         this.setInfo("roleInfo",loginData)
     }
-    getRoleInfo(callBack:(any)=>void,target:CompBase){
+    getRoleInfo(callBack:(I_roleInfo)=>void,target:CompBase){
         this.getInfo("roleInfo",callBack,target)
     }
-    getRoomInfo(callBack:(any)=>void,target:CompBase){
-        this.getInfo("roomInfo",callBack,target)
-    }
-    getAssetInfo(callBack:(any)=>void,target:CompBase){
+    getAssetInfo(callBack:(I_assetInfo)=>void,target:CompBase){
         this.getInfo("assetInfo",callBack,target)
     }
-    getInviteRewardInfo(callBack:(any)=>void,target:CompBase){
+    getInviteRewardInfo(callBack:(I_inviteReward)=>void,target:CompBase){
         this.getInfo("inviteRewardInfo",callBack,target)
-    }
-    getRankLevel(){
-        return 1;
     }
 }

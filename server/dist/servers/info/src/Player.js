@@ -67,20 +67,20 @@ class Player {
             }
         }
     }
-    getRoomInfo(msg, session, next) {
+    getRoomInfoHandler(msg, session, next) {
         next(this.roomInfo);
     }
-    getRoleInfo(msg, session, next) {
+    getRoleInfoHandler(msg, session, next) {
         this.getInfo(IInfo_1.e_InfoType.role).then((data) => {
             next(data);
         });
     }
-    getAssetInfo(msg, session, next) {
+    getAssetInfoHandler(msg, session, next) {
         this.getInfo(IInfo_1.e_InfoType.asset).then((data) => {
             next(data);
         });
     }
-    getInviteRewardInfo(msg, session, next) {
+    getInviteRewardInfoHandler(msg, session, next) {
         this.getInfo(IInfo_1.e_InfoType.inviteReward).then((data) => {
             next(data);
         });

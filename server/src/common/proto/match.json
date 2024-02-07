@@ -12,30 +12,10 @@
         },
         "matchRes": {
           "fields": {
-            "isMatch": {
-              "type": "bool",
-              "id": 1
-            },
-            "uid": {
-              "type": "int32",
-              "id": 2
-            }
-          }
-        },
-        "matchOkRes": {
-          "fields": {
-            "roomId": {
-              "type": "int32",
-              "id": 1
-            },
-            "roomIp": {
-              "type": "string",
-              "id": 2
-            },
             "roles": {
               "rule": "repeated",
               "type": "RoleInfo",
-              "id": 3
+              "id": 1
             }
           },
           "nested": {
@@ -46,15 +26,72 @@
                   "type": "int32",
                   "id": 1
                 },
+                "rankScore": {
+                  "rule": "required",
+                  "type": "int32",
+                  "id": 2
+                },
                 "nickName": {
                   "rule": "required",
                   "type": "string",
-                  "id": 2
+                  "id": 3
                 },
                 "avatarUrl": {
                   "rule": "required",
                   "type": "string",
+                  "id": 4
+                }
+              }
+            }
+          }
+        },
+        "inviteFriendReq": {
+          "fields": {
+            "inviteKey": {
+              "type": "string",
+              "id": 1
+            },
+            "isMatch": {
+              "type": "bool",
+              "id": 2
+            }
+          }
+        },
+        "inviteFriendRes": {
+          "fields": {
+            "roles": {
+              "rule": "repeated",
+              "type": "RoleInfo",
+              "id": 1
+            },
+            "isStart": {
+              "rule": "required",
+              "type": "bool",
+              "id": 2
+            }
+          },
+          "nested": {
+            "RoleInfo": {
+              "fields": {
+                "uid": {
+                  "rule": "required",
+                  "type": "int32",
+                  "id": 1
+                },
+                "rankScore": {
+                  "rule": "required",
+                  "type": "int32",
+                  "id": 2
+                },
+                "nickName": {
+                  "rule": "required",
+                  "type": "string",
                   "id": 3
+                },
+                "avatarUrl": {
+                  "rule": "required",
+                  "type": "string",
+                  "id": 4
                 }
               }
             }

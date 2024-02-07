@@ -7,7 +7,7 @@
 
 import { Game } from "../common/Game";
 import { LOAD_ORDER_CFG } from "../platform/PlatformBase";
-import { SceneBase } from "../common/base/SceneBase";
+import { SCENE_NAME, SceneBase } from "../common/base/SceneBase";
 import LoadingComp from "../common/components/LoadingComp";
 import { I_loginReq, I_loginRes } from "../common/interface/I_Login";
 
@@ -18,10 +18,10 @@ export default class LoadScene extends SceneBase {
     @property(LoadingComp)
     progressComp:LoadingComp
     constructor(){
-        super();
-        Game.getInstance().init();
+        super(SCENE_NAME.LOADSCENE);
     }
     start () {
+        Game.getInstance().init();
         super.start();
         let loadingCfg = game.platFormMgr.getLoadPercentCfg();
         this.progressComp.startRun(loadingCfg,this);
@@ -37,9 +37,9 @@ export default class LoadScene extends SceneBase {
                 game.netMgr.sendHttpRequest(data,"login",(loginData:I_loginRes)=>{
                     game.userData.setLoginData(loginData);
                     game.netMgr.createSocket(game.userData.centerIp)
-                    game.userData.getRoleInfo(()=>{
+                    game.netMgr.onReady(()=>{
                         next();
-                    },this)
+                    })
                 })
             }else{
                 game.alertMgr.showTiShiBox({content:"code错误!",btnCallBackList:[
@@ -50,11 +50,11 @@ export default class LoadScene extends SceneBase {
         });
     }
     changeScene(next){
-        game.userData.getRoomInfo((data)=>{
-            if(data.roomId){
-                game.sceneMgr.changeScene("GameScene",true);
+        game.gameData.getRoomInfo((data)=>{
+            if(data.roomId&&data.roomId>0){
+                game.sceneMgr.changeScene(SCENE_NAME.GAMESCENE,true);
             }else{
-                game.sceneMgr.changeScene("MenuScene",true);
+                game.sceneMgr.changeScene(SCENE_NAME.MENUSCENE,true);
             }
             next();
         },this)

@@ -5,9 +5,19 @@ export enum FIT_STYLE{
     FIT_WIDTH,
     FIT_HEIGHT
 }
+export enum SCENE_NAME{
+    LOADSCENE = "LoadScene",
+    MENUSCENE = "MenuScene",
+    GAMESCENE = "GameScene"
+}
 @ccclass
 export class SceneBase extends CompBase{
     fitStyle:FIT_STYLE
+    sceneName:SCENE_NAME;
+    constructor(sceneName:SCENE_NAME){
+        super();
+        this.sceneName = sceneName;
+    }
     start(): void {
         this.fitWinSize();
         game.sceneMgr.setCurrentScene(this);
@@ -16,17 +26,17 @@ export class SceneBase extends CompBase{
     createGuangBoNode(){
         let guangboNode = cc.find("guangBoNode",this.node);
         if(guangboNode){
-            let node = cc.find("GuangBo");
+            let node = cc.find("guangBoNode",game.getPersistNode());
             if(!node){
-                game.resMgr.loadRes<cc.Prefab>("prefabs/GuangBo").then((prefab:cc.Prefab)=>{
+                game.resMgr.loadRes<cc.Prefab>("prefabs/guangBoNode",cc.Prefab).then((prefab:cc.Prefab)=>{
                     node = cc.instantiate(prefab);
-                    cc.director.getScene().addChild(node);
+                    game.getPersistNode().addChild(node);
                     let pos = game.utilsMgr.getNodeInTargetPos(guangboNode,node.parent);
                     node.setPosition(pos);
                 })
             }
         }else{
-           let node = cc.find("GuangBo");
+           let node = cc.find("guangBoNode",game.getPersistNode());
            if(node){
              node.destroy();
            }

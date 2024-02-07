@@ -18,21 +18,21 @@ export default class TiShiBoxPanel extends PanelBase {
     start () {
         super.start();
     }
-    init(parmeter: any, closeCallBack: any): void {
-        super.init(parmeter,closeCallBack);
+    init(data:{ parmeter?: any, closeCallBack?: (any)=>void}): void {
+        super.init(data);
         let content = cc.find("panel/content",this.node);
         let title = cc.find("panel/title",this.node);
         let btnArr = cc.find("panel/btnPanel",this.node).children;
-        title.getComponent(cc.Label).string = parmeter.title || defaultTitle
-        content.getComponent(cc.Label).string = parmeter.content;
-        for(let i in parmeter.btnCallBackList){
-            let callData = parmeter.btnCallBackList[i];
+        title.getComponent(cc.Label).string = data.parmeter.title || defaultTitle
+        content.getComponent(cc.Label).string = data.parmeter.content;
+        for(let i in data.parmeter.btnCallBackList){
+            let callData = data.parmeter.btnCallBackList[i];
             let btn = btnArr[i];
             if(!btn){
                 btn = cc.instantiate(btnArr[0]);
                 cc.find("panel/btnPanel",this.node).addChild(btn);
             }
-            cc.find("text",btn).getComponent(cc.Label).string = callData.text || defaultBtnText[parmeter.btnCallBackList.length][i];
+            cc.find("text",btn).getComponent(cc.Label).string = callData.text || defaultBtnText[data.parmeter.btnCallBackList.length][i];
             btn.on(cc.Node.EventType.TOUCH_END, ()=>{
                 this.closePanel();
                 if(callData.callBack){

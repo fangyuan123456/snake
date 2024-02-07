@@ -13,6 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const RemoteBase_1 = __importDefault(require("../../../../common/base/RemoteBase"));
+const IInfo_1 = require("../../../../common/interface/IInfo");
 const SqlManager_1 = require("../../../../common/manager/SqlManager");
 class Remote extends RemoteBase_1.default {
     constructor() {
@@ -22,12 +23,6 @@ class Remote extends RemoteBase_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             infoGame.createPlayer(role.uid, role);
         });
-    }
-    setRoomInfo(data) {
-        let player = infoGame.getPlayer(data.uid);
-        if (player) {
-            player.setRoomInfo({ roomId: data.roomId, roomIp: data.roomIp });
-        }
     }
     updatePlayInviteData(uid, inviteUid) {
         let player = infoGame.getPlayer(uid);
@@ -48,11 +43,38 @@ class Remote extends RemoteBase_1.default {
             });
         }
     }
+    openRoom(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let player = infoGame.getPlayer(data.uid);
+            player.setRoomInfo({ roomId: data.roomId, roomIp: data.roomIp });
+            return yield this.getMatchRoleInfo({ uid: data.uid });
+        });
+    }
+    setRoomInfo(data) {
+        let player = infoGame.getPlayer(data.uid);
+        player.setRoomInfo({ roomId: data.roomId, roomIp: data.roomIp });
+    }
+    getMatchRoleInfo(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let player = infoGame.getPlayer(data.uid);
+            let roleInfo = yield player.getInfo(IInfo_1.e_InfoType.role);
+            let assetInfo = yield player.getInfo(IInfo_1.e_InfoType.asset);
+            return {
+                uid: data.uid,
+                nickName: roleInfo.nickName || "",
+                avatarUrl: roleInfo.avatarUrl || "",
+                rankScore: assetInfo.rankScore
+            };
+        });
+    }
     getRoomPlayerInfo(uid) {
         return __awaiter(this, void 0, void 0, function* () {
             let player = infoGame.getPlayer(uid);
+            let roleInfo = yield player.getInfo(IInfo_1.e_InfoType.role);
+            let assetInfo = yield player.getInfo(IInfo_1.e_InfoType.asset);
             return {
-                roleInfo: player.role
+                roleInfo: roleInfo,
+                assetInfo: assetInfo
             };
         });
     }

@@ -29,7 +29,7 @@ class Handler extends HandlerBase_1.default {
             player = infoGame.createPlayer(session.uid);
         }
         //@ts-ignore
-        let func = player[msgName];
+        let func = player[msgName + "Handler"];
         if (func) {
             func.call(player, msg, session, next);
         }

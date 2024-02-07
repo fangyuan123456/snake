@@ -26,7 +26,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.GameServerBase = void 0;
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
-const mydog_1 = require("mydog");
 const LogManager_1 = require("../manager/LogManager");
 const UtilsManager_1 = require("../manager/UtilsManager");
 const ProtoManager_1 = require("../manager/ProtoManager");
@@ -73,19 +72,6 @@ class GameServerBase {
         }
     }
     setConfig() {
-        let cert = this.getCert();
-        this.app.setConfig("mydogList", this.mydogList);
-        this.app.setConfig("connector", {
-            "connector": mydog_1.connector.Ws,
-            "clientOnCb": this.onUserIn,
-            "clientOffCb": this.onUserLeave,
-            "interval": 50,
-            "noDelay": false,
-            "ssl": this.app.env === "production",
-            "key": cert.key,
-            "cert": cert.cert,
-            "heartbeat": 10000
-        });
         this.app.setConfig("rpc", { "interval": 30, "noDelay": false });
         this.app.setConfig("encodeDecode", { "msgDecode": this.protoMgr.decode.bind(this.protoMgr), "msgEncode": this.protoMgr.encode.bind(this.protoMgr) });
         this.app.setConfig("logger", (level, info) => {
@@ -112,23 +98,26 @@ class GameServerBase {
             this.cpuUsage = ((diff.user + diff.system) / (5000 * 1000) * 100).toFixed(1);
         }, 5000);
     }
-    onUserIn(session) {
-    }
-    onUserLeave(session) {
-    }
     uncaughtException() {
         process.on("uncaughtException", function (err) {
             game.logMgr.error(err);
         });
     }
     sendMsg(uid, data, frontServer = "center" /* serverType.center */) {
-        let cmd = game.protoMgr.getProtoCode(data.msgHead);
-        if (cmd || cmd == 0) {
-            let sid = game.utilsMgr.getSid(uid, frontServer);
-            this.app.sendMsgByUidSid(cmd, data.msgData, [{ uid: uid, sid: sid }]);
+        if (Array.isArray(uid)) {
+            for (let i in uid) {
+                this.sendMsg(uid[i], data, frontServer);
+            }
         }
         else {
-            game.logMgr.error("msgHead:%s is not find", data.msgHead);
+            let cmd = game.protoMgr.getProtoCode(data.msgHead);
+            if (cmd || cmd == 0) {
+                let sid = game.utilsMgr.getSid(uid, frontServer);
+                this.app.sendMsgByUidSid(cmd, data.msgData, [{ uid: uid, sid: sid }]);
+            }
+            else {
+                game.logMgr.error("msgHead:%s is not find", data.msgHead);
+            }
         }
     }
 }

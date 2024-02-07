@@ -1,4 +1,5 @@
 import { SingleBase } from "../base/SingleBase";
+import { rankLevelCfg } from "../configs/CommonCfg";
 import SensitivityConfig from "../data/SensitivityConfig";
 export class UtilsManager extends SingleBase{
     getNodeInTargetPos(node:cc.Node,targetPos:cc.Node,pos:cc.Vec2 = cc.v2(0,0)){
@@ -19,6 +20,18 @@ export class UtilsManager extends SingleBase{
             }
         }
         return word;
+    }
+    getRankLevel(score:number){
+      for(let i  = rankLevelCfg.length - 1;i>=0;i--){
+        let cfg = rankLevelCfg[i];
+        if(cfg.score<=score){
+          return {
+            level:i+1,
+            score:cfg.score,
+            name:cfg.name
+          }  
+        }
+      }
     }
     deepCopy(obj: any): any {
         if (typeof obj !== 'object' || obj === null) {

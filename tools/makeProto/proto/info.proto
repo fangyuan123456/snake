@@ -34,6 +34,7 @@ message getAssetInfoRes {
         optional int32 countEndTime=3;
     }
     map<string,itemData> items=1;
+    required int32 rankScore = 2;
 }
 
 message getInviteRewardInfoReq {

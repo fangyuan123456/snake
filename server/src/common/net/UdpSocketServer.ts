@@ -39,7 +39,9 @@ export class UdpSocketServer{
                     session.send({msgHead:dataObj.msgHead,msgData:callData})
                 });
             }else{
-                game.logMgr.error("funcName:%s is not exits",handlerName)
+                this.moudles[fileName]["route"](handlerName,dataObj.msgData,session,(callData:any)=>{
+                    session.send({msgHead:dataObj.msgHead,msgData:callData})
+                });
             }
         }
     }

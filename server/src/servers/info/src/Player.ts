@@ -66,20 +66,20 @@ export class Player{
         }
     }
    
-    getRoomInfo(msg: {}, session: Session, next: Function){
+    getRoomInfoHandler(msg: {}, session: Session, next: Function){
         next(this.roomInfo)
     }
-    getRoleInfo(msg: {}, session: Session, next: Function){
+    getRoleInfoHandler(msg: {}, session: Session, next: Function){
         this.getInfo(e_InfoType.role).then((data)=>{
             next(data)
         })
     }
-    getAssetInfo(msg: {}, session: Session, next: Function){
+    getAssetInfoHandler(msg: {}, session: Session, next: Function){
         this.getInfo(e_InfoType.asset).then((data)=>{
             next(data)
         })
     }
-    getInviteRewardInfo(msg: {}, session: Session, next: Function){
+    getInviteRewardInfoHandler(msg: {}, session: Session, next: Function){
         this.getInfo(e_InfoType.inviteReward).then((data)=>{
             next(data)
         })

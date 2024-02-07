@@ -9,7 +9,7 @@ enum SOCKET_STATE{
 }
 type  socketCallBack=(any)=>void
 export class SocketBase{
-    delaySocketMsgMap:Dic<{delayTime:number,callBack?:()=>void}>
+    private delaySocketMsgMap:Dic<{callBack?:()=>void}> = {}
     state:SOCKET_STATE = SOCKET_STATE.OFFLINE
     socketType:SocketType
     ip:string
@@ -37,16 +37,21 @@ export class SocketBase{
     registerCallBack(){
     }
     onOpen(){
-        game.logMgr.debug("onOpen");
+        game.logMgr.debug(this.socketType+"onOpen");
         this.state = SOCKET_STATE.ONLINE
         this.dispatchMsgEvent("onOpen");
         this.handshake();
     }
     handshake(){
+        let msgData:{md5:string,uid:number,roomId?:number} = {md5:this.md5,uid:game.userData.uid};
+        if(this.socketType == SocketType.game){
+            let roomInfo = game.gameData.getRoomInfoSync();
+            msgData = {md5:this.md5,uid:game.userData.uid,roomId:roomInfo.roomId}
+        }
         this.send({
             msgType:MSG_TYPE.handshake,
             msgHead:"",
-            msgData:{md5:this.md5,uid:game.userData.uid}
+            msgData:msgData
         })
     }
     startHeartBeat() {
@@ -69,14 +74,14 @@ export class SocketBase{
             this.heartbeatTimer = setInterval(sendHeartbeat, this.heartbeat);
         }
     }
-    onMessage(event){
-        let buffer = new Uint8Array(event.data);
+    onMessage(bufferData:ArrayBuffer){
+        let buffer = new Uint8Array(bufferData);
         let num = 0;
         while(buffer.length>0){
             let msgLen = (buffer[0] << 24) | (buffer[1] << 16) | (buffer[2] << 8) | buffer[3];
             let msgBuffer = buffer.slice(0,msgLen+4);
             let msg = game.protoMgr.decode(msgBuffer);
-            game.logMgr.debug("onMessage:"+JSON.stringify(msg));
+            game.logMgr.debug(this.socketType+"onMessage:"+JSON.stringify(msg));
             if(msg.msgType == MSG_TYPE.handshake){
                 game.protoMgr.setMsgCodeList(msg.msgData.route)
                 this.heartbeat = msg.msgData.heartbeat
@@ -97,24 +102,35 @@ export class SocketBase{
         }
     }
     onMessageData(msg){
-        if(this.delaySocketMsgMap[msg.msgHead]&&this.delaySocketMsgMap[msg.msgHead].delayTime>=0){
-            this.delaySocketMsgMap[msg.msgHead].callBack = ()=>{
-                this.runCallBackList(msg);
-                this.dispatchMsgEvent(msg.msgHead,msg.msgData);
-            }
-        }else{
+        let callBack = ()=>{
             this.runCallBackList(msg);
             this.dispatchMsgEvent(msg.msgHead,msg.msgData);
         }
+        if(this.delaySocketMsgMap[msg.msgHead]){
+            this.delaySocketMsgMap[msg.msgHead].callBack = ()=>{
+                callBack();
+            }
+        }else{
+            callBack();
+        }
     }
     delaySocketMsg(msgName:string,delayTime:number){
-        this.delaySocketMsg[msgName] = {delayTime:delayTime};
+        this.delaySocketMsgMap[msgName] = {};
+        game.timeMgr.scheduleOnce(()=>{
+            let callBack = this.delaySocketMsgMap[msgName].callBack
+            if(callBack){
+                callBack();
+            }
+            delete this.delaySocketMsgMap[msgName];
+        },delayTime)
     }
     onError(){
+        game.logMgr.debug(this.socketType+"onError");
         this.close();
         this.dispatchMsgEvent("onError");
     }
     onClose(){
+        game.logMgr.debug(this.socketType+"onClose");
         this.close();
         this.dispatchMsgEvent("onClose");
     }
@@ -124,7 +140,7 @@ export class SocketBase{
             game.logMgr.error("socket:% state is %d",this.socketType,this.state);
             return;
         }
-        game.logMgr.debug("sendMsg:"+JSON.stringify(data));
+        game.logMgr.debug(this.socketType+"sendMsg:"+JSON.stringify(data));
         this.socket.send(game.protoMgr.encode(data));
         this.pushInCallBackList(data,callBack);
     }
@@ -149,29 +165,19 @@ export class SocketBase{
             delete this.msgCallBackList[data.msgHead]
         }
     }
-    close(){
+    close(isNotReConnect:boolean = false){
         if(this.socket){
             this.socket.close();
             this.socket = null;
         }
-        if(this.isNeedReConnect){
+        if(!isNotReConnect && this.isNeedReConnect){
             game.timeMgr.scheduleOnce(()=>{
                 this.connect();
             },1);
         }
         clearInterval(this.heartbeatTimer);
+        clearTimeout(this.heartbeatResTimeoutTimer);
+        this.heartbeatResTimeoutTimer = null;
         this.state = SOCKET_STATE.OFFLINE
-    }
-    update(dt){
-        for(let i in this.delaySocketMsgMap){
-            let obj = this.delaySocketMsgMap[i];
-            obj.delayTime-=dt;
-            if(obj.delayTime<=0){
-                if(obj.callBack){
-                    obj.callBack();
-                }
-                delete this.delaySocketMsgMap[i];
-            }
-        }
     }
 }

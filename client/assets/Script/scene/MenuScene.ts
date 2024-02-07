@@ -4,7 +4,7 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/reference/attributes.html
 // Learn life-cycle callbacks:
 
-import { SceneBase } from "../common/base/SceneBase";
+import { SCENE_NAME, SceneBase } from "../common/base/SceneBase";
 
 
 
@@ -15,8 +15,19 @@ const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class MenuScene extends SceneBase {
+    constructor(){
+        super(SCENE_NAME.MENUSCENE)
+    }
     start () {
         super.start();
+        this.init();
+    }
+    init(){
+        game.gameData.getRoomInfo((data)=>{
+            if(data.roomId>0){
+                game.sceneMgr.changeScene(SCENE_NAME.GAMESCENE)
+            }
+        },this)
     }
     btn_setting(){
         game.panelMgr.openPanel("SoundPanel");
@@ -41,5 +52,8 @@ export default class MenuScene extends SceneBase {
     }
     btn_match(){
         game.panelMgr.openPanel("MatchPanel");
+    }
+    btn_inviteMatch(){
+        game.panelMgr.openPanel("InvitePanel");
     }
 }

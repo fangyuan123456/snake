@@ -8,5 +8,8 @@ class Remote extends RemoteBase_1.default {
     constructor() {
         super();
     }
+    userLeave(uid) {
+        matchGame.userLeave(uid);
+    }
 }
 exports.default = Remote;

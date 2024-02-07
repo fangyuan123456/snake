@@ -1,5 +1,5 @@
 import RemoteBase from "../../../../common/base/RemoteBase";
-import { I_inviteReward, I_roleInfo } from "../../../../common/interface/IInfo";
+import { I_asset, I_inviteReward, I_roleInfo, e_InfoType } from "../../../../common/interface/IInfo";
 import { TableName } from "../../../../common/manager/SqlManager";
 
 declare global {
@@ -15,12 +15,6 @@ export default class Remote extends RemoteBase {
     }
     async createPlayer(role:I_roleInfo){
         infoGame.createPlayer(role.uid,role);
-    }
-    setRoomInfo(data:{uid:number,roomId:number,roomIp:string}){
-        let player = infoGame.getPlayer(data.uid);
-        if(player){
-            player.setRoomInfo({roomId:data.roomId,roomIp:data.roomIp});
-        }
     }
     updatePlayInviteData(uid:number,inviteUid:number){
         let player = infoGame.getPlayer(uid);
@@ -40,10 +34,33 @@ export default class Remote extends RemoteBase {
             })
         }
     }
-    async getRoomPlayerInfo(uid:number){
-        let player = infoGame.getPlayer(uid);
+    async openRoom(data:{uid:number,roomId:number,roomIp:string}){
+        let player = infoGame.getPlayer(data.uid);
+        player.setRoomInfo({roomId:data.roomId,roomIp:data.roomIp});
+        return await this.getMatchRoleInfo({uid:data.uid});
+    }
+    setRoomInfo(data:{uid:number,roomId:number,roomIp:string}){
+        let player = infoGame.getPlayer(data.uid);
+        player.setRoomInfo({roomId:data.roomId,roomIp:data.roomIp});
+    }
+    async getMatchRoleInfo(data:{uid:number}){
+        let player = infoGame.getPlayer(data.uid);
+        let roleInfo = await player.getInfo(e_InfoType.role);
+        let assetInfo = await player.getInfo(e_InfoType.asset);
         return {
-            roleInfo:player.role
+            uid:data.uid,
+            nickName:roleInfo.nickName||"",
+            avatarUrl:roleInfo.avatarUrl||"",
+            rankScore:assetInfo.rankScore
+        }
+    }
+    async getRoomPlayerInfo(uid:number):Promise<{roleInfo:I_roleInfo,assetInfo:I_asset}>{
+        let player = infoGame.getPlayer(uid);
+        let roleInfo = await player.getInfo(e_InfoType.role);
+        let assetInfo = await player.getInfo(e_InfoType.asset);
+        return {
+            roleInfo:roleInfo,
+            assetInfo:assetInfo
         }
     }
 }

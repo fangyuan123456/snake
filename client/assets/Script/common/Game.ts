@@ -51,6 +51,7 @@ export class Game extends SingleBase{
     gameData: GameData;
     configMgr: ConfigManager;
     otherInfoData: OtherInfoData;
+    persistNode: cc.Node;
     constructor(){
         super();
         globalThis.game = this;
@@ -85,6 +86,14 @@ export class Game extends SingleBase{
             break
         } 
 
+    }
+    getPersistNode(){
+        if(!this.persistNode){
+            this.persistNode = new cc.Node();
+            cc.director.getScene().addChild(this.persistNode);
+            cc.game.addPersistRootNode(this.persistNode)
+        }
+        return this.persistNode
     }
 
 };

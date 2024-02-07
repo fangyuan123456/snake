@@ -2,12 +2,13 @@ import { SocketType } from "../Game";
 import { CompBase } from "../base/CompBase"
 import { SingleBase } from "../base/SingleBase"
 import { Dic } from "../interface/I_Common";
-export type dataKeyCfg = Dic<{isLoginGet:boolean,isOffLineReq:boolean}>
+export type dataKeyCfg = Dic<{isConnectReq:boolean,ignoreHaveData?:boolean}>
 export default class DataBase extends SingleBase{
     netDatas?:Dic<any> = {};
     infoResolveMap:{[key:string]:any} = {};
     socketType:SocketType
     dataKeyCfg?:dataKeyCfg
+    isInfoReq:Dic<boolean> = {}
     constructor(dataKeyCfg?:dataKeyCfg,socketType:SocketType = SocketType.center){
         super();
         this.socketType = socketType;
@@ -22,15 +23,23 @@ export default class DataBase extends SingleBase{
             for(let i in this.dataKeyCfg){
                 let key = i;
                 let data = this.dataKeyCfg[i];
-                if(data.isLoginGet){
-                    let _infoName = game.utilsMgr.capitalizeFirstLetter(key);
-                    let msgName = "get"+_infoName;
-                    game.netMgr.sendSocket({
-                        msgHead:msgName,
-                    },null,this.socketType)
+                if((data.ignoreHaveData || !this.netDatas[i])&&data.isConnectReq){
+                    this.requestInfo(key);
                 }
             }
         })
+    }
+    private requestInfo(key:string){
+        if(this.isInfoReq[key]){
+            return;
+        }
+        let _infoName = game.utilsMgr.capitalizeFirstLetter(key);
+        let msgName = "get"+_infoName;
+        game.netMgr.sendSocket({
+            msgHead:msgName,
+        },()=>{
+            this.isInfoReq[key] = false;
+        },this.socketType)
     }
     registerAllInfoMsg(){
         for(let i in this.dataKeyCfg){
@@ -61,15 +70,16 @@ export default class DataBase extends SingleBase{
         }
     }
     protected setInfo(dataKey:string,data){
-        this.netDatas[dataKey] = data;
+        this.netDatas[dataKey] = this.netDatas[dataKey] || {};
+        game.utilsMgr.merge(this.netDatas[dataKey],data);
+        let _infoName = game.utilsMgr.capitalizeFirstLetter(dataKey);
+        if(this["set"+_infoName]){
+            this.netDatas[dataKey] = data;
+        }
     }
     protected getInfo(dataKey:string,callBack:(any)=>void,target:CompBase){
         if(!this.netDatas[dataKey]){
-            let _infoName = game.utilsMgr.capitalizeFirstLetter(dataKey);
-            let msgName = "get"+_infoName;
-            game.netMgr.sendSocket({
-                msgHead:msgName,
-            },null,this.socketType)
+            this.requestInfo(dataKey);
         }
         this.infoResolveMap[dataKey] =  this.infoResolveMap[dataKey]||[]
         this.infoResolveMap[dataKey].push({
@@ -77,5 +87,8 @@ export default class DataBase extends SingleBase{
             callBack:callBack
         });
         this._callResolveFunc(dataKey);
+    }
+    public getInfoSync(dataKey:string){
+        return this.netDatas[dataKey];
     }
 }

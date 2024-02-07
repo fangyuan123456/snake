@@ -153,6 +153,11 @@
               "keyType": "string",
               "type": "itemData",
               "id": 1
+            },
+            "rankScore": {
+              "rule": "required",
+              "type": "int32",
+              "id": 2
             }
           },
           "nested": {

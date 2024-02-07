@@ -1,4 +1,5 @@
 import RemoteBase from "../../../../common/base/RemoteBase";
+import { e_roomType } from "../../../../common/interface/IGame";
 
 declare global {
     interface Rpc {
@@ -11,7 +12,7 @@ export default class Remote extends RemoteBase {
     constructor() {
         super();
     }
-    createRoom(msg:{roomId:number,uidList:number[]}){
+    createRoom(msg:{roomId:number,uidList:number[],roomType:e_roomType}){
         gameGame.createRoom(msg);
     }
 }

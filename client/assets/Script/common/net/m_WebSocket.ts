@@ -2,7 +2,7 @@ import { SocketBase } from "./SocketBase"
 
 export class m_WebSocket extends SocketBase{
     createSocket(){
-        return  game.platFormMgr.createWebSocket(this.ip);
+        return  game.platFormMgr.createWebSocket("ws://"+this.ip);
     }
     registerCallBack(){
         this.socket.onopen = this.onOpen.bind(this);

@@ -8,9 +8,11 @@ class Handler extends HandlerBase_1.default {
     constructor() {
         super();
     }
+    inviteFriend(msg, session, next) {
+        matchGame.inviteFriend({ uid: session.uid, isMatch: msg.isMatch, inviteKey: msg.inviteKey });
+    }
     match(msg, session, next) {
         matchGame.match({ uid: session.uid, isMatch: msg.isMatch });
-        next({ uid: session.uid, isMatch: msg.isMatch });
     }
 }
 exports.default = Handler;

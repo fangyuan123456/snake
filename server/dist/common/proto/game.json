@@ -3,18 +3,50 @@
     "game": {
       "nested": {
         "enterRoomReq": {
-          "fields": {
-            "roomId": {
-              "type": "int32",
-              "id": 1
-            }
-          }
+          "fields": {}
         },
         "enterRoomRes": {
           "fields": {
-            "test1": {
-              "type": "string",
+            "playerInfos": {
+              "rule": "repeated",
+              "type": "roomPlayerInfo",
               "id": 1
+            },
+            "gameTime": {
+              "rule": "required",
+              "type": "int32",
+              "id": 2
+            }
+          },
+          "nested": {
+            "roomPlayerInfo": {
+              "fields": {
+                "uid": {
+                  "rule": "required",
+                  "type": "int32",
+                  "id": 1
+                },
+                "nickName": {
+                  "rule": "required",
+                  "type": "string",
+                  "id": 2
+                },
+                "avatarUrl": {
+                  "rule": "required",
+                  "type": "string",
+                  "id": 3
+                },
+                "rankScore": {
+                  "rule": "required",
+                  "type": "int32",
+                  "id": 4
+                },
+                "frames": {
+                  "rule": "repeated",
+                  "type": "int32",
+                  "id": 5
+                }
+              }
             }
           }
         },

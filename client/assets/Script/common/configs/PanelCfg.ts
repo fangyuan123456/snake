@@ -34,7 +34,10 @@ export let panelCfg:{[key: string]: panelStruct} = {
         url:"prefabs/panel/LoadingPanel"
     },
     MatchPanel:{
-        url:"prefabs/panel/MatchPanel"
+        url:"prefabs/panel/match/MatchPanel"
+    },
+    InvitePanel:{
+        url:"prefabs/panel/match/InvitePanel"
     },
     SoundPanel:{
         url:"prefabs/panel/SoundPanel"
