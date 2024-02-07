@@ -11,7 +11,7 @@ const dataKeyCfg:dataKeyCfg = {
         isConnectReq:true,
     },
     inviteRewardInfo:{
-        isConnectReq:false,
+        isConnectReq:true,
     }
 }
 export default class UserData extends DataBase{
@@ -27,13 +27,13 @@ export default class UserData extends DataBase{
         delete loginData.centerIp;
         this.setInfo("roleInfo",loginData)
     }
-    getRoleInfo(callBack:(I_roleInfo)=>void,target:CompBase){
+    getRoleInfo(callBack:(data:I_roleInfo)=>void,target:CompBase){
         this.getInfo("roleInfo",callBack,target)
     }
-    getAssetInfo(callBack:(I_assetInfo)=>void,target:CompBase){
+    getAssetInfo(callBack:(data:I_assetInfo)=>void,target:CompBase){
         this.getInfo("assetInfo",callBack,target)
     }
-    getInviteRewardInfo(callBack:(I_inviteReward)=>void,target:CompBase){
+    getInviteRewardInfo(callBack:(data:I_inviteReward)=>void,target:CompBase){
         this.getInfo("inviteRewardInfo",callBack,target)
     }
 }

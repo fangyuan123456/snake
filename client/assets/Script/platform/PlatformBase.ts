@@ -98,8 +98,12 @@ export abstract class PlatformBase extends SingleBase{
         let webSocket = new WebSocket(ip);
         webSocket.binaryType="arraybuffer";
         let socketTarget:I_webSocket = {
-            send:webSocket.send,
-            close:webSocket.close,
+            send:(buffer)=>{
+                webSocket.send(buffer);
+            },
+            close:()=>{
+                webSocket.close();
+            },
             onopen:()=>{},
             onmessage:()=>{},
             onerror:()=>{},

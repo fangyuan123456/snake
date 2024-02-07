@@ -35,6 +35,7 @@ export default class DataBase extends SingleBase{
         }
         let _infoName = game.utilsMgr.capitalizeFirstLetter(key);
         let msgName = "get"+_infoName;
+        this.isInfoReq[key] = true;
         game.netMgr.sendSocket({
             msgHead:msgName,
         },()=>{
@@ -74,7 +75,7 @@ export default class DataBase extends SingleBase{
         game.utilsMgr.merge(this.netDatas[dataKey],data);
         let _infoName = game.utilsMgr.capitalizeFirstLetter(dataKey);
         if(this["set"+_infoName]){
-            this.netDatas[dataKey] = data;
+            this["set"+_infoName](data);
         }
     }
     protected getInfo(dataKey:string,callBack:(any)=>void,target:CompBase){
