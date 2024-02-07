@@ -18,9 +18,9 @@ export default class GetRewardPanel extends PanelBase {
         super.start();
         cc.find("panel/bg/guang",this.node).runAction(cc.repeatForever(cc.rotateBy(1,180)))
     }
-    init(data:{jiaBeiNum:number,asset:I_assetInfo}){
-        this.jiaBeiNum=data.jiaBeiNum;
-        this.asset=data.asset;
+    init(data:{parmeter?:any,closeCallBack?:(any)=>void}){
+        this.jiaBeiNum=data.parmeter.jiaBeiNum;
+        this.asset=data.parmeter.asset;
         let itemParent = cc.find("panel/bg/prop",this.node);
         for(let i in this.asset.items){
             game.resMgr.createItem({item:this.asset.items[i]},itemParent)

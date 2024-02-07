@@ -34,7 +34,7 @@ export default class MatchPanel extends PanelBase {
         this.isMatching = true;
         game.netMgr.sendSocket({msgHead:"match",msgData:{isMatch:true}},(data:I_matchRes)=>{
             this.onMatchOk(data);
-        })
+        },this)
         game.netMgr.onClose(()=>{
             this.closePanel();
         },this)

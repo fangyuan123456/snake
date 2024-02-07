@@ -3501,7 +3501,9 @@
       "__id__": 1
     },
     "_enabled": true,
-    "matchRollingPrefab": null,
+    "matchRollingPrefab": {
+      "__uuid__": "08e242c5-6451-4771-bd8e-dcec6d6e2dda"
+    },
     "_id": ""
   },
   {

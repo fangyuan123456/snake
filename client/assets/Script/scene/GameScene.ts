@@ -35,7 +35,7 @@ export default class GameScene extends SceneBase {
                     game.netMgr.onReady(()=>{
                         game.netMgr.sendSocket({msgHead:"enterRoom",msgData:{}},(data:any)=>{
                             game.logMgr.debug(data);
-                        },SocketType.game)
+                        },this,SocketType.game)
                     },this,SocketType.game)
                 }
             }

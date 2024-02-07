@@ -18,8 +18,8 @@ class GameServer extends GameServerBase_1.GameServerBase {
         this.app.setConfig("mydogList", this.mydogList);
         this.app.setConfig("connector", {
             "connector": mydog_1.connector.Ws,
-            "clientOnCb": this.onUserIn,
-            "clientOffCb": this.onUserLeave,
+            "clientOnCb": this.onUserIn.bind(this),
+            "clientOffCb": this.onUserLeave.bind(this),
             "interval": 50,
             "noDelay": false,
             "ssl": this.app.env === "production",

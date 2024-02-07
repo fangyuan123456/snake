@@ -40,7 +40,7 @@ export default class DataBase extends SingleBase{
             msgHead:msgName,
         },()=>{
             this.isInfoReq[key] = false;
-        },this.socketType)
+        },null,this.socketType)
     }
     registerAllInfoMsg(){
         for(let i in this.dataKeyCfg){

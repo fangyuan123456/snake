@@ -39,7 +39,7 @@ export default class LoadScene extends SceneBase {
                     game.netMgr.createSocket(game.userData.centerIp)
                     game.netMgr.onReady(()=>{
                         next();
-                    })
+                    },this)
                 })
             }else{
                 game.alertMgr.showTiShiBox({content:"code错误!",btnCallBackList:[

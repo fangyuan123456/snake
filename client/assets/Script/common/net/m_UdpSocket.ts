@@ -1,3 +1,4 @@
+import { CompBase } from "../base/CompBase";
 import { I_msg, MSG_TYPE } from "../interface/I_Common";
 import { SocketBase } from "./SocketBase"
 
@@ -17,7 +18,7 @@ export class m_UdpSocket extends SocketBase{
             msgType:MSG_TYPE.handshake,
             msgHead:"",
             msgData:{md5:this.md5,uid:game.userData.uid}
-        },null,true)
+        },null,null,true)
     }
     startHeartBeat(): void {}
     private sendNeedCallBackData(data:I_msg,callBack?:(data:any)=>void){
@@ -35,8 +36,8 @@ export class m_UdpSocket extends SocketBase{
         sendFunc();
         game.timeMgr.scheduleOnce(sendFunc,0.1);
     }
-    send(data: I_msg, callBack?: (data: any) => void,isNeedReConnect?:boolean): void {
-        if(isNeedReConnect){
+    send(data: I_msg, callBack?: (data: any) => void,target?:CompBase,isNeedCallBack?:boolean): void {
+        if(isNeedCallBack){
             this.sendNeedCallBackData(data,callBack);
         }else{
             super.send(data,callBack);

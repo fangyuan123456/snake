@@ -114,7 +114,7 @@ export class MatchServer extends GameServerBase{
         let index = this.matchList.indexOf(data.uid);
         if(data.isMatch){
             if(index<0){
-                this.matchList.push(index);
+                this.matchList.push(data.uid);
             }
         }else{
             if(index>=0){

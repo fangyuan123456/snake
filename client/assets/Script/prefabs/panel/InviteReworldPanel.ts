@@ -116,6 +116,6 @@ export default class InviteReworldPanel extends PanelBase {
             if(data.isOk){
 
             }
-        })
+        },this)
     }
 }

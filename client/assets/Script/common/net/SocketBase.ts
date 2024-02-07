@@ -7,7 +7,10 @@ enum SOCKET_STATE{
     ONLINE,
     READY
 }
-type  socketCallBack=(any)=>void
+interface callTargetObj{
+    callBack:(any)=>void,
+    target?:CompBase
+}
 export class SocketBase{
     private delaySocketMsgMap:Dic<{callBack?:()=>void}> = {}
     state:SOCKET_STATE = SOCKET_STATE.OFFLINE
@@ -18,7 +21,7 @@ export class SocketBase{
     heartbeatTimer:NodeJS.Timeout
     heartbeatResTimeoutTimer:NodeJS.Timeout
     socket:any
-    msgCallBackList:{[key:string]:socketCallBack[]} = {}
+    msgCallBackList:{[key:string]:callTargetObj[]} = {}
     isNeedReConnect:boolean = true
     constructor(socketType:SocketType,ip:string){
         this.socketType = socketType;
@@ -134,7 +137,7 @@ export class SocketBase{
         this.close();
         this.dispatchMsgEvent("onClose");
     }
-    send(data:I_msg,callBack?:(data:any)=>void){
+    send(data:I_msg,callBack?:(data:any)=>void,target?:CompBase){
         data.msgData = data.msgData || {};
         if(data.msgType == MSG_TYPE.msg && this.state != SOCKET_STATE.READY){
             game.logMgr.error("socket:% state is %d",this.socketType,this.state);
@@ -142,7 +145,7 @@ export class SocketBase{
         }
         game.logMgr.debug(this.socketType+"sendMsg:"+JSON.stringify(data));
         this.socket.send(game.protoMgr.encode(data));
-        this.pushInCallBackList(data,callBack);
+        this.pushInCallBackList(data,callBack,target);
     }
     dispatchMsgEvent(msgName,data?){
         game.eventMgr.dispatch(this.socketType+"OnMsg"+msgName,data);
@@ -150,17 +153,22 @@ export class SocketBase{
     onMsgEvent(msgName:string,callBack:(any)=>void,target?:CompBase){
         game.eventMgr.on(this.socketType+"OnMsg"+msgName,callBack,target);
     }
-    pushInCallBackList(data:I_msg,callBack?:(data:any)=>void){
+    pushInCallBackList(data:I_msg,callBack?:(data:any)=>void,target?:CompBase){
         if(callBack){
             this.msgCallBackList[data.msgHead] = this.msgCallBackList[data.msgHead] || [];
-            this.msgCallBackList[data.msgHead].push(callBack);
+            this.msgCallBackList[data.msgHead].push({
+                callBack:callBack,
+                target:target
+            });
         }
     }
     runCallBackList(data:I_msg){
         let callList = this.msgCallBackList[data.msgHead];
         if(callList){
             for(let i in callList){
-                callList[i](data.msgData);
+                if(!callList[i].target || callList[i].target.node){
+                    callList[i].callBack(data.msgData);
+                }
             }
             delete this.msgCallBackList[data.msgHead]
         }

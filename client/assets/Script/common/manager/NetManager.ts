@@ -45,7 +45,7 @@ export class NetManager extends SingleBase{
             }
          })
     }
-    sendSocket(data:I_msg,callBack?:(data:any)=>void,socketType:SocketType = SocketType.center){
+    sendSocket(data:I_msg,callBack?:(data:any)=>void,target?:CompBase,socketType:SocketType = SocketType.center){
         if(!this.socketMap[socketType]){
             game.logMgr.error("socketName:%s is not find",socketType);
             return;

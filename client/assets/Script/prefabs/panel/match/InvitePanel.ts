@@ -34,7 +34,7 @@ export default class InvitePanel extends PanelBase {
         this.isInvite = true;
         game.netMgr.sendSocket({msgHead:"inviteFriend",msgData:{isInvite:true}},(data:I_matchRes)=>{
             this.onInviteStateShow(data);
-        })
+        },this)
         game.netMgr.onClose(()=>{
             this.closePanel();
         },this)

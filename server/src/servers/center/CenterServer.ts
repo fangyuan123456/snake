@@ -18,8 +18,8 @@ export class CenterServer extends GameServerBase{
         this.app.setConfig("mydogList", this.mydogList);
         this.app.setConfig("connector", {
             "connector": connector.Ws,
-            "clientOnCb": this.onUserIn,
-            "clientOffCb": this.onUserLeave,
+            "clientOnCb": this.onUserIn.bind(this),
+            "clientOffCb": this.onUserLeave.bind(this),
             "interval": 50,
             "noDelay": false,
             "ssl": this.app.env === "production",
