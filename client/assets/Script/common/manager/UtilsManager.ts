@@ -1,6 +1,6 @@
 import { SingleBase } from "../base/SingleBase";
 import { rankLevelCfg } from "../configs/CommonCfg";
-import SensitivityConfig from "../data/SensitivityConfig";
+import SensitivityConfig from "../components/SensitivityConfig";
 export class UtilsManager extends SingleBase{
     getNodeInTargetPos(node:cc.Node,targetPos:cc.Node,pos:cc.Vec2 = cc.v2(0,0)){
         let worldPos = node.convertToWorldSpace(pos);

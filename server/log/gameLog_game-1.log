@@ -231,3 +231,10 @@
 [2024-01-30T14:48:16.821] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
 [2024-01-30T14:48:16.839] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0
 [2024-01-30T14:48:16.843] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-02-18T20:43:22.063] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-02-18T21:03:25.759] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-02-18T21:05:37.062] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-02-18T21:08:05.166] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-02-18T21:16:46.133] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-02-18T21:24:01.873] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-02-18T22:15:29.351] [DEBUG] gameLog - udp server listening on port ${port}

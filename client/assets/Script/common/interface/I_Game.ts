@@ -13,3 +13,7 @@ export interface I_enterRoomRes{
     playerInfos:I_roomPlayerInfo[],
     gameTime:number
 }
+export interface I_frameMsgRes{
+    uid:number,
+    frames:number[]
+}

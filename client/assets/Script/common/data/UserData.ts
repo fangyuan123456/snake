@@ -16,6 +16,8 @@ const dataKeyCfg:dataKeyCfg = {
 }
 export default class UserData extends DataBase{
     uid:number = 0
+    isDropToolOn:boolean = false
+    friendMatchUid:number = null
     centerIp:string  = ""
     otherPlayerInfo: Dic<I_roleInfo> = {};
     constructor(){

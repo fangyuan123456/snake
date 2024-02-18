@@ -18,10 +18,28 @@ class Room {
         this.isGameStart = false;
         this.roomPlayers = {};
         this.roomType = IGame_1.e_roomType.FIGHT;
+        this.frameId = 0;
         this.roomType = roomType;
         for (let i in uidList) {
             let uid = uidList[i];
             this.roomPlayers[uid] = new RoomPlayer_1.RoomPlayer(this, uid);
+        }
+    }
+    enterRoomHandler(msg, session, next) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let data = yield this.getAllPlayerInfo();
+            let player = this.getRoomPlayer(session.uid);
+            player.isEnterGame = true;
+            this.checkGameStart();
+            next({ playerInfos: data, gameTime: 0 });
+        });
+    }
+    frameMsgHandler(msg, session, next) {
+        if (this.isGameStart) {
+            let player = this.getRoomPlayer(session.uid);
+            if (player) {
+                player.frameMsg(msg);
+            }
         }
     }
     getRoomPlayer(uid) {
@@ -30,6 +48,13 @@ class Room {
     getAllPlayerInfo() {
         return __awaiter(this, void 0, void 0, function* () {
             let frameData = this.getFrameData();
+            let getFrames = (uid) => {
+                for (let i in frameData) {
+                    if (frameData[i].uid == uid) {
+                        return frameData[i].frames;
+                    }
+                }
+            };
             let data = [];
             for (let i in this.roomPlayers) {
                 let player = this.roomPlayers[i];
@@ -39,7 +64,7 @@ class Room {
                     nickName: infoData.role.nickName || "",
                     avatarUrl: infoData.role.avatarUrl || "",
                     rankScore: infoData.asset.rankScore,
-                    frames: frameData[infoData.uid]
+                    frames: getFrames(infoData.uid)
                 });
             }
             return data;
@@ -61,28 +86,14 @@ class Room {
         }
         return true;
     }
-    enterRoomHandler(msg, session, next) {
-        return __awaiter(this, void 0, void 0, function* () {
-            let data = yield this.getAllPlayerInfo();
-            let player = this.getRoomPlayer(session.uid);
-            player.isEnterGame = true;
-            this.checkGameStart();
-            next({ playerInfos: data, gameTime: 0 });
-        });
-    }
-    frameMsgHandler(msg, session, next) {
-        if (this.isGameStart) {
-            let player = this.getRoomPlayer(session.uid);
-            if (player) {
-                player.frameMsg(msg);
-            }
-        }
-    }
     getFrameData(frameId = 0) {
-        let data = {};
+        let data = [];
         for (let i in this.roomPlayers) {
             let player = this.roomPlayers[i];
-            data[player.uid] = player.getFrames(frameId);
+            data.push({
+                uid: player.uid,
+                frames: player.getFrames(frameId)
+            });
         }
         return data;
     }
@@ -90,10 +101,11 @@ class Room {
         for (let i in this.roomPlayers) {
             let player = this.roomPlayers[i];
             let frameData = this.getFrameData(player.clientCurFrameId);
-            gameGame.sendMsg(player.uid, { msgHead: "frameMsg", msgData: { frames: frameData, frameId: player.clientCurFrameId } });
+            gameGame.sendMsg(player.uid, { msgHead: "frameMsg", msgData: { frameData: frameData } });
         }
     }
     update() {
+        this.frameId++;
         for (let i in this.roomPlayers) {
             let player = this.roomPlayers[i];
             player.update();

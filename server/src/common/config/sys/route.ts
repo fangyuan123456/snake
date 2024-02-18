@@ -1,4 +1,5 @@
 export default [
+    "center.main.pushMsg",
     "info.main.getPlayersInfo",
     "info.main.getRoomInfo",
     "info.main.getAssetInfo",
@@ -8,5 +9,5 @@ export default [
     "match.main.match",
     "match.main.matchOk",
     "game.main.enterRoom",
-    "center.main.pushMsg"
+    "game.main.frameMsg"
 ]

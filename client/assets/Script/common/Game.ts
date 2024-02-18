@@ -20,6 +20,7 @@ import { AduintManager } from "./manager/AduintManager";
 import GameData from "./data/GameData";
 import { ConfigManager } from "./manager/ConfigManager";
 import { OtherInfoData } from "./data/OtherInfoData";
+import RoomData from "./data/RoomData";
 
 declare global {
     namespace globalThis {
@@ -49,6 +50,7 @@ export class Game extends SingleBase{
     roomMgr: RoomManager;
     aduintMgr: AduintManager;
     gameData: GameData;
+    roomData:RoomData;
     configMgr: ConfigManager;
     otherInfoData: OtherInfoData;
     persistNode: cc.Node;

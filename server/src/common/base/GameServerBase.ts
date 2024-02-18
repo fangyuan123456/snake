@@ -104,8 +104,12 @@ export class GameServerBase{
         }else{
             let cmd = game.protoMgr.getProtoCode(data.msgHead!)
             if(cmd || cmd == 0){
-                let sid = game.utilsMgr.getSid(uid,frontServer);
-                this.app.sendMsgByUidSid(cmd,data.msgData,[{uid:uid,sid:sid}])
+                if(this.app.serverInfo.frontend){
+                    this.app.sendMsgByUid(cmd,data.msgData,[uid]);
+                }else{
+                    let sid = game.utilsMgr.getSid(uid,frontServer);
+                    this.app.sendMsgByUidSid(cmd,data.msgData,[{uid:uid,sid:sid}])
+                }
             }else{
                 game.logMgr.error("msgHead:%s is not find",data.msgHead)
             }

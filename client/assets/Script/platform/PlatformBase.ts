@@ -77,8 +77,6 @@ export abstract class PlatformBase extends SingleBase{
                     if(callBack){
                         callBack(xhr.response);
                     }
-                }else{
-                    failCallBack();
                 }
             }
         };

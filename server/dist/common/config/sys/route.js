@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = [
+    "center.main.pushMsg",
     "info.main.getPlayersInfo",
     "info.main.getRoomInfo",
     "info.main.getAssetInfo",
@@ -10,5 +11,5 @@ exports.default = [
     "match.main.match",
     "match.main.matchOk",
     "game.main.enterRoom",
-    "center.main.pushMsg"
+    "game.main.frameMsg"
 ];

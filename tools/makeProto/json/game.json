@@ -50,41 +50,42 @@
             }
           }
         },
-        "chatroomReq": {
+        "frameMsgReq": {
           "fields": {
-            "uid": {
+            "frameId": {
               "rule": "required",
               "type": "int32",
               "id": 1
             },
-            "type": {
+            "frameType": {
               "rule": "required",
               "type": "int32",
               "id": 2
-            },
-            "chat": {
-              "rule": "required",
-              "type": "string",
-              "id": 3
             }
           }
         },
-        "chatroomRes": {
+        "frameMsgRes": {
           "fields": {
-            "uid": {
-              "rule": "required",
-              "type": "int32",
+            "frameData": {
+              "rule": "repeated",
+              "type": "userFrameData",
               "id": 1
-            },
-            "type": {
-              "rule": "required",
-              "type": "int32",
-              "id": 2
-            },
-            "chat": {
-              "rule": "required",
-              "type": "string",
-              "id": 3
+            }
+          },
+          "nested": {
+            "userFrameData": {
+              "fields": {
+                "uid": {
+                  "rule": "required",
+                  "type": "int32",
+                  "id": 1
+                },
+                "frames": {
+                  "rule": "repeated",
+                  "type": "int32",
+                  "id": 2
+                }
+              }
             }
           }
         }

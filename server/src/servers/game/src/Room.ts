@@ -12,6 +12,7 @@ export class Room{
     isGameStart:boolean = false;
     roomPlayers:{[key:number]:RoomPlayer} = {};
     roomType:e_roomType = e_roomType.FIGHT
+    frameId:number = 0;
     constructor(uidList:number[],roomType:e_roomType){
         this.roomType = roomType;
         for(let i in uidList){
@@ -19,11 +20,39 @@ export class Room{
             this.roomPlayers[uid] = new RoomPlayer(this,uid);
         }
     }
+
+
+
+    async enterRoomHandler(msg: any, session: Session|UdpSession, next: Function){
+        let data = await this.getAllPlayerInfo();
+        let player = this.getRoomPlayer(session.uid);
+        player.isEnterGame = true;
+        this.checkGameStart();
+        next({playerInfos:data,gameTime:0})
+    }
+    frameMsgHandler(msg:{frameId:number,frameType:number},session:Session|UdpSession,next:Function){
+        if(this.isGameStart){
+            let player = this.getRoomPlayer(session.uid);
+            if(player){
+                player.frameMsg(msg);
+            }
+        }
+    }
+
+
+
     getRoomPlayer(uid:number){
         return this.roomPlayers[uid]
     }
     async getAllPlayerInfo(){
         let frameData = this.getFrameData();
+        let getFrames=(uid:number)=>{
+            for(let i in frameData){
+                if(frameData[i].uid == uid){
+                    return frameData[i].frames;
+                }
+            }
+        }
         let data:I_roomPlayerInfo[] = [];
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
@@ -33,7 +62,7 @@ export class Room{
                 nickName:infoData.role!.nickName||"",
                 avatarUrl:infoData.role!.avatarUrl||"",
                 rankScore:infoData.asset!.rankScore,
-                frames:frameData[infoData.uid]
+                frames:getFrames(infoData.uid)!
             }); 
         }
         return data;
@@ -54,26 +83,14 @@ export class Room{
         }
         return true;
     }
-    async enterRoomHandler(msg: any, session: Session|UdpSession, next: Function){
-        let data = await this.getAllPlayerInfo();
-        let player = this.getRoomPlayer(session.uid);
-        player.isEnterGame = true;
-        this.checkGameStart();
-        next({playerInfos:data,gameTime:0})
-    }
-    frameMsgHandler(msg:{frameId:number,frameType:number},session:Session|UdpSession,next:Function){
-        if(this.isGameStart){
-            let player = this.getRoomPlayer(session.uid);
-            if(player){
-                player.frameMsg(msg);
-            }
-        }
-    }
     getFrameData(frameId:number = 0){
-        let data:Dic<any> = {};
+        let data:{uid:number,frames:number[]}[] = [];
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
-            data[player.uid] = player.getFrames(frameId);
+            data.push({
+                uid:player.uid,
+                frames:player.getFrames(frameId)
+            })
         }
         return data;
     }
@@ -81,10 +98,11 @@ export class Room{
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
             let frameData = this.getFrameData(player.clientCurFrameId);
-            gameGame.sendMsg(player.uid,{msgHead:"frameMsg",msgData:{frames:frameData,frameId:player.clientCurFrameId}})
+            gameGame.sendMsg(player.uid,{msgHead:"frameMsg",msgData:{frameData:frameData}})
         }
     }
     update(){
+        this.frameId++;
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
             player.update();

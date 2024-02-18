@@ -8,7 +8,7 @@ class RoomPlayer {
         this.isOnLine = false;
         this.isEnterGame = false;
         this.clientCurFrameId = 0;
-        this.framesTypeList = [];
+        this.playTypeMap = [];
         this.newFrameType = 0;
         this.room = room;
         this.uid = uid;
@@ -24,14 +24,20 @@ class RoomPlayer {
         this.newFrameType = msg.frameType;
     }
     getFrames(frameId) {
-        let newFrameTypeList = [];
-        for (let i = frameId; i < this.framesTypeList.length; i++) {
-            newFrameTypeList.push(this.framesTypeList[i]);
+        let frames = [];
+        for (let i in this.playTypeMap) {
+            let playFrameId = Number(i);
+            if (playFrameId > frameId) {
+                frames.push(playFrameId * 10 + this.playTypeMap[i]);
+            }
         }
-        return newFrameTypeList;
+        return frames;
     }
     pushInFrameData() {
-        this.framesTypeList.push(this.newFrameType);
+        if (this.newFrameType) {
+            this.playTypeMap[this.room.frameId] = this.newFrameType;
+            this.newFrameType = null;
+        }
     }
     callInitResolve() {
         if (this.isInit) {

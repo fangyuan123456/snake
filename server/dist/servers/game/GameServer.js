@@ -70,8 +70,7 @@ class GameServer extends GameServerBase_1.GameServerBase {
                 udpSession.send(data);
             }
             else {
-                let sid = game.utilsMgr.getSid(uid, frontServer);
-                this.app.sendMsgByUidSid(cmd, data.msgData, [{ uid: uid, sid: sid }]);
+                this.app.sendMsgByUid(cmd, data.msgData, [uid]);
             }
         }
         else {

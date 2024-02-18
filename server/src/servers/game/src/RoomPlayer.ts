@@ -11,8 +11,8 @@ export class RoomPlayer{
     private isOnLine:boolean = false;
     public isEnterGame:boolean = false;
     public clientCurFrameId:number = 0;
-    private framesTypeList:number[] = [];
-    private newFrameType:number = 0;
+    private playTypeMap:{[key:number]:number} = [];
+    private newFrameType:number|null = 0;
     private room:Room;
     constructor(room:Room,uid:number){
         this.room = room;
@@ -29,14 +29,20 @@ export class RoomPlayer{
         this.newFrameType = msg.frameType;
     }
     getFrames(frameId:number){
-        let newFrameTypeList = [];
-        for(let i = frameId;i<this.framesTypeList.length;i++){
-            newFrameTypeList.push(this.framesTypeList[i]);
+        let frames:number[] = [];
+        for(let i in this.playTypeMap){
+            let playFrameId = Number(i);
+            if(playFrameId>frameId){
+                frames.push(playFrameId*10+this.playTypeMap[i]);
+            }
         }
-        return newFrameTypeList;
+        return frames;
     }
     pushInFrameData(){
-        this.framesTypeList.push(this.newFrameType);
+        if(this.newFrameType){
+            this.playTypeMap[this.room.frameId] = this.newFrameType;
+            this.newFrameType = null;
+        }
     }
     callInitResolve(){
         if(this.isInit){

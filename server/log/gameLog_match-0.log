@@ -149,3 +149,31 @@
 [2024-01-30T14:48:16.810] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
 [2024-01-30T14:48:16.816] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1
 [2024-01-30T14:48:16.819] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-02-18T20:44:34.893] [DEBUG] gameLog - cmd:6,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T20:44:34.897] [DEBUG] gameLog - cmd:6,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T20:44:34.898] [DEBUG] gameLog - cmd:1,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T20:44:34.901] [DEBUG] gameLog - cmd:1,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T21:04:13.471] [DEBUG] gameLog - cmd:6,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T21:04:13.474] [DEBUG] gameLog - cmd:6,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T21:04:13.475] [DEBUG] gameLog - cmd:1,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T21:04:13.477] [DEBUG] gameLog - cmd:1,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T21:05:46.042] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T21:05:46.046] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T21:05:46.047] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T21:05:46.048] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T21:08:20.234] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T21:08:20.238] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T21:08:20.238] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T21:08:20.240] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T21:17:14.928] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T21:17:14.933] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T21:17:14.934] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T21:17:14.936] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T21:24:09.375] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T21:24:09.379] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T21:24:09.379] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T21:24:09.381] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T22:15:37.821] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T22:15:37.825] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-18T22:15:37.826] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-18T22:15:37.828] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}

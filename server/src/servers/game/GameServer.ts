@@ -74,8 +74,7 @@ export class GameServer extends GameServerBase{
             if(udpSession){
                 udpSession.send(data)
             }else{
-                let sid = game.utilsMgr.getSid(uid,frontServer);
-                this.app.sendMsgByUidSid(cmd,data.msgData,[{uid:uid,sid:sid}])
+                this.app.sendMsgByUid(cmd,data.msgData,[uid])
             }
         }else{
             game.logMgr.error("msgHead:%s is not find",data.msgHead)
