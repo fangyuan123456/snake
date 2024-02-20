@@ -2,7 +2,7 @@ import { SocketType } from "../Game";
 import { CompBase } from "../base/CompBase";
 import DataBase from "../base/DataBase";
 import { Dic } from "../interface/I_Common";
-import { I_frameMsgRes } from "../interface/I_Game";
+import { I_enterRoomRes, I_frameMsgRes } from "../interface/I_Game";
 import { I_roomInfo } from "../interface/I_Info";
 export default class RoomData extends CompBase{
     curFrameId:number = null
@@ -12,6 +12,9 @@ export default class RoomData extends CompBase{
         game.netMgr.onMsg("frameMsg",(data)=>{
             this.onFrameMsg(data);
         },this,SocketType.game)
+    }
+    setRoomInfo(roomInfo:I_enterRoomRes){
+
     }
     onFrameMsg(msg:I_frameMsgRes[]){
         for(let i in msg){

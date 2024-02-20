@@ -5,6 +5,7 @@
 // Learn life-cycle callbacks:
 import { SocketType } from "../common/Game";
 import { SCENE_NAME, SceneBase } from "../common/base/SceneBase";
+import { I_enterRoomRes } from "../common/interface/I_Game";
 
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 const {ccclass, property} = cc._decorator;
@@ -33,8 +34,9 @@ export default class GameScene extends SceneBase {
                 if(!game.netMgr.socketMap[SocketType.game]){
                     this.createGameSocket(data.roomIp);
                     game.netMgr.onReady(()=>{
-                        game.netMgr.sendSocket({msgHead:"enterRoom",msgData:{}},(data:any)=>{
-                            game.logMgr.debug(data);
+                        game.netMgr.sendSocket({msgHead:"enterRoom",msgData:{}},(data:I_enterRoomRes)=>{
+                            game.roomData.setRoomInfo(data);
+                            game.eventMgr.dispatch("gameInit");
                         },this,SocketType.game)
                     },this,SocketType.game)
                 }

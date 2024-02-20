@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "diamondNode",
+    "_name": "DiamondNode",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -61,8 +61,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        38.245,
-        21.531,
+        0,
+        0,
         0,
         0,
         0,

@@ -24,21 +24,20 @@ export class SceneBase extends CompBase{
         this.createGuangBoNode();    
     }
     createGuangBoNode(){
-        let guangboNode = cc.find("guangBoNode",this.node);
-        if(guangboNode){
-            let node = cc.find("guangBoNode",game.getPersistNode());
-            if(!node){
-                game.resMgr.loadRes<cc.Prefab>("prefabs/guangBoNode",cc.Prefab).then((prefab:cc.Prefab)=>{
-                    node = cc.instantiate(prefab);
-                    game.getPersistNode().addChild(node);
-                    let pos = game.utilsMgr.getNodeInTargetPos(guangboNode,node.parent);
-                    node.setPosition(pos);
+        let guangBoPosNode = cc.find("guangBoPosNode",this.node);
+        let guanBo = cc.find("GuangBoNode",game.getPersistNode());
+        if(guangBoPosNode){
+            if(!guanBo){
+                game.resMgr.loadRes<cc.Prefab>("prefabs/GuangBoNode",cc.Prefab).then((prefab:cc.Prefab)=>{
+                    guanBo = cc.instantiate(prefab);
+                    game.getPersistNode().addChild(guanBo);
+                    let pos = game.utilsMgr.getNodeInTargetPos(guangBoPosNode,guanBo.parent);
+                    guanBo.setPosition(pos);
                 })
             }
         }else{
-           let node = cc.find("guangBoNode",game.getPersistNode());
-           if(node){
-             node.destroy();
+           if(guanBo){
+             guanBo.destroy();
            }
         }   
     }

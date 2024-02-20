@@ -76,7 +76,7 @@ export class ResManager extends SingleBase{
         this.setSpImg(sp,url,callBack,isRemote)
     }
     createItem(data:{item:I_item,scale?:number},parent:cc.Node){
-        this.loadRes("prefabs/itemNode",cc.Prefab).then((prefab:cc.Prefab)=>{
+        this.loadRes("prefabs/ItemNode",cc.Prefab).then((prefab:cc.Prefab)=>{
             let node = cc.instantiate(prefab);
             parent.addChild(node);
             if(data.scale){

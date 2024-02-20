@@ -13,6 +13,7 @@ export class Room{
     roomPlayers:{[key:number]:RoomPlayer} = {};
     roomType:e_roomType = e_roomType.FIGHT
     frameId:number = 0;
+    gameTime:number = 0;
     constructor(uidList:number[],roomType:e_roomType){
         this.roomType = roomType;
         for(let i in uidList){
@@ -28,7 +29,7 @@ export class Room{
         let player = this.getRoomPlayer(session.uid);
         player.isEnterGame = true;
         this.checkGameStart();
-        next({playerInfos:data,gameTime:0})
+        next({playerInfos:data,gameTime:this.gameTime})
     }
     frameMsgHandler(msg:{frameId:number,frameType:number},session:Session|UdpSession,next:Function){
         if(this.isGameStart){
@@ -38,9 +39,6 @@ export class Room{
             }
         }
     }
-
-
-
     getRoomPlayer(uid:number){
         return this.roomPlayers[uid]
     }
@@ -102,6 +100,7 @@ export class Room{
         }
     }
     update(){
+        this.gameTime+=GameConfig.frameDt/1000;
         this.frameId++;
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
