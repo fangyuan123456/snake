@@ -63,11 +63,27 @@ export default class SnakeBase extends CompBase {
         return frameData
     }
     private getTargetDir(lastDir:number,curDir:number){
-        let targetDir = 0;
-        if(curDir>=lastDir){
-            return Math.min(curDir,lastDir+gameDefine.frameChangeAngle)
+        // 角度范围在 [0, 360) 内
+        const normalizedAngleA = (lastDir + 360) % 360;
+        const normalizedAngleB = (curDir + 360) % 360;
+    
+        // 计算 A 往 B 转动的方向
+        let direction = Math.sign((normalizedAngleB - normalizedAngleA + 360) % 360 - 180);
+    
+        // 如果 A 和 B 在同一条线上，则直接返回 B
+        if (normalizedAngleA === normalizedAngleB) {
+            return normalizedAngleB;
         }
-        return targetDir
+    
+        // 计算转动后的角度
+        let rotatedAngle = normalizedAngleA + direction * gameDefine.frameChangeAngle;
+    
+        // 如果越过了角度 B，就返回 B
+        if ((direction === 1 && rotatedAngle >= normalizedAngleB) || (direction === -1 && rotatedAngle <= normalizedAngleB)) {
+            return normalizedAngleB;
+        }
+        // 角度范围在 [0, 360) 内
+        return (rotatedAngle + 360) % 360;
     }
     logicUpdate(frameSpeed:number){
         let frameData = this.readFrame();
@@ -84,7 +100,7 @@ export default class SnakeBase extends CompBase {
     }
     protected update(dt: number): void {
         this.node.position = FMath.slerpV3(this.node.position,this.curPos.getVec3(),this.velocity,dt,gameDefine.frameDt/this.frameSpeed);
-        this.node.angle = FMath.slerp(this.node.angle,this.curDir,this.velocity,dt,gameDefine.frameDt/this.frameSpeed)
+        this.node.angle = FMath.slerp(this.node.angle,this.targetDir,this.velocity,dt,gameDefine.frameDt/this.frameSpeed)
     }
 
     // update (dt) {}
