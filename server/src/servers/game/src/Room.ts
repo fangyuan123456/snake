@@ -86,7 +86,7 @@ export class Room{
         }
     }
     update(){
-        this.gameTime+=GameConfig.frameDt/1000;
+        this.gameTime = Math.round(GameConfig.frameDt/1000 + this.gameTime);
         this.frameId++;
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
