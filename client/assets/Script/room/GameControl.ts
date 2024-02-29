@@ -54,14 +54,13 @@ export default class GameControl extends CompBase {
                 let vec = cc.v2(vec3.x,vec3.y).normalize();
                 let rAngle = -vec.signAngle(cc.v2(1,0));
                 angle = cc.misc.radiansToDegrees(rAngle);
-                if(rAngle<0){
-                    rAngle +=360;
+                if(angle<0){
+                    angle +=360;
                 }
             }
             let playType1 = this.isClickAddSpeed?1:0;
             let playType = playType1 + Math.floor(angle)*10;
             game.roomData.setCollectPlayType(playType);
-            console.log(angle);
         }else{
             game.roomData.setCollectPlayType();
         }

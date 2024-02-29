@@ -1,8 +1,7 @@
 import { SocketType } from "../../common/Game";
 import { CompBase } from "../../common/base/CompBase";
 import { SCENE_NAME } from "../../common/base/SceneBase";
-import { define } from "../../common/configs/CommonCfg";
-import { addFrameCfg } from "../../common/configs/RoomCfg";
+import { addFrameCfg, gameDefine } from "../../common/configs/RoomCfg";
 import { Dic } from "../../common/interface/I_Common";
 import { I_enterRoomRes, I_frameMsgRes } from "../../common/interface/I_Game";
 import { I_roomInfo } from "../../common/interface/I_Info";
@@ -53,7 +52,7 @@ export default class RoomData extends CompBase{
     }
     sendFrameMsg(){
         let frameOffset = this.roomInfo.serverFrameId - this.curFrameId;
-        if(this.collectPlayType && frameOffset < define.frameCanPlayOffset){
+        if(this.collectPlayType && frameOffset < gameDefine.frameCanPlayOffset){
             game.netMgr.sendSocket({msgHead:"frameMsg",msgData:{frameId:this.roomInfo.serverFrameId,frameType:this.collectPlayType}},null,this,SocketType.game)
         }
     }
@@ -77,7 +76,7 @@ export default class RoomData extends CompBase{
     logicUpdate(frameSpeed:number){
         this.curFrameId++;
         this.sendFrameMsg();
-        this.frameLeftTime = define.frameDt;
+        this.frameLeftTime = gameDefine.frameDt;
         game.eventMgr.dispatch("logicUpdate",frameSpeed)
     }
     setCollectPlayType(collectPlayType?:number){

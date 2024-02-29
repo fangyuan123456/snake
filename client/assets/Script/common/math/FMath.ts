@@ -1,4 +1,4 @@
-import { define } from "../configs/CommonCfg";
+import { gameDefine } from "../configs/RoomCfg";
 import { Decimal } from "./Decimal";
 import { DecimalVec } from "./DecimalVec";
 type intNum = number;
@@ -110,7 +110,7 @@ export class FMath {
         return new DecimalVec(this.cos(dir),this.sin(dir));
     }
 
-    static smoothDampV3(current: cc.Vec3, target: cc.Vec3, currentVelocity: cc.Vec3, smoothTime: number, maxSpeed: number = Infinity, deltaTime: number = define.frameDt) {
+    static smoothDampV3(current: cc.Vec3, target: cc.Vec3, currentVelocity: cc.Vec3, smoothTime: number, maxSpeed: number = Infinity, deltaTime: number = gameDefine.frameDt) {
         let output_x = 0;
         let output_y = 0;
         let output_z = 0;
@@ -176,7 +176,7 @@ export class FMath {
     
         return new cc.Vec3(output_x, output_y, output_z);
     }
-    static  smoothDamp(current: number, target: number, currentVelocity: number[], smoothTime: number, maxSpeed: number = Infinity, deltaTime: number = define.frameDt) {
+    static  smoothDamp(current: number, target: number, currentVelocity: number[], smoothTime: number, maxSpeed: number = Infinity, deltaTime: number = gameDefine.frameDt) {
         deltaTime = Math.max(0.0001, deltaTime);
         // Based on Game Programming Gems 4 Chapter 1.10
         smoothTime = Math.max(0.0001, smoothTime);
