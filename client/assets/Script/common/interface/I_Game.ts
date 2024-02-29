@@ -1,19 +1,21 @@
+import { Dic } from "./I_Common"
+
 export enum ROOM_TYPE{
     FRIEND,
     FIGHT
 }
 export interface I_roomPlayerInfo{
-    uid:number,
     nickName:string,
     avatarUrl:string,
     rankScore:number,
-    frames:number[]
+    frames:Dic<number>
 }
 export interface I_enterRoomRes{
-    playerInfos:I_roomPlayerInfo[],
-    gameTime:number
+    playerInfos:Dic<I_roomPlayerInfo>,
+    gameTime:number,
+    serverFrameId:number
 }
 export interface I_frameMsgRes{
-    uid:number,
-    frames:number[]
+    frameData:Dic<{frames:Dic<number>}>
+    serverFrameId:number
 }

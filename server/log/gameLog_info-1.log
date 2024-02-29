@@ -1065,3 +1065,37 @@
 [2024-02-18T22:44:46.510] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
 [2024-02-18T22:44:46.511] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
 [2024-02-18T22:44:46.512] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-02-29T13:45:32.945] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-02-29T13:45:32.976] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-02-29T13:45:32.982] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:49:10.061] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:49:10.063] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:49:10.065] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-02-29T13:53:56.397] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-02-29T13:53:56.414] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-02-29T13:53:56.426] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-02-29T13:53:56.439] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-02-29T13:54:14.906] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-02-29T13:54:14.927] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:54:14.942] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-02-29T13:57:49.672] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-02-29T13:57:49.694] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:57:49.709] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-02-29T13:58:28.068] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:58:28.071] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:58:28.073] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-02-29T13:58:30.907] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:58:30.910] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:58:30.920] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-02-29T13:58:51.280] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:58:51.282] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:58:51.283] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-02-29T13:58:56.133] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-02-29T13:58:56.168] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-02-29T13:59:11.788] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-02-29T13:59:17.990] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-02-29T13:59:17.999] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:59:18.038] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-02-29T14:00:10.889] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-02-29T14:00:10.911] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-02-29T14:00:10.915] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1

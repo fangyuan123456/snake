@@ -3086,3 +3086,43 @@
 [2024-02-18T22:44:56.456] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
 [2024-02-18T22:44:56.457] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
 [2024-02-18T22:44:56.457] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T13:45:19.369] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-02-29T13:45:19.394] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T13:45:19.406] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:49:11.821] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:49:11.826] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:49:11.829] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T13:50:35.403] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:50:35.405] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:50:35.407] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T13:50:49.240] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:50:49.243] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:50:49.244] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T13:53:56.400] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-02-29T13:53:56.417] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-02-29T13:53:56.428] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-02-29T13:54:14.792] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-02-29T13:54:14.822] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:54:14.836] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T13:57:42.976] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-02-29T13:57:42.996] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:57:43.013] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T13:58:30.953] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:58:30.955] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:58:30.958] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T13:58:52.877] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:58:52.879] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:58:52.880] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T13:58:56.132] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-02-29T13:58:56.168] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-02-29T13:59:11.828] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-02-29T13:59:17.561] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-02-29T13:59:17.564] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:59:17.581] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T13:59:41.855] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:59:41.858] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:59:41.861] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T13:59:53.384] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:59:53.385] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-02-29T13:59:53.387] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-02-29T14:00:10.888] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login

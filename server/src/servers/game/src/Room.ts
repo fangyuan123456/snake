@@ -4,10 +4,6 @@ import { Dic, I_msg } from "../../../common/interface/ICommon";
 import { GameConfig } from "./GameConfig";
 import { UdpSession } from "../../../common/net/UdpSession";
 import { I_roomPlayerInfo, e_roomType } from "../../../common/interface/IGame";
-interface playTypeData{
-    uid?:number
-    playType?:number
-}
 export class Room{
     isGameStart:boolean = false;
     roomPlayers:{[key:number]:RoomPlayer} = {};
@@ -29,7 +25,7 @@ export class Room{
         let player = this.getRoomPlayer(session.uid);
         player.isEnterGame = true;
         this.checkGameStart();
-        next({playerInfos:data,gameTime:this.gameTime})
+        next({playerInfos:data,gameTime:this.gameTime,serverFrameId:this.frameId,})
     }
     frameMsgHandler(msg:{frameId:number,frameType:number},session:Session|UdpSession,next:Function){
         if(this.isGameStart){
@@ -44,24 +40,16 @@ export class Room{
     }
     async getAllPlayerInfo(){
         let frameData = this.getFrameData();
-        let getFrames=(uid:number)=>{
-            for(let i in frameData){
-                if(frameData[i].uid == uid){
-                    return frameData[i].frames;
-                }
-            }
-        }
-        let data:I_roomPlayerInfo[] = [];
+        let data:Dic<I_roomPlayerInfo> = {};
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
             let infoData = await player.getMyInfo();
-            data.push({
-                uid:infoData.uid,
+            data[infoData.uid] = {
                 nickName:infoData.role!.nickName||"",
                 avatarUrl:infoData.role!.avatarUrl||"",
                 rankScore:infoData.asset!.rankScore,
-                frames:getFrames(infoData.uid)!
-            }); 
+                frames:frameData[player.uid].frames
+            }; 
         }
         return data;
     }
@@ -77,26 +65,24 @@ export class Room{
                     return false;
                 }
             }
+            this.isGameStart = true;
             setInterval(this.update.bind(this),GameConfig.frameDt);
         }
         return true;
     }
     getFrameData(frameId:number = 0){
-        let data:{uid:number,frames:number[]}[] = [];
+        let data:Dic<{frames:Dic<number>}> = {};
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
-            data.push({
-                uid:player.uid,
-                frames:player.getFrames(frameId)
-            })
+            data[player.uid] = {frames:player.getFrames(frameId)}
         }
         return data;
     }
     sendFrame(){
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
-            let frameData = this.getFrameData(player.clientCurFrameId);
-            gameGame.sendMsg(player.uid,{msgHead:"frameMsg",msgData:{frameData:frameData}})
+            let frameData = this.getFrameData(player.clientReceiveFrameId);
+            gameGame.sendMsg(player.uid,{msgHead:"frameMsg",msgData:{frameData:frameData,serverFrameId:this.frameId}})
         }
     }
     update(){

@@ -1,4 +1,5 @@
 import { serverType } from "../../../common/config/CommonCfg";
+import { Dic } from "../../../common/interface/ICommon";
 import { I_asset, I_roleInfo } from "../../../common/interface/IInfo";
 import { Room } from "./Room";
 type resolveFunc = (data:any)=>void;
@@ -10,9 +11,9 @@ export class RoomPlayer{
     private isInit:boolean = false;
     private isOnLine:boolean = false;
     public isEnterGame:boolean = false;
-    public clientCurFrameId:number = 0;
+    public clientReceiveFrameId:number = 0;
     private playTypeMap:{[key:number]:number} = [];
-    private newFrameType:number|null = 0;
+    private newFrameType:number|null = null;
     private room:Room;
     constructor(room:Room,uid:number){
         this.room = room;
@@ -25,21 +26,21 @@ export class RoomPlayer{
         })
     }
     frameMsg(msg:{frameId:number,frameType:number}){
-        this.clientCurFrameId = msg.frameId;
+        this.clientReceiveFrameId = msg.frameId;
         this.newFrameType = msg.frameType;
     }
     getFrames(frameId:number){
-        let frames:number[] = [];
+        let frames:Dic<number> = {};
         for(let i in this.playTypeMap){
             let playFrameId = Number(i);
             if(playFrameId>frameId){
-                frames.push(playFrameId*10+this.playTypeMap[i]);
+                frames[playFrameId] = this.playTypeMap[i];
             }
         }
         return frames;
     }
     pushInFrameData(){
-        if(this.newFrameType){
+        if(this.newFrameType || this.newFrameType == 0){
             this.playTypeMap[this.room.frameId] = this.newFrameType;
             this.newFrameType = null;
         }

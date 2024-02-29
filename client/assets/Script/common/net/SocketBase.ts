@@ -84,7 +84,9 @@ export class SocketBase{
             let msgLen = (buffer[0] << 24) | (buffer[1] << 16) | (buffer[2] << 8) | buffer[3];
             let msgBuffer = buffer.slice(0,msgLen+4);
             let msg = game.protoMgr.decode(msgBuffer);
-            game.logMgr.debug(this.socketType+"onMessage:"+JSON.stringify(msg));
+            if(msg.msgHead != "frameMsg"){
+                game.logMgr.debug(this.socketType+"onMessage:"+JSON.stringify(msg));
+            }
             if(msg.msgType == MSG_TYPE.handshake){
                 game.protoMgr.setMsgCodeList(msg.msgData.route)
                 this.heartbeat = msg.msgData.heartbeat

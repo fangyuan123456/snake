@@ -5,24 +5,13 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
+import SnakeBase from "./base/SnakeBase";
+
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Snake extends cc.Component {
-
-    @property(cc.Label)
-    label: cc.Label = null;
-
-    @property
-    text: string = 'hello';
-
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {}
-
+export default class Snake extends SnakeBase {
     start () {
-
+        super.start();
     }
-
-    // update (dt) {}
 }

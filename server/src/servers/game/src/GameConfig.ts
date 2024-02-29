@@ -1,3 +1,3 @@
 export let GameConfig={
-    frameDt:50
+    frameDt:100
 }

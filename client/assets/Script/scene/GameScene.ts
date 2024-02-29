@@ -5,7 +5,7 @@
 // Learn life-cycle callbacks:
 import { SocketType } from "../common/Game";
 import { SCENE_NAME, SceneBase } from "../common/base/SceneBase";
-import RoomData from "../common/data/RoomData";
+import RoomData from "../room/data/RoomData";
 import { I_enterRoomRes } from "../common/interface/I_Game";
 
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html

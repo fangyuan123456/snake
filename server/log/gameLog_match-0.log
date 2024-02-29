@@ -177,3 +177,37 @@
 [2024-02-18T22:15:37.825] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
 [2024-02-18T22:15:37.826] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
 [2024-02-18T22:15:37.828] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:45:37.178] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-29T13:45:45.033] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-29T13:45:45.037] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:45:45.048] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:53:56.400] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: login, ::ffff:127.0.0.1
+[2024-02-29T13:53:56.417] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-02-29T13:53:56.426] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-02-29T13:53:56.438] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-02-29T13:54:21.802] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-29T13:54:21.820] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-29T13:54:21.822] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:54:21.832] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:57:02.262] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: login, ::ffff:127.0.0.1
+[2024-02-29T13:57:02.277] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-02-29T13:57:02.288] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-02-29T13:57:02.297] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-02-29T13:57:02.299] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1
+[2024-02-29T13:57:54.959] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-29T13:57:54.975] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-29T13:57:54.977] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:57:54.984] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:58:56.139] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: login, ::ffff:127.0.0.1
+[2024-02-29T13:58:56.168] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-02-29T13:58:56.178] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-02-29T13:58:56.184] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-02-29T13:58:56.186] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1
+[2024-02-29T13:59:21.177] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-29T13:59:21.193] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-02-29T13:59:21.195] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T13:59:21.208] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-02-29T14:00:10.887] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: login, ::ffff:127.0.0.1
+[2024-02-29T14:00:10.912] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-02-29T14:00:10.916] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-02-29T14:00:10.926] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1

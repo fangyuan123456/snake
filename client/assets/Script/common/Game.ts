@@ -20,7 +20,7 @@ import { AduintManager } from "./manager/AduintManager";
 import GameData from "./data/GameData";
 import { ConfigManager } from "./manager/ConfigManager";
 import { OtherInfoData } from "./data/OtherInfoData";
-import RoomData from "./data/RoomData";
+import RoomData from "../room/data/RoomData";
 
 declare global {
     namespace globalThis {

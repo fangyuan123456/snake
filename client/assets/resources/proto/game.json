@@ -8,7 +8,7 @@
         "enterRoomRes": {
           "fields": {
             "playerInfos": {
-              "rule": "repeated",
+              "keyType": "int32",
               "type": "roomPlayerInfo",
               "id": 1
             },
@@ -16,35 +16,35 @@
               "rule": "required",
               "type": "int32",
               "id": 2
+            },
+            "serverFrameId": {
+              "rule": "required",
+              "type": "int32",
+              "id": 3
             }
           },
           "nested": {
             "roomPlayerInfo": {
               "fields": {
-                "uid": {
-                  "rule": "required",
-                  "type": "int32",
-                  "id": 1
-                },
                 "nickName": {
                   "rule": "required",
                   "type": "string",
-                  "id": 2
+                  "id": 1
                 },
                 "avatarUrl": {
                   "rule": "required",
                   "type": "string",
-                  "id": 3
+                  "id": 2
                 },
                 "rankScore": {
                   "rule": "required",
                   "type": "int32",
-                  "id": 4
+                  "id": 3
                 },
                 "frames": {
-                  "rule": "repeated",
+                  "keyType": "int32",
                   "type": "int32",
-                  "id": 5
+                  "id": 4
                 }
               }
             }
@@ -67,23 +67,23 @@
         "frameMsgRes": {
           "fields": {
             "frameData": {
-              "rule": "repeated",
+              "keyType": "int32",
               "type": "userFrameData",
               "id": 1
+            },
+            "serverFrameId": {
+              "rule": "required",
+              "type": "int32",
+              "id": 2
             }
           },
           "nested": {
             "userFrameData": {
               "fields": {
-                "uid": {
-                  "rule": "required",
+                "frames": {
+                  "keyType": "int32",
                   "type": "int32",
                   "id": 1
-                },
-                "frames": {
-                  "rule": "repeated",
-                  "type": "int32",
-                  "id": 2
                 }
               }
             }

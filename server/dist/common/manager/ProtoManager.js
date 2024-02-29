@@ -45,7 +45,9 @@ class ProtoManager extends SingleBase_1.SingleBase {
         return this.getEncodeDecodeFunc(pbName).decode(msg);
     }
     encode(cmd, msg) {
-        game.logMgr.debug("cmd:%d,msg:%s", cmd, JSON.stringify(msg));
+        if (cmd != 10) {
+            game.logMgr.debug("cmd:%d,msg:%s", cmd, JSON.stringify(msg));
+        }
         let routeUrl = game.app.routeConfig[cmd];
         let strArr = routeUrl.split(".");
         let funcName = strArr[strArr.length - 1];

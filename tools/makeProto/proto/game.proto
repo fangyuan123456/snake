@@ -6,14 +6,14 @@ message enterRoomReq {
 }
 message enterRoomRes {
     message roomPlayerInfo{
-        required int32 uid = 1;
-        required string nickName = 2;
-        required string avatarUrl = 3;
-        required int32 rankScore = 4;
-        repeated int32 frames = 5;
+        required string nickName = 1;
+        required string avatarUrl = 2;
+        required int32 rankScore = 3;
+        map<int32,int32> frames = 4;
     }
-    repeated roomPlayerInfo playerInfos = 1;
+    map<int32,roomPlayerInfo> playerInfos = 1;
     required int32 gameTime = 2;
+    required int32 serverFrameId = 3;
 }
 
 message frameMsgReq {
@@ -22,9 +22,9 @@ message frameMsgReq {
 }
 message frameMsgRes {
     message userFrameData{
-        required int32 uid = 1;
-        repeated int32 frames = 2;
+        map<int32,int32> frames = 1;
     }
-    repeated userFrameData frameData=1;
+    map<int32,userFrameData> frameData=1;
+    required int32 serverFrameId = 2;
 }
 
