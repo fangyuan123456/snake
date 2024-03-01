@@ -2407,3 +2407,15 @@
 [2024-03-01T22:43:12.260] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
 [2024-03-01T22:43:12.260] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
 [2024-03-01T22:43:12.261] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-03-01T22:52:56.685] [DEBUG] gameLog - getAssetInfo
+[2024-03-01T22:52:56.687] [ERROR] gameLog - 找不到玩家:17
+[2024-03-01T22:52:56.688] [DEBUG] gameLog - getInviteRewardInfo
+[2024-03-01T22:52:56.688] [ERROR] gameLog - 找不到玩家:17
+[2024-03-01T22:52:56.689] [DEBUG] gameLog - getRoomInfo
+[2024-03-01T22:52:56.689] [ERROR] gameLog - 找不到玩家:17
+[2024-03-01T22:52:56.690] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-03-01T22:52:56.691] [DEBUG] gameLog - getRoomInfo
+[2024-03-01T22:52:56.692] [ERROR] gameLog - 找不到玩家:17
+[2024-03-01T22:52:56.692] [DEBUG] gameLog - cmd:2,msg:{"roomId":0,"roomIp":""}
+[2024-03-01T22:52:56.781] [DEBUG] gameLog - cmd:5,msg:{"inviteUids":[16],"getRewardIndexs":[]}
+[2024-03-01T22:52:56.785] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}

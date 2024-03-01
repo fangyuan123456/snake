@@ -583,3 +583,7 @@
 [2024-03-01T22:42:17.853] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":16,"nickName":"uid_16","avatarUrl":""},{"uid":17,"nickName":"uid_17","avatarUrl":""}]}
 [2024-03-01T22:42:17.853] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
 [2024-03-01T22:42:17.855] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-03-01T22:53:01.338] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-03-01T22:53:01.341] [DEBUG] gameLog - cmd:7,msg:{"roles":[{"uid":17,"nickName":"uid_17","avatarUrl":""},{"uid":16,"nickName":"uid_16","avatarUrl":""}]}
+[2024-03-01T22:53:01.342] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}
+[2024-03-01T22:53:01.344] [DEBUG] gameLog - cmd:2,msg:{"roomId":10000,"roomIp":"127.0.0.1:9010"}

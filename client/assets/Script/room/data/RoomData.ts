@@ -54,7 +54,7 @@ export default class RoomData extends CompBase{
         game.netMgr.createSocket(data.roomIp,SocketType.game,true);
     }
     sendFrameMsg(){
-        this.userInputMap[this.roomInfo.serverFrameId] = this.inputType
+        this.userInputMap[this.roomInfo.serverFrameId+1] = this.inputType
         game.netMgr.sendSocket({msgHead:"frameMsg",msgData:{frameId:this.roomInfo.serverFrameId,frameType:this.inputType}},null,this,SocketType.game)
     }
     setRoomInfo(roomInfo:I_enterRoomRes){
