@@ -26,13 +26,16 @@ export default class SnakeBase extends CompBase {
     useSkillSpeedMul:number
     curPos:DecimalVec
     curDir:number
-    targetDir:number
+    targetDir:number = gameDefine.defaultDir
 
-    frameSpeed:number
+    frameSpeed:number = 1
     velocity:number[] = []
+    snapshotData:{pos:DecimalVec,dir:number}
     start () {
         super.start();
         this.onEvent("logicUpdate",this.logicUpdate.bind(this));
+        this.onEvent("predictNextFrame",this.predictNextFrame.bind(this));
+        this.onEvent("reelBackToServerFrame",this.reelBackToServerFrame.bind(this));
     }
     init(data:{initPos:cc.Vec3,dir:number,playerInfo:I_snakeInfo}){
         this.playerInfo = data.playerInfo;
@@ -48,8 +51,11 @@ export default class SnakeBase extends CompBase {
         let endVec = new DecimalVec(this.curPos.x,this.curPos.y,this.curPos.z).add(moveVec);
         return endVec;
     }
-    readFrame(){
-        let playType = game.roomData.readFrame(this.playerInfo.uid);
+    readFrame(frameId?:number){
+        let playType = game.roomData.readFrame(this.playerInfo.uid,frameId);
+        return playType;
+    }
+    parsePlayType(playType){
         let dir = this.curDir;
         let isUseSkill = false;
         if(playType){
@@ -62,46 +68,30 @@ export default class SnakeBase extends CompBase {
         };
         return frameData
     }
-    private getTargetDir(lastDir:number,curDir:number){
-        // 角度范围在 [0, 360) 内
-        const normalizedAngleA = (lastDir + 360) % 360;
-        const normalizedAngleB = (curDir + 360) % 360;
-    
-        // 计算 A 往 B 转动的方向
-        let direction = Math.sign((normalizedAngleB - normalizedAngleA + 360) % 360 - 180);
-    
-        // 如果 A 和 B 在同一条线上，则直接返回 B
-        if (normalizedAngleA === normalizedAngleB) {
-            return normalizedAngleB;
-        }
-    
-        // 计算转动后的角度
-        let rotatedAngle = normalizedAngleA + direction * gameDefine.frameChangeAngle;
-    
-        // 如果越过了角度 B，就返回 B
-        if ((direction === 1 && rotatedAngle >= normalizedAngleB) || (direction === -1 && rotatedAngle <= normalizedAngleB)) {
-            return normalizedAngleB;
-        }
-        // 角度范围在 [0, 360) 内
-        return (rotatedAngle + 360) % 360;
-    }
     logicUpdate(frameSpeed:number){
-        let frameData = this.readFrame();
+        this.updateTransfrom(frameSpeed,this.readFrame());
+    }
+    updateTransfrom(frameSpeed:number,playType:number){
+        let frameData = this.parsePlayType(playType);
         let lastDir = this.curDir;
-        let lastPos = this.curPos;
         this.curPos = this.getMoveEndPos(frameData);
         this.curDir = frameData.dir;
-        this.targetDir = this.getTargetDir(lastDir,this.curDir);
+        this.targetDir = FMath.rotateTowards(lastDir,this.curDir,gameDefine.frameChangeAngle);
 
         this.frameSpeed = frameSpeed;
         this.velocity = [];
-        this.node.position = lastPos.getVec3();
-        this.node.angle = lastDir
+    }
+    predictNextFrame(){
+        if(this.playerInfo.uid == game.userData.uid){
+            this.updateTransfrom(1,game.roomData.getPredictUserInput());
+        }
+    }
+    reelBackToServerFrame(frameId){
+        this.updateTransfrom(1,this.readFrame(frameId));
     }
     protected update(dt: number): void {
         this.node.position = FMath.slerpV3(this.node.position,this.curPos.getVec3(),this.velocity,dt,gameDefine.frameDt/this.frameSpeed);
         this.node.angle = FMath.slerp(this.node.angle,this.targetDir,this.velocity,dt,gameDefine.frameDt/this.frameSpeed)
     }
-
     // update (dt) {}
 }

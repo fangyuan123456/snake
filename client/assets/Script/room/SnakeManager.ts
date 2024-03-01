@@ -6,6 +6,7 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
 import { CompBase } from "../common/base/CompBase";
+import { gameDefine } from "../common/configs/RoomCfg";
 import SnakeBase from "./base/SnakeBase";
 
 const {ccclass, property} = cc._decorator;
@@ -27,7 +28,7 @@ export default class SnakeManager extends CompBase {
             let node = cc.instantiate(this.snakePrefab);
             this.node.addChild(node);
 
-            node.getComponent(SnakeBase).init({initPos:new cc.Vec3(0,0,0),dir:90,playerInfo:{uid:Number(i),nickName:playerInfo.nickName,avatarUrl:playerInfo.avatarUrl,rankScore:playerInfo.rankScore}})
+            node.getComponent(SnakeBase).init({initPos:new cc.Vec3(0,0,0),dir:gameDefine.defaultDir,playerInfo:{uid:Number(i),nickName:playerInfo.nickName,avatarUrl:playerInfo.avatarUrl,rankScore:playerInfo.rankScore}})
             if(Number(i) == game.userData.uid){
                 game.roomData.mySnake = node.getComponent(SnakeBase);
             }

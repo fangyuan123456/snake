@@ -7,5 +7,7 @@ export let addFrameCfg = [
 export let gameDefine = {
     frameDt:0.1,
     frameCanPlayOffset : 20,
-    frameChangeAngle : 20
+    frameChangeAngle : 20,
+    defaultDir:0
+
 }

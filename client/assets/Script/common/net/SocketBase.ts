@@ -145,7 +145,6 @@ export class SocketBase{
             game.logMgr.error("socket:% state is %d",this.socketType,this.state);
             return;
         }
-        game.logMgr.debug(this.socketType+"sendMsg:"+JSON.stringify(data));
         this.socket.send(game.protoMgr.encode(data));
         this.pushInCallBackList(data,callBack,target);
     }
@@ -176,13 +175,19 @@ export class SocketBase{
         }
     }
     close(isNotReConnect:boolean = false){
+        if(isNotReConnect){
+            this.isNeedReConnect = !isNotReConnect
+        }
         if(this.socket){
             this.socket.close();
             this.socket = null;
         }
-        if(!isNotReConnect && this.isNeedReConnect){
+        if(this.isNeedReConnect){
+            game.logMgr.debug(this.socketType+"自动重连！")
             game.timeMgr.scheduleOnce(()=>{
-                this.connect();
+                if(this.isNeedReConnect){
+                    this.connect();
+                }
             },1);
         }
         clearInterval(this.heartbeatTimer);

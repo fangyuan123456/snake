@@ -8,7 +8,7 @@ export interface I_roomPlayerInfo{
     nickName:string,
     avatarUrl:string,
     rankScore:number,
-    frames:Dic<number>
+    frames:number[]
 }
 export interface I_enterRoomRes{
     playerInfos:Dic<I_roomPlayerInfo>,
@@ -16,6 +16,6 @@ export interface I_enterRoomRes{
     serverFrameId:number
 }
 export interface I_frameMsgRes{
-    frameData:Dic<{frames:Dic<number>}>,
+    frameData:Dic<{frames:number[]}>,
     serverFrameId:number
 }

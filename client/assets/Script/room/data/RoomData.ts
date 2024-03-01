@@ -10,11 +10,14 @@ export default class RoomData extends CompBase{
     mySnake:SnakeBase
     curFrameId:number = null
     frameSpeed:number = 1
-    frameLeftTime:number = 0;
+    frameLeftTime:number = gameDefine.frameDt;
     frameData:Dic<number>
+    userInputMap:Dic<number> = {};//玩家操作类型对象，收到服务操作会清除
     roomInfo:I_enterRoomRes;
     isInit:boolean;
-    collectPlayType:number;
+    inputType:number = gameDefine.defaultDir;
+    isInWaitFrameState:boolean;
+    predictFrameId: number;
     start(): void {
         game.roomData = this;
         this.sendEnterRoom();
@@ -39,7 +42,6 @@ export default class RoomData extends CompBase{
         },this);
     }
     init(data:I_roomInfo){
-        game.netMgr.createSocket(data.roomIp,SocketType.game,true);
         game.netMgr.onReady(()=>{
             game.netMgr.sendSocket({msgHead:"enterRoom",msgData:{}},(data:I_enterRoomRes)=>{
                 this.setRoomInfo(data);
@@ -49,38 +51,58 @@ export default class RoomData extends CompBase{
         game.netMgr.onMsg("frameMsg",(data)=>{
             this.onFrameMsgHandler(data);
         },this,SocketType.game)
+        game.netMgr.createSocket(data.roomIp,SocketType.game,true);
     }
     sendFrameMsg(){
-        let frameOffset = this.roomInfo.serverFrameId - this.curFrameId;
-        if(this.collectPlayType && frameOffset < gameDefine.frameCanPlayOffset){
-            game.netMgr.sendSocket({msgHead:"frameMsg",msgData:{frameId:this.roomInfo.serverFrameId,frameType:this.collectPlayType}},null,this,SocketType.game)
-        }
+        this.userInputMap[this.roomInfo.serverFrameId] = this.inputType
+        game.netMgr.sendSocket({msgHead:"frameMsg",msgData:{frameId:this.roomInfo.serverFrameId,frameType:this.inputType}},null,this,SocketType.game)
     }
     setRoomInfo(roomInfo:I_enterRoomRes){
         this.roomInfo = roomInfo;
     }
-    readFrame(uid:number):number{
-        return this.roomInfo.playerInfos[uid].frames[this.curFrameId];
+    readFrame(uid:number,frameId?:number):number{
+        frameId = frameId || this.curFrameId;
+        return this.roomInfo.playerInfos[uid].frames[frameId-1];
+    }
+    getPredictUserInput():number{
+        return this.userInputMap[this.curFrameId];
     }
     onFrameMsgHandler(msg:I_frameMsgRes){
         if(this.roomInfo){
             this.roomInfo.serverFrameId = msg.serverFrameId;
+            delete this.userInputMap[this.roomInfo.serverFrameId]
             for(let uid in msg.frameData){
                 let frames = msg.frameData[uid].frames;
-                for(let frameId in frames){
-                    this.roomInfo.playerInfos[uid].frames[frameId] = frames[frameId]
+                let len = frames.length;
+                for(let i = 0;i<len;i++){
+                    let frameId = this.roomInfo.serverFrameId - len + i;
+                    this.roomInfo.playerInfos[uid].frames[frameId] = frames[i]
                 }
             }
         }
     }
+    timestamp:number = 0
     logicUpdate(frameSpeed:number){
         this.curFrameId++;
+        this.isInWaitFrameState = this.roomInfo.serverFrameId<this.curFrameId;
         this.sendFrameMsg();
         this.frameLeftTime = gameDefine.frameDt;
-        game.eventMgr.dispatch("logicUpdate",frameSpeed)
+        if(this.isInWaitFrameState){
+            this.predictFrameId = this.roomInfo.serverFrameId+1;
+            game.eventMgr.dispatch("predictNextFrame")
+        }else{
+            game.eventMgr.dispatch("logicUpdate",frameSpeed)
+            this.checkCollision();
+        }
     }
-    setCollectPlayType(collectPlayType?:number){
-        this.collectPlayType = collectPlayType;
+    reelBackToServerFrame(){
+        for(let i = this.predictFrameId;i<=this.roomInfo.serverFrameId;i++){
+            game.eventMgr.dispatch("reelBackToServerFrame",i)
+            this.checkCollision();
+        }
+    }
+    collectUserInput(inputType?:number){
+        this.inputType = inputType;
     }
     getFrameSpeed(){
         let frameOffset = this.roomInfo.serverFrameId - this.curFrameId
@@ -92,27 +114,30 @@ export default class RoomData extends CompBase{
         return 1;
     }
     frameUpdate(dt,ignoreFrameSpeed?){
-        if(this.roomInfo && this.roomInfo.serverFrameId > this.curFrameId){
-            let frameSpeed = this.getFrameSpeed();
-            let dtTime = !ignoreFrameSpeed?dt*frameSpeed:dt;
-            if(this.frameLeftTime<=dtTime){
-                let offsetTime = dtTime - this.frameLeftTime;
-                this.logicUpdate(frameSpeed);
-                this.checkCollision();
-                this.frameUpdate(offsetTime,true);
-            }else{
-                this.frameLeftTime -= dtTime;
-            }
+        let frameSpeed = this.getFrameSpeed();
+        let dtTime = !ignoreFrameSpeed?dt*frameSpeed:dt;
+        if(this.frameLeftTime<=dtTime){
+            let offsetTime = dtTime - this.frameLeftTime;
+            this.logicUpdate(frameSpeed);
+            this.frameUpdate(offsetTime,true);
+        }else{
+            this.frameLeftTime -= dtTime;
         }
     }
     protected update(dt: number): void {
-        this.frameUpdate(dt);
+        if(this.roomInfo&& this.roomInfo.serverFrameId>0){
+            let isInWaitFrameState = this.roomInfo.serverFrameId<this.curFrameId;
+            if(!isInWaitFrameState && this.isInWaitFrameState){
+                this.isInWaitFrameState = false;
+                this.reelBackToServerFrame();
+            }
+            this.frameUpdate(dt);
+        }
     }
     checkCollision(){
 
     }
     protected onDestroy(): void {
         game.roomData = null;
-        game.netMgr.closeAndDestroySocket(SocketType.game);
     }
 }

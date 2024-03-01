@@ -8,7 +8,6 @@ export default class DataBase extends SingleBase{
     infoResolveMap:{[key:string]:any} = {};
     socketType:SocketType
     dataKeyCfg?:dataKeyCfg
-    isInfoReq:Dic<boolean> = {}
     constructor(dataKeyCfg?:dataKeyCfg,socketType:SocketType = SocketType.center){
         super();
         this.socketType = socketType;
@@ -30,16 +29,12 @@ export default class DataBase extends SingleBase{
         })
     }
     private requestInfo(key:string){
-        if(this.isInfoReq[key]){
-            return;
-        }
         let _infoName = game.utilsMgr.capitalizeFirstLetter(key);
         let msgName = "get"+_infoName;
-        this.isInfoReq[key] = true;
         game.netMgr.sendSocket({
             msgHead:msgName,
         },()=>{
-            this.isInfoReq[key] = false;
+            // this.isInfoReq[key] = false;
         },null,this.socketType)
     }
     registerAllInfoMsg(){

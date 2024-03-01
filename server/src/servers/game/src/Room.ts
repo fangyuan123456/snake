@@ -17,15 +17,12 @@ export class Room{
             this.roomPlayers[uid] = new RoomPlayer(this,uid);
         }
     }
-
-
-
     async enterRoomHandler(msg: any, session: Session|UdpSession, next: Function){
         let data = await this.getAllPlayerInfo();
         let player = this.getRoomPlayer(session.uid);
         player.isEnterGame = true;
         this.checkGameStart();
-        next({playerInfos:data,gameTime:this.gameTime,serverFrameId:this.frameId,})
+        next({playerInfos:data,gameTime:this.gameTime,serverFrameId:this.frameId})
     }
     frameMsgHandler(msg:{frameId:number,frameType:number},session:Session|UdpSession,next:Function){
         if(this.isGameStart){
@@ -66,12 +63,13 @@ export class Room{
                 }
             }
             this.isGameStart = true;
-            setInterval(this.update.bind(this),GameConfig.frameDt);
+            this.curTimestamp = new Date().getTime()
+            setInterval(this.update.bind(this),10);
         }
         return true;
     }
-    getFrameData(frameId:number = 0){
-        let data:Dic<{frames:Dic<number>}> = {};
+    getFrameData(frameId:number = 1){
+        let data:Dic<{frames:number[]}> = {};
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
             data[player.uid] = {frames:player.getFrames(frameId)}
@@ -85,13 +83,27 @@ export class Room{
             gameGame.sendMsg(player.uid,{msgHead:"frameMsg",msgData:{frameData:frameData,serverFrameId:this.frameId}})
         }
     }
-    update(){
-        this.gameTime = Math.round(GameConfig.frameDt/1000 + this.gameTime);
+    frameUpdate(){
         this.frameId++;
+        this.gameTime = Math.round(GameConfig.frameDt/1000 + this.gameTime);
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
             player.update();
         }
-        this.sendFrame();
+        setTimeout(()=>{
+            this.sendFrame();
+        },Math.random()*200)
+  
+    }
+    curTimestamp:number = 0;
+    countTime:number = 0;
+    update(){
+        let curTimestamp = new Date().getTime();
+        this.countTime += curTimestamp - this.curTimestamp;
+        this.curTimestamp = curTimestamp;
+        if(this.countTime>=GameConfig.frameDt){
+            this.frameUpdate();
+            this.countTime -=GameConfig.frameDt;
+        }
     }
 }

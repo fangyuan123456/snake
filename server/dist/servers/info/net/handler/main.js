@@ -24,9 +24,13 @@ class Handler extends HandlerBase_1.default {
         }
     }
     route(msgName, msg, session, next) {
+        game.logMgr.debug(msgName);
         let player = infoGame.getPlayer(session.uid);
         if (!player) {
             player = infoGame.createPlayer(session.uid);
+        }
+        else {
+            game.logMgr.error("找不到玩家:%s", session.uid);
         }
         //@ts-ignore
         let func = player[msgName + "Handler"];

@@ -9,7 +9,7 @@ message enterRoomRes {
         required string nickName = 1;
         required string avatarUrl = 2;
         required int32 rankScore = 3;
-        map<int32,int32> frames = 4;
+        repeated int32 frames = 4;
     }
     map<int32,roomPlayerInfo> playerInfos = 1;
     required int32 gameTime = 2;
@@ -22,7 +22,7 @@ message frameMsgReq {
 }
 message frameMsgRes {
     message userFrameData{
-        map<int32,int32> frames = 1;
+        repeated int32 frames = 1;
     }
     map<int32,userFrameData> frameData=1;
     required int32 serverFrameId = 2;

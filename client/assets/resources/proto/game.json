@@ -42,7 +42,7 @@
                   "id": 3
                 },
                 "frames": {
-                  "keyType": "int32",
+                  "rule": "repeated",
                   "type": "int32",
                   "id": 4
                 }
@@ -81,7 +81,7 @@
             "userFrameData": {
               "fields": {
                 "frames": {
-                  "keyType": "int32",
+                  "rule": "repeated",
                   "type": "int32",
                   "id": 1
                 }

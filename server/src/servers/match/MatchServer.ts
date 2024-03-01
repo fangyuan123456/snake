@@ -71,7 +71,7 @@ export class MatchServer extends GameServerBase{
                 }
             }else{
                 if(index){
-                    this.inviteRoom[inviteKey].splice(index);
+                    this.inviteRoom[inviteKey].splice(index,1);
                 }
             }
             let uids = getUids();

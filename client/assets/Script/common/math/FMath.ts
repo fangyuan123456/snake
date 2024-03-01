@@ -209,6 +209,9 @@ export class FMath {
         currentVelocity[0] += dt;
         let currentTime = currentVelocity[0];
         let percent = currentTime/time;
+        if(percent>1){
+            percent = 1;
+        }
         return (target - current)*percent + current;
     }
     static slerpV3(current:cc.Vec3,target:cc.Vec3,currentVelocity:number[],dt:number,time:number){
@@ -216,8 +219,35 @@ export class FMath {
         currentVelocity[0] += dt;
         let currentTime = currentVelocity[0];
         let percent = currentTime/time;
+        if(percent>1){
+            percent = 1;
+        }
         let vec = target.sub(current);
         return current.add(new cc.Vec3(vec.x*percent,vec.y*percent,vec.z*percent));
+    }
+
+    static rotateTowards(angleA: number, angleB: number, step: number): number {
+        // 角度范围在 [0, 360) 内
+        const normalizedAngleA = (angleA + 360) % 360;
+        const normalizedAngleB = (angleB + 360) % 360;
+    
+        // 计算 A 往 B 转动的方向
+        let direction = Math.sign((normalizedAngleB - normalizedAngleA + 360) % 360 - 180);
+    
+        // 如果 A 和 B 在同一条线上，则直接返回 B
+        if (normalizedAngleA === normalizedAngleB) {
+            return normalizedAngleB;
+        }
+    
+        // 计算转动后的角度
+        let rotatedAngle = normalizedAngleA + direction * gameDefine.frameChangeAngle;
+    
+        // 如果越过了角度 B，就返回 B
+        if ((direction === 1 && rotatedAngle >= normalizedAngleB) || (direction === -1 && rotatedAngle <= normalizedAngleB)) {
+            return normalizedAngleB;
+        }
+        // 角度范围在 [0, 360) 内
+        return (rotatedAngle + 360) % 360;
     }
 }
 FMath.initSinCos();

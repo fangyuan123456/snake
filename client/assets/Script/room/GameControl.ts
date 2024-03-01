@@ -17,9 +17,9 @@ export default class GameControl extends CompBase {
         cc.find("controlBarPanel/bar",this.node).on(cc.Node.EventType.TOUCH_END,this.touchEndFunc.bind(this));
         cc.find("controlBarPanel/bar",this.node).on(cc.Node.EventType.TOUCH_CANCEL,this.touchEndFunc.bind(this));
 
-        cc.find("btn_addSpeed",this.node).on(cc.Node.EventType.TOUCH_START,this.touchAddSpeed.bind(this,true));
-        cc.find("btn_addSpeed",this.node).on(cc.Node.EventType.TOUCH_END,this.touchEndAddSpeed.bind(this));
-        cc.find("btn_addSpeed",this.node).on(cc.Node.EventType.TOUCH_CANCEL,this.touchEndAddSpeed.bind(this));
+        cc.find("addSpeedPanel/btnAddSpeed",this.node).on(cc.Node.EventType.TOUCH_START,this.touchAddSpeed.bind(this,true));
+        cc.find("addSpeedPanel/btnAddSpeed",this.node).on(cc.Node.EventType.TOUCH_END,this.touchEndAddSpeed.bind(this));
+        cc.find("addSpeedPanel/btnAddSpeed",this.node).on(cc.Node.EventType.TOUCH_CANCEL,this.touchEndAddSpeed.bind(this));
     }
     touchMoveFunc(event:cc.Event.EventTouch){
         let width = cc.find("controlBarPanel/barBg",this.node).width;
@@ -30,7 +30,7 @@ export default class GameControl extends CompBase {
         }
         pos = pos.normalize().mul(distance);
         cc.find("controlBarPanel/bar",this.node).position = cc.v3(pos.x,pos.y,0);
-        this.collectPlayType();
+        this.collectUserInput();
     }
     touchEndFunc(event:cc.Event.EventTouch){
         cc.find("controlBarPanel/bar",this.node).runAction(cc.sequence(
@@ -40,13 +40,13 @@ export default class GameControl extends CompBase {
     }
     touchAddSpeed(event:cc.Event.EventTouch){
         this.isClickAddSpeed = true
-        this.collectPlayType();
+        this.collectUserInput();
     }
     touchEndAddSpeed(event:cc.Event.EventTouch){
         this.isClickAddSpeed = false
-        this.collectPlayType();
+        this.collectUserInput();
     }
-    collectPlayType(){
+    collectUserInput(){
         let vec3 = cc.find("controlBarPanel/bar",this.node).position;
         if(!vec3.equals(cc.v3(0,0,0)) || this.isClickAddSpeed){
             let angle = 0;
@@ -60,9 +60,28 @@ export default class GameControl extends CompBase {
             }
             let playType1 = this.isClickAddSpeed?1:0;
             let playType = playType1 + Math.floor(angle)*10;
-            game.roomData.setCollectPlayType(playType);
-        }else{
-            game.roomData.setCollectPlayType();
+            game.roomData.collectUserInput(playType);
         }
+    }
+    curDirVec:cc.Vec2
+    protected update(dt: number): void {
+        if(!this.curDirVec){
+            this.curDirVec = new cc.Vec2(Math.random()*10-5,Math.random()*10-5)
+        }
+        let pos = game.roomData.mySnake.node.position;
+        if(pos.y>300){
+            this.curDirVec.y = -Math.abs(this.curDirVec.y)
+        }else if(pos.y<-300){
+            this.curDirVec.y = Math.abs(this.curDirVec.y)
+        }
+        if(pos.x>300){
+            this.curDirVec.x = -Math.abs(this.curDirVec.x)
+        }else if(pos.x<-300){
+            this.curDirVec.x = Math.abs(this.curDirVec.x)
+        }
+        let r = -this.curDirVec.signAngle(cc.v2(1,0));
+        let dir = Math.round((cc.misc.radiansToDegrees(r)+360)%360) 
+        let playType = 0 + Math.floor(dir)*10;
+        game.roomData.collectUserInput(playType)
     }
 }

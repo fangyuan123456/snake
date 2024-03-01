@@ -1,3 +1,4 @@
+import { json } from "express";
 import { SocketType } from "../Game";
 import { CompBase } from "../base/CompBase";
 import { SingleBase } from "../base/SingleBase";
@@ -50,6 +51,7 @@ export class NetManager extends SingleBase{
             game.logMgr.error("socketName:%s is not find",socketType);
             return;
         }
+        game.logMgr.debug("sendSocket:%s",JSON.stringify(data));
         this.socketMap[socketType].send(data,callBack);
     }
     createSocket(ip:string,socketType:SocketType = SocketType.center,isUdp:boolean = false){
@@ -65,6 +67,7 @@ export class NetManager extends SingleBase{
         }
     }
     closeAndDestroySocket(socketType:SocketType = SocketType.center){
+        game.logMgr.debug(socketType+"主动断开不要重连")
         if(this.socketMap[socketType]){
             this.socketMap[socketType].close(true);
             delete this.socketMap[socketType];
@@ -74,6 +77,7 @@ export class NetManager extends SingleBase{
         this.onMsg("onOpen",callBack,target,socketType);
     }
     onReady(callBack:(any)=>void,target?:CompBase,socketType:SocketType = SocketType.center){
+        game.logMgr.debug(socketType+"注册OnReady")
         this.onMsg("onReady",callBack,target,socketType);
     }
     onClose(callBack:(any)=>void,target?:CompBase,socketType:SocketType = SocketType.center){

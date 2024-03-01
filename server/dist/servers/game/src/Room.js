@@ -20,6 +20,8 @@ class Room {
         this.roomType = IGame_1.e_roomType.FIGHT;
         this.frameId = 0;
         this.gameTime = 0;
+        this.curTimestamp = 0;
+        this.countTime = 0;
         this.roomType = roomType;
         for (let i in uidList) {
             let uid = uidList[i];
@@ -32,7 +34,7 @@ class Room {
             let player = this.getRoomPlayer(session.uid);
             player.isEnterGame = true;
             this.checkGameStart();
-            next({ playerInfos: data, gameTime: this.gameTime, serverFrameId: this.frameId, });
+            next({ playerInfos: data, gameTime: this.gameTime, serverFrameId: this.frameId });
         });
     }
     frameMsgHandler(msg, session, next) {
@@ -76,11 +78,12 @@ class Room {
                 }
             }
             this.isGameStart = true;
-            setInterval(this.update.bind(this), GameConfig_1.GameConfig.frameDt);
+            this.curTimestamp = new Date().getTime();
+            setInterval(this.update.bind(this), 10);
         }
         return true;
     }
-    getFrameData(frameId = 0) {
+    getFrameData(frameId = 1) {
         let data = {};
         for (let i in this.roomPlayers) {
             let player = this.roomPlayers[i];
@@ -95,14 +98,25 @@ class Room {
             gameGame.sendMsg(player.uid, { msgHead: "frameMsg", msgData: { frameData: frameData, serverFrameId: this.frameId } });
         }
     }
-    update() {
-        this.gameTime += GameConfig_1.GameConfig.frameDt / 1000;
+    frameUpdate() {
         this.frameId++;
+        this.gameTime = Math.round(GameConfig_1.GameConfig.frameDt / 1000 + this.gameTime);
         for (let i in this.roomPlayers) {
             let player = this.roomPlayers[i];
             player.update();
         }
-        this.sendFrame();
+        setTimeout(() => {
+            this.sendFrame();
+        }, Math.random() * 200);
+    }
+    update() {
+        let curTimestamp = new Date().getTime();
+        this.countTime += curTimestamp - this.curTimestamp;
+        this.curTimestamp = curTimestamp;
+        if (this.countTime >= GameConfig_1.GameConfig.frameDt) {
+            this.frameUpdate();
+            this.countTime -= GameConfig_1.GameConfig.frameDt;
+        }
     }
 }
 exports.Room = Room;

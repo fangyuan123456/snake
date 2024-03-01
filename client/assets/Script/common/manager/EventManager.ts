@@ -30,7 +30,7 @@ export class EventManager extends SingleBase{
         let eventList = this.eventMap[eventName] || [];
         for(let i = 0;i<eventList.length;i++){
             if(eventList[i].target && (!eventList[i].target.node || !eventList[i].target.node.parent)){
-                eventList.splice(i);
+                eventList.splice(i,1);
                 i--
             }else{
                 eventList[i].callBack(data);
@@ -38,7 +38,7 @@ export class EventManager extends SingleBase{
         }
         for(let i = eventList.length-1;i>=0;i--){
             if(eventList[i].isOnce){
-                eventList.splice(i);
+                eventList.splice(i,1);
             }
         }
     }
@@ -46,7 +46,7 @@ export class EventManager extends SingleBase{
         let eventData = this.getEventData(eventName,callBack);
         if(eventData){
             let index = this.eventMap[eventName].indexOf(eventData);
-            this.eventMap[eventName].splice(index);
+            this.eventMap[eventName].splice(index,1);
         }
     }
     removeAll(target:CompBase){
@@ -54,7 +54,7 @@ export class EventManager extends SingleBase{
             for(let j = this.eventMap[i].length - 1;j>=0;j--){
                 let eventData = this.eventMap[i][j];
                 if(eventData.target == target){
-                    this.eventMap[i].splice(j);
+                    this.eventMap[i].splice(j,1);
                 }
             }
         }

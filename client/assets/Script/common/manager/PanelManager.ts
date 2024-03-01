@@ -38,7 +38,7 @@ export class PanelManager extends SingleBase{
         for(let i=panelList.length-1;i>=0;i--){
             let panel = panelList[i];
             if(panel == panelName || panel.panelName == panelName){
-                panelList.splice(i);
+                panelList.splice(i,1);
                 panel.playCloseAction(()=>{
                     panel.node.destroy();
                     game.timeMgr.scheduleOnce(()=>{
