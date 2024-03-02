@@ -90,10 +90,7 @@ export class Room{
             let player = this.roomPlayers[i];
             player.update();
         }
-        setTimeout(()=>{
-            this.sendFrame();
-        },Math.random()*200)
-  
+        this.sendFrame();
     }
     curTimestamp:number = 0;
     countTime:number = 0;

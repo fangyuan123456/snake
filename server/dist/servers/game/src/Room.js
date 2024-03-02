@@ -105,9 +105,7 @@ class Room {
             let player = this.roomPlayers[i];
             player.update();
         }
-        setTimeout(() => {
-            this.sendFrame();
-        }, Math.random() * 200);
+        this.sendFrame();
     }
     update() {
         let curTimestamp = new Date().getTime();

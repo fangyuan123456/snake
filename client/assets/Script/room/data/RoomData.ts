@@ -16,8 +16,8 @@ export default class RoomData extends CompBase{
     roomInfo:I_enterRoomRes;
     isInit:boolean;
     inputType:number = gameDefine.defaultDir;
-    isInWaitFrameState:boolean;
     predictFrameId: number;
+    posList:Dic<string[]> = {};
     start(): void {
         game.roomData = this;
         this.sendEnterRoom();
@@ -64,8 +64,8 @@ export default class RoomData extends CompBase{
         frameId = frameId || this.curFrameId;
         return this.roomInfo.playerInfos[uid].frames[frameId-1];
     }
-    getPredictUserInput():number{
-        return this.userInputMap[this.curFrameId];
+    getPredictUserInput(frameId):number{
+        return this.userInputMap[frameId];
     }
     onFrameMsgHandler(msg:I_frameMsgRes){
         if(this.roomInfo){
@@ -84,21 +84,30 @@ export default class RoomData extends CompBase{
     timestamp:number = 0
     logicUpdate(frameSpeed:number){
         this.curFrameId++;
-        this.isInWaitFrameState = this.roomInfo.serverFrameId<this.curFrameId;
+        let isInWaitFrameState = this.roomInfo.serverFrameId<this.curFrameId;
         this.sendFrameMsg();
         this.frameLeftTime = gameDefine.frameDt;
-        if(this.isInWaitFrameState){
+        if(isInWaitFrameState){
             this.predictFrameId = this.roomInfo.serverFrameId+1;
-            game.eventMgr.dispatch("predictNextFrame")
+            game.eventMgr.dispatch("predictNextFrame",this.curFrameId)
         }else{
+            this.predictFrameId = null;
             game.eventMgr.dispatch("logicUpdate",frameSpeed)
             this.checkCollision();
         }
     }
     reelBackToServerFrame(){
-        for(let i = this.predictFrameId;i<=this.roomInfo.serverFrameId;i++){
-            game.eventMgr.dispatch("reelBackToServerFrame",i)
-            this.checkCollision();
+        let predictFrameId = this.predictFrameId;
+        this.predictFrameId = null;
+        game.eventMgr.dispatch("useSnapshot")
+        for(let i = predictFrameId;i<=this.curFrameId;i++){
+            if(i<=this.roomInfo.serverFrameId){
+                game.eventMgr.dispatch("reelBackToServerFrame",i)
+                this.checkCollision();
+            }else{
+                this.predictFrameId = this.roomInfo.serverFrameId+1;
+                game.eventMgr.dispatch("predictNextFrame",i)
+            }
         }
     }
     collectUserInput(inputType?:number){
@@ -125,10 +134,8 @@ export default class RoomData extends CompBase{
         }
     }
     protected update(dt: number): void {
-        if(this.roomInfo&& this.roomInfo.serverFrameId>0){
-            let isInWaitFrameState = this.roomInfo.serverFrameId<this.curFrameId;
-            if(!isInWaitFrameState && this.isInWaitFrameState){
-                this.isInWaitFrameState = false;
+        if(this.roomInfo&&this.roomInfo.serverFrameId>0){
+            if(this.predictFrameId && this.roomInfo.serverFrameId>=this.predictFrameId){
                 this.reelBackToServerFrame();
             }
             this.frameUpdate(dt);

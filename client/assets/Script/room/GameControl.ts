@@ -63,25 +63,27 @@ export default class GameControl extends CompBase {
             game.roomData.collectUserInput(playType);
         }
     }
-    curDirVec:cc.Vec2
+    time:number = 1
     protected update(dt: number): void {
-        if(!this.curDirVec){
-            this.curDirVec = new cc.Vec2(Math.random()*10-5,Math.random()*10-5)
+        this.time+=dt;
+        if(this.time>1){
+            this.time = 0
+            let getAngleVec = ()=>{
+                let pos = game.roomData.mySnake.node.position;
+                let x = Math.random()-0.5;
+                let y = Math.random()-0.5;
+                if((pos.x>200 && x>0) ||(pos.x<-200 && x<0)||
+                (pos.y>200 && y>0) ||(pos.y<-200 && y<0)
+                ){
+                    return getAngleVec();
+                }else{
+                    return new cc.Vec2(x,y);
+                }
+            }
+            let r = -getAngleVec().signAngle(cc.v2(1,0));
+            let dir = Math.round((cc.misc.radiansToDegrees(r)+360)%360) 
+            let playType = 0 + Math.floor(dir)*10;
+            game.roomData.collectUserInput(playType)
         }
-        let pos = game.roomData.mySnake.node.position;
-        if(pos.y>300){
-            this.curDirVec.y = -Math.abs(this.curDirVec.y)
-        }else if(pos.y<-300){
-            this.curDirVec.y = Math.abs(this.curDirVec.y)
-        }
-        if(pos.x>300){
-            this.curDirVec.x = -Math.abs(this.curDirVec.x)
-        }else if(pos.x<-300){
-            this.curDirVec.x = Math.abs(this.curDirVec.x)
-        }
-        let r = -this.curDirVec.signAngle(cc.v2(1,0));
-        let dir = Math.round((cc.misc.radiansToDegrees(r)+360)%360) 
-        let playType = 0 + Math.floor(dir)*10;
-        game.roomData.collectUserInput(playType)
     }
 }

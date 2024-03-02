@@ -214,6 +214,21 @@ export class FMath {
         }
         return (target - current)*percent + current;
     }
+    static slerpAngle(current:number,target:number,currentVelocity:number[],dt:number,time:number){
+        currentVelocity[0] = currentVelocity[0] || 0;
+        currentVelocity[0] += dt;
+        let direction = Math.sign((current - target + 360) % 360 - 180);
+        let currentTime = currentVelocity[0];
+        let percent = currentTime/time;
+        if(percent>1){
+            percent = 1;
+        }
+        if(direction>0){
+            return (target+360 - current)%360*percent + current;
+        }else{
+            return current - (current+360 - target)%360*percent;
+        }
+    }
     static slerpV3(current:cc.Vec3,target:cc.Vec3,currentVelocity:number[],dt:number,time:number){
         currentVelocity[0] = currentVelocity[0] || 0;
         currentVelocity[0] += dt;
@@ -228,19 +243,24 @@ export class FMath {
 
     static rotateTowards(angleA: number, angleB: number, step: number): number {
         // 角度范围在 [0, 360) 内
-        const normalizedAngleA = (angleA + 360) % 360;
-        const normalizedAngleB = (angleB + 360) % 360;
+        let normalizedAngleA = (angleA + 360) % 360;
+        let normalizedAngleB = (angleB + 360) % 360;
     
         // 计算 A 往 B 转动的方向
-        let direction = Math.sign((normalizedAngleB - normalizedAngleA + 360) % 360 - 180);
+        let direction = -Math.sign((normalizedAngleB - normalizedAngleA + 360) % 360 - 180);
     
         // 如果 A 和 B 在同一条线上，则直接返回 B
         if (normalizedAngleA === normalizedAngleB) {
             return normalizedAngleB;
         }
+        if(direction == 1 && normalizedAngleB<normalizedAngleA){
+            normalizedAngleB+=360;
+        }else if(direction == -1 && normalizedAngleA<normalizedAngleB){
+            normalizedAngleA+=360;
+        }
     
         // 计算转动后的角度
-        let rotatedAngle = normalizedAngleA + direction * gameDefine.frameChangeAngle;
+        let rotatedAngle = normalizedAngleA + direction * step;
     
         // 如果越过了角度 B，就返回 B
         if ((direction === 1 && rotatedAngle >= normalizedAngleB) || (direction === -1 && rotatedAngle <= normalizedAngleB)) {

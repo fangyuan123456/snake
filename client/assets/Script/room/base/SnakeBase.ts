@@ -34,7 +34,6 @@ export default class SnakeBase extends CompBase {
     start () {
         super.start();
         this.onEvent("logicUpdate",this.logicUpdate.bind(this));
-        this.onEvent("predictNextFrame",this.predictNextFrame.bind(this));
         this.onEvent("reelBackToServerFrame",this.reelBackToServerFrame.bind(this));
     }
     init(data:{initPos:cc.Vec3,dir:number,playerInfo:I_snakeInfo}){
@@ -68,30 +67,37 @@ export default class SnakeBase extends CompBase {
         };
         return frameData
     }
-    logicUpdate(frameSpeed:number){
-        this.updateTransfrom(frameSpeed,this.readFrame());
+    useSnapshot(){
+        this.curDir = this.snapshotData.dir;
+        this.curPos = this.snapshotData.pos
     }
-    updateTransfrom(frameSpeed:number,playType:number){
-        let frameData = this.parsePlayType(playType);
-        let lastDir = this.curDir;
-        this.curPos = this.getMoveEndPos(frameData);
-        this.curDir = frameData.dir;
-        this.targetDir = FMath.rotateTowards(lastDir,this.curDir,gameDefine.frameChangeAngle);
-
-        this.frameSpeed = frameSpeed;
-        this.velocity = [];
-    }
-    predictNextFrame(){
-        if(this.playerInfo.uid == game.userData.uid){
-            this.updateTransfrom(1,game.roomData.getPredictUserInput());
+    takeSnapshot(){
+        this.snapshotData = {
+            pos:this.curPos,
+            dir:this.curDir
         }
     }
     reelBackToServerFrame(frameId){
-        this.updateTransfrom(1,this.readFrame(frameId));
+        this.updateTransfrom(1,this.readFrame(frameId),frameId);
+        this.takeSnapshot();
     }
+    logicUpdate(frameSpeed:number){
+        this.updateTransfrom(frameSpeed,this.readFrame());
+        this.takeSnapshot();
+    }
+    updateTransfrom(frameSpeed:number,playType:number,frameId?){
+        let frameData = this.parsePlayType(playType);
+        let lastDir = this.curDir;
+        this.curPos = this.getMoveEndPos(frameData);
+        this.targetDir = frameData.dir;
+        this.curDir = FMath.rotateTowards(lastDir,this.targetDir,gameDefine.frameChangeAngle);
+        this.frameSpeed = frameSpeed;
+        this.velocity = [];
+    }
+
     protected update(dt: number): void {
         this.node.position = FMath.slerpV3(this.node.position,this.curPos.getVec3(),this.velocity,dt,gameDefine.frameDt/this.frameSpeed);
-        this.node.angle = FMath.slerp(this.node.angle,this.targetDir,this.velocity,dt,gameDefine.frameDt/this.frameSpeed)
+        this.node.angle = FMath.slerpAngle(this.node.angle,this.curDir,this.velocity,dt,gameDefine.frameDt/this.frameSpeed)
     }
     // update (dt) {}
 }
