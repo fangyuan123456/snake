@@ -1,6 +1,6 @@
 import { Application, Session, connector } from "mydog";
 import { GameServerBase } from "../../common/base/GameServerBase";
-import { serverType } from "../../common/config/CommonCfg";
+import { KICKUSER_TYPE, serverType } from "../../common/config/CommonCfg";
 declare global{
     namespace globalThis{
         var centerGame:CenterServer
@@ -28,6 +28,12 @@ export class CenterServer extends GameServerBase{
             "heartbeat":10000
         });
         this.app.configure(serverType.center, this.route.bind(this));
+        this.app.setKickUserFunc(this.kickUserFunc.bind(this))
+    }
+    kickUserFunc(uid:number){
+        let session = this.app.getSession(uid);
+        this.sendMsg(uid,{msgHead:"kickUser",msgData:{kickType:KICKUSER_TYPE.REMOTE_LOGININ}})
+        session.close();
     }
     route(){
         this.app.route(serverType.info, (session: Session) => {

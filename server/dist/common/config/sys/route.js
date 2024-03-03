@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = [
     "center.main.pushMsg",
+    "center.main.kickUser",
     "info.main.getPlayersInfo",
     "info.main.getRoomInfo",
     "info.main.getAssetInfo",

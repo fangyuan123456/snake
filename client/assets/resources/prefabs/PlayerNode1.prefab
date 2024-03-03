@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "PlayerNode",
+    "_name": "PlayerNode1",
     "_objFlags": 0,
     "_parent": null,
     "_children": [

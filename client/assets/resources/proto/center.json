@@ -32,6 +32,15 @@
             }
           }
         },
+        "kickUserRes": {
+          "fields": {
+            "kickType": {
+              "rule": "required",
+              "type": "int32",
+              "id": 1
+            }
+          }
+        },
         "guangBoReq": {
           "fields": {
             "uid": {

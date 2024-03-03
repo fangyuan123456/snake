@@ -7,6 +7,9 @@ export const enum serverType {
     match = "match",
     game = "game"
 }
+export enum KICKUSER_TYPE{
+    REMOTE_LOGININ = 1
+}
 export let mysqlConfig = {
     "development": {
         "host": "120.76.217.84",

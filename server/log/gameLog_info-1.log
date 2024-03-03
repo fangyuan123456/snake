@@ -3335,3 +3335,5 @@
 [2024-03-02T20:50:33.987] [DEBUG] gameLog - cmd:3,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
 [2024-03-02T21:34:26.498] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-0
 [2024-03-02T21:34:26.501] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-03-03T22:44:49.915] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-03-03T22:44:49.919] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1

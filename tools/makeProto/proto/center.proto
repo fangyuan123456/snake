@@ -4,6 +4,9 @@ message pushMsgRes{
     optional string msgText=1;
     optional int32 msgType=2;
 }
+message kickUserRes{
+    required int32 kickType=1;
+}
 message guangBoReq{
     required int32 uid=1;
     required string msg=2;
