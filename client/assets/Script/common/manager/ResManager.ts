@@ -95,4 +95,12 @@ export class ResManager extends SingleBase{
             parent.addChild(node);
         })
     }
+    loadJson(cfgName:string,bundleName?:string){
+        return new Promise<string>((resolve, reject) => {
+            this.loadRes<cc.JsonAsset>(cfgName,cc.JsonAsset,bundleName).then((jsonAsset)=>{
+                resolve(jsonAsset.json) 
+            })
+        })
+ 
+    }
 }

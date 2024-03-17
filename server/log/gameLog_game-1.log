@@ -433,3 +433,17 @@
 [2024-03-03T22:44:49.927] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
 [2024-03-03T22:44:49.930] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0
 [2024-03-03T22:50:16.516] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T21:41:25.136] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T21:43:32.029] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T21:44:37.670] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-03-17T21:44:37.675] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-03-17T21:45:16.159] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T21:50:53.695] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T21:52:12.616] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T21:53:32.978] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T21:54:12.235] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T21:55:01.035] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T21:55:54.139] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T22:02:52.873] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T22:04:15.351] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-17T22:05:29.089] [DEBUG] gameLog - udp server listening on port ${port}

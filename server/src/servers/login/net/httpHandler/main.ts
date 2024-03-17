@@ -1,9 +1,12 @@
 import { Response } from "express";
-import { I_loginReq, I_sdkLoginRes } from "../../../../common/interface/ILogin";
+import { I_loginReq, I_loginRes, I_sdkLoginRes } from "../../../../common/interface/ILogin";
 import { TableName } from "../../../../common/manager/SqlManager";
 import { serverType } from "../../../../common/config/CommonCfg";
 import { I_roleInfo } from "../../../../common/interface/IInfo";
 import HandlerBase from "../../../../common/base/HandlerBase";
+import { Dic } from "../../../../common/interface/ICommon";
+import * as fs from "fs";
+import * as path from "path";
 export default class Handler extends HandlerBase {
     constructor() {
         super();
@@ -24,7 +27,13 @@ export default class Handler extends HandlerBase {
                     this.updatePlayInviteData(inviteUid,uid);
                 }
                 let server = game.utilsMgr.getServerByUid(uid,serverType.center);
-                let loginResData = game.utilsMgr.merge(registerData,{centerIp:game.utilsMgr.getServerIp(server),});
+                let loginResData:I_loginRes = {
+                    centerIp:game.utilsMgr.getServerIp(server),
+                    isOpenShare:game.platformMgr.getPlatformApi(msgData.platform).getIsOpenShare(),
+                    isSheHeState:game.platformMgr.getPlatformApi(msgData.platform).getIsSheHeState(),
+                    playerInfo:registerData,
+
+                }
                 game.httpServer!.sendMsg(loginResData,res);
             });
         });
@@ -45,5 +54,23 @@ export default class Handler extends HandlerBase {
                 resolve(mData);
             });
         })
+    }
+    onGetJumpGameListReq(msgData:{platform:string},res:Response){
+        game.httpServer!.sendMsg(game.platformMgr.getPlatformApi(msgData.platform),res);
+    }
+    onGetTableCfgHandler(versionData:Dic<string>,res:Response){
+        let pathUrl = path.join(loginGame.app.base,"common/config/tables/version")
+        let jsonData = require(pathUrl)
+        let dataMap:Dic<string> = {}
+        for(let i in jsonData){
+            if( game.utilsMgr.comporeVersion(versionData[i],jsonData[i])){
+                let dataPathUrl = path.join(loginGame.app.base, "common/config/tables/clientCfg/" + i);
+                dataMap[i] = require(dataPathUrl);
+            }
+        }
+        if(Object.keys(dataMap).length>0){
+            dataMap["version"] = jsonData;
+        }
+        game.httpServer!.sendMsg(dataMap,res)
     }
 }

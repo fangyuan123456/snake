@@ -11,11 +11,11 @@ export class TimeManager extends SingleBase{
         }
         scheduler.schedule(callFunc,target,delayTime)
     }
-    unSchedule(callBack:()=>void,target?:cc.Node){
+    unSchedule(callBack:(dt:number)=>void,target?:cc.Node){
         let scheduler = cc.director.getScheduler();
         scheduler.unschedule(callBack,target)
     }
-    schedule(callBack:(dt:number)=>void,delayTime:number,target:cc.Node = game.getPersistNode()){
+    schedule(callBack:(dt:number)=>void,delayTime:number = 0,target:cc.Node = game.getPersistNode()){
         let scheduler = cc.director.getScheduler();
         scheduler.schedule((dt)=>{
             if(callBack){

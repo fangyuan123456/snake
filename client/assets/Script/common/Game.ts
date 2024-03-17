@@ -21,6 +21,7 @@ import GameData from "./data/GameData";
 import { ConfigManager } from "./manager/ConfigManager";
 import { OtherInfoData } from "./data/OtherInfoData";
 import RoomData from "../room/data/RoomData";
+import { StorgeManager } from "./manager/StorgeManager";
 
 declare global {
     namespace globalThis {
@@ -45,6 +46,7 @@ export class Game extends SingleBase{
     alertMgr:AlertManager
     utilsMgr:UtilsManager
     pushMsgMgr:PushMsgManager
+    storgeMgr:StorgeManager
 
     userData:UserData
     roomMgr: RoomManager;
@@ -74,6 +76,7 @@ export class Game extends SingleBase{
         this.roomMgr = RoomManager.getInstance();
         this.aduintMgr = AduintManager.getInstance();
         this.configMgr = ConfigManager.getInstance();
+        this.storgeMgr = StorgeManager.getInstance();
     
 
         this.userData = UserData.getInstance();

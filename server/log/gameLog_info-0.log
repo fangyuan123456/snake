@@ -5940,3 +5940,7 @@
 [2024-03-03T22:52:58.386] [ERROR] gameLog - 找不到玩家:16
 [2024-03-03T22:52:58.387] [DEBUG] gameLog - cmd:3,msg:{"roomId":0,"roomIp":""}
 [2024-03-03T22:52:58.388] [DEBUG] gameLog - cmd:6,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-03-17T21:44:38.338] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-03-17T21:44:38.343] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-03-17T21:53:18.689] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-03-17T21:53:18.694] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login

@@ -57,6 +57,12 @@ export abstract class PlatformBase extends SingleBase{
             title:"登录中..."
         },
         {
+            funcName:"loadCfg",
+            progressNum:100,
+            time:1,
+            title:"加载配置信息..."
+        },
+        {
             funcName:"changeScene",
             progressNum:10,
             time:0.5,

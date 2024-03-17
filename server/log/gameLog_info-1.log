@@ -3337,3 +3337,65 @@
 [2024-03-02T21:34:26.501] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
 [2024-03-03T22:44:49.915] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
 [2024-03-03T22:44:49.919] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-03-17T21:42:32.581] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_inviteReward' doesn't exist
+    at Sequence._packetToError (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\common\manager\SqlManager.js:55:32
+    at Handshake.onConnect (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Handshake._callback (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_inviteReward' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_inviteReward where uid = 1'
+}
+[2024-03-17T21:42:32.586] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_inviteReward' doesn't exist
+    at Sequence._packetToError (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    --------------------
+    at Protocol._enqueue (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Connection.js:198:25)
+    at D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\common\manager\SqlManager.js:55:32
+    at Handshake.onConnect (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Handshake._callback (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\fangyuan\gitWorkSpace\blockDuel1\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_inviteReward' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_inviteReward where uid = 1'
+}
+[2024-03-17T21:44:37.334] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-03-17T21:44:37.337] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-03-17T21:53:17.831] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-03-17T21:53:17.840] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login

@@ -1,60 +1,90 @@
 "use strict";
-exports.__esModule = true;
-var xlsx = require("node-xlsx");
-var fs = require("fs");
-var path = require("path");
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const xlsx = __importStar(require("node-xlsx"));
+const fs = __importStar(require("fs"));
+const path = __importStar(require("path"));
 console.log("\n");
-var specailKeyList = ["var","extable"];
-var config = require("./config.json");
-var inputfiles = fs.readdirSync(config.input);
-inputfiles.forEach(function (filename) {
+var specailKeyList = ["var", "extable"];
+let config = require("./config.json");
+let inputfiles = fs.readdirSync(config.input);
+let versionData = {};
+inputfiles.forEach((filename) => {
     if (filename[0] === "~") {
         return;
     }
     if (!filename.endsWith(".xlsx")) {
         return;
     }
-    var intputfilepath = path.join(config.input, filename);
-    var buff = fs.readFileSync(intputfilepath);
+    let intputfilepath = path.join(config.input, filename);
+    let buff = fs.readFileSync(intputfilepath);
     parseBuffToJson(buff, config.output_server, config.output_client, path.basename(filename, '.xlsx'));
     console.log("---->>>", filename);
 });
+fs.writeFileSync(path.join(config.output_server, "version.json"), JSON.stringify(versionData, null, 4));
+fs.writeFileSync(path.join(config.output_client, "version.json"), JSON.stringify(versionData, null, 4));
+console.log("---->>>", "version");
 console.log("\n");
 function parseBuffToJson(buff, outputDir, outputClientDir, filename) {
-    var sheets = xlsx.parse(buff, { "raw": false });
-    var lists = sheets[0].data;
+    let sheets = xlsx.parse(buff, { "raw": false });
+    let lists = sheets[0].data;
     if (lists.length <= 4) {
         return;
     }
-    var keyarr = lists[1];
-    var typearr = lists[2];
-    for (var i = 0; i < typearr.length; i++) {
+    let version = lists[0];
+    versionData[filename] = version[1];
+    let keyarr = lists[2];
+    let typearr = lists[3];
+    for (let i = 0; i < typearr.length; i++) {
         typearr[i] = typearr[i].trim().toLowerCase();
     }
-    var csArr = lists[3];
-    for (var i = 0; i < csArr.length; i++) {
+    let csArr = lists[4];
+    for (let i = 0; i < csArr.length; i++) {
         csArr[i] = csArr[i].trim().toLowerCase();
     }
-    var objS = {};
-    var objC = {};
-    for (var i = 4; i < lists.length; i++) {
-        var indexId = lists[i][0];
+    let objS = {};
+    let objC = {};
+    for (let i = 5; i < lists.length; i++) {
+        let indexId = lists[i][0];
         if (indexId === undefined) {
             continue;
         }
-        var s_obj = createObj(indexId, keyarr, typearr, csArr, lists[i], true);
+        let s_obj = createObj(indexId, keyarr, typearr, csArr, lists[i], true);
         objS[indexId] = s_obj;
-        var c_obj = createObj(indexId, keyarr, typearr, csArr, lists[i], false);
+        let c_obj = createObj(indexId, keyarr, typearr, csArr, lists[i], false);
         objC[indexId] = c_obj;
     }
-    var spaceNum = 4;
+    let spaceNum = 4;
     fs.writeFileSync(path.join(outputDir, filename + ".json"), JSON.stringify(objS, null, spaceNum));
+    fs.writeFileSync(path.join(outputDir + "/clientCfg/", filename + ".json"), JSON.stringify(objC, null, spaceNum));
     fs.writeFileSync(path.join(outputClientDir, filename + ".json"), JSON.stringify(objC, null, spaceNum));
 }
 function createObj(indexId, keyarr, typearr, csArr, dataarr, isSvr) {
-    var obj = {};
-    for (var i = 0; i < keyarr.length; i++) {
-        var can = true;
+    let obj = {};
+    for (let i = 0; i < keyarr.length; i++) {
+        let can = true;
         if (isSvr) {
             can = csArr[i] === "cs" || csArr[i] === "s";
         }
@@ -68,8 +98,8 @@ function createObj(indexId, keyarr, typearr, csArr, dataarr, isSvr) {
     return obj;
 }
 function changeValue(indexId, key, value, type) {
-    if(specailKeyList.indexOf(indexId)>=0 && (type != "json" || !value)){
-        return
+    if (specailKeyList.indexOf(indexId) >= 0 && (type != "json" || !value)) {
+        return;
     }
     if (value === undefined) {
         value = "";
@@ -93,14 +123,14 @@ function changeValue(indexId, key, value, type) {
         return Math.floor(Number(value) || 0);
     }
     else if (type === "json") {
-        var data = void 0;
+        let data;
         try {
-            if(specailKeyList.indexOf(indexId)>=0){
+            if (specailKeyList.indexOf(indexId) >= 0) {
                 data = value.split("#");
-            }else{
+            }
+            else {
                 data = JSON.parse(value.trim());
             }
-            
         }
         catch (e) {
             throw Error("not json:" + indexId + "," + key);

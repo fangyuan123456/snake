@@ -14,10 +14,11 @@ export class ProtoManager extends SingleBase{
     loadAllProto(){
         let packageList = ["center","info","match","game"];
         for(let i in packageList){
-            cc.resources.load("proto/"+packageList[i], (err,jsonAsset:cc.JsonAsset)=> {
-                const root = pbjs.Root.fromJSON(jsonAsset.json);
+            game.resMgr.loadJson("proto/"+packageList[i]).then((data:string)=>{
+                //@ts-ignore
+                const root = pbjs.Root.fromJSON(data);
                 this.protoRoot[packageList[i]] = root;
-           })
+            })
         }
     }
     getEncodeDecodeFunc(pkName:string,pbName:string){ 

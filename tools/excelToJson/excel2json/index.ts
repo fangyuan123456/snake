@@ -7,9 +7,10 @@ interface I_config {
     "output_client": string;
 }
 console.log("\n");
-
+var specailKeyList = ["var","extable"];
 let config: I_config = require("./config.json");
 let inputfiles: string[] = fs.readdirSync(config.input);
+let versionData:{[key:string]:string} = {};
 
 inputfiles.forEach((filename) => {
     if (filename[0] === "~") {
@@ -24,7 +25,9 @@ inputfiles.forEach((filename) => {
     console.log("---->>>", filename);
 });
 
-
+fs.writeFileSync(path.join(config.output_server,  "version.json"), JSON.stringify(versionData, null, 4));
+fs.writeFileSync(path.join(config.output_client,  "version.json"), JSON.stringify(versionData, null, 4));
+console.log("---->>>", "version");
 console.log("\n");
 
 
@@ -34,19 +37,21 @@ function parseBuffToJson(buff: Buffer, outputDir: string, outputClientDir: strin
     if (lists.length <= 4) {
         return;
     }
-    let keyarr = lists[1];
-    let typearr: string[] = lists[2];
+    let version = lists[0];
+    versionData[filename] = version[1];
+    let keyarr = lists[2];
+    let typearr: string[] = lists[3];
     for (let i = 0; i < typearr.length; i++) {
         typearr[i] = typearr[i].trim().toLowerCase();
     }
-    let csArr: string[] = lists[3];
+    let csArr: string[] = lists[4];
     for (let i = 0; i < csArr.length; i++) {
         csArr[i] = csArr[i].trim().toLowerCase();
     }
 
     let objS: any = {};
     let objC: any = {};
-    for (let i = 4; i < lists.length; i++) {
+    for (let i = 5; i < lists.length; i++) {
         let indexId = lists[i][0];
         if (indexId === undefined) {
             continue;
@@ -59,9 +64,10 @@ function parseBuffToJson(buff: Buffer, outputDir: string, outputClientDir: strin
     }
     let spaceNum = 4;
     fs.writeFileSync(path.join(outputDir, filename + ".json"), JSON.stringify(objS, null, spaceNum));
+    fs.writeFileSync(path.join(outputDir+"/clientCfg/", filename + ".json"), JSON.stringify(objC, null, spaceNum));
     fs.writeFileSync(path.join(outputClientDir, filename + ".json"), JSON.stringify(objC, null, spaceNum));
 }
-function createObj(indexId: number, keyarr: string[], typearr: string[], csArr: string[], dataarr: any[], isSvr: boolean) {
+function createObj(indexId: string, keyarr: string[], typearr: string[], csArr: string[], dataarr: any[], isSvr: boolean) {
     let obj: any = {};
     for (let i = 0; i < keyarr.length; i++) {
         let can = true;
@@ -77,7 +83,11 @@ function createObj(indexId: number, keyarr: string[], typearr: string[], csArr: 
     return obj;
 }
 
-function changeValue(indexId: number, key: string, value: string, type: string) {
+function changeValue(indexId: string, key: string, value: string, type: string) {
+    if(specailKeyList.indexOf(indexId)>=0 && (type != "json" || !value)){
+        return
+    }
+
     if (value === undefined) {
         value = "";
     }
@@ -97,7 +107,11 @@ function changeValue(indexId: number, key: string, value: string, type: string) 
     } else if (type === "json") {
         let data: any
         try {
-            data = JSON.parse(value.trim());
+            if(specailKeyList.indexOf(indexId)>=0){
+                data = value.split("#");
+            }else{
+                data = JSON.parse(value.trim());
+            }
         } catch (e) {
             throw Error("not json:" + indexId + "," + key);
         }

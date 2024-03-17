@@ -11,5 +11,11 @@ class PlatformApiBase {
             });
         }
     }
+    getIsOpenShare() {
+        return false;
+    }
+    getIsSheHeState() {
+        return false;
+    }
 }
 exports.PlatformApiBase = PlatformApiBase;

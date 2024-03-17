@@ -12,10 +12,7 @@ export interface I_roleInfo {
     gender?:number,
     city?:string,
     country?:string,
-    province?:string,
-    sceneId?:number,
-    pathId?:number,
-    platform?:string,
+    province?:string
 }
 export interface I_asset {
     items:Dic<I_item>,

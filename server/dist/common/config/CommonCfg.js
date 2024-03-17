@@ -4,7 +4,7 @@ exports.getConfigByEnv = exports.pushMsgType = exports.ITEM_ID = exports.mysqlCo
 var KICKUSER_TYPE;
 (function (KICKUSER_TYPE) {
     KICKUSER_TYPE[KICKUSER_TYPE["REMOTE_LOGININ"] = 1] = "REMOTE_LOGININ";
-})(KICKUSER_TYPE = exports.KICKUSER_TYPE || (exports.KICKUSER_TYPE = {}));
+})(KICKUSER_TYPE || (exports.KICKUSER_TYPE = KICKUSER_TYPE = {}));
 exports.mysqlConfig = {
     "development": {
         "host": "120.76.217.84",
@@ -20,11 +20,11 @@ var ITEM_ID;
 (function (ITEM_ID) {
     ITEM_ID[ITEM_ID["COINS"] = 1] = "COINS";
     ITEM_ID[ITEM_ID["DIAMOND"] = 2] = "DIAMOND";
-})(ITEM_ID = exports.ITEM_ID || (exports.ITEM_ID = {}));
+})(ITEM_ID || (exports.ITEM_ID = ITEM_ID = {}));
 var pushMsgType;
 (function (pushMsgType) {
     pushMsgType[pushMsgType["KICK_ROOM"] = 1] = "KICK_ROOM";
-})(pushMsgType = exports.pushMsgType || (exports.pushMsgType = {}));
+})(pushMsgType || (exports.pushMsgType = pushMsgType = {}));
 /** 根据环境获取配置 */
 function getConfigByEnv(config) {
     if (config[game.app.env] === undefined) {

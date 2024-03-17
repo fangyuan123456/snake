@@ -33,16 +33,23 @@ class PlatformManager extends SingleBase_1.SingleBase {
     }
     getPlatformApi(platform) {
         let api = this.platformApiMap[platform];
-        if (api) {
+        if (!api) {
             let fileName = path.join(__dirname, "../platform/" + platform + "/platformApi.js");
-            let handler = require(fileName);
+            let handler = null;
+            try {
+                handler = require(fileName).platformApi;
+            }
+            catch (_a) {
+                fileName = path.join(__dirname, "../platform/PlatformApiBase.js");
+                handler = require(fileName).PlatformApiBase;
+            }
             api = new handler();
             this.platformApiMap[platform] = api;
         }
         return api;
     }
     getLoginCode(data, callBack) {
-        if (data.isCeShi || !this.getPlatformApi(data.platform)) {
+        if (data.isCeShi) {
             if (callBack) {
                 callBack({
                     openId: data.code

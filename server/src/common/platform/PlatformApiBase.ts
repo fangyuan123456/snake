@@ -11,4 +11,10 @@ export class PlatformApiBase{
             });
         }
     }
+    getIsOpenShare(){
+        return false;
+    }
+    getIsSheHeState(){
+        return false;
+    }
 }

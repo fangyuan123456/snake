@@ -63,4 +63,14 @@ export class UtilsManager extends SingleBase{
         }
         return copy;
     }
+    comporeVersion(versionStr1:string,versionStr2:string){
+        let versionList1 = versionStr1.split(".");
+        let versionList2 = versionStr2.split(".");
+        for (let i = 0; i < versionList1.length; i++) {
+            if(versionList1[i]<versionList2[i]){
+                return true;
+            }
+        }
+        return false;
+    }
 }

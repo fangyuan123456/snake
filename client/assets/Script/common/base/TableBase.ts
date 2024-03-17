@@ -13,8 +13,8 @@ export default class TableBase {
         this.tbName = tbName;
     }
     private setOrginData(){
-        cc.resources.load("tableCfg/"+this.tbName, (err,jsonAsset:cc.JsonAsset)=> {
-            this.orginData = jsonAsset.json;
+        game.configMgr.getDataCfg(this.tbName).then((data)=>{
+            this.orginData = game.utilsMgr.deepCopy(data);
             if(this.orginData["var"]){
                 this.varCond = this.orginData["var"];
                 this.setTbVarKeyList();
@@ -32,7 +32,7 @@ export default class TableBase {
             this.loadAllExTable(()=>{
                 this.setData();
             })
-       })
+        })
     }
     private loadAllExTable(callBack:()=>void){
         if(Object.keys(this.extableCfgData).length>0){

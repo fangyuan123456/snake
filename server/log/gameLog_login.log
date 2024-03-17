@@ -20469,3 +20469,60 @@
 [2024-03-02T21:33:21.141] [DEBUG] gameLog - undefined
 [2024-03-02T21:34:25.775] [ERROR] gameLog - [rpcServer.ts] heartBeat time out, close it: con-0
 [2024-03-02T21:34:25.776] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-03-17T21:42:32.086] [DEBUG] gameLog - undefined
+[2024-03-17T21:42:32.462] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getIsOpenShare')
+    at D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\servers\login\net\HttpHandler\main.js:39:83
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-03-17T21:43:46.731] [DEBUG] gameLog - undefined
+[2024-03-17T21:43:46.948] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'getIsOpenShare')
+    at D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\servers\login\net\HttpHandler\main.js:39:83
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-03-17T21:44:19.207] [DEBUG] gameLog - undefined
+[2024-03-17T21:45:37.370] [DEBUG] gameLog - undefined
+[2024-03-17T21:45:43.090] [ERROR] gameLog - Error: Cannot find module 'D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\common\platform\web\platformApi.js'
+Require stack:
+- D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\common\manager\PlatformManager.js
+- D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\common\base\GameServerBase.js
+- D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\servers\login\LoginServer.js
+- D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\app.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at PlatformManager.getPlatformApi (D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\common\manager\PlatformManager.js:38:27)
+    at D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\servers\login\net\HttpHandler\main.js:39:51
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\fangyuan\\gitWorkSpace\\blockDuel1\\server\\dist\\common\\manager\\PlatformManager.js',
+    'D:\\fangyuan\\gitWorkSpace\\blockDuel1\\server\\dist\\common\\base\\GameServerBase.js',
+    'D:\\fangyuan\\gitWorkSpace\\blockDuel1\\server\\dist\\servers\\login\\LoginServer.js',
+    'D:\\fangyuan\\gitWorkSpace\\blockDuel1\\server\\dist\\app.js'
+  ]
+}
+[2024-03-17T21:51:29.276] [DEBUG] gameLog - undefined
+[2024-03-17T21:51:29.494] [ERROR] gameLog - TypeError: handler is not a constructor
+    at PlatformManager.getPlatformApi (D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\common\manager\PlatformManager.js:46:19)
+    at D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\servers\login\net\HttpHandler\main.js:39:51
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-03-17T21:52:15.008] [DEBUG] gameLog - undefined
+[2024-03-17T21:52:40.969] [ERROR] gameLog - TypeError: handler is not a constructor
+    at PlatformManager.getPlatformApi (D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\common\manager\PlatformManager.js:46:19)
+    at D:\fangyuan\gitWorkSpace\blockDuel1\server\dist\servers\login\net\HttpHandler\main.js:39:51
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-03-17T21:52:40.986] [DEBUG] gameLog - undefined
+[2024-03-17T21:53:34.212] [DEBUG] gameLog - undefined
+[2024-03-17T21:55:02.697] [DEBUG] gameLog - undefined
+[2024-03-17T21:55:11.149] [DEBUG] gameLog - undefined
+[2024-03-17T21:56:00.616] [DEBUG] gameLog - undefined
+[2024-03-17T21:56:00.920] [DEBUG] gameLog - undefined
+[2024-03-17T21:56:24.473] [DEBUG] gameLog - undefined
+[2024-03-17T21:56:24.634] [DEBUG] gameLog - undefined
+[2024-03-17T21:56:52.862] [DEBUG] gameLog - undefined
+[2024-03-17T21:58:09.489] [DEBUG] gameLog - undefined
+[2024-03-17T21:58:17.905] [DEBUG] gameLog - undefined
+[2024-03-17T22:03:07.375] [DEBUG] gameLog - undefined
+[2024-03-17T22:04:34.290] [DEBUG] gameLog - undefined
+[2024-03-17T22:05:57.336] [DEBUG] gameLog - undefined
+[2024-03-17T22:06:18.195] [DEBUG] gameLog - undefined
+[2024-03-17T22:06:20.883] [DEBUG] gameLog - undefined
