@@ -23,14 +23,29 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+//@ts-ignore
 const xlsx = __importStar(require("node-xlsx"));
+const crypto = __importStar(require("crypto"));
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
+let argMap = {};
+let argArr = process.argv;
+console.log(argArr);
+for (let i = 2; i < argArr.length; i += 2) {
+    switch (argArr[i]) {
+        case "-v":
+            argMap["version"] = argArr[i + 1];
+            break;
+    }
+}
 console.log("\n");
 var specailKeyList = ["var", "extable"];
 let config = require("./config.json");
 let inputfiles = fs.readdirSync(config.input);
-let versionData = {};
+let versionData = {
+    version: "1.0.0",
+    versionMap: {}
+};
 inputfiles.forEach((filename) => {
     if (filename[0] === "~") {
         return;
@@ -43,6 +58,7 @@ inputfiles.forEach((filename) => {
     parseBuffToJson(buff, config.output_server, config.output_client, path.basename(filename, '.xlsx'));
     console.log("---->>>", filename);
 });
+versionData.version = argMap["version"];
 fs.writeFileSync(path.join(config.output_server, "version.json"), JSON.stringify(versionData, null, 4));
 fs.writeFileSync(path.join(config.output_client, "version.json"), JSON.stringify(versionData, null, 4));
 console.log("---->>>", "version");
@@ -53,20 +69,23 @@ function parseBuffToJson(buff, outputDir, outputClientDir, filename) {
     if (lists.length <= 4) {
         return;
     }
-    let version = lists[0];
-    versionData[filename] = version[1];
-    let keyarr = lists[2];
-    let typearr = lists[3];
+    // 将对象转换为字符串
+    const objString = JSON.stringify(lists);
+    // 计算 MD5
+    const hash = crypto.createHash('md5').update(objString).digest('hex');
+    versionData.versionMap[hash] = hash;
+    let keyarr = lists[1];
+    let typearr = lists[2];
     for (let i = 0; i < typearr.length; i++) {
         typearr[i] = typearr[i].trim().toLowerCase();
     }
-    let csArr = lists[4];
+    let csArr = lists[3];
     for (let i = 0; i < csArr.length; i++) {
         csArr[i] = csArr[i].trim().toLowerCase();
     }
     let objS = {};
     let objC = {};
-    for (let i = 5; i < lists.length; i++) {
+    for (let i = 4; i < lists.length; i++) {
         let indexId = lists[i][0];
         if (indexId === undefined) {
             continue;
@@ -140,4 +159,18 @@ function changeValue(indexId, key, value, type) {
     else {
         return value;
     }
+}
+function getNextVersion(versionStr) {
+    let versionList = versionStr.split(".");
+    let len = versionList.length;
+    versionList[len - 1] = (Number(versionList[len - 1]) + 1) + "";
+    let newStr = "";
+    for (let i = 0; i < versionList.length; i++) {
+        let appendStr = versionList[i] + ".";
+        if (i == versionList.length - 1) {
+            appendStr = versionList[i];
+        }
+        newStr += appendStr;
+    }
+    return newStr;
 }
