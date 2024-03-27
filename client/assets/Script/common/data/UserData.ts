@@ -24,7 +24,7 @@ export default class UserData extends DataBase{
         super(dataKeyCfg);
     }
     setLoginData(loginData:I_loginRes){
-        this.uid = loginData.uid,
+        this.uid = loginData.playerInfo.uid,
         this.centerIp = loginData.centerIp
         delete loginData.centerIp;
         this.setInfo("roleInfo",loginData)

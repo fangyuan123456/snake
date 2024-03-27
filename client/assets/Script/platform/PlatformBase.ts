@@ -1,12 +1,7 @@
 import { ServerCfg } from "../common/configs/ServerCfg";
 import { SingleBase } from "../common/base/SingleBase";
 import { I_loginReq } from "../common/interface/I_Login";
-export interface LOAD_ORDER_CFG{
-    funcName:string,
-    progressNum:number,
-    time:number,
-    title:string
-}
+import { I_LoadCfg } from "../common/interface/I_Common";
 export interface I_webSocket{
     send:(buffer:ArrayBuffer)=>void,
     close:()=>void,
@@ -43,7 +38,7 @@ export function getPlatForm():PLATFORM_TYPE{
 export abstract class PlatformBase extends SingleBase{
     platformName = ""
     isSupportUdp = false
-    loadOrderCfg:LOAD_ORDER_CFG[]=[
+    loadOrderCfg:I_LoadCfg[]=[
         {
             funcName:"loadRes",
             progressNum:20,

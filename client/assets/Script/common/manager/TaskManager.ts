@@ -1,5 +1,5 @@
-import { LOAD_ORDER_CFG } from "../../platform/PlatformBase";
 import { SingleBase } from "../base/SingleBase";
+import { Dic } from "../interface/I_Common";
 
 interface Task {
     data?:any
@@ -38,12 +38,23 @@ export class Queque{
         }
     }
 }
+export type taskDelegateCompeleFunc = (()=>void)
 export class TaskManager extends SingleBase{
+    delegateList:Dic<taskDelegateCompeleFunc[]> = {};
     private taskQues: { [queName: string]: Queque } = {};
-  
     constructor() {
         super();
         this.taskQues = {};
+    }
+    setDelegate(queName:string,delegateFunc:taskDelegateCompeleFunc){
+        this.delegateList[queName] = this.delegateList[queName] || [];
+        this.delegateList[queName].push(delegateFunc);
+    }
+    callDelegateFunc(queName:string){
+        let delegateList = this.delegateList[queName] || [];
+        for(let i in delegateList){
+            delegateList[i]();
+        }
     }
     createTaskQue(queName: string) {
         if(this.taskQues[queName]){
@@ -61,5 +72,6 @@ export class TaskManager extends SingleBase{
         return this.taskQues[queName];
     }
     onTaskQueCompleted(queName){
+        this.callDelegateFunc(queName);
     }
   }

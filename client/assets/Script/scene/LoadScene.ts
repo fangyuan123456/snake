@@ -6,11 +6,10 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
 import { Game } from "../common/Game";
-import { LOAD_ORDER_CFG } from "../platform/PlatformBase";
 import { SCENE_NAME, SceneBase } from "../common/base/SceneBase";
 import { I_loginReq, I_loginRes } from "../common/interface/I_Login";
-import { LoadingTask } from "../common/LoadingTask";
 import { Dic } from "../common/interface/I_Common";
+import { LoadingTask } from "../common/customClass/LoadingTask";
 
 const {ccclass, property} = cc._decorator;
 

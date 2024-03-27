@@ -1,7 +1,7 @@
-import { LOAD_ORDER_CFG } from "../platform/PlatformBase";
+import { I_LoadCfg } from "../interface/I_Common"
 
 export class LoadingTask{
-    progressCfg:LOAD_ORDER_CFG[]
+    progressCfg:I_LoadCfg[]
     progressCallBack:(precent:number,title?:string)=>void
     taskName:string
     private target:any
@@ -23,6 +23,9 @@ export class LoadingTask{
         }
         return new Promise<void>((resolve, reject) => {
             this.startRun();
+            game.taskMgr.setDelegate(this.taskName,()=>{
+                resolve();
+            })
         })
 
     }
@@ -76,7 +79,7 @@ export class LoadingTask{
         taskQue.startRun();
     }
     runProgressFunc:(number)=>void
-    runProgressByTime(cfg:LOAD_ORDER_CFG){
+    runProgressByTime(cfg:I_LoadCfg){
         let progress = this.curProgress;
         let time = 0;
         let actionFunc = (dt)=>{
