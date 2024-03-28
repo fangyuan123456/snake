@@ -10,7 +10,7 @@ export class BundleBase extends CompBase{
     preLoad(progressCallBack:(precent:number,title?:string)=>void){
         return new Promise<void>((resolve, reject) => {
             let downLoader = new LoadingTask();
-            downLoader.start(this.downLoadCfg,this,progressCallBack).then(()=>{
+            downLoader.startLoad(this.downLoadCfg,this,progressCallBack).then(()=>{
                 resolve();
             });
         })

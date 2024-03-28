@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "ItemNode1",
+    "_name": "ItemNode",
     "_objFlags": 0,
     "_parent": null,
     "_children": [

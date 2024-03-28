@@ -1,0 +1,10 @@
+[2024-03-28T10:17:10.284] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-28T10:21:14.129] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-03-28T10:21:14.133] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-03-28T10:27:41.407] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-28T10:46:39.290] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-03-28T10:46:39.295] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-03-28T10:48:18.040] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-03-28T10:49:23.399] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-03-28T10:49:23.403] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-03-28T10:50:02.259] [DEBUG] gameLog - udp server listening on port ${port}

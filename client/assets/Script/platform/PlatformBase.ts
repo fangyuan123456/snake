@@ -38,6 +38,8 @@ export function getPlatForm():PLATFORM_TYPE{
 export abstract class PlatformBase extends SingleBase{
     platformName = ""
     isSupportUdp = false
+    isSheHeState:boolean = false
+    isOpenShare:boolean = false
     loadOrderCfg:I_LoadCfg[]=[
         {
             funcName:"loadRes",
@@ -135,5 +137,11 @@ export abstract class PlatformBase extends SingleBase{
     }
     getLoginCode(callBack:(data:I_loginReq)=>void){
         
+    }
+    getIsOpenShare() {
+        return this.isOpenShare;
+    }
+    getIsSheHeState() {
+        return this.isSheHeState;
     }
 };

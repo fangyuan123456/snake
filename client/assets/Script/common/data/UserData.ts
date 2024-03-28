@@ -18,16 +18,16 @@ export default class UserData extends DataBase{
     uid:number = 0
     isDropToolOn:boolean = false
     friendMatchUid:number = null
-    centerIp:string  = ""
     otherPlayerInfo: Dic<I_roleInfo> = {};
     constructor(){
         super(dataKeyCfg);
     }
     setLoginData(loginData:I_loginRes){
         this.uid = loginData.playerInfo.uid,
-        this.centerIp = loginData.centerIp
-        delete loginData.centerIp;
-        this.setInfo("roleInfo",loginData)
+        game.gameData.centerIp = loginData.centerIp
+        game.platFormMgr.isOpenShare = loginData.isOpenShare;
+        game.platFormMgr.isSheHeState = loginData.isSheHeState;
+        this.setInfo("roleInfo",loginData.playerInfo)
     }
     getRoleInfo(callBack:(data:I_roleInfo)=>void,target:CompBase){
         this.getInfo("roleInfo",callBack,target)

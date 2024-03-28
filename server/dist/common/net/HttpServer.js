@@ -94,7 +94,7 @@ class HttpServer {
             }
         });
         req.on("end", (err) => {
-            game.logMgr.debug(err);
+            // game.logMgr.debug(err);
         });
         req.on("error", (err) => {
             game.logMgr.error(err);

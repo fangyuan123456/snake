@@ -24,7 +24,7 @@ export default class LoadScene extends SceneBase {
         super.start();
         let loadingCfg = game.platFormMgr.getLoadPercentCfg();
         this.loadTask = new LoadingTask();
-        this.loadTask.start(loadingCfg,this,this.updateLoadBar.bind(this));
+        this.loadTask.startLoad(loadingCfg,this,this.updateLoadBar.bind(this));
     }
     updateLoadBar(progress:number,title:string){
         let loadingBar = cc.find("Canvas/progressBarLoading").getComponent(cc.ProgressBar)
@@ -52,7 +52,7 @@ export default class LoadScene extends SceneBase {
             if(data.code){
                 game.netMgr.sendHttpRequest(data,"login",(loginData:I_loginRes)=>{
                     game.userData.setLoginData(loginData);
-                    game.netMgr.createSocket(game.userData.centerIp)
+                    game.netMgr.createSocket(game.gameData.centerIp)
                     game.netMgr.onReady(()=>{
                         next();
                     },this)

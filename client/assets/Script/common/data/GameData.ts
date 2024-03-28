@@ -11,8 +11,7 @@ const dataKeyCfg:dataKeyCfg = {
 export default class GameData extends DataBase{
     isDropToolOn:boolean = false
     friendMatchUid:number = null
-    curFrameId:number = null
-    frames:Dic<number[]>= {}
+    centerIp:string  = ""
     constructor(){
         super(dataKeyCfg);
     }
@@ -21,16 +20,6 @@ export default class GameData extends DataBase{
     }
     getRoomInfoSync():I_roomInfo{
         return this.getInfoSync("roomInfo");
-    }
-    getPlayType(uid:number){
-        let frames = this.frames[uid];
-        for(let i in frames){
-            let frameId = Math.floor(frames[i]/10);
-            let playType = frames[i]%10;
-            if(frameId == this.curFrameId){
-                return playType;
-            }
-        }
     }
 
 }

@@ -93,16 +93,21 @@ class Handler extends HandlerBase_1.default {
         let pathUrl = path.join(loginGame.app.base, "common/config/tables/version");
         let jsonData = require(pathUrl);
         let dataMap = {};
-        for (let i in jsonData) {
-            if (game.utilsMgr.comporeVersion(versionData[i], jsonData[i])) {
-                let dataPathUrl = path.join(loginGame.app.base, "common/config/tables/clientCfg/" + i);
-                dataMap[i] = require(dataPathUrl);
+        if (game.utilsMgr.comporeVersion(versionData.version, jsonData.version)) {
+            for (let i in jsonData.versionMap) {
+                if (versionData.versionMap[i] != jsonData.versionMap[i]) {
+                    let dataPathUrl = path.join(loginGame.app.base, "common/config/tables/clientCfg/" + i);
+                    dataMap[i] = require(dataPathUrl);
+                }
             }
+            if (Object.keys(dataMap).length > 0) {
+                dataMap["version"] = jsonData;
+            }
+            game.httpServer.sendMsg(dataMap, res);
         }
-        if (Object.keys(dataMap).length > 0) {
-            dataMap["version"] = jsonData;
+        else {
+            game.httpServer.sendMsg(dataMap, res);
         }
-        game.httpServer.sendMsg(dataMap, res);
     }
 }
 exports.default = Handler;

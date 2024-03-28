@@ -26,8 +26,6 @@ export default class Handler extends HandlerBase {
         let player = infoGame.getPlayer(session.uid);
         if(!player){
             player = infoGame.createPlayer(session.uid)
-        }else{
-            game.logMgr.error("找不到玩家:%s",session.uid)
         }
         //@ts-ignore
         let func = player[msgName+"Handler"]

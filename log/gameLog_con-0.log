@@ -1,0 +1,4 @@
+[2024-03-28T10:21:08.379] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-03-28T10:21:08.386] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-03-28T10:49:26.246] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-03-28T10:49:26.250] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login

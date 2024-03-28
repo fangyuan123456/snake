@@ -65,7 +65,7 @@ export class HttpServer{
             }
         })
         req.on("end",(err:any)=>{
-            game.logMgr.debug(err);
+            // game.logMgr.debug(err);
         });
         req.on("error",(err:Error)=>{
             game.logMgr.error(err);

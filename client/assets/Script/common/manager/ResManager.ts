@@ -107,7 +107,7 @@ export class ResManager extends SingleBase{
         return new Promise<any>(async (resolve, reject) => {
             let cfgStroge = game.storgeMgr.getCfgStroge(cfgName);
             if(!cfgStroge){
-                cfgStroge = await this.loadJson(cfgName,bundleName);
+                cfgStroge = await this.loadJson("tableCfg/"+cfgName,bundleName);
             }
             resolve(cfgStroge);
         })

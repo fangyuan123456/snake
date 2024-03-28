@@ -12,7 +12,7 @@ export class LoadingTask{
     private title:string = ""
 
     constructor(){}
-    start (progressCfg,target:any|any[],progressCallBack?:(precent:number,title?:string)=>void) {
+    startLoad (progressCfg,target:any|any[],progressCallBack?:(precent:number,title?:string)=>void) {
         this.taskName = "LoadingTask"+new Date().getTime();
         this.progressCfg = progressCfg;
         this.progressCallBack = progressCallBack
@@ -34,7 +34,7 @@ export class LoadingTask{
             this.totalProgress+=this.progressCfg[i].progressNum
         }
     }
-    startRun(){
+    private startRun(){
         let taskQue = game.taskMgr.createTaskQue(this.taskName);
         this.progressCfg = this.progressCfg;
         this.setTotalProgress();
@@ -57,14 +57,14 @@ export class LoadingTask{
                     this.setTitle(cfg.title);
                 }
                 if(this.target){
-                    if(this.target[cfg.funcName]){
+                    if(this.target[cfg.funcName] && (!this.target[cfg.funcName].node || this.target[cfg.funcName].node.parent)){
                         this.target[cfg.funcName](nextFunc);
                         return;
                     }
                 }else{
                     for(let i = 0;i<this.targetList.length;i++){
                         let target = this.targetList[i];
-                        if(target[cfg.funcName]){
+                        if(target[cfg.funcName]  && (!target[cfg.funcName].node || target[cfg.funcName].node.parent)){
                             target[cfg.funcName](nextFunc);
                             return;
                         }
@@ -104,8 +104,12 @@ export class LoadingTask{
     setProgress(progress){
         let precent = +(progress/this.totalProgress).toFixed(2);
         this.precent = precent;
-        if(this.progressCallBack){
-            this.progressCallBack(this.precent,this.title)
+        try{
+            if(this.progressCallBack){
+                this.progressCallBack(this.precent,this.title)
+            }
+        }catch(err){
+            game.timeMgr.unSchedule(this.runProgressFunc);
         }
     }
     setTitle(title:string){
