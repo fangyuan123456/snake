@@ -13,7 +13,7 @@ export default class TableBase {
         this.tbName = tbName;
     }
     private setOrginData(){
-        game.configMgr.getDataCfg(this.tbName).then((data)=>{
+        game.resMgr.loadCfg(this.tbName).then((data)=>{
             this.orginData = game.utilsMgr.deepCopy(data);
             if(this.orginData["var"]){
                 this.varCond = this.orginData["var"];

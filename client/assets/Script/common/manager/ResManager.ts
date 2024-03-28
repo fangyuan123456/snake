@@ -96,11 +96,21 @@ export class ResManager extends SingleBase{
         })
     }
     loadJson(cfgName:string,bundleName?:string){
-        return new Promise<string>((resolve, reject) => {
+        return new Promise<any>((resolve, reject) => {
             this.loadRes<cc.JsonAsset>(cfgName,cc.JsonAsset,bundleName).then((jsonAsset)=>{
                 resolve(jsonAsset.json) 
             })
         })
  
+    }
+    loadCfg(cfgName:string,bundleName?:string){
+        return new Promise<any>(async (resolve, reject) => {
+            let cfgStroge = game.storgeMgr.getCfgStroge(cfgName);
+            if(!cfgStroge){
+                cfgStroge = await this.loadJson(cfgName,bundleName);
+            }
+            resolve(cfgStroge);
+        })
+       
     }
 }

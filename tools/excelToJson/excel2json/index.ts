@@ -14,8 +14,6 @@ for(let i = 2;i<argArr.length;i+=2){
         break
     }
 }
-
-
 interface I_config {
     "input": string,
     "output_server": string;
@@ -24,6 +22,9 @@ interface I_config {
 console.log("\n");
 var specailKeyList = ["var","extable"];
 let config: I_config = require("./config.json");
+checkExitAndCreateDirectory(config.output_client);
+checkExitAndCreateDirectory(config.output_server);
+checkExitAndCreateDirectory(config.output_server+"/clientCfg/");
 let inputfiles: string[] = fs.readdirSync(config.input);
 let versionData:{version:string,versionMap:{[key:string]:string}} = {
     version:"1.0.0",
@@ -56,7 +57,7 @@ function parseBuffToJson(buff: Buffer, outputDir: string, outputClientDir: strin
     const objString = JSON.stringify(lists);
     // 计算 MD5
     const hash = crypto.createHash('md5').update(objString).digest('hex');
-    versionData.versionMap[hash] = hash;
+    versionData.versionMap[filename] = hash;
     let keyarr = lists[1];
     let typearr: string[] = lists[2];
     for (let i = 0; i < typearr.length; i++) {
@@ -138,17 +139,15 @@ function changeValue(indexId: string, key: string, value: string, type: string) 
         return value;
     }
 }
-function getNextVersion(versionStr:string){
-    let versionList =  versionStr.split(".")
-    let len  = versionList.length;
-    versionList[len-1] = (Number(versionList[len - 1]) + 1)+"";
-    let newStr = "";
-    for(let i = 0 ;i<versionList.length;i++){
-        let appendStr = versionList[i]+"."
-        if(i == versionList.length-1){
-            appendStr = versionList[i]
-        }
-        newStr +=appendStr;
-    }
-    return newStr;
+function checkExitAndCreateDirectory(folderPath:string){
+    const folders = folderPath.split('/');
+    let currentPath = '';
+  
+    folders.forEach(folder => {
+      currentPath += folder + '/';
+      if (!fs.existsSync(currentPath)) {
+        fs.mkdirSync(currentPath);
+        console.log(`Folder created: ${currentPath}`);
+      }
+    });
 }

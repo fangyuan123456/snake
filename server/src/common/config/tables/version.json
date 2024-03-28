@@ -1,5 +1,8 @@
 {
-    "inviteReward": "1.0.0",
-    "items": "1.0.0",
-    "userLayer": "1.0.0"
+    "version": "1.0.0",
+    "versionMap": {
+        "inviteReward": "4a1f6a203e88aefb0ea7845d6650a66c",
+        "items": "93d63067f70fb238e33c99fbcdacd1b7",
+        "userLayer": "c7ba3c28ecac101083481ef5b9e83448"
+    }
 }

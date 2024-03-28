@@ -38,12 +38,11 @@ export default class LoadScene extends SceneBase {
         },1)
     }
     async loadCfg(next){
-        await game.configMgr.checkVersionInvildAndClean();
-        let cfgVersion = await game.configMgr.getCfgVersion();
-        game.configMgr.dataCfgs["version"] = null;
+        await game.storgeMgr.checkVersionInvildAndClean();
+        let cfgVersion = await game.resMgr.loadCfg("version");
         game.netMgr.sendHttpRequest(cfgVersion,"getTableCfg",(cfgData:Dic<any>)=>{
             if(Object.keys(cfgData).length>0){
-                game.storgeMgr.setItems(cfgData);
+                game.storgeMgr.setCfgStroge(cfgData);
             }
             next();
         })

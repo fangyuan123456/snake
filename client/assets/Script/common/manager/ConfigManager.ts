@@ -9,39 +9,6 @@ export class ConfigManager extends SingleBase{
     constructor(){
         super();
     }
-    public async checkVersionInvildAndClean(){
-        let storage = game.storgeMgr.getItem("version");
-        let cfg = await game.resMgr.loadJson("tableCfg/version");
-        if(storage){
-            let isInvild =false;
-            let clearData:Dic<any> = {}
-            for(let i in storage){
-                clearData[i] = null;
-                if(game.utilsMgr.comporeVersion(cfg[i],storage[i])){
-                    isInvild = true;
-                }
-            }
-            clearData["version"] = null;
-            if(!isInvild){
-                game.storgeMgr.setItems(clearData);
-            }
-        }
-    }
-    public async getCfgVersion(){
-        return this.getDataCfg("version")
-    }
-    public setDataCfgs(dataCfgs){
-        for(let i in dataCfgs){
-            this.dataCfgs[i] = dataCfgs;
-        }
-    }
-    public getDataCfg(cfgName){
-        return new Promise<any>(async (resolve, reject) => {
-           let cfg = this.dataCfgs[cfgName] || game.storgeMgr.getItem("version") || await game.resMgr.loadJson("tableCfg/version");
-            this.dataCfgs[cfgName] = cfg;
-           resolve(cfg);
-        })
-    }
     private setTbVar(tbVar:Dic<any>){
         for(let i in tbVar){
             this.tbVar[i] = tbVar[i];

@@ -10,6 +10,20 @@ export class BundleManager extends SingleBase{
     bundleMap:Dic<BundleBase> = {}
     bundleStateMap:Dic<boolean> = {}
     delegateList:Dic<Dic<bundleDelegateFunc[]>> = {};
+    private getDelegateCallList(bundleName:e_bundleName,bundleState:e_bundleState){
+        this.delegateList[bundleName] = this.delegateList[bundleName] || {};
+        this.delegateList[bundleName][bundleState] = this.delegateList[bundleName][bundleState] || [];
+        return this.delegateList[bundleName][bundleState];
+    }
+    private callDelegateFunc(bundleName:e_bundleName,bundleState:e_bundleState,parmater?:any){
+        let delegateList = this.getDelegateCallList(bundleName,bundleState);
+        for(let i in delegateList){
+            delegateList[i](parmater);
+        }
+        if(bundleState == e_bundleState.Completed){
+            this.delegateList[bundleName] = null;
+        }
+    }
     addBundle(bundleName:e_bundleName,progressCallBack?:(precent:number,title:string)=>void){
         return new Promise<BundleBase>((resolve, reject) => {
             let bundle = this.getBundle(bundleName);
@@ -52,18 +66,8 @@ export class BundleManager extends SingleBase{
         bundleComp.node.removeFromParent(true);
         this.bundleMap[bundleName] = null;
     }
-    private getDelegateCallList(bundleName:e_bundleName,bundleState:e_bundleState){
-        this.delegateList[bundleName] = this.delegateList[bundleName] || {};
-        this.delegateList[bundleName][bundleState] = this.delegateList[bundleName][bundleState] || [];
-        return this.delegateList[bundleName][bundleState];
-    }
     setDelegate(bundleName:e_bundleName,bundleState:e_bundleState,delegateFunc:bundleDelegateFunc){
         this.getDelegateCallList(bundleName,bundleState).push(delegateFunc)
     }
-    callDelegateFunc(bundleName:e_bundleName,bundleState:e_bundleState,parmater?:any){
-        let delegateList = this.getDelegateCallList(bundleName,bundleState);
-        for(let i in delegateList){
-            delegateList[i](parmater);
-        }
-    }
+
 }

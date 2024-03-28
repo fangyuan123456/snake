@@ -41,6 +41,9 @@ for (let i = 2; i < argArr.length; i += 2) {
 console.log("\n");
 var specailKeyList = ["var", "extable"];
 let config = require("./config.json");
+checkExitAndCreateDirectory(config.output_client);
+checkExitAndCreateDirectory(config.output_server);
+checkExitAndCreateDirectory(config.output_server + "/clientCfg/");
 let inputfiles = fs.readdirSync(config.input);
 let versionData = {
     version: "1.0.0",
@@ -73,7 +76,7 @@ function parseBuffToJson(buff, outputDir, outputClientDir, filename) {
     const objString = JSON.stringify(lists);
     // 计算 MD5
     const hash = crypto.createHash('md5').update(objString).digest('hex');
-    versionData.versionMap[hash] = hash;
+    versionData.versionMap[filename] = hash;
     let keyarr = lists[1];
     let typearr = lists[2];
     for (let i = 0; i < typearr.length; i++) {
@@ -160,17 +163,14 @@ function changeValue(indexId, key, value, type) {
         return value;
     }
 }
-function getNextVersion(versionStr) {
-    let versionList = versionStr.split(".");
-    let len = versionList.length;
-    versionList[len - 1] = (Number(versionList[len - 1]) + 1) + "";
-    let newStr = "";
-    for (let i = 0; i < versionList.length; i++) {
-        let appendStr = versionList[i] + ".";
-        if (i == versionList.length - 1) {
-            appendStr = versionList[i];
+function checkExitAndCreateDirectory(folderPath) {
+    const folders = folderPath.split('/');
+    let currentPath = '';
+    folders.forEach(folder => {
+        currentPath += folder + '/';
+        if (!fs.existsSync(currentPath)) {
+            fs.mkdirSync(currentPath);
+            console.log(`Folder created: ${currentPath}`);
         }
-        newStr += appendStr;
-    }
-    return newStr;
+    });
 }

@@ -3,6 +3,7 @@ import { SingleBase } from "../base/SingleBase";
 import { Dic } from "../interface/I_Common";
 
 export class StorgeManager extends SingleBase{
+    cfgStrogeMap:Dic<any> = {};
     getItems(itemKeyList:string[]){
         let itemData:Dic<any> = {};
         for(let i in itemKeyList){
@@ -36,6 +37,36 @@ export class StorgeManager extends SingleBase{
             localStorage.setItem(itemKey,data)
         }else{
             localStorage.removeItem(itemKey);
+        }
+    }
+    setCfgStroge(itemData:Dic<any>){
+        for(let cfgName in itemData){
+            this.cfgStrogeMap[cfgName] = itemData[cfgName];
+        }
+        game.storgeMgr.setItems(itemData);
+    }
+    getCfgStroge(cfgName:string){
+        if(!this.cfgStrogeMap[cfgName]){
+            let cfg = this.getItem(cfgName);
+            if(cfg){
+                this.cfgStrogeMap[cfgName] = cfg;
+            }
+        }
+        return this.cfgStrogeMap[cfgName] 
+    }
+    async checkVersionInvildAndClean(){
+        let storage = game.storgeMgr.getItem("version");
+        let cfg = await game.resMgr.loadCfg("version");
+        if(storage){
+            let isInvild = game.utilsMgr.comporeVersion(cfg.version,storage.version);
+            if(!isInvild){
+                let clearData:Dic<any> = {}
+                clearData["version"] = null;
+                for(let i in cfg.versionMap){
+                    clearData[i] = null;
+                }
+                game.storgeMgr.setItems(clearData);
+            }
         }
     }
 }
