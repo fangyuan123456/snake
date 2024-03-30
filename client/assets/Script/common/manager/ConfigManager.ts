@@ -1,12 +1,6 @@
 import { ConfigBase } from "../base/ConfigBase";
 import { SingleBase } from "../base/SingleBase";
 import { Dic, e_bundleName } from "../interface/I_Common";
-let VAR_CFG:Dic<{target:any,key:string}> = {
-    "A":{
-        target:game.userData,
-        key:"level"
-    }
-}
 export class ConfigManager extends SingleBase{
     tbVar:Dic<any> = {};
     magicKeyCfg:Dic<string> = {Layer:"getLayer"}
@@ -29,6 +23,12 @@ export class ConfigManager extends SingleBase{
         }
     }
     initVar(){
+        let VAR_CFG:Dic<{target:any,key:string}> = {
+            "A":{
+                target:game.userData,
+                key:"level"
+            }
+        }
         for(let i in VAR_CFG){
             game.dataBindMgr.bind({
                 curData:{

@@ -22,6 +22,23 @@ export default class LoadScene extends SceneBase {
     start () {
         Game.getInstance().init();
         super.start();
+
+        let obj1 = {A:1};
+        let obj2 = {B:2};
+        game.dataBindMgr.bind({
+            curData:{
+                target:obj2,
+                key:"B"
+            },
+            targetData:{
+                target:obj1,
+                key:"A"
+            }
+        },(value)=>{
+            console.log(value);
+            console.log(obj2)
+        })
+        obj1.A = 3;
         let loadingCfg = game.platFormMgr.getLoadPercentCfg();
         this.loadTask = new LoadingTask();
         this.loadTask.startLoad(loadingCfg,this,this.updateLoadBar.bind(this));
