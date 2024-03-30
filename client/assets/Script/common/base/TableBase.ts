@@ -1,23 +1,27 @@
-import { Dic } from "../interface/I_Common";
+import { Dic, e_bundleName } from "../interface/I_Common";
+import { ConfigBase } from "./ConfigBase";
 
 
 export default class TableBase {
     tbName: string;
     orginData: any;
     data:any;
+    configComp:ConfigBase
+    bundleName:e_bundleName = null;
     getCfgCallBackList:any[] = [];
-    tbVarKeyList:string[] = [];
     extableCfgData:Dic<any> = {};
     varCond:Dic<any> = {};
-    constructor(tbName:string) {
+    constructor(tbName:string,bundleName?:e_bundleName,configComp?:ConfigBase) {
         this.tbName = tbName;
+        this.bundleName = bundleName;
+        this.configComp = configComp;
     }
     private setOrginData(){
-        game.resMgr.loadCfg(this.tbName).then((data)=>{
+        game.resMgr.loadCfg(this.tbName,this.bundleName).then((data)=>{
             this.orginData = game.utilsMgr.deepCopy(data);
             if(this.orginData["var"]){
                 this.varCond = this.orginData["var"];
-                this.setTbVarKeyList();
+                this.onVarEventListener();
                 delete this.orginData["var"];
             }
             if(this.orginData["extable"]){
@@ -34,6 +38,10 @@ export default class TableBase {
             })
         })
     }
+    private onVarEventListener(){
+        game.eventMgr.on("CFG_VAR_CHANGE",this.onVarChange.bind(this))
+
+    }
     private loadAllExTable(callBack:()=>void){
         if(Object.keys(this.extableCfgData).length>0){
             let callEndFunc = ()=>{
@@ -45,27 +53,13 @@ export default class TableBase {
                 callBack();
             }
             for(let i in this.extableCfgData){
-                let table = game.configMgr.tables[i];
-                if(!table){
-                    table = new TableBase(i);
-                    game.configMgr.tables[i] = table;
-                }
-                table.getData((data)=>{
+                this.configComp.getCfg(i,(data)=>{
                     this.extableCfgData[i] = data;
                     callEndFunc();
                 })
             }
         }else{
             callBack();
-        }
-    }
-    private setTbVarKeyList(){
-        for(let i in this.varCond){
-            for(let j in this.varCond[i]){
-                if(this.tbVarKeyList.indexOf(this.varCond[i][j])<0){
-                    this.tbVarKeyList.push(this.varCond[i][j])
-                }
-            }
         }
     }
     private  resplceVar(str:string,varList:string[]){
@@ -82,7 +76,7 @@ export default class TableBase {
             if(match){
                 for(let j =  0;j<match.length;j++){
                     let matchStr:string = match[j];
-                    let funcStr = matchStr.replace(i,"game.configMgr."+game.configMgr.magicKeyCfg[i])
+                    let funcStr = matchStr.replace(i,"this.configComp."+game.configMgr.magicKeyCfg[i])
                     let evalData = eval(funcStr)
                     str = str.replace(matchStr,evalData+"")
                 }  
@@ -90,8 +84,16 @@ export default class TableBase {
         }
         return eval(str);
     }
-    onVarChange(){
-        this.setData();
+    onVarChange(varKey){
+        for(let i in this.varCond){
+            for(let j in this.varCond[i]){
+                if(varKey == this.varCond[i][j]){
+                    this.setData();
+                    return;
+                }
+                
+            }
+        }
     }
     setData(){
         this.data = {};
@@ -116,7 +118,7 @@ export default class TableBase {
             for(let i = this.getCfgCallBackList.length-1;i>=0;i--){
                 let target = this.getCfgCallBackList[i].target;
                 let callBack = this.getCfgCallBackList[i].callBack;
-                if(!target || (target&&target.node && target.node.parent)){
+                if(!target || target.isValid){
                     callBack(data);
                     if(this.getCfgCallBackList[i].isCallOnce){
                         this.getCfgCallBackList.splice(i,1);
@@ -140,5 +142,11 @@ export default class TableBase {
         if(!this.orginData){
             this.setOrginData();
         }
+    }
+    private offVarEventListener(){
+        game.eventMgr.remove("CFG_VAR_CHANGE",this.onVarChange.bind(this));
+    }
+    destroy(){
+        this.offVarEventListener();
     }
 }

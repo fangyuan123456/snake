@@ -7,7 +7,7 @@ interface EVENT_LIST{
 }
 export class EventManager extends SingleBase{
     eventMap:{[eventName: string]:EVENT_LIST[]} = {}
-    on(eventName:string,callBack:(data?:any)=>void,target?:CompBase) {
+    on(eventName:string,callBack:(data?:any)=>void,target?:any) {
         if(!this.getEventData(eventName,callBack)){
             this.eventMap[eventName] = this.eventMap[eventName] || [];
             this.eventMap[eventName].push({
@@ -16,7 +16,7 @@ export class EventManager extends SingleBase{
             })
         }
     }
-    once(eventName:string,callBack:(data?:any)=>void,target?:CompBase) {
+    once(eventName:string,callBack:(data?:any)=>void,target?:any) {
         if(!this.getEventData(eventName,callBack)){
             this.eventMap[eventName] = this.eventMap[eventName] || [];
             this.eventMap[eventName].push({
@@ -29,7 +29,7 @@ export class EventManager extends SingleBase{
     dispatch(eventName,data?:any){
         let eventList = this.eventMap[eventName] || [];
         for(let i = 0;i<eventList.length;i++){
-            if(eventList[i].target && (!eventList[i].target.node || !eventList[i].target.node.parent)){
+            if(eventList[i].target && (eventList[i].target.isValid)){
                 eventList.splice(i,1);
                 i--
             }else{
@@ -49,7 +49,7 @@ export class EventManager extends SingleBase{
             this.eventMap[eventName].splice(index,1);
         }
     }
-    removeAll(target:CompBase){
+    removeAll(target:any){
         for(let i in this.eventMap){
             for(let j = this.eventMap[i].length - 1;j>=0;j--){
                 let eventData = this.eventMap[i][j];

@@ -1,48 +1,50 @@
+import { ConfigBase } from "../base/ConfigBase";
 import { SingleBase } from "../base/SingleBase";
-import TableBase from "../base/TableBase";
-import { Dic } from "../interface/I_Common";
+import { Dic, e_bundleName } from "../interface/I_Common";
+let VAR_CFG:Dic<{target:any,key:string}> = {
+    "A":{
+        target:game.userData,
+        key:"level"
+    }
+}
 export class ConfigManager extends SingleBase{
-    tbVar:Dic<any> = {"A":1,"B":1};
+    tbVar:Dic<any> = {};
     magicKeyCfg:Dic<string> = {Layer:"getLayer"}
-    tables:Dic<TableBase> = {};
-    dataCfgs:Dic<any> = {};
+    configs:Dic<ConfigBase> = {};
     constructor(){
         super();
     }
-    private setTbVar(tbVar:Dic<any>){
-        for(let i in tbVar){
-            this.tbVar[i] = tbVar[i];
+    getCfg(tbName:string,callBack:(data:any)=>void,target?:any,bundleName?:e_bundleName){
+        let cfg:ConfigBase = null;
+        if(!bundleName){
+            if(!this.configs["default"]){
+                this.configs["default"] = new ConfigBase();
+            }
+            cfg = this.configs["default"];
         }
-        this.resetTbValueByVar(tbVar);
+        if(cfg){
+            return cfg.getCfg(tbName,callBack,target);
+        }else{
+            game.logMgr.error("bundleName:%s is not load",bundleName)
+        }
     }
-    private resetTbValueByVar(tbVar:Dic<any>){
-        for(let i in this.tables){
-            let tbVarKeyList = this.tables[i].tbVarKeyList;
-            for(let j in tbVarKeyList){
-                if(tbVar[tbVarKeyList[j]]){
-                    this.tables[i].onVarChange();
+    initVar(){
+        for(let i in VAR_CFG){
+            game.dataBindMgr.bind({
+                curData:{
+                    target:this.tbVar,
+                    key:i
+                },
+                targetData:{
+                    target:VAR_CFG[i].target,
+                    key:VAR_CFG[i].key
                 }
-            }
+            })
+            this.tbVar[i].bind(VAR_CFG[i],()=>{
+                game.eventMgr.dispatch("CFG_VAR_CHANGE",i);
+            });
         }
     }
-    getCfg(tbName:string,callBack:(data:any)=>void,target:any){
-        if(!this.tables[tbName]){
-            this.tables[tbName] = new TableBase(tbName);
-        }
-        return this.tables[tbName].getData(callBack,target);
-    }
-    getLayer(key:string,value:number,tbName:string = "userLayer"){
-        if(!this.tables[tbName]){
-            this.tables[tbName] = new TableBase(tbName);
-        }
-        let data = this.tables[tbName].getDataSync();
-        let dataValue = 0;
-        let layer = data[key].layer;
-        for(let i in layer){
-            if(dataValue>=Number(i)){
-                dataValue = layer[i];
-            }
-        }
-        return dataValue;
-    }
+
+
 }

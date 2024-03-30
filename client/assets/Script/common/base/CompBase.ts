@@ -9,7 +9,7 @@ export class CompBase extends cc.Component{
     onceEvent(eventName:string,callBack:()=>void){
         game.eventMgr.once(eventName,callBack,this)
     }
-    protected onDestroy(): void {
-        game.eventMgr.removeAll(this);
+    isvalid(){
+        return this.node && this.node.parent
     }
 }

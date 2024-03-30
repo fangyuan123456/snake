@@ -16,6 +16,7 @@ const dataKeyCfg:dataKeyCfg = {
 }
 export default class UserData extends DataBase{
     uid:number = 0
+    level:number = 0
     isDropToolOn:boolean = false
     friendMatchUid:number = null
     otherPlayerInfo: Dic<I_roleInfo> = {};
@@ -28,6 +29,9 @@ export default class UserData extends DataBase{
         game.platFormMgr.isOpenShare = loginData.isOpenShare;
         game.platFormMgr.isSheHeState = loginData.isSheHeState;
         this.setInfo("roleInfo",loginData.playerInfo)
+    }
+    setRoleInfo(data:any){
+        this.level = data.level;
     }
     getRoleInfo(callBack:(data:I_roleInfo)=>void,target:CompBase){
         this.getInfo("roleInfo",callBack,target)
