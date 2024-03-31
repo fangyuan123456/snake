@@ -4,30 +4,39 @@ interface I_BindingStruct {
     targetData: { target: any, key: string }
 }
 export class ObservableProxy {
-    private obj: { [key: string]: any };
-    constructor(obj: { [key: string]: any }) {
+    private obj: { target: any, key: string };
+    constructor(obj: { target: any, key: string }) {
         this.obj = obj;
         this.createObservable();
     }
     createObservable(){
-        if(!this.obj["observable"]){
-            this.obj["observable"] = new Proxy(this.obj, {
-                set(target, key, value, receiver) {
-                    const result = Reflect.set(target, key, value, receiver)
-                    target.observableList.forEach((data)=>{
-                        data.cb(data.key)();
+        let observableMap = this.obj.target.observableMap || {};
+        if(!observableMap[this.obj.key]){
+            observableMap[this.obj.key] = true;
+            let target = this.obj.target;
+            target.observableRegisterMap = target.observableRegisterMap || {}
+            target.observableRegisterMap[this.obj.key] = target.observableRegisterMap[this.obj.key] || []
+            let observableRegisterList =  target.observableRegisterMap[this.obj.key];
+            let originalValue = this.obj.target[this.obj.key];
+            Object.defineProperty(this.obj.target, this.obj.key, {
+                set(newValue) {
+                    originalValue = newValue;
+                    observableRegisterList.forEach((cb)=>{
+                        cb(newValue);
                     })
-                    return result
-                }
-            })
+                },
+                get(){
+                    return originalValue
+                },
+                enumerable: true,
+                configurable: true
+            });
         }
     }
-    addObserver(key:string,cb: Function){
+    addObserver(cb: Function){
         if (cb) {
-            if(!this.obj.observableList){
-                this.obj.observableList = new Set();
-            }
-            this.obj.observableList.add({key:key,cb:cb})
+            let observableRegisterList = this.obj.target.observableRegisterMap[this.obj.key]
+            observableRegisterList.push(cb)
         }
     }
 }
@@ -37,8 +46,8 @@ export class DataBindManager extends SingleBase {
         super();
     }
     bind(bindData: I_BindingStruct, callBack?: (value?:any) => void) {
-        let proxy = new ObservableProxy(bindData.targetData.target);
-        proxy.addObserver(bindData.targetData.key, (value: any) => {
+        let proxy = new ObservableProxy(bindData.targetData);
+        proxy.addObserver((value: any) => {
             bindData.curData.target[bindData.curData.key] = value;
             if(callBack){
                 callBack(value)
