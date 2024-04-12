@@ -1,12 +1,12 @@
 import { SceneBase } from "../base/SceneBase";
 import { SingleBase } from "../base/SingleBase";
-import { ROOM_TYPE } from "../interface/I_Game";
+import { e_RoomType } from "../interface/I_Game";
 export class RoomManager extends SingleBase{
-    private roomType:ROOM_TYPE = ROOM_TYPE.FIGHT
-    getRoomType():ROOM_TYPE{
+    private roomType:e_RoomType = e_RoomType.FIGHT
+    getRoomType():e_RoomType{
         return this.roomType
     }
-    setRoomType(roomTye:ROOM_TYPE){
+    setRoomType(roomTye:e_RoomType){
 
     }
 }

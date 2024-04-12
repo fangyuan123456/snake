@@ -1,7 +1,7 @@
 {
   "engine": "cocos2d-html5",
   "packages": "packages",
-  "version": "2.4.13",
+  "version": "2.4.9",
   "name": "snake",
   "id": "c71c8516-e9ae-46d5-958a-17ddeef9167d",
   "isNew": false

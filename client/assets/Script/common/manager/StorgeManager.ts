@@ -1,7 +1,10 @@
 import { SceneBase } from "../base/SceneBase";
 import { SingleBase } from "../base/SingleBase";
 import { Dic } from "../interface/I_Common";
-
+import { ObservableProxy } from "./DataBindManager";
+export enum e_STROGE_KEY{
+    SOUND_STROGE_KEY = "SOUND_STROGE_KEY"
+}
 export class StorgeManager extends SingleBase{
     cfgStrogeMap:Dic<any> = {};
     getItems(itemKeyList:string[]){
@@ -12,7 +15,7 @@ export class StorgeManager extends SingleBase{
         return itemData;
     }
     getItem(itemKey:string){
-        let dataStr = localStorage.getItem(itemKey);
+        let dataStr = cc.sys.localStorage.getItem(itemKey);
         let data = null;
         try{
             data = JSON.parse(dataStr)
@@ -34,9 +37,9 @@ export class StorgeManager extends SingleBase{
             }else if(typeof(data) == "object"){
                 putData = JSON.stringify(data);
             }
-            localStorage.setItem(itemKey,data)
+            cc.sys.localStorage.setItem(itemKey,putData)
         }else{
-            localStorage.removeItem(itemKey);
+            cc.sys.localStorage.removeItem(itemKey);
         }
     }
     setCfgStroge(itemData:Dic<any>){
@@ -54,6 +57,15 @@ export class StorgeManager extends SingleBase{
         }
         return this.cfgStrogeMap[cfgName] 
     }
+    bindStrogeKey(data:{target:any,key:string},strogeKey:e_STROGE_KEY){
+        let proxy = new ObservableProxy(data);
+        proxy.addObserver((value: any) => {
+            this.setItem(strogeKey,value);
+        });
+        if(this.getItem(strogeKey)){
+            data.target[data.key] =  this.getItem(strogeKey);
+        }
+    }
     async checkVersionInvildAndClean(){
         let storage = game.storgeMgr.getItem("version");
         let cfg = await game.resMgr.loadCfg("version");
@@ -67,6 +79,11 @@ export class StorgeManager extends SingleBase{
                 }
                 game.storgeMgr.setItems(clearData);
             }
+        }
+    }
+    clearAllStroge(){
+        for(let i in e_STROGE_KEY){
+            this.setItem(e_STROGE_KEY[i],null)
         }
     }
 }

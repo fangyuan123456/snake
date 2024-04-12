@@ -50,7 +50,7 @@ export class ResManager extends SingleBase{
             return bundle.get(url,type);
         }
     }
-    setSpImg(sp:cc.Node,url:string,callBack?:()=>void,isRemote?:boolean){
+    setSpImg(sp:cc.Node,url:string,callBack?:()=>void,isRemote?:boolean,bundleName?:string){
         if(isRemote){
             this.loadImgRemote(url).then((spriteFrame)=>{
                 sp.getComponent(cc.Sprite).spriteFrame = spriteFrame
@@ -59,7 +59,7 @@ export class ResManager extends SingleBase{
                 }
             })
         }else{
-            this.loadRes(url,cc.SpriteFrame).then((spriteFrame)=>{
+            this.loadRes(url,cc.SpriteFrame,bundleName).then((spriteFrame)=>{
                 sp.getComponent(cc.Sprite).spriteFrame = spriteFrame
                 if(callBack){
                     callBack()

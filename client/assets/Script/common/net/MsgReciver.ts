@@ -1,8 +1,8 @@
 import { SocketType } from "../Game";
 import { SingleBase } from "../base/SingleBase";
 import { KICKUSER_TYPE, pushMsgType } from "../configs/CommonCfg";
-
-export class PushMsgManager extends SingleBase{
+//消息接受器
+export class MsgReciver extends SingleBase{
     constructor(){
         super();
         game.netMgr.onMsg("pushMsg",this.onPushMsg.bind(this));

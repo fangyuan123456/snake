@@ -3,7 +3,7 @@ import { CompBase } from "../../common/base/CompBase";
 import { SCENE_NAME } from "../../common/base/SceneBase";
 import { addFrameCfg, gameDefine } from "../../common/configs/RoomCfg";
 import { Dic } from "../../common/interface/I_Common";
-import { I_enterRoomRes, I_frameMsgRes } from "../../common/interface/I_Game";
+import { I_enterRoomRes, I_frameMsgRes, e_RoomType } from "../../common/interface/I_Game";
 import { I_roomInfo } from "../../common/interface/I_Info";
 import SnakeBase from "../base/SnakeBase";
 export default class RoomData extends CompBase{
@@ -18,6 +18,10 @@ export default class RoomData extends CompBase{
     inputType:number = gameDefine.defaultDir;
     predictFrameId: number;
     posList:Dic<string[]> = {};
+
+
+    roomType:e_RoomType = e_RoomType.GAME_FIGHT;
+    isGamePause:boolean = false;
     start(): void {
         game.roomData = this;
         this.sendEnterRoom();

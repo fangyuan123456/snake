@@ -14,7 +14,6 @@ import { NetManager } from "./manager/NetManager";
 import UserData from "./data/UserData";
 import { AlertManager } from "./manager/AlertManager";
 import { UtilsManager } from "./manager/UtilsManager";
-import { PushMsgManager } from "./manager/PushMsgManager";
 import { RoomManager } from "./manager/RoomManager";
 import { AduintManager } from "./manager/AduintManager";
 import GameData from "./data/GameData";
@@ -23,6 +22,7 @@ import RoomData from "../room/data/RoomData";
 import { StorgeManager } from "./manager/StorgeManager";
 import { DataBindManager } from "./manager/DataBindManager";
 import { ConfigManager } from "./manager/ConfigManager";
+import { SoundManager } from "./manager/SoundsManager";
 
 declare global {
     namespace globalThis {
@@ -46,8 +46,8 @@ export class Game extends SingleBase{
     netMgr:NetManager
     alertMgr:AlertManager
     utilsMgr:UtilsManager
-    pushMsgMgr:PushMsgManager
     storgeMgr:StorgeManager
+    soundsMgr:SoundManager
 
     userData:UserData
     roomMgr: RoomManager;
@@ -74,11 +74,11 @@ export class Game extends SingleBase{
         this.netMgr = NetManager.getInstance();
         this.alertMgr = AlertManager.getInstance();
         this.utilsMgr = UtilsManager.getInstance();
-        this.pushMsgMgr = PushMsgManager.getInstance();
         this.roomMgr = RoomManager.getInstance();
         this.aduintMgr = AduintManager.getInstance();
         this.configMgr = ConfigManager.getInstance();
         this.storgeMgr = StorgeManager.getInstance();
+        this.soundsMgr = SoundManager.getInstance();
     
 
         this.userData = UserData.getInstance();

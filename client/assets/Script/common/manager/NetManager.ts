@@ -7,11 +7,19 @@ import { I_msg } from "../interface/I_Common";
 import { SocketBase } from "../net/SocketBase";
 import { m_UdpSocket } from "../net/m_UdpSocket";
 import { m_WebSocket } from "../net/m_WebSocket";
+import { MsgReciver } from "../net/MsgReciver";
 export class NetManager extends SingleBase{
     showLoadTimes:number = 0
     socketMap:{[key:string]:SocketBase} = {}
+    private msgReciver:MsgReciver
     constructor(){
         super();
+        game.timeMgr.scheduleOnce(()=>{
+            this.init();
+        },0)
+    }
+    init(){
+        this.msgReciver = MsgReciver.getInstance();
     }
     sendHttpRequest(data:any,className:string,_callBack:(data:any)=>void,_fileCallback?:()=>void,retryTime:number = -1,_isShowLoading = true){
         let msgData = {

@@ -144,4 +144,7 @@ export abstract class PlatformBase extends SingleBase{
     getIsSheHeState() {
         return this.isSheHeState;
     }
+    postMsg(key:string,data:any){
+
+    }
 };

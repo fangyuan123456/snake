@@ -5,7 +5,7 @@ export default class Handler extends HandlerBase{
     constructor() {
         super();
     }
-    test(msg: { "test1": string}, session: Session, next: Function){
-        next({test1:session.uid+""})
+    getRankData(msg:{type:string}, session: Session, next: Function){
+        next({type:msg.type,playerData:centerGame.rankDataList[msg.type]} )
     }
 }

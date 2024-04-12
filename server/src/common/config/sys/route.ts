@@ -10,5 +10,6 @@ export default [
     "match.main.match",
     "match.main.matchOk",
     "game.main.enterRoom",
-    "game.main.frameMsg"
+    "game.main.frameMsg",
+    "center.main.getRankData"
 ]

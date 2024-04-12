@@ -29,7 +29,7 @@ export class EventManager extends SingleBase{
     dispatch(eventName,data?:any){
         let eventList = this.eventMap[eventName] || [];
         for(let i = 0;i<eventList.length;i++){
-            if(eventList[i].target && (eventList[i].target.isValid)){
+            if(eventList[i].target && (!eventList[i].target.isValid)){
                 eventList.splice(i,1);
                 i--
             }else{

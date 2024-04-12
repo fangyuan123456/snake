@@ -1,6 +1,8 @@
 import { Application, Session, connector } from "mydog";
 import { GameServerBase } from "../../common/base/GameServerBase";
 import { KICKUSER_TYPE, serverType } from "../../common/config/CommonCfg";
+import { Dic } from "../../common/interface/ICommon";
+import { I_rankInfo, I_rankItemInfo } from "../../common/interface/ICenter";
 declare global{
     namespace globalThis{
         var centerGame:CenterServer
@@ -8,6 +10,8 @@ declare global{
 }
 
 export class CenterServer extends GameServerBase{
+    rankLen:number = 100;
+    rankDataList:Dic<I_rankItemInfo[]> = {}//榜上玩家
     constructor(app:Application){
         super(app);
         globalThis.centerGame = this;
@@ -48,5 +52,27 @@ export class CenterServer extends GameServerBase{
     }
     onUserLeave(session:Session){
         game.app.rpc(game.utilsMgr.getSid(session.uid,serverType.match)).match.main.userLeave(session.uid);
+    }
+
+
+    updateRankScore(scoreData:Dic<{score:number,type:string}>){
+        // for(let i in scoreData){
+        //     this.outRankData[scoreData[i].type][i].score = scoreData[i].score;
+        //     this.rankDataList[scoreData[i].type].push(this.outRankData[scoreData[i].type][i]);
+        // }
+        // for(let type in this.rankDataList){
+        //     let rankList = this.rankDataList[type];
+        //     for(let i = this.rankLen;i<rankList.length;i++){
+        //         for(let j = this.rankLen - 1;j>=0;j--){
+        //             if(rankList[i].score>rankList[j].score){
+        //                 let rank
+        //                 break;
+        //             }
+        //         }
+        //     }
+        // }
+    //    for(let i = 100;i<this.rankDataList[])
+
+
     }
 }

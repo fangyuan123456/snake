@@ -15,3 +15,17 @@ message guangBoRes{
     required string nickName=1;
     required string msg=2;
 }
+
+message getRankDataReq{
+    required string type=1;
+}
+message getRankDataRes{
+    required string type=1;
+    message playerData{
+        required int32 uid=1;
+        optional string nickName=2;
+        optional string avatarUrl=3;
+        required int32 score=4;
+    }
+    repeated playerData data=2;
+}

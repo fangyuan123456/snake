@@ -7,7 +7,7 @@
 
 import { PanelBase } from "../../common/base/PanelBase";
 import { chatKuaiJie } from "../../common/configs/CommonCfg";
-import { ROOM_TYPE } from "../../common/interface/I_Game";
+import { e_RoomType } from "../../common/interface/I_Game";
 
 const {ccclass, property} = cc._decorator;
 
@@ -70,7 +70,7 @@ export default class ChatPanel extends PanelBase {
          }
      }
      sendChatMsg(data:{type:number,chat:string}){
-        if(game.roomMgr.getRoomType()==ROOM_TYPE.FIGHT){
+        if(game.roomMgr.getRoomType()==e_RoomType.FIGHT){
             game.netMgr.sendSocket({msgHead:"chatroom",msgData:data});
          }else{
             //  EventManager.emit("chatroomResHander",data);

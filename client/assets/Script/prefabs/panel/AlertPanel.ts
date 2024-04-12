@@ -28,8 +28,8 @@ export default class AlertPanel extends PanelBase {
     playCloseAction(callBack: () => void): void {
         super.playCloseAction(callBack);
     }
-    init(parmeter:any,closeCallBack){
-        super.init(parmeter,closeCallBack);
-        cc.find("tishiLabel",this.node).getComponent(cc.Label).string = parmeter;
+    init(data:{parmeter?:any,closeCallBack?:(any)=>void}){
+        super.init(data);
+        cc.find("tishiLabel",this.node).getComponent(cc.Label).string = data.parmeter;
     }
 }

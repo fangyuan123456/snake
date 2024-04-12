@@ -10,6 +10,7 @@ import { SCENE_NAME, SceneBase } from "../common/base/SceneBase";
 import { I_loginReq, I_loginRes } from "../common/interface/I_Login";
 import { Dic } from "../common/interface/I_Common";
 import { LoadingTask } from "../common/customClass/LoadingTask";
+import { DataBindManager, ObservableProxy } from "../common/manager/DataBindManager";
 
 const {ccclass, property} = cc._decorator;
 
@@ -22,26 +23,57 @@ export default class LoadScene extends SceneBase {
     start () {
         Game.getInstance().init();
         super.start();
-
-        let obj1 = {A:1};
-        let obj2 = {B:2};
-        game.dataBindMgr.bind({
-            curData:{
-                target:obj2,
-                key:"B"
-            },
-            targetData:{
-                target:obj1,
-                key:"A"
-            }
-        },(value)=>{
-            console.log(value);
-            console.log(obj2)
-        })
-        obj1.A = 3;
         let loadingCfg = game.platFormMgr.getLoadPercentCfg();
         this.loadTask = new LoadingTask();
         this.loadTask.startLoad(loadingCfg,this,this.updateLoadBar.bind(this));
+
+        // this.test();
+    }
+
+    test(){
+        // game.storgeMgr.clearAllStroge();
+            // 示例对象
+            let A = {
+                name: {
+                    aa: 'Alice'
+                },
+                age: 30
+            };
+
+            let B = {
+                name: {
+                    aa: 'Alice'
+                },
+                age: 30
+            };
+            let C = {
+                name: {
+                    aa: 'Alice'
+                },
+                age: 30
+            };
+            game.dataBindMgr.bind({curData:{target:B,key:"name"},targetData:{target:A,key:"name"}},()=>{
+                console.log(JSON.stringify(B))
+            })
+            game.dataBindMgr.bind({curData:{target:C,key:"name"},targetData:{target:A,key:"name"}},()=>{
+                console.log(JSON.stringify(C))
+            })
+            A.name = {
+                aa: '77777'
+            };
+            A.name.aa = "fangyuan";
+            // 
+
+            // 创建代理对象
+            // let proxyA = new ObservableProxy({target:A,key:"name"});
+            // A.name.aa = "13";
+
+            // // 使用代理对象
+            // console.log(proxyA.name.aa); // 输出: "Getting property "name""，然后输出: "Getting property "aa""，然后输出: "Alice"
+            // proxyA.name.aa = 'Bob'; // 输出: "Setting property "aa" to "Bob""
+            // console.log(proxyA.name.aa); // 输出: "Getting property "name""，然后输出: "Getting property "aa""，然后输出: "Bob"
+
+
     }
     updateLoadBar(progress:number,title:string){
         let loadingBar = cc.find("Canvas/progressBarLoading").getComponent(cc.ProgressBar)

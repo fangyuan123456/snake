@@ -17,5 +17,6 @@ export default class FitBgComp extends CompBase {
         var scaleX=this.node.width/winSize.width;
         var scaleY=this.node.height/winSize.height;
         this.node.scale=scaleX>scaleY?scaleX/scaleY:scaleY/scaleX;
+   
     }
 }

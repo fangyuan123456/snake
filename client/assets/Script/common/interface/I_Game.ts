@@ -1,8 +1,9 @@
 import { Dic } from "./I_Common"
 
-export enum ROOM_TYPE{
-    FRIEND,
-    FIGHT
+export enum e_RoomType{
+    GAME_FIGHT,
+    GAME_ROBOTE,
+    GAME_SINGROOM,
 }
 export interface I_roomPlayerInfo{
     nickName:string,

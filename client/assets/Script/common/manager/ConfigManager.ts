@@ -39,12 +39,13 @@ export class ConfigManager extends SingleBase{
                     target:VAR_CFG[i].target,
                     key:VAR_CFG[i].key
                 }
-            })
-            this.tbVar[i].bind(VAR_CFG[i],()=>{
+            },()=>{
                 game.eventMgr.dispatch("CFG_VAR_CHANGE",i);
-            });
+            })
         }
     }
 
-
+    getDuanWei(score:number){
+        return "黄金"
+    }
 }
