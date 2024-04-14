@@ -3,6 +3,7 @@ import { GameServerBase } from "../../common/base/GameServerBase";
 import { KICKUSER_TYPE, serverType } from "../../common/config/CommonCfg";
 import { Dic } from "../../common/interface/ICommon";
 import { I_rankInfo, I_rankItemInfo } from "../../common/interface/ICenter";
+import { e_TableName } from "../info/SqlManager";
 declare global{
     namespace globalThis{
         var centerGame:CenterServer
@@ -15,6 +16,7 @@ export class CenterServer extends GameServerBase{
     constructor(app:Application){
         super(app);
         globalThis.centerGame = this;
+        this.selectRankInfo();
     }
     setConfig(): void {
         super.setConfig();
@@ -54,7 +56,9 @@ export class CenterServer extends GameServerBase{
         game.app.rpc(game.utilsMgr.getSid(session.uid,serverType.match)).match.main.userLeave(session.uid);
     }
 
-
+    selectRankInfo(){
+        game.sqlMgr.select(e_TableName.USER)
+    }
     updateRankScore(scoreData:Dic<{score:number,type:string}>){
         // for(let i in scoreData){
         //     this.outRankData[scoreData[i].type][i].score = scoreData[i].score;

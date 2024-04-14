@@ -11,3 +11,13 @@ export interface I_msg{
     msgType?:MSG_TYPE,
     msgData:any
 }
+export interface I_playerAllInfo{
+    uid: number,              // uid
+    openId:string,
+    nickName: string,         // 昵称
+    avatarUrl:string,
+    gender?:number,
+    city?:string,
+    country?:string,
+    province?:string
+}

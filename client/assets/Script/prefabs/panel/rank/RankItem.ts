@@ -6,8 +6,8 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
 import { CompBase } from "../../../common/base/CompBase";
+import { I_rankItemInfo } from "../../../common/interface/I_Center";
 import { e_RoomType } from "../../../common/interface/I_Game";
-import { I_rankItemInfo } from "../../../common/interface/I_Info";
 
 const {ccclass, property} = cc._decorator;
 

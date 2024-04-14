@@ -13,12 +13,14 @@ import { HttpServer } from "../net/HttpServer";
 import { TimeManager } from "../manager/TimeManager";
 import { serverType } from "../config/CommonCfg";
 import { PlatformManager } from "../manager/PlatformManager";
-import { SqlManager } from "../manager/SqlManager";
+import { SqlManager } from "../../servers/info/SqlManager";
 import { EventManager } from "../manager/EventManager";
 import { ConfigManager } from "../manager/ConfigManager";
-import { I_msg } from "../interface/ICommon";
+import { Dic, I_msg } from "../interface/ICommon";
+import { InfoManager } from "../manager/InfoManager";
 
 export class GameServerBase{
+    bundleInfoKeyCfg:Dic<string[]> = {};
     clientNum:number = 0
     cpuUsage:string = ""
     app:Application
@@ -29,8 +31,8 @@ export class GameServerBase{
     timeMgr:TimeManager
     platformMgr:PlatformManager
     eventMgr:EventManager
-    sqlMgr:SqlManager
     configMgr: ConfigManager;
+    infoMgr:InfoManager;
     constructor(app:Application){
         this.app = app;
         globalThis.game = this;
@@ -40,8 +42,8 @@ export class GameServerBase{
         this.timeMgr = TimeManager.getInstance();
         this.platformMgr = PlatformManager.getInstance();
         this.eventMgr = EventManager.getInstance();
-        this.sqlMgr = SqlManager.getInstance();
         this.configMgr = ConfigManager.getInstance();
+        this.infoMgr = InfoManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
         this.setConfig();

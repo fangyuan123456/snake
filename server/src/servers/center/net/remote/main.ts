@@ -18,4 +18,10 @@ export default class Remote extends RemoteBase {
     updateRankScore(scoreData:Dic<{score:number,type:string}>){
         centerGame.updateRankScore(scoreData);
     }
+    playerOnLine(){
+
+    }
+    playerOffLine(){
+        
+    }
 }

@@ -1,6 +1,6 @@
 import { Response } from "express";
 import { I_loginReq, I_loginRes, I_sdkLoginRes } from "../../../../common/interface/ILogin";
-import { TableName } from "../../../../common/manager/SqlManager";
+import { e_TableName } from "../../../info/SqlManager";
 import { serverType } from "../../../../common/config/CommonCfg";
 import { I_roleInfo } from "../../../../common/interface/IInfo";
 import HandlerBase from "../../../../common/base/HandlerBase";
@@ -12,7 +12,11 @@ export default class Handler extends HandlerBase {
         super();
     }
     updatePlayInviteData(uid:number,myInviteUid:number){
-        game.app.rpc(game.utilsMgr.getSid(uid,serverType.info)).info.main.updatePlayInviteData(uid,myInviteUid);
+        game.infoMgr.getInfo(uid,["inviteUid"]).then((data)=>{
+            let inviteUid  = data.inviteUid;
+            inviteUid.push(myInviteUid);
+            game.infoMgr.setInfo(uid,{inviteUid:inviteUid})
+        })
     }
     onLoginHandler(msgData:I_loginReq,res:Response){
         game.platformMgr.getLoginCode(msgData,(sdkData:I_sdkLoginRes)=>{
@@ -41,18 +45,18 @@ export default class Handler extends HandlerBase {
     registerAndLogin(data:any):Promise<I_roleInfo>{
         return new Promise(async (resolve,reject)=>{
             let mData:I_roleInfo;
-            let userData = await game.sqlMgr.select(TableName.USER,{openId:data.openId})
+            let userData = await game.sqlMgr.select(e_TableName.USER,{openId:data.openId})
             if(userData.length == 0){
-                userData = await game.sqlMgr.add(TableName.USER,data);
+                userData = await game.sqlMgr.add(e_TableName.USER,data);
                 mData = loginGame.getDefaultUserData(userData.insertId);
                 game.utilsMgr.merge(mData,data);
-                game.sqlMgr.update(TableName.USER,mData,{uid:mData.uid});
+                game.sqlMgr.update(e_TableName.USER,mData,{uid:mData.uid});
             }else{
                 mData = userData[0];
             }
-            game.app.rpc(game.utilsMgr.getSid(mData.uid,serverType.info)).info.main.createPlayer(mData).then(()=>{
-                resolve(mData);
-            });
+            game.app.rpc(game.utilsMgr.getSid(mData.uid,serverType.info)).info.main.userLoginIn(mData.uid).then((info)=>{
+                resolve(info);
+            })
         })
     }
     onGetJumpGameListReq(msgData:{platform:string},res:Response){

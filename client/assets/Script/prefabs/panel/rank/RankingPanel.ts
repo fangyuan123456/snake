@@ -7,9 +7,9 @@
 
 import { PanelBase } from "../../../common/base/PanelBase";
 import { AbsAdapter } from "../../../common/components/ListView";
+import { I_rankInfo } from "../../../common/interface/I_Center";
 import { Dic } from "../../../common/interface/I_Common";
 import { e_RoomType } from "../../../common/interface/I_Game";
-import { I_rankInfo } from "../../../common/interface/I_Info";
 import RankItem from "./RankItem";
 
 const {ccclass, property} = cc._decorator;

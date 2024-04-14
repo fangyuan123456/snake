@@ -1,14 +1,14 @@
 import { Dic } from "../interface/ICommon";
-import { TableName } from "../manager/SqlManager";
+import { e_TableName } from "../../servers/info/SqlManager";
 type resolveType = (data:any)=>void;
 export class SqlBase{
     cond:Dic<any> = null!
     data?:Dic<any>
-    tb_name:TableName
+    tb_name:e_TableName
     whileUpdateKeyList:Dic<any> = {}
     getInfoResolveCallList:resolveType[] = [];
     defaultItems?:Dic<any>
-    constructor(tb_name:TableName,cond:Dic<any>){
+    constructor(tb_name:e_TableName,cond:Dic<any>){
         this.tb_name = tb_name;
         this.cond = cond;
         this.init();
