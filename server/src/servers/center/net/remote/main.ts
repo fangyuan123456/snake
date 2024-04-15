@@ -1,4 +1,4 @@
-import RemoteBase from "../../../../common/base/RemoteBase"
+
 import { Dic } from "../../../../common/interface/ICommon";
 
 declare global {
@@ -8,20 +8,11 @@ declare global {
         }
     }
 }
-export default class Remote extends RemoteBase {
-    constructor() {
-        super();
+export default class Remote {
+    notifyCleanInfo(uid:number){
+        game.infoMgr.onNotifyCleanPlayerInfo(uid);
     }
-    getClientNum() {
-        return game.app.clientNum
-    }
-    updateRankScore(scoreData:Dic<{score:number,type:string}>){
-        centerGame.updateRankScore(scoreData);
-    }
-    playerOnLine(){
-
-    }
-    playerOffLine(){
-        
+    notifySetInfo(uid:number,info:Dic<any>){
+        game.infoMgr.onNotifyPlayerInfoUpdate(uid,info);
     }
 }

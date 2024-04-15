@@ -1,11 +1,15 @@
 export default {
     "development": {
         "login": [
-            { "id": "login", "host": "127.0.0.1", "port": 5000, "HttpPort": 8080,"isNeedDownLoad":true }
+            { "id": "login", "host": "127.0.0.1", "port": 4000, "HttpPort": 8080,"isNeedDownLoad":true }
+        ],
+        "connector": [
+            { "id": "con-0", "host": "127.0.0.1", "port": 5000, "frontend": true, "clientHost": "127.0.0.1", "clientPort": 5010 },
+            { "id": "con-1", "host": "127.0.0.1", "port": 5100, "frontend": true, "clientHost": "127.0.0.1", "clientPort": 5110 },
         ],
         "center": [
-            { "id": "con-0", "host": "127.0.0.1", "port": 6000, "frontend": true, "clientHost": "127.0.0.1", "clientPort": 6010 },
-            { "id": "con-1", "host": "127.0.0.1", "port": 6100, "frontend": true, "clientHost": "127.0.0.1", "clientPort": 6110 },
+            { "id": "center-0", "host": "127.0.0.1", "port": 6000 },
+            { "id": "center-1", "host": "127.0.0.1", "port": 6100},
         ],
         "info": [
             { "id": "info-0", "host": "127.0.0.1", "port": 7000 },

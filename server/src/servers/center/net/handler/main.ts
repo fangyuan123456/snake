@@ -1,11 +1,10 @@
 import { Session } from "mydog";
-import HandlerBase from "../../../../common/base/HandlerBase";
 
-export default class Handler extends HandlerBase{
+export default class Handler {
     constructor() {
-        super();
     }
-    getRankData(msg:{type:string}, session: Session, next: Function){
-        next({type:msg.type,playerData:centerGame.rankDataList[msg.type]} )
+    route(msgName: string, msg: any, session: Session, next: Function) {
+        game.logMgr.debug(msgName);
+        game.callSystemHandler(msgName, msg, session, next);
     }
 }

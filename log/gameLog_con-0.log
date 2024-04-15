@@ -2,3 +2,77 @@
 [2024-03-28T10:21:08.386] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
 [2024-03-28T10:49:26.246] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
 [2024-03-28T10:49:26.250] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:18:17.196] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:18:17.204] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:19:10.496] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-04-15T18:19:10.499] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-04-15T18:20:55.143] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:20:55.148] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:21:50.199] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-04-15T18:21:50.200] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-04-15T18:33:09.834] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:33:09.840] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:35:36.691] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:35:36.701] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:37:18.487] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:37:18.491] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:39:12.277] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:39:12.285] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:40:33.118] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:40:33.121] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:48:58.030] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:48:58.035] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:49:54.396] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T19:18:38.199] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T19:18:38.206] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T19:20:04.742] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T19:23:50.624] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T19:27:26.637] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T19:27:29.953] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T19:33:52.209] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T19:48:45.882] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T19:49:26.051] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T19:50:47.367] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T19:51:35.553] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T19:52:55.082] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: game-1
+[2024-04-15T19:52:55.083] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: game-1
+[2024-04-15T19:52:55.084] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: game-0
+[2024-04-15T19:52:55.085] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: game-0
+[2024-04-15T19:52:55.085] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-1
+[2024-04-15T19:52:55.085] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-1
+[2024-04-15T19:52:55.086] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-04-15T19:52:55.086] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-04-15T19:53:20.348] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T19:57:08.413] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)

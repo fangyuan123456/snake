@@ -1,11 +1,8 @@
 import { Session } from "mydog";
-import HandlerBase from "../../../../common/base/HandlerBase";
+
 import { UdpSession } from "../../../../common/net/UdpSession";
 
-export default class Handler extends HandlerBase {
-    constructor() {
-        super();
-    }
+export default class Handler {
     enterRoom(msg: any, session: Session|UdpSession, next: Function){
         this.route("enterRoom",msg,session,next);
     }

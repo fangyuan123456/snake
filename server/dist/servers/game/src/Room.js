@@ -54,11 +54,11 @@ class Room {
             let data = {};
             for (let i in this.roomPlayers) {
                 let player = this.roomPlayers[i];
-                let infoData = yield player.getMyInfo();
-                data[infoData.uid] = {
-                    nickName: infoData.role.nickName || "",
-                    avatarUrl: infoData.role.avatarUrl || "",
-                    rankScore: infoData.asset.rankScore,
+                let infoData = yield game.infoMgr.getInfoByBundle(player.uid, GameConfig_1.e_InfoBundle.gameRoleInfo);
+                data[player.uid] = {
+                    nickName: infoData.nickName || "",
+                    avatarUrl: infoData.avatarUrl || "",
+                    rankScore: infoData.rankScore,
                     frames: frameData[player.uid].frames
                 };
             }

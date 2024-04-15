@@ -68,6 +68,91 @@
               "id": 2
             }
           }
+        },
+        "getRankDataReq": {
+          "fields": {
+            "type": {
+              "rule": "required",
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "getRankDataRes": {
+          "fields": {
+            "type": {
+              "rule": "required",
+              "type": "string",
+              "id": 1
+            },
+            "data": {
+              "rule": "repeated",
+              "type": "playerData",
+              "id": 2
+            }
+          },
+          "nested": {
+            "playerData": {
+              "oneofs": {
+                "_nickName": {
+                  "oneof": [
+                    "nickName"
+                  ]
+                },
+                "_avatarUrl": {
+                  "oneof": [
+                    "avatarUrl"
+                  ]
+                }
+              },
+              "fields": {
+                "uid": {
+                  "rule": "required",
+                  "type": "int32",
+                  "id": 1
+                },
+                "nickName": {
+                  "type": "string",
+                  "id": 2,
+                  "options": {
+                    "proto3_optional": true
+                  }
+                },
+                "avatarUrl": {
+                  "type": "string",
+                  "id": 3,
+                  "options": {
+                    "proto3_optional": true
+                  }
+                },
+                "score": {
+                  "rule": "required",
+                  "type": "int32",
+                  "id": 4
+                }
+              }
+            }
+          }
+        },
+        "getInviteRewardReq": {
+          "fields": {
+            "getRewardIndex": {
+              "type": "int32",
+              "id": 1
+            }
+          }
+        },
+        "getInviteRewardRes": {
+          "fields": {
+            "isOk": {
+              "type": "bool",
+              "id": 1
+            },
+            "getRewardIndex": {
+              "type": "int32",
+              "id": 2
+            }
+          }
         }
       }
     }

@@ -32,13 +32,16 @@ const ProtoManager_1 = require("../manager/ProtoManager");
 const HttpServer_1 = require("../net/HttpServer");
 const TimeManager_1 = require("../manager/TimeManager");
 const PlatformManager_1 = require("../manager/PlatformManager");
-const SqlManager_1 = require("../manager/SqlManager");
 const EventManager_1 = require("../manager/EventManager");
 const ConfigManager_1 = require("../manager/ConfigManager");
+const InfoManager_1 = require("../manager/InfoManager");
 class GameServerBase {
     constructor(app) {
+        this.bundleInfoKeyCfg = {};
+        this.isNeedCacheInfo = false;
         this.clientNum = 0;
         this.cpuUsage = "";
+        this.systemList = [];
         this.app = app;
         globalThis.game = this;
         this.logMgr = LogManager_1.LogManager.getInstance();
@@ -47,8 +50,8 @@ class GameServerBase {
         this.timeMgr = TimeManager_1.TimeManager.getInstance();
         this.platformMgr = PlatformManager_1.PlatformManager.getInstance();
         this.eventMgr = EventManager_1.EventManager.getInstance();
-        this.sqlMgr = SqlManager_1.SqlManager.getInstance();
         this.configMgr = ConfigManager_1.ConfigManager.getInstance();
+        this.infoMgr = InfoManager_1.InfoManager.getInstance();
         this.uncaughtException();
         this.initCupUsage();
         this.setConfig();
@@ -71,7 +74,11 @@ class GameServerBase {
             };
         }
     }
-    setConfig() {
+    setConfig(bundleInfoKeyCfg, isNeedCacheInfo = false) {
+        if (bundleInfoKeyCfg) {
+            this.bundleInfoKeyCfg = bundleInfoKeyCfg;
+        }
+        this.isNeedCacheInfo = isNeedCacheInfo;
         this.app.setConfig("rpc", { "interval": 30, "noDelay": false });
         this.app.setConfig("encodeDecode", { "msgDecode": this.protoMgr.decode.bind(this.protoMgr), "msgEncode": this.protoMgr.encode.bind(this.protoMgr) });
         this.app.setConfig("logger", (level, info) => {
@@ -79,6 +86,35 @@ class GameServerBase {
                 this.logMgr[level](info);
             }
         });
+    }
+    callSystemHandler(msgName, msg, session, next) {
+        for (let i in this.systemList) {
+            let system = this.systemList[i];
+            //@ts-ignore
+            let func = system[msgName + "Handler"];
+            if (func) {
+                func.call(msg, session, next);
+                return;
+            }
+        }
+        game.logMgr.error("msgName:%s is not found in Room", msgName);
+    }
+    getAllBundleInfoKey() {
+        let keyList = [];
+        for (let bundleName in this.bundleInfoKeyCfg) {
+            for (let i in this.bundleInfoKeyCfg[bundleName]) {
+                let key = this.bundleInfoKeyCfg[bundleName][i];
+                if (keyList.indexOf(key) < 0) {
+                    keyList.push(key);
+                }
+            }
+        }
+        if (keyList.length > 0) {
+            return keyList;
+        }
+    }
+    getIsNeedCacheInfo() {
+        return this.isNeedCacheInfo;
     }
     mydogList() {
         let onlineNum = "--";
@@ -103,7 +139,7 @@ class GameServerBase {
             game.logMgr.error(err);
         });
     }
-    sendMsg(uid, data, frontServer = "center" /* serverType.center */) {
+    sendMsg(uid, data, frontServer = "connector" /* serverType.connector */) {
         if (Array.isArray(uid)) {
             for (let i in uid) {
                 this.sendMsg(uid[i], data, frontServer);

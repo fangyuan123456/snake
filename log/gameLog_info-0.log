@@ -421,3 +421,744 @@
 [2024-04-12T17:10:58.325] [DEBUG] gameLog - cmd:3,msg:{"roomId":0,"roomIp":""}
 [2024-04-12T17:10:58.326] [DEBUG] gameLog - cmd:4,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
 [2024-04-12T17:10:58.326] [DEBUG] gameLog - cmd:6,msg:{"inviteUids":[],"getRewardIndexs":[]}
+[2024-04-15T18:18:10.014] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:18:10.017] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:20:12.183] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:20:12.192] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:20:12.194] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:20:12.198] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Handshake.onConnect (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Handshake._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:20:12.200] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Handshake.onConnect (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Handshake._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:20:30.319] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:20:30.320] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:20:30.321] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:20:30.321] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:20:30.322] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:20:57.093] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:20:57.097] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:21:20.959] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:21:20.960] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:21:20.961] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:21:20.963] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:21:20.964] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:22:08.503] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-0, ::ffff:127.0.0.1
+[2024-04-15T18:22:08.504] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:22:08.504] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:22:08.505] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-04-15T18:22:08.505] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-1, ::ffff:127.0.0.1
+[2024-04-15T18:22:08.506] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-04-15T18:22:08.509] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:22:08.510] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:22:08.510] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:22:08.511] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:22:08.512] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:22:48.733] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:22:48.734] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:22:48.735] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:22:48.735] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:22:48.736] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:22:57.865] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:22:57.866] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:22:57.867] [ERROR] gameLog - ReferenceError: gameGame is not defined
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:239:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:22:57.867] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:22:57.868] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:23:46.268] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:23:46.269] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:23:46.269] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:23:53.589] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Handshake.onConnect (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Handshake._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:23:53.593] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.t_score' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Handshake.onConnect (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:64:7)
+    at Handshake.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Handshake._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.t_score' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from t_score where uid = 16'
+}
+[2024-04-15T18:33:10.320] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:33:10.326] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:35:35.721] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:35:35.725] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:37:15.699] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:37:15.703] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:39:09.935] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:39:09.939] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:40:33.977] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:40:33.981] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:45:32.418] [ERROR] gameLog - Error: Packets out of order. Got: 1 Expected: 2
+    at Parser._tryReadPacketHeader (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:470:15)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:33:29)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:62:23
+    at new Promise (<anonymous>)
+    at SqlClient.query (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:61:16)
+    at SqlClient.select (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:147:21)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:193:28
+    at new Promise (<anonymous>) {
+  code: 'PROTOCOL_PACKETS_OUT_OF_ORDER',
+  fatal: true
+}
+[2024-04-15T18:45:32.422] [ERROR] gameLog - Error: Packets out of order. Got: 1 Expected: 2
+    at Parser._tryReadPacketHeader (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:470:15)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:33:29)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:62:23
+    at new Promise (<anonymous>)
+    at SqlClient.query (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:61:16)
+    at SqlClient.select (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:147:21)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:193:28
+    at new Promise (<anonymous>) {
+  code: 'PROTOCOL_PACKETS_OUT_OF_ORDER',
+  fatal: true
+}
+[2024-04-15T18:45:32.424] [ERROR] gameLog - Error: Packets out of order. Got: 1 Expected: 2
+    at Parser._tryReadPacketHeader (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:470:15)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:33:29)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:62:23
+    at new Promise (<anonymous>)
+    at SqlClient.query (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:61:16)
+    at SqlClient.select (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:147:21)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:193:28
+    at new Promise (<anonymous>) {
+  code: 'PROTOCOL_PACKETS_OUT_OF_ORDER',
+  fatal: true
+}
+[2024-04-15T18:45:32.425] [ERROR] gameLog - Error: Packets out of order. Got: 1 Expected: 2
+    at Parser._tryReadPacketHeader (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:470:15)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:33:29)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:62:23
+    at new Promise (<anonymous>)
+    at SqlClient.query (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:61:16)
+    at SqlClient.select (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:147:21)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:193:28
+    at new Promise (<anonymous>) {
+  code: 'PROTOCOL_PACKETS_OUT_OF_ORDER',
+  fatal: true
+}
+[2024-04-15T18:45:32.427] [ERROR] gameLog - Error: Packets out of order. Got: 1 Expected: 2
+    at Parser._tryReadPacketHeader (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:470:15)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:33:29)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:62:23
+    at new Promise (<anonymous>)
+    at SqlClient.query (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:61:16)
+    at SqlClient.select (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:147:21)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:193:28
+    at new Promise (<anonymous>) {
+  code: 'PROTOCOL_PACKETS_OUT_OF_ORDER',
+  fatal: true
+}
+[2024-04-15T18:45:32.429] [ERROR] gameLog - Error: Packets out of order. Got: 1 Expected: 2
+    at Parser._tryReadPacketHeader (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:470:15)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:33:29)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:48:16)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:62:23
+    at new Promise (<anonymous>)
+    at SqlClient.query (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:61:16)
+    at SqlClient.select (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:147:21)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:193:28
+    at new Promise (<anonymous>) {
+  code: 'PROTOCOL_PACKETS_OUT_OF_ORDER',
+  fatal: true
+}
+[2024-04-15T18:46:27.437] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:46:27.441] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:49:04.619] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:49:04.627] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:49:54.397] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:50:11.329] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:50:11.330] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:54:44.238] [DEBUG] gameLog - cmd:3,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T18:54:44.253] [DEBUG] gameLog - cmd:2,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T18:54:44.256] [DEBUG] gameLog - cmd:4,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T18:54:44.258] [ERROR] gameLog - msgHead:getScoreInfo is not find
+[2024-04-15T18:54:44.258] [DEBUG] gameLog - cmd:3,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T18:54:44.259] [DEBUG] gameLog - cmd:2,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T18:54:44.259] [DEBUG] gameLog - cmd:4,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T18:54:44.260] [ERROR] gameLog - msgHead:getScoreInfo is not find
+[2024-04-15T19:19:54.354] [DEBUG] gameLog - cmd:3,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T19:19:54.369] [DEBUG] gameLog - cmd:2,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T19:19:54.372] [DEBUG] gameLog - cmd:4,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T19:19:54.373] [ERROR] gameLog - msgHead:getScoreInfo is not find
+[2024-04-15T19:19:54.374] [DEBUG] gameLog - cmd:3,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T19:19:54.374] [DEBUG] gameLog - cmd:2,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T19:19:54.375] [DEBUG] gameLog - cmd:4,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T19:19:54.375] [ERROR] gameLog - msgHead:getScoreInfo is not find
+[2024-04-15T19:19:54.445] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-04-15T19:19:54.447] [DEBUG] gameLog - cmd:4,msg:{"inviteUids":"[]"}
+[2024-04-15T19:20:23.408] [DEBUG] gameLog - cmd:3,msg:{"getRoleInfo":{},"getAssetInfo":{},"getInviteRewardInfo":{},"getScoreInfo":{}}
+[2024-04-15T19:23:39.680] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-04-15T19:23:39.688] [DEBUG] gameLog - cmd:4,msg:{"inviteUids":"[]"}
+[2024-04-15T19:23:59.197] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T19:27:18.289] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-04-15T19:27:18.293] [DEBUG] gameLog - cmd:4,msg:{"inviteUids":"[]"}
+[2024-04-15T19:27:26.991] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.undefined' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.undefined' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "update undefined set platform = 'web' where uid = '16'"
+}
+[2024-04-15T19:27:34.454] [ERROR] gameLog - Error: ER_NO_SUCH_TABLE: Table 'db_fangkuai.undefined' doesn't exist
+    at Sequence._packetToError (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    --------------------
+    at Protocol._enqueue (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:198:25)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\info\src\SqlManager.js:64:32
+    at Ping.onOperationComplete (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Pool.js:110:5)
+    at Ping.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:526:10)
+    at Ping._callback (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\Connection.js:488:16)
+    at Sequence.end (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Sequence.OkPacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\sequences\Sequence.js:92:8)
+    at Protocol._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (E:\fangyuan\gitWorkSpace\snake\server\node_modules\mysql\lib\protocol\Parser.js:433:10) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'db_fangkuai.undefined' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "update undefined set platform = 'web' where uid = '16'"
+}
+[2024-04-15T19:48:35.047] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-04-15T19:48:35.053] [DEBUG] gameLog - cmd:4,msg:{"inviteUids":"[]"}
+[2024-04-15T19:49:14.591] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-04-15T19:49:14.594] [DEBUG] gameLog - cmd:4,msg:{"inviteUids":"[]"}
+[2024-04-15T19:50:36.007] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-04-15T19:50:36.012] [DEBUG] gameLog - cmd:4,msg:{"inviteUids":"[]"}
+[2024-04-15T19:50:36.013] [DEBUG] gameLog - cmd:5,msg:{"rankScore":0,"score":0}
+[2024-04-15T19:51:25.505] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-04-15T19:51:25.506] [DEBUG] gameLog - cmd:4,msg:{"inviteUids":"[]"}
+[2024-04-15T19:51:25.507] [DEBUG] gameLog - cmd:5,msg:{"rankScore":0,"score":0}
+[2024-04-15T19:51:41.373] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: match-0
+[2024-04-15T19:52:56.340] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0
+[2024-04-15T19:52:56.349] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T19:53:09.632] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-04-15T19:53:09.636] [DEBUG] gameLog - cmd:4,msg:{"inviteUids":"[]"}
+[2024-04-15T19:53:09.637] [DEBUG] gameLog - cmd:5,msg:{"rankScore":0,"score":0}
+[2024-04-15T19:56:56.948] [DEBUG] gameLog - cmd:2,msg:{"items":{"1":{"num":2},"2":{"num":2}}}
+[2024-04-15T19:56:56.953] [DEBUG] gameLog - cmd:4,msg:{"inviteUids":"[]"}
+[2024-04-15T19:56:56.954] [DEBUG] gameLog - cmd:5,msg:{"rankScore":0,"score":0}

@@ -3,7 +3,7 @@ import { GameServerBase } from "../../common/base/GameServerBase";
 import { MatchConfig } from "./src/MatchConfig";
 import { serverType } from "../../common/config/CommonCfg";
 import { Dic } from "../../common/interface/ICommon";
-import { I_MatchRoleInfo } from "../../common/interface/IMatch";
+import { I_MatchRoleInfo, I_playerRoomId } from "../../common/interface/IMatch";
 import { e_roomType } from "../../common/interface/IGame";
 declare global{
     namespace globalThis{
@@ -13,6 +13,7 @@ declare global{
 export class MatchServer extends GameServerBase{
     matchList:number[] = [];
     inviteRoom:Dic<I_MatchRoleInfo[]> = {}
+    playerRoomIdInfo:Dic<I_playerRoomId> = {};
     roomIdIndex = 10000;
     inviteRoomIndex = 1;
     constructor(app:Application){
@@ -56,7 +57,7 @@ export class MatchServer extends GameServerBase{
             let roomIp = game.utilsMgr.getServerIp(gameServer);
             for(let i in matchUidList){
                 let uid = matchUidList[i];
-                game.app.rpc(game.utilsMgr.getSid(uid,serverType.info)).info.main.setRoomInfo({uid:uid,roomId:roomId,roomIp:roomIp});
+                this.playerRoomIdInfo[uid] = {roomId:roomId,roomIp:roomIp}
             }
             game.app.rpc(gameServer.id).game.main.createRoom({roomId:roomId,uidList:matchUidList,roomType:e_roomType.FRIEND})
             game.sendMsg(matchUidList,{msgHead:"getRoomInfo",msgData:{roomId:roomId,roomIp:roomIp}})
@@ -66,8 +67,8 @@ export class MatchServer extends GameServerBase{
             let index = getRoleIndexFunc(data.uid);
             if(data.isMatch){
                 if(!index){
-                    let roleInfo:I_MatchRoleInfo = await game.app.rpc(game.utilsMgr.getSid(data.uid,serverType.info)).info.main.getMatchRoleInfo({uid:data.uid});
-                    this.inviteRoom[inviteKey].push({uid:data.uid,nickName:roleInfo.nickName,avatarUrl:roleInfo.avatarUrl,rankScore:roleInfo.rankScore});
+                    let roleInfo:I_MatchRoleInfo = await game.infoMgr.getInfoByBundle<I_MatchRoleInfo>(data.uid,"matchRoleInfo")
+                    this.inviteRoom[inviteKey].push(roleInfo);
                 }
             }else{
                 if(index){
@@ -84,6 +85,9 @@ export class MatchServer extends GameServerBase{
             }
         }
     }
+    setConfig(){
+        super.setConfig();
+    }
     match(data:{uid:number,isMatch:boolean}){
         let checkMatchOkAndOpenRoom = ()=>{
             let openRoomFunc = async (matchUidList:number[])=>{
@@ -93,8 +97,9 @@ export class MatchServer extends GameServerBase{
                 let roles:I_MatchRoleInfo[] = [];
                 for(let i in matchUidList){
                     let uid = matchUidList[i];
-                    let roleInfo:I_MatchRoleInfo = await game.app.rpc(game.utilsMgr.getSid(uid,serverType.info)).info.main.openRoom({uid:uid,roomId:roomId,roomIp:roomIp});
+                    let roleInfo:I_MatchRoleInfo = await game.infoMgr.getInfoByBundle<I_MatchRoleInfo>(uid,"matchRoleInfo")
                     roles.push(roleInfo);
+                    this.playerRoomIdInfo[uid] = {roomId:roomId,roomIp:roomIp}
                 }
                 game.app.rpc(gameServer.id).game.main.createRoom({roomId:roomId,uidList:matchUidList,roomType:e_roomType.FRIEND});
                 game.sendMsg(matchUidList,{msgHead:"match",msgData:{roles:roles}});
@@ -122,6 +127,11 @@ export class MatchServer extends GameServerBase{
             }
         }
         checkMatchOkAndOpenRoom();
+    }
+
+
+    getRoomInfo(uid:number){
+        return this.playerRoomIdInfo[uid] || {roomId:0,roomIp:""}
     }
     userLeave(uid:number){
         let index = this.matchList.indexOf(uid);
