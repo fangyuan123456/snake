@@ -2,6 +2,21 @@
   "nested": {
     "match": {
       "nested": {
+        "getRoomInfoReq": {
+          "fields": {}
+        },
+        "getRoomInfoRes": {
+          "fields": {
+            "roomId": {
+              "type": "int32",
+              "id": 1
+            },
+            "roomIp": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
         "matchReq": {
           "fields": {
             "isMatch": {

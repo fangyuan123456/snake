@@ -10,12 +10,14 @@ export class ConfigManager extends SingleBase{
     }
     getCfg(tbName:string,callBack:(data:any)=>void,target?:any,bundleName?:e_bundleName){
         let cfg:ConfigBase = null;
-        if(!bundleName){
-            if(!this.configs["default"]){
-                this.configs["default"] = new ConfigBase();
-            }
-            cfg = this.configs["default"];
+        let key:string = bundleName;
+        if(!key){
+            key = "default"
         }
+        if(!this.configs[key]){
+            this.configs[key] = new ConfigBase(bundleName);
+        }
+        cfg = this.configs[key];
         if(cfg){
             return cfg.getCfg(tbName,callBack,target);
         }else{

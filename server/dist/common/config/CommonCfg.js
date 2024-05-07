@@ -7,11 +7,11 @@ var KICKUSER_TYPE;
 })(KICKUSER_TYPE || (exports.KICKUSER_TYPE = KICKUSER_TYPE = {}));
 exports.mysqlConfig = {
     "development": {
-        "host": "120.76.217.84",
+        "host": "127.0.0.1",
         "port": 3306,
         "user": "root",
         "password": "fangyuan123.",
-        "database": "db_snake",
+        "database": "db_fangkuai",
         "connectionLimit": 5,
     },
     "production": {}

@@ -1,7 +1,12 @@
 syntax = "proto3";
 package match;
 
-
+message getRoomInfoReq {
+}
+message getRoomInfoRes {
+    int32 roomId = 1; 
+    string roomIp = 2; 
+}
 message matchReq {
     bool isMatch = 1;
 }

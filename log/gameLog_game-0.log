@@ -10,7 +10,72 @@
 [2024-03-28T10:50:02.273] [DEBUG] gameLog - udp server listening on port ${port}
 [2024-04-11T17:58:35.275] [DEBUG] gameLog - udp server listening on port ${port}
 [2024-04-12T16:52:18.002] [DEBUG] gameLog - udp server listening on port ${port}
-[2024-05-03T10:40:58.115] [DEBUG] gameLog - udp server listening on port ${port}
-[2024-05-03T10:42:47.545] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
-[2024-05-03T10:43:26.910] [DEBUG] gameLog - udp server listening on port ${port}
-[2024-05-07T22:30:49.294] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:08:42.447] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:09:49.677] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:10:45.677] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:10:52.832] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:11:20.710] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:12:16.820] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:18:09.983] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:18:09.988] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:18:59.553] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-04-15T18:18:59.556] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-04-15T18:19:48.070] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:20:57.481] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:20:57.486] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:21:58.519] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-04-15T18:21:58.522] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-04-15T18:23:46.277] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:23:46.278] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:23:46.278] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:23:46.281] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-0, ::ffff:127.0.0.1
+[2024-04-15T18:23:46.282] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-1, ::ffff:127.0.0.1
+[2024-04-15T18:23:53.382] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:29:53.846] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:31:29.562] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:32:03.262] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:33:09.957] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:33:09.958] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:34:30.571] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:35:37.729] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:35:37.731] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:37:19.722] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:37:19.726] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:38:03.013] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:39:08.241] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:39:08.243] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:40:31.161] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:40:31.165] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:41:57.493] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:44:59.762] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:46:04.731] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:46:27.442] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:46:27.443] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:46:27.448] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:46:36.909] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:46:55.708] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:49:03.043] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T18:49:03.048] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:49:54.396] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T18:50:11.330] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:50:11.330] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:52:58.728] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T18:54:29.857] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T19:18:32.720] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T19:18:32.723] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T19:19:45.180] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T19:20:51.348] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: login
+[2024-04-15T19:21:10.854] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: login
+[2024-04-15T19:21:10.856] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T19:21:10.857] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: info-0
+[2024-04-15T19:21:10.857] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: info-0
+[2024-04-15T19:21:10.862] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T19:21:10.863] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-0, ::ffff:127.0.0.1
+[2024-04-15T19:21:38.459] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T19:23:39.438] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T19:26:57.016] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T19:32:42.872] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T19:48:06.100] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T19:50:35.706] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T19:53:09.448] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-04-15T19:56:56.544] [DEBUG] gameLog - udp server listening on port ${port}

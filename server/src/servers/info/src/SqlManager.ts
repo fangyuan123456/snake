@@ -15,13 +15,13 @@ enum SqlOpsType{
     SELECT
 }
 type callback = (err: mysql.MysqlError | null, res?: any) => void
-import { SingleBase } from "../../common/base/SingleBase";
-import { getConfigByEnv, mysqlConfig } from "../../common/config/CommonCfg";
+import { SingleBase } from "../../../common/base/SingleBase";
+import { getConfigByEnv, mysqlConfig } from "../../../common/config/CommonCfg";
 class SqlClient{
     private pool?: mysql.Pool;
     constructor() {
     }
-    query(sql: string, args: any): Promise<any> {
+    query(sql: string, args: any, cb?: callback): Promise<any> {
         if(!this.pool){
             let config = getConfigByEnv(mysqlConfig);
             this.pool = mysql.createPool(config);
@@ -114,7 +114,7 @@ class SqlClient{
 }
 
 const SelectTb = [e_TableName.ASSET,e_TableName.USER,e_TableName.INVITE_REWARD,e_TableName.SCORE]
-const TbSpecailKey = ["items","inviteUids"];
+const TbSpecailKey = ["items","inviteUid"];
 const SqlCommitInterval = 10;
 export class SqlManager extends SingleBase{
     sqlClient:SqlClient;
@@ -153,7 +153,23 @@ export class SqlManager extends SingleBase{
             this.needSaveInfo[uid][infoKey] = data;
         }
     }
-    async getPlayerInfo(uid:number,infoKey?:Dic<any>){
+    public selectTb(tb_name:e_TableName,cond:Dic<any>){
+        return new Promise<any>((resolve, reject) => {
+            this.sqlClient.select(tb_name,cond).then((infoList:Dic<any>[])=>{
+                let info = infoList[0];
+                if(!info){
+                    this.sqlClient.add(tb_name,cond).then(async ()=>{
+                        info = await this.selectTb(tb_name,cond);
+                        resolve(info)
+                    })
+                }else{
+                    info = this.parseSQLInfo(info)
+                    resolve(info)
+                }
+            })
+        })
+    }
+    async getPlayerInfo(uid:number,infoKeyList?:string[]){
        return new Promise<Dic<any>>((resolve, reject) => {
             let isNeedSetKeyTableName = false;
             if(Object.keys(this.keyTableNameMap).length==0){
@@ -167,27 +183,33 @@ export class SqlManager extends SingleBase{
                     if(this.needSaveInfo[uid]){
                         info = game.utilsMgr.merge(info,this.needSaveInfo[uid])
                     }
-                    resolve(info);
+                    resolve(this.resetInfoByDefault(uid,info));
                 }
             }
-            let needSelectTb:Dic<any> = SelectTb;
-            if(infoKey){
-                needSelectTb = this.spliceInfoByTbName(infoKey);
+            let needSelectTb:e_TableName[] = SelectTb;
+            if(infoKeyList){
+                needSelectTb = this.getTbNameByKeyList(infoKeyList);
             }
             for(let i in needSelectTb){
                 callNum++;
                 let tb_name = needSelectTb[i];
-                this.sqlClient.select(tb_name,{uid:uid}).then((info)=>{
+                this.selectTb(tb_name,{uid:uid}).then((_dataInfo)=>{
                     if(isNeedSetKeyTableName){
-                        for(let key in info){
+                        for(let key in _dataInfo){
                             this.keyTableNameMap[key] = tb_name;
                         }
                     }
-                    gameGame.utilsMgr.merge(info,this.parseSQLInfo(info))
+                    game.utilsMgr.merge(info,_dataInfo)
                     selectEndCallFunc();
                 })
             }
         })
+    }
+    private resetInfoByDefault(uid:number,info:Dic<any>){
+        if(info.nickName){
+            info.nickName = "uid_"+ uid
+        }
+        return info
     }
     spliceInfoByTbName(info:Dic<string>):Dic<Dic<any>>{
         let infoMap:Dic<Dic<any>> = {}
@@ -197,6 +219,17 @@ export class SqlManager extends SingleBase{
             infoMap[tb_name][i] = info[i];
         }
         return infoMap
+    }
+    getTbNameByKeyList(keyList:string[]){
+        let tbList:e_TableName[] = []
+        for(let i in keyList){
+            let key = keyList[i];
+            let tb_name = this.keyTableNameMap[key];
+            if(tbList.indexOf(tb_name)<0){
+                tbList.push(tb_name);
+            }
+        }
+        return tbList
     }
     commitSqlUpdate(){
         let commitTimes = 0;

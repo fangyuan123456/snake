@@ -1,12 +1,9 @@
 import { Session } from "mydog";
-import HandlerBase from "../../../../common/base/HandlerBase";
 
-export default class Handler extends HandlerBase{
+export default class Handler {
     constructor() {
-        super();
     }
-    getRankData(msg:{type:string}, session: Session, next: Function){
-        let rankDataKey = msg.type == "normalGame"?"score":"rankScore"
-        next({type:msg.type,playerData:centerGame.rankDataList[rankDataKey]} )
+    route(msgName: string, msg: any, session: Session, next: Function) {
+        next({type:msg.type,playerData:centerGame.rankDataList[msg.type]} )
     }
 }

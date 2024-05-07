@@ -1,7 +1,7 @@
 import { Session } from "mydog";
 import { RoomPlayer } from "./RoomPlayer";
 import { Dic, I_msg } from "../../../common/interface/ICommon";
-import { GameConfig } from "./GameConfig";
+import { GameConfig, e_InfoBundle } from "./GameConfig";
 import { UdpSession } from "../../../common/net/UdpSession";
 import { I_roomPlayerInfo, e_roomType } from "../../../common/interface/IGame";
 export class Room{
@@ -40,11 +40,11 @@ export class Room{
         let data:Dic<I_roomPlayerInfo> = {};
         for(let i in this.roomPlayers){
             let player = this.roomPlayers[i];
-            let infoData = await player.getMyInfo();
-            data[infoData.uid] = {
-                nickName:infoData.role!.nickName||"",
-                avatarUrl:infoData.role!.avatarUrl||"",
-                rankScore:infoData.asset!.rankScore,
+            let infoData = await game.infoMgr.getInfoByBundle<I_roomPlayerInfo>(player.uid,e_InfoBundle.gameRoleInfo);
+            data[player.uid] = {
+                nickName:infoData.nickName||"",
+                avatarUrl:infoData.avatarUrl||"",
+                rankScore:infoData.rankScore,
                 frames:frameData[player.uid].frames
             }; 
         }

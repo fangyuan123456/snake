@@ -12,6 +12,9 @@ const dataKeyCfg:dataKeyCfg = {
     },
     inviteRewardInfo:{
         isConnectReq:true,
+    },
+    scoreInfo:{
+        isConnectReq:true,
     }
 }
 export default class UserData extends DataBase{
@@ -41,5 +44,8 @@ export default class UserData extends DataBase{
     }
     getInviteRewardInfo(callBack:(data:I_inviteReward)=>void,target:CompBase){
         this.getInfo("inviteRewardInfo",callBack,target)
+    }
+    getScoreInfo(callBack:(data:I_inviteReward)=>void,target:CompBase){
+        this.getInfo("scoreInfo",callBack,target)
     }
 }

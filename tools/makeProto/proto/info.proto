@@ -2,12 +2,7 @@ syntax = "proto3";
 package info;
 
 
-message getRoomInfoReq {
-}
-message getRoomInfoRes {
-    int32 roomId = 1; 
-    string roomIp = 2; 
-}
+
 
 message getRoleInfoReq {
 }
@@ -37,20 +32,19 @@ message getAssetInfoRes {
     required int32 rankScore = 2;
 }
 
+message getScoreInfoReq {
+}
+message getScoreInfoRes {
+    required int32 rankScore = 1;
+    required int32 score = 2;
+}
+
 message getInviteRewardInfoReq {
 }
 message getInviteRewardInfoRes {
     repeated int32 inviteUids = 1;
     repeated int32 getRewardIndexs = 2; 
 }
-message getInviteRewardReq {
-    int32 getRewardIndex = 1;
-}
-message getInviteRewardRes {
-    bool isOk = 1;
-    int32 getRewardIndex = 2;
-}
-
 message updateRoleInfoReq{
     required int32 uid =1;
     required string openId =2;
@@ -61,9 +55,4 @@ message updateRoleInfoReq{
     optional string country = 7;
     optional string province = 8;
 }
-message getPlayersInfoReq{
-    repeated int32 uids = 1;
-}
-message getPlayersInfoRes{
-    map<int32,getRoleInfoRes> infos = 1;
-}
+

@@ -1,4 +1,3 @@
-import RemoteBase from "../../../../common/base/RemoteBase";
 declare global {
     interface Rpc {
         match: {
@@ -6,11 +5,8 @@ declare global {
         }
     }
 }
-export default class Remote extends RemoteBase {
-    constructor() {
-        super();
-    }
-    userLeave(uid:number){
+export default class Remote {
+    onUserLeave(uid:number){
         matchGame.userLeave(uid);
     }
 }

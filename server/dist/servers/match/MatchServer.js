@@ -18,6 +18,7 @@ class MatchServer extends GameServerBase_1.GameServerBase {
         super(app);
         this.matchList = [];
         this.inviteRoom = {};
+        this.playerRoomIdInfo = {};
         this.roomIdIndex = 10000;
         this.inviteRoomIndex = 1;
         globalThis.matchGame = this;
@@ -62,7 +63,7 @@ class MatchServer extends GameServerBase_1.GameServerBase {
                 let roomIp = game.utilsMgr.getServerIp(gameServer);
                 for (let i in matchUidList) {
                     let uid = matchUidList[i];
-                    game.app.rpc(game.utilsMgr.getSid(uid, "info" /* serverType.info */)).info.main.setRoomInfo({ uid: uid, roomId: roomId, roomIp: roomIp });
+                    this.playerRoomIdInfo[uid] = { roomId: roomId, roomIp: roomIp };
                 }
                 game.app.rpc(gameServer.id).game.main.createRoom({ roomId: roomId, uidList: matchUidList, roomType: IGame_1.e_roomType.FRIEND });
                 game.sendMsg(matchUidList, { msgHead: "getRoomInfo", msgData: { roomId: roomId, roomIp: roomIp } });
@@ -72,8 +73,8 @@ class MatchServer extends GameServerBase_1.GameServerBase {
                 let index = getRoleIndexFunc(data.uid);
                 if (data.isMatch) {
                     if (!index) {
-                        let roleInfo = yield game.app.rpc(game.utilsMgr.getSid(data.uid, "info" /* serverType.info */)).info.main.getMatchRoleInfo({ uid: data.uid });
-                        this.inviteRoom[inviteKey].push({ uid: data.uid, nickName: roleInfo.nickName, avatarUrl: roleInfo.avatarUrl, rankScore: roleInfo.rankScore });
+                        let roleInfo = yield game.infoMgr.getInfoByBundle(data.uid, "matchRoleInfo");
+                        this.inviteRoom[inviteKey].push(roleInfo);
                     }
                 }
                 else {
@@ -92,6 +93,9 @@ class MatchServer extends GameServerBase_1.GameServerBase {
             }
         });
     }
+    setConfig() {
+        super.setConfig();
+    }
     match(data) {
         let checkMatchOkAndOpenRoom = () => {
             let openRoomFunc = (matchUidList) => __awaiter(this, void 0, void 0, function* () {
@@ -101,8 +105,9 @@ class MatchServer extends GameServerBase_1.GameServerBase {
                 let roles = [];
                 for (let i in matchUidList) {
                     let uid = matchUidList[i];
-                    let roleInfo = yield game.app.rpc(game.utilsMgr.getSid(uid, "info" /* serverType.info */)).info.main.openRoom({ uid: uid, roomId: roomId, roomIp: roomIp });
+                    let roleInfo = yield game.infoMgr.getInfoByBundle(uid, "matchRoleInfo");
                     roles.push(roleInfo);
+                    this.playerRoomIdInfo[uid] = { roomId: roomId, roomIp: roomIp };
                 }
                 game.app.rpc(gameServer.id).game.main.createRoom({ roomId: roomId, uidList: matchUidList, roomType: IGame_1.e_roomType.FRIEND });
                 game.sendMsg(matchUidList, { msgHead: "match", msgData: { roles: roles } });
@@ -131,6 +136,9 @@ class MatchServer extends GameServerBase_1.GameServerBase {
             }
         }
         checkMatchOkAndOpenRoom();
+    }
+    getRoomInfo(uid) {
+        return this.playerRoomIdInfo[uid] || { roomId: 0, roomIp: "" };
     }
     userLeave(uid) {
         let index = this.matchList.indexOf(uid);

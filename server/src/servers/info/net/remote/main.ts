@@ -1,8 +1,5 @@
-import RemoteBase from "../../../../common/base/RemoteBase";
-import { Dic, I_playerAllInfo } from "../../../../common/interface/ICommon";
-import { I_asset, I_inviteReward, I_roleInfo, e_InfoType } from "../../../../common/interface/IInfo";
-import { e_TableName } from "../../SqlManager";
 
+import { Dic, I_playerAllInfo } from "../../../../common/interface/ICommon";
 declare global {
     interface Rpc {
         info: {
@@ -10,20 +7,26 @@ declare global {
         }
     }
 }
-export default class Remote extends RemoteBase {
+export default class Remote{
     constructor() {
-        super();
     }
-    async userLoginIn(uid:number){
+    async userRegister(openId:number){
+        return await infoGame.userRegister(openId);
+    }
+    async onUserIn(uid:number){
         return await infoGame.userLoginIn(uid);
     }
-    userLoginOut(uid:number){
+    onUserLeave(uid:number){
         infoGame.userLoginOut(uid);
     }
-    async getPlayerInfo(uid:number,infoKey?:Dic<any>){
-        return await infoGame.getPlayerInfo(uid,infoKey);
+    async getPlayerInfo(uid:number,infoKeyList?:string[]){
+        return await infoGame.getPlayerInfo(uid,infoKeyList);
+    }
+    async getOnceInfo(uid:number,infoKeyList:string[]){
+        return await infoGame.getOnceInfo(uid,infoKeyList);
     }
     setPlayerInfo(uid:number,info:Dic<any>){
         infoGame.setPlayerInfo(uid,info);
+        infoGame.notifySetInfo(uid,info);
     }
 }

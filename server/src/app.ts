@@ -5,6 +5,7 @@ import { InfoServer } from "./servers/info/InfoServer";
 import { CenterServer } from "./servers/center/CenterServer";
 import { MatchServer } from "./servers/match/MatchServer";
 import { GameServer } from "./servers/game/GameServer";
+import { ConnectorServer } from "./servers/connector/ConnectorServer";
 
 let CreateServerApp=function(){
     let app = createApp();
@@ -17,6 +18,9 @@ let CreateServerApp=function(){
         break;
         case serverType.info:
             new InfoServer(app);
+        break;
+        case serverType.connector:
+            new ConnectorServer(app);
         break;
         case serverType.center:
             new CenterServer(app);

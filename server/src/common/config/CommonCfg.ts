@@ -2,6 +2,7 @@
 export const enum serverType {
     master = "master",
     login = "login",
+    connector = "connector",
     center = "center",
     info = "info",
     match = "match",
@@ -12,11 +13,11 @@ export enum KICKUSER_TYPE{
 }
 export let mysqlConfig = {
     "development": {
-        "host": "120.76.217.84",
+        "host": "127.0.0.1",
         "port": 3306,
         "user": "root",
         "password": "fangyuan123.",
-        "database": "db_snake",
+        "database": "db_fangkuai",
         "connectionLimit": 5,
     },
     "production": {

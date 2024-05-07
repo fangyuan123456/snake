@@ -31,3 +31,326 @@
 [2024-03-28T10:46:16.989] [DEBUG] gameLog - undefined
 [2024-03-28T10:48:19.430] [DEBUG] gameLog - undefined
 [2024-03-28T10:48:19.696] [DEBUG] gameLog - undefined
+[2024-04-15T18:17:10.400] [ERROR] gameLog - TypeError: Cannot read properties of null (reading 'uid')
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:69:64
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:18:27.754] [ERROR] gameLog - TypeError: Cannot read properties of null (reading 'uid')
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:69:64
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:18:27.755] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-04-15T18:18:27.760] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1
+[2024-04-15T18:18:27.760] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-04-15T18:18:27.761] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-1, ::ffff:127.0.0.1
+[2024-04-15T18:18:27.761] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-04-15T18:18:27.762] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:18:27.763] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:18:27.765] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-0, ::ffff:127.0.0.1
+[2024-04-15T18:18:37.812] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T18:20:12.172] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:21:10.324] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-04-15T18:21:10.326] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:21:10.327] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:21:10.331] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1
+[2024-04-15T18:21:10.332] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:21:10.332] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-1, ::ffff:127.0.0.1
+[2024-04-15T18:21:10.332] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-0, ::ffff:127.0.0.1
+[2024-04-15T18:21:10.333] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:21:10.334] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-04-15T18:21:10.334] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-04-15T18:21:28.985] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T18:21:39.019] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:22:31.182] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T18:23:05.319] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T18:24:03.927] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T18:29:54.097] [ERROR] gameLog - ReferenceError: infoGame is not defined
+    at InfoManager.setPlayerInfo (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\InfoManager.js:86:9)
+    at Handler.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:70:34)
+    at Generator.next (<anonymous>)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:31:71
+    at new Promise (<anonymous>)
+    at __awaiter (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:27:12)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:69:158
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:31:29.757] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at InfoManager.getInfoServer (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\InfoManager.js:59:47)
+    at InfoManager.setPlayerInfo (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\InfoManager.js:96:18)
+    at Handler.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:70:34)
+    at Generator.next (<anonymous>)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:31:71
+    at new Promise (<anonymous>)
+    at __awaiter (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:27:12)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:69:158
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:31:43.530] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at InfoManager.getInfoServer (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\InfoManager.js:59:47)
+    at InfoManager.setPlayerInfo (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\InfoManager.js:96:18)
+    at Handler.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:70:34)
+    at Generator.next (<anonymous>)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:31:71
+    at new Promise (<anonymous>)
+    at __awaiter (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:27:12)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:69:158
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:32:13.340] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at InfoManager.getInfoServer (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\InfoManager.js:59:47)
+    at InfoManager.setPlayerInfo (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\InfoManager.js:96:18)
+    at Handler.<anonymous> (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:70:34)
+    at Generator.next (<anonymous>)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:31:71
+    at new Promise (<anonymous>)
+    at __awaiter (E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:27:12)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:69:158
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:34:34.633] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:34:34.637] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:36:09.986] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:36:09.988] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-04-15T18:36:09.992] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:36:09.992] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-04-15T18:36:09.993] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-1, ::ffff:127.0.0.1
+[2024-04-15T18:36:09.993] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:36:09.993] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1
+[2024-04-15T18:36:09.994] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-0, ::ffff:127.0.0.1
+[2024-04-15T18:36:09.994] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-04-15T18:36:29.609] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:36:42.896] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:37:46.251] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:37:46.253] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-04-15T18:37:46.254] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:37:46.257] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-04-15T18:37:46.258] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:37:46.258] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-0, ::ffff:127.0.0.1
+[2024-04-15T18:37:46.258] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:37:46.259] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1
+[2024-04-15T18:37:46.259] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-1, ::ffff:127.0.0.1
+[2024-04-15T18:37:46.260] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-04-15T18:37:49.638] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:37:49.640] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:38:03.221] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:38:03.224] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:38:22.996] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:38:42.409] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:38:42.411] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:38:45.570] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:38:55.241] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:39:23.104] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:39:24.465] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:39:24.467] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-04-15T18:39:24.467] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:39:24.472] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-04-15T18:39:24.472] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-0, ::ffff:127.0.0.1
+[2024-04-15T18:39:24.473] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:39:24.473] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-04-15T18:39:24.474] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-1, ::ffff:127.0.0.1
+[2024-04-15T18:39:24.474] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:39:24.475] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1
+[2024-04-15T18:39:45.080] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:39:47.440] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:40:00.666] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:40:01.416] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:40:01.417] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:40:12.808] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:40:14.664] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:40:14.665] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:40:48.824] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:40:50.368] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:40:50.370] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-0, ::ffff:127.0.0.1
+[2024-04-15T18:40:50.370] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:40:50.373] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-1, ::ffff:127.0.0.1
+[2024-04-15T18:40:50.374] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-0, ::ffff:127.0.0.1
+[2024-04-15T18:40:50.374] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: game-1, ::ffff:127.0.0.1
+[2024-04-15T18:40:50.374] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: info-1, ::ffff:127.0.0.1
+[2024-04-15T18:40:50.375] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-0, ::ffff:127.0.0.1
+[2024-04-15T18:40:50.375] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-04-15T18:40:50.375] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: center-1, ::ffff:127.0.0.1
+[2024-04-15T18:41:26.208] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:42:07.625] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:45:11.700] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:46:15.887] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T18:46:19.902] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2024-04-15T18:46:40.168] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:46:42.363] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:46:46.769] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:46:46.772] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:46:56.004] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:46:56.007] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:47:13.020] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:47:46.599] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:47:46.600] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:47:50.472] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:47:50.473] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:47:54.200] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:47:54.201] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:47:58.901] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:47:58.903] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:48:12.164] [ERROR] gameLog - infoBundleName:getRoleInfo is not cfg
+[2024-04-15T18:48:22.360] [ERROR] gameLog - TypeError: Cannot read properties of undefined (reading 'id')
+    at UtilsManager.getSid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:32:46)
+    at UtilsManager.getServerByUid (E:\fangyuan\gitWorkSpace\snake\server\dist\common\manager\UtilsManager.js:35:24)
+    at E:\fangyuan\gitWorkSpace\snake\server\dist\servers\login\net\HttpHandler\main.js:55:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-04-15T18:48:22.361] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T18:54:44.238] [ERROR] gameLog - RpcError: rpcTimeout
+    at E:\fangyuan\gitWorkSpace\snake\server\node_modules\mydog\lib\components\rpcService.js:328:24
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processTimers (node:internal/timers:509:9)
+[2024-04-15T19:51:41.970] [ERROR] gameLog - [rpcClient.ts] heartbeat timeout, close the rpc socket: match-0
+[2024-04-15T19:52:42.268] [ERROR] gameLog - [rpcClient.ts] socket closed, reconnect the rpc server later: match-0

@@ -2,21 +2,6 @@
   "nested": {
     "info": {
       "nested": {
-        "getRoomInfoReq": {
-          "fields": {}
-        },
-        "getRoomInfoRes": {
-          "fields": {
-            "roomId": {
-              "type": "int32",
-              "id": 1
-            },
-            "roomIp": {
-              "type": "string",
-              "id": 2
-            }
-          }
-        },
         "getRoleInfoReq": {
           "fields": {}
         },
@@ -198,6 +183,23 @@
             }
           }
         },
+        "getScoreInfoReq": {
+          "fields": {}
+        },
+        "getScoreInfoRes": {
+          "fields": {
+            "rankScore": {
+              "rule": "required",
+              "type": "int32",
+              "id": 1
+            },
+            "score": {
+              "rule": "required",
+              "type": "int32",
+              "id": 2
+            }
+          }
+        },
         "getInviteRewardInfoReq": {
           "fields": {}
         },
@@ -210,26 +212,6 @@
             },
             "getRewardIndexs": {
               "rule": "repeated",
-              "type": "int32",
-              "id": 2
-            }
-          }
-        },
-        "getInviteRewardReq": {
-          "fields": {
-            "getRewardIndex": {
-              "type": "int32",
-              "id": 1
-            }
-          }
-        },
-        "getInviteRewardRes": {
-          "fields": {
-            "isOk": {
-              "type": "bool",
-              "id": 1
-            },
-            "getRewardIndex": {
               "type": "int32",
               "id": 2
             }
@@ -320,24 +302,6 @@
               "options": {
                 "proto3_optional": true
               }
-            }
-          }
-        },
-        "getPlayersInfoReq": {
-          "fields": {
-            "uids": {
-              "rule": "repeated",
-              "type": "int32",
-              "id": 1
-            }
-          }
-        },
-        "getPlayersInfoRes": {
-          "fields": {
-            "infos": {
-              "keyType": "int32",
-              "type": "getRoleInfoRes",
-              "id": 1
             }
           }
         }
