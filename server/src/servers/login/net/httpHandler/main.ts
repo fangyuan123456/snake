@@ -12,10 +12,10 @@ export default class Handler extends HandlerBase {
         super();
     }
     updatePlayInviteData(uid:number,myInviteUid:number){
-        game.infoMgr.getInfo(uid,["inviteUid"]).then((data)=>{
+        game.infoMgr.getPlayerInfo(uid,["inviteUid"]).then((data)=>{
             let inviteUid  = data.inviteUid;
             inviteUid.push(myInviteUid);
-            game.infoMgr.setInfo(uid,{inviteUid:inviteUid})
+            game.infoMgr.setPlayerInfo(uid,{inviteUid:inviteUid})
         })
     }
     onLoginHandler(msgData:I_loginReq,res:Response){
@@ -44,19 +44,17 @@ export default class Handler extends HandlerBase {
     }
     registerAndLogin(data:any):Promise<I_roleInfo>{
         return new Promise(async (resolve,reject)=>{
-            let mData:I_roleInfo;
-            let userData = await game.sqlMgr.select(e_TableName.USER,{openId:data.openId})
-            if(userData.length == 0){
-                userData = await game.sqlMgr.add(e_TableName.USER,data);
-                mData = loginGame.getDefaultUserData(userData.insertId);
-                game.utilsMgr.merge(mData,data);
-                game.sqlMgr.update(e_TableName.USER,mData,{uid:mData.uid});
-            }else{
-                mData = userData[0];
-            }
-            game.app.rpc(game.utilsMgr.getSid(mData.uid,serverType.info)).info.main.userLoginIn(mData.uid).then((info)=>{
-                resolve(info);
-            })
+            // let mData:I_roleInfo;
+            // let userData = await game.sqlMgr.select(e_TableName.USER,{openId:data.openId})
+            // if(userData.length == 0){
+            //     userData = await game.sqlMgr.add(e_TableName.USER,data);
+            //     mData = loginGame.getDefaultUserData(userData.insertId);
+            //     game.utilsMgr.merge(mData,data);
+            //     game.sqlMgr.update(e_TableName.USER,mData,{uid:mData.uid});
+            // }else{
+            //     mData = userData[0];
+            // }
+         
         })
     }
     onGetJumpGameListReq(msgData:{platform:string},res:Response){

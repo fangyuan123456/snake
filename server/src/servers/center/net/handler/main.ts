@@ -6,6 +6,7 @@ export default class Handler extends HandlerBase{
         super();
     }
     getRankData(msg:{type:string}, session: Session, next: Function){
-        next({type:msg.type,playerData:centerGame.rankDataList[msg.type]} )
+        let rankDataKey = msg.type == "normalGame"?"score":"rankScore"
+        next({type:msg.type,playerData:centerGame.rankDataList[rankDataKey]} )
     }
 }

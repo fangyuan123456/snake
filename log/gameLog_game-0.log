@@ -10,3 +10,7 @@
 [2024-03-28T10:50:02.273] [DEBUG] gameLog - udp server listening on port ${port}
 [2024-04-11T17:58:35.275] [DEBUG] gameLog - udp server listening on port ${port}
 [2024-04-12T16:52:18.002] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-05-03T10:40:58.115] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-05-03T10:42:47.545] [ERROR] gameLog - [rpcServer.ts] a rpc client disconnected: con-0, ::ffff:127.0.0.1
+[2024-05-03T10:43:26.910] [DEBUG] gameLog - udp server listening on port ${port}
+[2024-05-07T22:30:49.294] [DEBUG] gameLog - udp server listening on port ${port}

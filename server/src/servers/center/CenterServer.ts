@@ -16,7 +16,7 @@ export class CenterServer extends GameServerBase{
     constructor(app:Application){
         super(app);
         globalThis.centerGame = this;
-        this.selectRankInfo();
+
     }
     setConfig(): void {
         super.setConfig();
@@ -56,27 +56,40 @@ export class CenterServer extends GameServerBase{
         game.app.rpc(game.utilsMgr.getSid(session.uid,serverType.match)).match.main.userLeave(session.uid);
     }
 
-    selectRankInfo(){
-        game.sqlMgr.select(e_TableName.USER)
+    setRankInfo(rankInfo:Dic<I_rankItemInfo[]>){
+        this.rankDataList = rankInfo;
     }
-    updateRankScore(scoreData:Dic<{score:number,type:string}>){
-        // for(let i in scoreData){
-        //     this.outRankData[scoreData[i].type][i].score = scoreData[i].score;
-        //     this.rankDataList[scoreData[i].type].push(this.outRankData[scoreData[i].type][i]);
-        // }
-        // for(let type in this.rankDataList){
-        //     let rankList = this.rankDataList[type];
-        //     for(let i = this.rankLen;i<rankList.length;i++){
-        //         for(let j = this.rankLen - 1;j>=0;j--){
-        //             if(rankList[i].score>rankList[j].score){
-        //                 let rank
-        //                 break;
-        //             }
-        //         }
-        //     }
-        // }
-    //    for(let i = 100;i<this.rankDataList[])
-
-
+    async updateRankInfo(uid:number,info:Dic<number>){
+        let getRankItem = (scoreKey:string,checkUid:number)=>{
+            let itemList = this.rankDataList[scoreKey];
+            for(let i in itemList){
+                if(itemList[i].uid == checkUid){
+                    return itemList[i];
+                }
+            }
+        }
+        for(let i in info){
+            let itemList = this.rankDataList[i];
+            if(info[i]>itemList[itemList.length-1].score){
+                let item = getRankItem(i,uid);
+                if(item){
+                    item.score = info[i];
+                }else{
+                    let info =  await this.infoMgr.getPlayerInfo(uid);
+                    itemList.push({
+                        uid:uid,
+                        nickName:info.nickName,
+                        avatarUrl:info.avatarUrl,
+                        score:info[i]
+                    })
+                }
+                itemList.sort((a,b)=>{
+                    return a.score - b.score
+                })
+                if(!item){
+                    itemList.pop();
+                }
+            }
+        }
     }
 }

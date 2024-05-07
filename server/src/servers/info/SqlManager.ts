@@ -21,7 +21,7 @@ class SqlClient{
     private pool?: mysql.Pool;
     constructor() {
     }
-    query(sql: string, args: any, cb?: callback): Promise<any> {
+    query(sql: string, args: any): Promise<any> {
         if(!this.pool){
             let config = getConfigByEnv(mysqlConfig);
             this.pool = mysql.createPool(config);
@@ -114,7 +114,7 @@ class SqlClient{
 }
 
 const SelectTb = [e_TableName.ASSET,e_TableName.USER,e_TableName.INVITE_REWARD,e_TableName.SCORE]
-const TbSpecailKey = ["item","inviteUid"];
+const TbSpecailKey = ["items","inviteUids"];
 const SqlCommitInterval = 10;
 export class SqlManager extends SingleBase{
     sqlClient:SqlClient;

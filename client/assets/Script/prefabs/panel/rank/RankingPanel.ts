@@ -32,7 +32,6 @@ export default class RankingPanel extends PanelBase {
     rankType:e_rankType = e_rankType.TOTAL
     
     onLoad () {
-        super.onLoad();
     }
     start () {
         super.start();

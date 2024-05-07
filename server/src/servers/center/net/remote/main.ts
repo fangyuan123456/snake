@@ -1,4 +1,5 @@
 import RemoteBase from "../../../../common/base/RemoteBase"
+import { I_rankItemInfo } from "../../../../common/interface/ICenter";
 import { Dic } from "../../../../common/interface/ICommon";
 
 declare global {
@@ -15,8 +16,11 @@ export default class Remote extends RemoteBase {
     getClientNum() {
         return game.app.clientNum
     }
-    updateRankScore(scoreData:Dic<{score:number,type:string}>){
-        centerGame.updateRankScore(scoreData);
+    setRankInfo(rankInfo:Dic<I_rankItemInfo[]>){
+        centerGame.setRankInfo(rankInfo);
+    }
+    updateRankInfo(uid:number,info:Dic<number>){
+        centerGame.updateRankInfo(uid,info)
     }
     playerOnLine(){
 
